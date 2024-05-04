@@ -1,126 +1,87 @@
 <x-admin-guest-layout>
-    <!--begin::Authentication - Sign-in -->
-    <div class="d-flex flex-column flex-column-fluid bgi-position-y-bottom position-x-center bgi-no-repeat bgi-size-contain bgi-attachment-fixed"
-        style="background-image: url({{ asset('admin/assets/media/illustrations/sketchy-1/14.png') }}">
-        <!--begin::Content-->
-        <div class="d-flex flex-center flex-column flex-column-fluid p-10 pb-lg-20">
-            <!--begin::Logo-->
-            <a href="../../demo1/dist/index.html" class="mb-12">
-                <img alt="Logo" src="{{ asset('admin/assets/media/logos/logo-1.svg') }}" class="h-40px" />
-            </a>
-            <!--end::Logo-->
-            <!--begin::Wrapper-->
-            <div class="w-lg-500px bg-body rounded shadow-sm p-10 p-lg-15 mx-auto">
-
-                <x-auth-session-status class="mb-4" :status="session('status')" />
-
-                <!--begin::Form-->
-                <form class="form w-100" action="{{ route('admin.login') }}" method="POST">
-                    @csrf
-
-                    <!--begin::Heading-->
-                    <div class="text-center mb-10">
-                        <!--begin::Title-->
-                        <h1 class="text-dark mb-3">Sign In to Metronic</h1>
-                        <!--end::Title-->
+    <div class="d-flex flex-column flex-root">
+        <div class="d-flex flex-column flex-lg-row flex-column-fluid">
+            <div class="d-flex flex-column flex-lg-row-auto w-xl-600px positon-xl-relative"
+                style="background-color:  #f5f5f5;">
+                <div class="d-flex flex-column position-xl-fixed top-0 bottom-0 w-xl-600px">
+                    <div class="d-flex flex-row-fluid flex-column text-center p-10 pt-lg-20">
+                        <a href="{{ route('homePage') }}" class="py-9 mb-5">
+                            <img alt="Logo"
+                                src="{{ !empty($site->site_logo) && file_exists(public_path('storage/settings/' . $site->site_logo)) ? asset('storage/settings/' . $site->site_logo) : asset('images/no-logo(217-55).jpg') }}"
+                                class="h-60px" />
+                        </a>
+                        <h1 class="fw-bolder fs-2qx pb-5 pb-md-10" style="color: #179ef7">Welcome to
+                            {{ !empty($site->site_name) ? $site->site_name : 'Metronic' }}</h1>
+                        <p class="fw-bold fs-2" style="color: #000;">Discover Amazing
+                            {{ !empty($site->site_name) ? $site->site_name : 'Metronic' }}
+                            <br />with great build tools
+                        </p>
                     </div>
-                    <!--begin::Heading-->
-                    <!--begin::Input group-->
-                    <div class="fv-row mb-10">
-                        <!--begin::Label-->
-                        <x-metronic.label
-                            class="form-label fs-6 fw-bolder text-dark">{{ __('Email') }}</x-metronic.label>
-                        <!--end::Label-->
-                        <!--begin::Input-->
-                        <x-metronic.input type="email" name="email"
-                            class="form-control form-control-lg form-control-solid"
-                            placeholder="Enter your email address" value="{{ old('email') }}"
-                            autocomplete="off"></x-metronic.input>
-                        <!--end::Input-->
-                    </div>
-                    <!--end::Input group-->
-                    <!--begin::Input group-->
-                    <div class="fv-row mb-10">
-                        <!--begin::Wrapper-->
-                        <div class="d-flex flex-stack mb-2">
-                            <!--begin::Label-->
-                            <x-metronic.label
-                                class="form-label fw-bolder text-dark fs-6 mb-0">{{ __('Password') }}</x-metronic.label>
-                            <!--end::Label-->
-                            <!--begin::Link-->
-                            @if (Route::has('admin.password.request'))
-                                <a href="{{ route('admin.password.request') }}" class="link-primary fs-6 fw-bolder">
-                                    {{ __('Forgot password ?') }}</a>
-                            @endif
-                            <!--end::Link-->
-                        </div>
-                        <!--end::Wrapper-->
-                        <!--begin::Input-->
-                        <x-metronic.input type="password" name="password"
-                            class="form-control form-control-lg form-control-solid" placeholder="Enter your password"
-                            autocomplete="off"></x-metronic.input>
-                        <!--end::Input-->
-                    </div>
-                    <!--end::Input group-->
-                    <!--begin::Input group-->
-                    <div class="fv-row mb-10">
-                        <!--begin::Wrapper-->
-                        <div class="d-flex flex-stack mb-2">
-                            <div class="mb-3">
-                                <div class="form-check">
-                                    <input id="remember_me" type="checkbox" class="form-check-input" name="remember">
-                                    <x-metronic.label for="remember_me"
-                                        class="form-check-label">{{ __('Remember me') }}</x-metronic.label>
+                    <div class="d-flex flex-row-auto bgi-no-repeat bgi-position-x-center bgi-size-contain bgi-position-y-bottom min-h-100px min-h-lg-350px"
+                        style="background-image: url(assets/media/illustrations/sketchy-1/13.png"></div>
+                </div>
+            </div>
+            <div class="d-flex flex-column flex-lg-row-fluid py-10">
+                <div class="d-flex flex-center flex-column flex-column-fluid">
+                    <div class="w-lg-500px p-10 p-lg-15 mx-auto">
+                        <x-auth-session-status class="mb-4" :status="session('status')" />
+
+                        <form class="form w-100" action="{{ route('admin.login') }}" method="POST">
+                            @csrf
+                            <div class="text-center mb-10">
+                                <h1 class="text-dark mb-3">Sign In to
+                                    {{ !empty($site->site_name) ? $site->site_name : 'Metronic' }}</h1>
+                                {{-- <div class="text-gray-400 fw-bold fs-4">New Here?
+                                    <a href="../../demo1/dist/authentication/layouts/aside/sign-up.html"
+                                        class="link-primary fw-bolder">Create an Account</a>
+                                </div> --}}
+                            </div>
+                            <div class="fv-row mb-10">
+                                <x-metronic.label
+                                    class="form-label fs-6 fw-bolder text-dark">{{ __('Email') }}</x-metronic.label>
+                                <x-metronic.input type="email" name="email"
+                                    class="form-control form-control-lg form-control-solid"
+                                    placeholder="Enter your email address" value="{{ old('email') }}"
+                                    autocomplete="off"></x-metronic.input>
+                            </div>
+                            <div class="fv-row mb-10">
+                                <div class="d-flex flex-stack mb-2">
+                                    <x-metronic.label
+                                        class="form-label fw-bolder text-dark fs-6 mb-0">{{ __('Password') }}</x-metronic.label>
+                                    @if (Route::has('admin.password.request'))
+                                        <a href="{{ route('admin.password.request') }}"
+                                            class="link-primary fs-6 fw-bolder">
+                                            {{ __('Forgot password ?') }}</a>
+                                    @endif
+                                </div>
+                                <x-metronic.input type="password" name="password"
+                                    class="form-control form-control-lg form-control-solid"
+                                    placeholder="Enter your password" autocomplete="off"></x-metronic.input>
+                            </div>
+                            <div class="fv-row mb-10">
+                                <div class="d-flex flex-stack mb-2">
+                                    <div class="mb-3">
+                                        <div class="form-check">
+                                            <input id="remember_me" type="checkbox" class="form-check-input"
+                                                name="remember">
+                                            <x-metronic.label for="remember_me"
+                                                class="form-check-label">{{ __('Remember me') }}</x-metronic.label>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                    <!--end::Input group-->
+                            <div class="text-center">
+                                <x-metronic.button type="submit" class="primary btn-lg w-100 mb-5 rounded-1">
+                                    <span class="indicator-label"> {{ __('Sign In') }}</span>
+                                </x-metronic.button>
 
-                    <!--begin::Actions-->
-                    <div class="text-center">
-                        <!--begin::Submit button-->
-                        <x-metronic.button type="submit" class="primary btn-lg w-100 mb-5">
-                            <span class="indicator-label"> {{ __('Continue') }}</span>
-                        </x-metronic.button>
-                        <!--end::Submit button-->
-                        <!--begin::Separator-->
-                        <div class="text-center text-muted text-uppercase fw-bolder mb-5">or</div>
-                        <!--end::Separator-->
-                        <!--begin::Google link-->
-                        <a href="#" class="btn btn-flex flex-center btn-light btn-lg w-100 mb-5">
-                            <img alt="Logo" src="{{ asset('admin/assets/media/svg/brand-logos/google-icon.svg') }}"
-                                class="h-20px me-3" />Continue with Google</a>
-                        <!--end::Google link-->
-                        <!--begin::Google link-->
-                        <a href="#" class="btn btn-flex flex-center btn-light btn-lg w-100 mb-5">
-                            <img alt="Logo" src="{{ asset('admin/assets/media/svg/brand-logos/facebook-4.svg') }}"
-                                class="h-20px me-3" />Continue with Facebook</a>
-                        <!--end::Google link-->
-                        <!--begin::Google link-->
-                        <a href="#" class="btn btn-flex flex-center btn-light btn-lg w-100">
-                            <img alt="Logo" src="{{ asset('admin/assets/media/svg/brand-logos/apple-black.svg') }}"
-                                class="h-20px me-3" />Continue with Apple</a>
-                        <!--end::Google link-->
+                            </div>
+                        </form>
                     </div>
-                    <!--end::Actions-->
-                </form>
-                <!--end::Form-->
+                </div>
+
             </div>
-            <!--end::Wrapper-->
         </div>
-        <!--end::Content-->
-        <!--begin::Footer-->
-        <div class="d-flex flex-center flex-column-auto p-10">
-            <!--begin::Links-->
-            <div class="d-flex align-items-center fw-bold fs-6">
-                <a href="https://keenthemes.com" class="text-muted text-hover-primary px-2">About</a>
-                <a href="mailto:support@keenthemes.com" class="text-muted text-hover-primary px-2">Contact</a>
-                <a href="https://1.envato.market/EA4JP" class="text-muted text-hover-primary px-2">Contact Us</a>
-            </div>
-            <!--end::Links-->
-        </div>
-        <!--end::Footer-->
     </div>
-    <!--end::Authentication - Sign-in-->
+
 </x-admin-guest-layout>

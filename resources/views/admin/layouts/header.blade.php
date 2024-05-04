@@ -433,7 +433,7 @@
                                     <div class="fw-bolder d-flex align-items-center fs-5">
                                         {{ Auth::guard('admin')->user()->name }}
                                     </div>
-                                    <a href="#" class="fw-bold text-muted text-hover-primary fs-7">
+                                    <a href="#" class="fw-bold text-muted text-hover-primary fs-7" style="overflow-wrap: anywhere;">
                                         {{ Auth::guard('admin')->user()->email }}
                                     </a>
                                 </div>

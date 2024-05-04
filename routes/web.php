@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\AdminProfileController;
+use App\Http\Controllers\Frontend\HomeController;
 use App\Http\Controllers\VendorProfileController;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
@@ -37,5 +38,9 @@ Route::middleware(['localeSessionRedirect', 'localizationRedirect', 'localeViewP
     Route::delete('/profile', [AdminProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+
 require __DIR__ . '/auth.php';
 require __DIR__ . '/admin.php';
+
+// Frontend Routes
+Route::get('/', [HomeController::class, 'homePage'])->name('homePage');
