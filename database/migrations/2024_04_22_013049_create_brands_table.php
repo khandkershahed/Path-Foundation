@@ -15,7 +15,6 @@ return new class extends Migration
             $table->id();
             $table->string('name', 30)->unique();
             $table->string('slug', 40)->unique();
-            // $table->string('logo', 100)->nullable()->comment('Image Dimension: 100 x 70');
             $table->string('url', 255)->nullable();
             $table->boolean('status')->default(0)->comment('0 for inactive, 1 for active');
             $table->timestamps();

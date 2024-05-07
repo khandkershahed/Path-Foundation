@@ -18,9 +18,9 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -43,4 +43,14 @@ require __DIR__ . '/auth.php';
 require __DIR__ . '/admin.php';
 
 // Frontend Routes
-Route::get('/', [HomeController::class, 'homePage'])->name('homePage');
+Route::get('/', [HomeController::class, 'index'])->name('homepage');
+//Learn More
+Route::get('/learn-more', [HomeController::class, 'LearnMore'])->name('learn.more');
+//What We Do
+Route::get('/what-we-do', [HomeController::class, 'whatWeDo'])->name('whatwedo');
+/// Product Search Route
+Route::post('/search', [HomeController::class, 'courseSearch'])->name('course.search');
+// Advance Search Routes
+Route::post('global-search', [HomeController::class, 'globalSearch'])->name('global.search');
+
+require __DIR__ . '/frontend.php';

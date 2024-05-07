@@ -38,6 +38,13 @@ use App\Http\Controllers\Admin\Auth\ConfirmablePasswordController;
 use App\Http\Controllers\Admin\Auth\AuthenticatedSessionController;
 use App\Http\Controllers\Admin\Auth\EmailVerificationPromptController;
 use App\Http\Controllers\Admin\Auth\EmailVerificationNotificationController;
+use App\Http\Controllers\Admin\FeatureController;
+use App\Http\Controllers\Admin\HomepageController;
+use App\Http\Controllers\Admin\LearnMoreController;
+use App\Http\Controllers\Admin\NewsTrendController;
+use App\Http\Controllers\Admin\RowController;
+use App\Http\Controllers\Admin\SuccessController;
+use App\Http\Controllers\Admin\WhatWeDoPageController;
 
 // Route::get('/', function () {
 //     return redirect()->route('admin.dashboard');
@@ -114,6 +121,13 @@ Route::middleware(['localeSessionRedirect', 'localizationRedirect', 'localeViewP
             'newsletters'     => NewsletterController::class,
             'brands'          => BrandController::class, //done
             'contacts'        => ContactController::class,
+            'feature'         => FeatureController::class,
+            'row'             => RowController::class,
+            'news-trend'      => NewsTrendController::class,
+            'homepage'        => HomepageController::class,
+            'whatwedo'        => WhatWeDoPageController::class,
+            'learnmore'       => LearnMoreController::class,
+            'success'         => SuccessController::class,
         ],
     );
 

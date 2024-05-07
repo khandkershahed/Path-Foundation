@@ -104,6 +104,7 @@
     <!--begin::Page Vendors Javascript(used by this page)-->
     <script src="{{ asset($hostUrl . 'plugins/custom/fullcalendar/fullcalendar.bundle.js') }}"></script>
     <script src="{{ asset($hostUrl . 'plugins/custom/datatables/datatables.bundle.js') }}"></script>
+    <script src="{{ asset($hostUrl . 'plugins/custom/tinymce/tinymce.bundle.js') }}"></script>
     <script src="https://cdn.datatables.net/1.11.4/js/dataTables.bootstrap5.min.js"></script>
     <script src="{{ asset($hostUrl . 'plugins/custom/formrepeater/formrepeater.bundle.js') }}"></script>
 
@@ -116,13 +117,24 @@
     <script src="{{ asset($hostUrl . 'js/widgets.bundle.js') }}"></script>
     <script src="{{ asset($hostUrl . 'js/custom/widgets.js') }}"></script>
     <script src="{{ asset($hostUrl . 'js/custom/apps/chat/chat.js') }}"></script>
+    <script src="{{ asset($hostUrl . 'js/custom/documentation/editors/tinymce/plugins.js') }}"></script>
+    <script src="https://cdn.tiny.cloud/1/n4jpbhtanca801bcjejx1pc9j033yn0de5ral6e7r0wd6383/tinymce/6/tinymce.min.js"
+    referrerpolicy="origin"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     {{-- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> --}}
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js" async></script>
 
     <script src="{{ asset('admin/js/custom.js') }}"></script>
+    {!! Toastr::message() !!}
     @include('toastr')
     @stack('scripts')
+    <script>
+        tinymce.init({
+            selector: 'textarea.kt_docs_tinymce_plugins',
+            plugins: 'anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount',
+            toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table | align lineheight | numlist bullist indent outdent | emoticons charmap | removeformat',
+        });
+    </script>
     <!--end::Page Custom Javascript-->
     <!--end::Javascript-->
 
