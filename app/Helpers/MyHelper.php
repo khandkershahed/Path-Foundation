@@ -2,6 +2,7 @@
 
 use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Facades\Storage;
+use Intervention\Image\Laravel\Facades\Image;
 
 if (!function_exists('handaleFileUpload')) {
     function handaleFileUpload(UploadedFile $file, $folder = 'default')
@@ -54,7 +55,7 @@ if (!function_exists('customUpload')) {
                 }
             }
 
-            $img = Image::make($mainFile);
+            $img = Image::read($mainFile);
             $img->save("$uploadPath/$fileName");
             if ($reqWidth !== null && $reqHeight !== null) {
                 $img->resize($reqWidth, $reqHeight, function ($constraint) {
