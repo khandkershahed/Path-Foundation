@@ -146,9 +146,9 @@
     <!---------End -------->
 </section>
 <!--======// Business section //======-->
-@if (!empty($features) && array_filter($features))
-    <section class="">
-        <div class="container">
+<section class="">
+    <div class="container">
+        @if (!empty($features) && array_filter($features))
             <!-- home title -->
             <div class="row">
                 @if (!empty(optional($home)->header1))
@@ -170,11 +170,13 @@
                                         <img class="img-fluid" height="85px"
                                             src="{{ !empty($feature->logo) && file_exists(public_path('storage/' . $feature->logo)) ? asset('storage/' . $feature->logo) : asset('frontend/images/service-no-img.png') }}"
                                             alt="NGEN IT">
-                                        <h5 class="business_services pt-2">{{ Str::words($feature->badge, 10, $end = '') }}
+                                        <h5 class="business_services pt-2">
+                                            {{ Str::words($feature->badge, 10, $end = '') }}
                                         </h5>
                                     </div>
                                     <div class="feature_description">
-                                        <p class="feature_descrip">{{ Str::words($feature->header, 12, $end = '') }}</p>
+                                        <p class="feature_descrip">{{ Str::words($feature->header, 12, $end = '') }}
+                                        </p>
                                     </div>
                                     <a href="{{ route('feature.details', $feature->id) }}"
                                         class="business_item_button pt-3">
@@ -236,9 +238,9 @@
                     <a class="btn-color" href="{{ route('learn.more') }}">Learn More</a>
                 </div>
             @endif
-        </div>
-    </section>
-@endif
+        @endif
+    </div>
+</section>
 
 <!---------End -------->
 <!--=======// Shop product //======-->
