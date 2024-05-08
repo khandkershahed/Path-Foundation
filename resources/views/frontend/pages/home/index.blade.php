@@ -8,7 +8,7 @@
 @endsection
 <section class="">
     <!--======// Banner Section //======-->
-    @if (!empty(optional($home)->branner1) && !empty(optional($home)->branner2) && !empty(optional($home)->branner3))
+    @if (!empty(optional($home)->branner1) || !empty(optional($home)->branner2) || !empty(optional($home)->branner3))
         <section>
             <div class="Advance-Slider">
                 <!-- Item -->
