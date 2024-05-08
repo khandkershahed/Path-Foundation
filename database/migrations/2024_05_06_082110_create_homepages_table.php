@@ -13,23 +13,23 @@ return new class extends Migration
     {
         Schema::create('homepages', function (Blueprint $table) {
             $table->id();
-            $table->string('branner1');
+            $table->string('branner1')->nullable();
             $table->string('banner1_title')->nullable();
             $table->text('banner1_short_description')->nullable();
             $table->string('banner1_button_name')->nullable();
             $table->string('banner1_button_link')->nullable();
-            $table->string('branner2');
+            $table->string('branner2')->nullable();
             $table->string('banner2_title')->nullable();
             $table->text('banner2_short_description')->nullable();
             $table->string('banner2_button_name')->nullable();
             $table->string('banner2_button_link')->nullable();
-            $table->string('branner3');
+            $table->string('branner3')->nullable();
             $table->string('banner3_title')->nullable();
             $table->text('banner3_short_description')->nullable();
             $table->string('banner3_button_name')->nullable();
             $table->string('banner3_button_link')->nullable();
-            $table->text('header1');
-            $table->text('header2');
+            $table->text('header1')->nullable();
+            $table->text('header2')->nullable();
             $table->string('btn1_title')->nullable();
             $table->string('btn1_name')->nullable();
             $table->string('btn1_link')->nullable();

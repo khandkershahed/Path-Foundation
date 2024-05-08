@@ -84,7 +84,7 @@
                                     <div class="input-group">
                                         <input name="banner1_title" maxlength="255" type="text"
                                             class="form-control form-control-sm" placeholder="Enter Banner Title One"
-                                            required>
+                                            >
                                     </div>
                                 </div>
                                 {{--  --}}
@@ -95,7 +95,7 @@
                                     <div class="input-group">
                                         <input name="banner1_short_description" type="text"
                                             class="form-control form-control-sm"
-                                            placeholder="Enter Banner One ShortDescription" required>
+                                            placeholder="Enter Banner One ShortDescription" >
                                     </div>
                                 </div>
                                 {{--  --}}
@@ -106,7 +106,7 @@
                                     <div class="input-group">
                                         <input name="banner1_button_name" type="text" maxlength="255"
                                             class="form-control form-control-sm"
-                                            placeholder="Enter Banner One Button Name" required>
+                                            placeholder="Enter Banner One Button Name" >
                                     </div>
                                 </div>
                                 {{--  --}}
@@ -117,7 +117,7 @@
                                     <div class="input-group">
                                         <input name="banner1_button_link" maxlength="255" type="url"
                                             class="form-control form-control-sm"
-                                            placeholder="Enter Banner One Button Name" required>
+                                            placeholder="Enter Banner One Button Name" >
                                     </div>
                                 </div>
                                 {{--  --}}
@@ -154,7 +154,7 @@
                                     <div class="input-group">
                                         <input name="banner2_title" maxlength="255" type="text"
                                             class="form-control form-control-sm" placeholder="Enter Banner Title Two"
-                                            required>
+                                            >
                                     </div>
                                 </div>
                                 {{--  --}}
@@ -165,7 +165,7 @@
                                     <div class="input-group">
                                         <input name="banner2_short_description" type="text"
                                             class="form-control form-control-sm"
-                                            placeholder="Enter Banner Two ShortDescription" required>
+                                            placeholder="Enter Banner Two ShortDescription" >
                                     </div>
                                 </div>
                                 {{--  --}}
@@ -176,7 +176,7 @@
                                     <div class="input-group">
                                         <input name="banner2_button_name" type="text" maxlength="255"
                                             class="form-control form-control-sm"
-                                            placeholder="Enter Banner Two Button Name" required>
+                                            placeholder="Enter Banner Two Button Name" >
                                     </div>
                                 </div>
                                 {{--  --}}
@@ -187,7 +187,7 @@
                                     <div class="input-group">
                                         <input name="banner2_button_link" maxlength="255" type="url"
                                             class="form-control form-control-sm"
-                                            placeholder="Enter Banner Two Button Name" required>
+                                            placeholder="Enter Banner Two Button Name" >
                                     </div>
                                 </div>
                                 {{--  --}}
@@ -224,7 +224,7 @@
                                     <div class="input-group">
                                         <input name="banner3_title" maxlength="255" type="text"
                                             class="form-control form-control-sm"
-                                            placeholder="Enter Banner Title Three" required>
+                                            placeholder="Enter Banner Title Three" >
                                     </div>
                                 </div>
                                 {{--  --}}
@@ -235,7 +235,7 @@
                                     <div class="input-group">
                                         <input name="banner3_short_description" type="text"
                                             class="form-control form-control-sm"
-                                            placeholder="Enter Banner Three ShortDescription" required>
+                                            placeholder="Enter Banner Three ShortDescription" >
                                     </div>
                                 </div>
                                 {{--  --}}
@@ -246,7 +246,7 @@
                                     <div class="input-group">
                                         <input name="banner3_button_name" type="text" maxlength="255"
                                             class="form-control form-control-sm"
-                                            placeholder="Enter Banner Three Button Name" required>
+                                            placeholder="Enter Banner Three Button Name" >
                                     </div>
                                 </div>
                                 {{--  --}}
@@ -257,7 +257,7 @@
                                     <div class="input-group">
                                         <input name="banner3_button_link" maxlength="255" type="url"
                                             class="form-control form-control-sm"
-                                            placeholder="Enter Banner Three Button Name" required>
+                                            placeholder="Enter Banner Three Button Name" >
                                     </div>
                                 </div>
                                 {{--  --}}
@@ -272,7 +272,7 @@
                                     <div class="input-group">
                                         <input name="btn1_title" maxlength="255" type="text"
                                             class="form-control form-control-sm" placeholder="Enter Button One Title"
-                                            required>
+                                            >
                                     </div>
                                 </div>
                                 <div class="d-flex align-items-center pt-8">
@@ -282,7 +282,7 @@
                                     <div class="input-group">
                                         <input name="btn1_name" maxlength="255" type="text"
                                             class="form-control form-control-sm" placeholder="Enter Button One Name"
-                                            required>
+                                            >
                                     </div>
                                 </div>
                                 {{--  --}}
@@ -293,7 +293,7 @@
                                     <div class="input-group">
                                         <input name="btn1_link" maxlength="255" type="url"
                                             class="form-control form-control-sm" placeholder="Enter Button One Link"
-                                            required>
+                                            >
                                     </div>
                                 </div>
                                 {{--  --}}
@@ -311,7 +311,7 @@
                                     <div class="input-group">
                                         <input name="btn2_title" maxlength="255" type="text"
                                             class="form-control form-control-sm" placeholder="Enter Button Two Title"
-                                            required>
+                                            >
                                     </div>
                                 </div>
                                 <div class="d-flex align-items-center pt-8">
@@ -321,7 +321,7 @@
                                     <div class="input-group">
                                         <input name="btn2_name" maxlength="255" type="text"
                                             class="form-control form-control-sm" placeholder="Enter Button Two Name"
-                                            required>
+                                            >
                                     </div>
                                 </div>
                                 {{--  --}}
@@ -332,7 +332,7 @@
                                     <div class="input-group">
                                         <input name="btn2_link" maxlength="255" type="url"
                                             class="form-control form-control-sm" placeholder="Enter Button Two Link"
-                                            required>
+                                            >
                                     </div>
                                 </div>
                             </div>
@@ -342,13 +342,13 @@
                                     <div class="form-group col-lg-12 col-md-6 col-sm-12">
                                         <label>Header 1 <span class="text-danger">*</span></label>
                                         <input type="text" name="header1" class="form-control form-control-sm"
-                                            placeholder="Write Something..." required>
+                                            placeholder="Write Something..." >
                                     </div>
 
                                     <div class="form-group col-lg-12 col-md-6 col-sm-12 pt-6">
                                         <label>Header 2 <span class="text-danger">*</span></label>
                                         <input type="text" name="header2" class="form-control form-control-sm"
-                                            placeholder="Write Something..." required>
+                                            placeholder="Write Something..." >
                                     </div>
                                 </div>
                             <div class="px-2 py-2 rounded bg-light mb-2">

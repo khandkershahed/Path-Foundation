@@ -54,11 +54,11 @@ class HomepageController extends Controller
             $request->all(),
             [
 
-                'branner1' => 'required|image|mimes:png,jpg,jpeg|max:5000',
-                'branner2' => 'required|image|mimes:png,jpg,jpeg|max:5000',
-                'branner3' => 'required|image|mimes:png,jpg,jpeg|max:5000',
-                'header1'  => 'required|max:400',
-                'header2'  => 'required|max:400',
+                'branner1' => 'image|mimes:png,jpg,jpeg|max:5000',
+                'branner2' => 'image|mimes:png,jpg,jpeg|max:5000',
+                'branner3' => 'image|mimes:png,jpg,jpeg|max:5000',
+                'header1'  => 'max:400',
+                'header2'  => 'max:400',
 
             ]
 
@@ -178,22 +178,22 @@ class HomepageController extends Controller
             $validator =
                 [
                     [
-                        'branner1' => 'required|image|mimes:png,jpg,jpeg|max:5000',
-                        'branner2' => 'required|image|mimes:png,jpg,jpeg|max:5000',
-                        'branner3' => 'required|image|mimes:png,jpg,jpeg|max:5000',
-                        'header1'  => 'required|max:400',
-                        'header2'  => 'required|max:400',
+                        'branner1' => 'image|mimes:png,jpg,jpeg|max:5000',
+                        'branner2' => 'image|mimes:png,jpg,jpeg|max:5000',
+                        'branner3' => 'image|mimes:png,jpg,jpeg|max:5000',
+                        'header1'  => 'max:400',
+                        'header2'  => 'max:400',
                     ]
                 ];
         } else {
             $validator =
                 [
                     [
-                        'branner1' => 'required|image|mimes:png,jpg,jpeg|max:5000',
-                        'branner2' => 'required|image|mimes:png,jpg,jpeg|max:5000',
-                        'branner3' => 'required|image|mimes:png,jpg,jpeg|max:5000',
-                        'header1'  => 'required|max:400',
-                        'header2'  => 'required|max:400',
+                        'branner1' => 'image|mimes:png,jpg,jpeg|max:5000',
+                        'branner2' => 'image|mimes:png,jpg,jpeg|max:5000',
+                        'branner3' => 'image|mimes:png,jpg,jpeg|max:5000',
+                        'header1'  => 'max:400',
+                        'header2'  => 'max:400',
                     ]
                 ];
         }
