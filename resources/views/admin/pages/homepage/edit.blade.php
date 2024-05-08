@@ -360,15 +360,13 @@
                                     <div class="form-group col-lg-12 col-md-6 col-sm-12">
                                         <label>Header 1 <span class="text-danger">*</span></label>
                                         <input type="text" name="header1" class="form-control form-control-sm"
-                                            placeholder="Write Something..." value="{{ $homePage->header1 }}"
-                                            required>
+                                            placeholder="Write Something..." value="{{ $homePage->header1 }}">
                                     </div>
 
                                     <div class="form-group col-lg-12 col-md-6 col-sm-12">
                                         <label>Header 2 <span class="text-danger">*</span></label>
                                         <input type="text" name="header2" class="form-control form-control-sm"
-                                            placeholder="Write Something..." value="{{ $homePage->header2 }}"
-                                            required>
+                                            placeholder="Write Something..." value="{{ $homePage->header2 }}">
                                     </div>
 
                                 </div>
@@ -555,7 +553,7 @@
                             <div class="px-2 py-2 rounded bg-light row align-items-center mt-1">
                                 <div class="col-lg-4 pt-1">
                                     <label
-                                        class="col-form-label label_style col-lg-2 p-0 text-start text-black label_style">Client
+                                        class="col-form-label label_style col-lg-12 p-0 text-start text-black label_style">Client
                                         Success One</label>
                                     <div class="input-group">
                                         <select name="success1_id" class="form-control form-control-sm select"
@@ -572,7 +570,7 @@
                                 </div>
                                 <div class="col-lg-4 pt-1">
                                     <label
-                                        class="col-form-label label_style col-lg-2 p-0 text-start text-black label_style">Client
+                                        class="col-form-label label_style col-lg-12 p-0 text-start text-black label_style">Client
                                         Success Two</label>
                                     <div class="input-group">
                                         <select name="success2_id" class="form-control form-control-sm select"
@@ -589,7 +587,7 @@
                                 </div>
                                 <div class="col-lg-4 pt-1">
                                     <label
-                                        class="col-form-label label_style col-lg-2 p-0 text-start text-black label_style">Client
+                                        class="col-form-label label_style col-lg-12 p-0 text-start text-black label_style">Client
                                         Success Three</label>
                                     <div class="input-group">
                                         <select name="success3_id" class="form-control form-control-sm select"
