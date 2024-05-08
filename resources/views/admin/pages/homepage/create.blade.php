@@ -359,7 +359,6 @@
                                     <div class="input-group">
                                         <select name="story1_id" value="{{old('story1_id')}}" class="form-select" data-control="select2" data-placeholder="Select an option"
                                             id="select1" placeholder="Choose iTEM">
-                                            <option>Choose Features One</option>
                                             @foreach ($client_experiences as $item)
                                                 <option class="col-8" value="{{ $item->id }}">
                                                     {{ $item->title }}
@@ -376,7 +375,6 @@
                                     <div class="input-group">
                                         <select name="story2_id" value="{{old('story2_id')}}" class="form-select" data-control="select2" data-placeholder="Select an option"
                                             id="select2">
-                                            <option>Choose Features Two</option>
                                             @foreach ($client_experiences as $item)
                                                 <option class="col-8" value="{{ $item->id }}">
                                                     {{ $item->title }}
@@ -393,7 +391,6 @@
                                     <div class="input-group">
                                         <select name="story3_id" value="{{old('story3_id')}}" class="form-select" data-control="select2" data-placeholder="Select an option"
                                             id="select3">
-                                            <option>Choose Features Three</option>
                                             @foreach ($client_experiences as $item)
                                                 <option class="col-8" value="{{ $item->id }}">
                                                     {{ $item->title }}
@@ -410,7 +407,6 @@
                                     <div class="input-group">
                                         <select name="story4_id" value="{{old('story4_id')}}" class="form-select" data-control="select2" data-placeholder="Select an option"
                                             id="select4">
-                                            <option>Choose Features Four</option>
                                             @foreach ($client_experiences as $item)
                                                 <option class="col-8" value="{{ $item->id }}">
                                                     {{ $item->title }}
@@ -427,7 +423,6 @@
                                     <div class="input-group">
                                         <select name="story5_id" value="{{old('story5_id')}}" class="form-select" data-control="select2" data-placeholder="Select an option"
                                             id="select5">
-                                            <option>Choose Features Five</option>
                                             @foreach ($client_experiences as $item)
                                                 <option class="col-8" value="{{ $item->id }}">
                                                     {{ $item->title }}
@@ -446,7 +441,6 @@
                                     <div class="input-group">
                                         <select name="solution1_id" value="{{old('solution1_id')}}" class="form-select" data-control="select2" data-placeholder="Select an option"
                                             id="select">
-                                            <option>Choose Client Story One</option>
                                             @foreach ($storys as $item)
                                                 <option class="col-8" value="{{ $item->id }}">
                                                     {{ $item->badge }}
@@ -463,7 +457,6 @@
                                     <div class="input-group">
                                         <select name="solution2_id" value="{{old('solution2_id')}}" class="form-select" data-control="select2" data-placeholder="Select an option"
                                             id="select7">
-                                            <option>Choose Client Story Two</option>
                                             @foreach ($storys as $item)
                                                 <option class="col-8" value="{{ $item->id }}">
                                                     {{ $item->badge }}
@@ -480,7 +473,6 @@
                                     <div class="input-group">
                                         <select name="solution3_id" value="{{old('solution3_id')}}" class="form-select" data-control="select2" data-placeholder="Select an option"
                                             id="select8">
-                                            <option>Choose Client Story Three</option>
                                             @foreach ($storys as $item)
                                                 <option class="col-8" value="{{ $item->id }}">
                                                     {{ $item->badge }}
@@ -497,7 +489,6 @@
                                     <div class="input-group">
                                         <select name="solution4_id" value="{{old('solution4_id')}}" class="form-select" data-control="select2" data-placeholder="Select an option"
                                             id="select9">
-                                            <option>Choose Client Story Four</option>
                                             @foreach ($storys as $item)
                                                 <option class="col-8" value="{{ $item->id }}">
                                                     {{ $item->badge }}
@@ -516,7 +507,6 @@
                                         Tech Glossy</label>
                                     <div class="input-group">
                                         <select name="techglossy_id" value="{{old('techglossy_id')}}" class="form-select" data-control="select2" data-placeholder="Select an option">
-                                            <option>Choose Sigle Tech Glossy</option>
                                             @foreach ($techglossys as $item)
                                                 <option class="form-control" value="{{ $item->id }}">
                                                     {{ $item->badge }}
@@ -536,7 +526,6 @@
                                     <div class="input-group">
                                         <select name="success1_id" value="{{old('success1_id')}}" class="form-select" data-control="select2" data-placeholder="Select an option"
                                             id="select10">
-                                            <option>Choose Client Success One</option>
                                             @foreach ($techglossys as $item)
                                                 <option class="form-control" value="{{ $item->id }}">
                                                     {{ $item->badge }}
@@ -552,7 +541,6 @@
                                     <div class="input-group">
                                         <select name="success2_id" value="{{old('success2_id')}}" class="form-select" data-control="select2" data-placeholder="Select an option"
                                             id="select11">
-                                            <option>Choose Client Success Two</option>
                                             @foreach ($techglossys as $item)
                                                 <option class="form-control" value="{{ $item->id }}">
                                                     {{ $item->badge }}
@@ -568,7 +556,6 @@
                                     <div class="input-group">
                                         <select name="success3_id" value="{{old('success3_id')}}" class="form-select" data-control="select2" data-placeholder="Select an option"
                                             id="select12">
-                                            <option>Choose Client Success Three</option>
                                             @foreach ($techglossys as $item)
                                                 <option class="form-control" value="{{ $item->id }}">
                                                     {{ $item->badge }}
