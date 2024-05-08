@@ -16,7 +16,7 @@
                             <rect x="6.01041" y="10.9247" width="12" height="2" rx="1"
                                 fill="currentColor" />
                         </svg>
-                    </span>  Create
+                    </span> Create
                 </a>
             </div>
         </div>
@@ -29,12 +29,15 @@
                         <th class="text-right">Action</th>
                     </tr>
                 </thead>
+                @php
+                    $words = ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine'];
+                @endphp
                 <tbody class="fw-bold text-gray-600">
                     @if (count($homes) > 0)
                         @foreach ($homes as $key => $home)
                             <tr>
                                 <td>{{ $home->id }}</td>
-                                <td>{{ isset($words[$key]) ? 'Tamplate' . ' ' . Str::ucfirst($words[$key]) : 'Number out of range' }}
+                                <td>{{ isset($words[$key]) ? 'Template' . ' ' . Str::ucfirst($words[$key]) : 'Number out of range' }}
                                 </td>
                                 <td class="text-center">
                                     {{-- <a href="{{ route('homepage.show', $home->id) }}" class="text-info">

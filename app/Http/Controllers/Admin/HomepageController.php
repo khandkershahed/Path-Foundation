@@ -22,7 +22,7 @@ class HomepageController extends Controller
      */
     public function index()
     {
-        $data['homes'] = Homepage::orderBy('id', 'DESC')->select('id')->get();
+        $data['homes'] = Homepage::orderBy('id', 'DESC')->get(['id']);
         return view('admin.pages.homepage.index', $data);
     }
 

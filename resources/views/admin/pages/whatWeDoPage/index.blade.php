@@ -38,7 +38,7 @@
                         @foreach ($whatWeDoPages as $key => $whatWeDoPage)
                             <tr>
                                 <td class="text-center">{{ $loop->iteration }}</td>
-                                <td>{{ isset($words[$key]) ? Str::ucfirst($words[$key]) . ' ' . 'Tamplate' : 'Number out of range' }}
+                                <td>{{ isset($words[$key]) ? Str::ucfirst($words[$key]) . ' ' . 'Template' : 'Number out of range' }}
                                 </td>
                                 <td>
                                     <a href="{{ route('what-we-do-page.edit', [$whatWeDoPage->id]) }}"
