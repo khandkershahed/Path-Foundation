@@ -5,7 +5,7 @@
                 style="background-color:  #f5f5f5;">
                 <div class="d-flex flex-column position-xl-fixed top-0 bottom-0 w-xl-600px">
                     <div class="d-flex flex-row-fluid flex-column text-center p-10 pt-lg-20">
-                        <a href="{{ route('homePage') }}" class="py-9 mb-5">
+                        <a href="{{ route('homepage') }}" class="py-9 mb-5">
                             <img alt="Logo"
                                 src="{{ !empty($site->site_logo) && file_exists(public_path('storage/settings/' . $site->site_logo)) ? asset('storage/settings/' . $site->site_logo) : asset('images/no-logo(217-55).jpg') }}"
                                 class="h-60px" />
