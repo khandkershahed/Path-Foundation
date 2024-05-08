@@ -392,7 +392,7 @@
                                         class="col-form-label label_style col-lg-2 p-0 text-start text-black label_style">Feature
                                         Two</label>
                                     <div class="input-group" style="width: 275px;">
-                                        <select name="story2_id" class="form-control form-control-sm select"
+                                        <select name="story2_id" class="form-select form-select-solid" data-control="select2"
                                             data-allow-clear="true" id="select2" data-placeholder="Select Feature">
                                             @foreach ($client_experiences as $item)
                                                 <option value="{{ $item->id }}"
@@ -409,7 +409,7 @@
                                         class="col-form-label label_style col-lg-2 p-0 text-start text-black label_style">Feature
                                         Three</label>
                                     <div class="input-group" style="width: 275px;">
-                                        <select name="story3_id" class="form-control form-control-sm select"
+                                        <select name="story3_id" class="form-select form-select-solid" data-control="select2"
                                             data-allow-clear="true" id="select3" data-placeholder="Select Feature">
                                             @foreach ($client_experiences as $item)
                                                 <option value="{{ $item->id }}"
@@ -425,7 +425,7 @@
                                         class="col-form-label label_style col-lg-2 p-0 text-start text-black label_style">Feature
                                         Four</label>
                                     <div class="input-group" style="width: 275px;">
-                                        <select name="story4_id" class="form-control form-control-sm select"
+                                        <select name="story4_id" class="form-select form-select-solid" data-control="select2"
                                             data-allow-clear="true" id="select4" data-placeholder="Select Feature">
                                             @foreach ($client_experiences as $item)
                                                 <option value="{{ $item->id }}"
@@ -441,7 +441,7 @@
                                         class="col-form-label label_style col-lg-2 p-0 text-start text-black label_style">Feature
                                         Five</label>
                                     <div class="input-group" style="width: 275px;">
-                                        <select name="story5_id" class="form-control form-control-sm select"
+                                        <select name="story5_id" class="form-select form-select-solid" data-control="select2"
                                             data-allow-clear="true" id="select5" data-placeholder="Select Feature">
                                             @foreach ($client_experiences as $item)
                                                 <option value="{{ $item->id }}"
@@ -459,7 +459,7 @@
                                         class="col-form-label label_style col-lg-2 p-0 text-start text-black label_style">Client
                                         Story One</label>
                                     <div class="input-group">
-                                        <select name="solution1_id" class="form-control form-control-sm select"
+                                        <select name="solution1_id" class="form-select form-select-solid" data-control="select2"
                                             data-allow-clear="true" data-placeholder="Select Client Story">
                                             <option value="" selected disabled>Select Client Story</option>
                                             @foreach ($storys as $item)
@@ -476,7 +476,7 @@
                                         class="col-form-label label_style col-lg-2 p-0 text-start text-black label_style">Client
                                         Story Two</label>
                                     <div class="input-group">
-                                        <select name="solution2_id" class="form-control form-control-sm select"
+                                        <select name="solution2_id" class="form-select form-select-solid" data-control="select2"
                                             data-allow-clear="true" data-placeholder="Select Client Story"
                                             id="select7">
                                             <option value="" selected disabled>Select Client Story</option>
@@ -495,7 +495,7 @@
                                         class="col-form-label label_style col-lg-2 p-0 text-start text-black label_style">Client
                                         Story Three</label>
                                     <div class="input-group">
-                                        <select name="solution3_id" class="form-control form-control-sm select"
+                                        <select name="solution3_id" class="form-select form-select-solid" data-control="select2"
                                             data-allow-clear="true" data-placeholder="Select Client Story"
                                             id="select8">
                                             <option value="" selected disabled>Select Client Story</option>
@@ -514,7 +514,7 @@
                                         class="col-form-label label_style col-lg-2 p-0 text-start text-black label_style">Client
                                         Story Four</label>
                                     <div class="input-group">
-                                        <select name="solution4_id" class="form-control form-control-sm select"
+                                        <select name="solution4_id" class="form-select form-select-solid" data-control="select2"
                                             data-allow-clear="true" data-placeholder="Select Client Story"
                                             id="select9">
                                             <option value="" selected disabled>Select Client Story</option>
@@ -536,7 +536,7 @@
                                         class="col-form-label label_style col-lg-2 p-0 text-start text-black label_style">Single
                                         Tech Glossy</label>
                                     <div class="input-group">
-                                        <select name="techglossy_id" class="form-control form-control-sm select"
+                                        <select name="techglossy_id" class="form-select form-select-solid" data-control="select2"
                                             data-allow-clear="true" data-placeholder="Select Tech Glossy"
                                             id="select6">
                                             @foreach ($techglossys as $item)
@@ -556,7 +556,7 @@
                                         class="col-form-label label_style col-lg-12 p-0 text-start text-black label_style">Client
                                         Success One</label>
                                     <div class="input-group">
-                                        <select name="success1_id" class="form-control form-control-sm select"
+                                        <select name="success1_id" class="form-select form-select-solid" data-control="select2"
                                             data-allow-clear="true" data-placeholder="Select Client Success"
                                             id="select10">
                                             @foreach ($successes as $item)
@@ -573,7 +573,7 @@
                                         class="col-form-label label_style col-lg-12 p-0 text-start text-black label_style">Client
                                         Success Two</label>
                                     <div class="input-group">
-                                        <select name="success2_id" class="form-control form-control-sm select"
+                                        <select name="success2_id" class="form-select form-select-solid" data-control="select2"
                                             data-allow-clear="true" data-placeholder="Select Client Success"
                                             id="select11">
                                             @foreach ($successes as $item)
@@ -590,7 +590,7 @@
                                         class="col-form-label label_style col-lg-12 p-0 text-start text-black label_style">Client
                                         Success Three</label>
                                     <div class="input-group">
-                                        <select name="success3_id" class="form-control form-control-sm select"
+                                        <select name="success3_id" class="form-select form-select-solid" data-control="select2"
                                             data-allow-clear="true" data-placeholder="Select Client Success">
                                             @foreach ($successes as $item)
                                                 <option value="{{ $item->id }}"
