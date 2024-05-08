@@ -146,7 +146,7 @@
     <!---------End -------->
 </section>
 <!--======// Business section //======-->
-@if (!empty($features))
+@if (!empty($features) && array_filter($features))
     <section class="">
         <div class="container">
             <!-- home title -->
@@ -321,7 +321,7 @@
 <!---------End -------->
 <!--=======// Client Story //======-->
 {{-- @if (!empty($story) | !empty($story2) | !empty($story3) | !empty($story4)) --}}
-@if (!empty($storys))
+@if (!empty($storys) && array_filter($storys))
     <section>
         <div class="container my-4 mb-5 d-lg-block d-sm-none">
             <h2 class="text-center"><span class="main_color">Storys</span></h2>
@@ -449,8 +449,7 @@
 <!---------End -------->
 <!---------Our Success Section-------->
 
-@if (!empty($successItems))
-{{-- @if (count($successItems) > 0) --}}
+@if (!empty($successItems) && array_filter($successItems))
     <section class="success_section">
         <div class="container my-4 pb-4 d-lg-block d-sm-none">
             <h2 class="text-center pb-5">Our Success <span class="main_color">Starts With</span> Our Culture.</h2>

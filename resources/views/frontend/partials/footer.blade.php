@@ -40,7 +40,7 @@
                             style="border-bottom: 5px solid #ae0a46;">Abo</span>ut & Contact</h6>
                     <!-- nav list -->
                     <div class="footer_nav_list pt-lg-4 pt-2">
-                        <ul class="footer_link_text">
+                        {{-- <ul class="footer_link_text">
                             <li>
                                 <a href="{{route('about')}}">Company</a> & <a
                                     href="{{ route('portfolio') }}">Portfolios</a>
@@ -56,7 +56,7 @@
                                 <a href="{{ route('contact') }}">Contact</a> & <a
                                     href="{{ route('support') }}">Supports</a>
                             </li>
-                        </ul>
+                        </ul> --}}
                     </div>
                 </div>
                 <div class="col-lg-2 col-md-2 col-6 footer_item_wrapper">
@@ -65,7 +65,7 @@
                             style="border-bottom: 5px solid #ae0a46;">Kno</span>wledge Base</h6>
                     <!-- nav list -->
                     <div class="footer_nav_list pt-lg-4 pt-2">
-                        <ul class="footer_link_text">
+                        {{-- <ul class="footer_link_text">
                             <li>
                                 <a href="{{ route('all.blog') }}">NGEN IT Blogs</a>
                             </li>
@@ -78,7 +78,7 @@
                             <li>
                                 <a href="{{ route('faq') }}">FAQs</a>
                             </li>
-                        </ul>
+                        </ul> --}}
                     </div>
                 </div>
                 <!-- item -->
@@ -88,7 +88,7 @@
                             style="border-bottom: 5px solid #ae0a46;">Pro</span>duct & Services</h6>
                     <!-- nav list -->
                     <div class="footer_nav_list pt-lg-4 pt-2">
-                        <ul class="footer_link_text">
+                        {{-- <ul class="footer_link_text">
                             <li>
                                 <a href="{{ route('software.common') }}">Software</a> & <a
                                     href="{{ route('hardware.common') }}">Hardware</a>
@@ -100,11 +100,7 @@
                             <li>
                                 <a href="javascript:void(0);">Training</a> & <a href="javascript:void(0);">Books</a>
                             </li>
-                            {{-- <li>
-                                <a href="{{ route('contact') }}">Support</a> & <a
-                                    href="{{ route('support') }}">Services</a>
-                            </li> --}}
-                        </ul>
+                        </ul> --}}
                     </div>
                 </div>
                 <!-- item -->
