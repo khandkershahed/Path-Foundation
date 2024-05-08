@@ -44,11 +44,11 @@
                                         <i class="icon-eye"></i>
                                     </a> --}}
                                     <a href="{{ route('admin.homepage.edit', $home->id) }}" class="text-primary">
-                                        <i class="icon-pencil"></i>
+                                        <i class="-pencil">edit</i>
                                     </a>
                                     <a href="{{ route('admin.homepage.destroy', [$home->id]) }}"
                                         class="text-danger delete mx-2">
-                                        <i class="delete icon-trash"></i>
+                                        <i class="delete icon-trash"></i>delete
                                     </a>
                                 </td>
                             </tr>
