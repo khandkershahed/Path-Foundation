@@ -12,7 +12,7 @@
     }
 </style>
 
-<section>
+{{-- <section>
     <div class="sidebar_rfq">
         <div style="position: fixed; top: 40%; z-index: 99; width: 50%;">
             <div class="container" style="background-color: white !important; background: url('https://i.ibb.co/t204YkF/Background-quote-tray.jpg') no-repeat center center / cover;">
@@ -86,7 +86,7 @@
             </div>
         </div>
     </div>
-</section>
+</section> --}}
 
 <section>
     <div class="">
@@ -110,7 +110,7 @@
                             @csrf
                             <div class="row mb-4">
                                 <div class="col-lg-9">
-                                    <label class="mb-2" for="product_name">Product Name <span
+                                    <label class="mb-2" for="product_name">Course Name <span
                                             class="text-danger">*</span></label>
                                     <input type="text" class="form-control" name="product_name" id="product_name"
                                         value="{{ old('product_name') }}" required>
