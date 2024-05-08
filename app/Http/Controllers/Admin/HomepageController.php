@@ -54,9 +54,9 @@ class HomepageController extends Controller
             $request->all(),
             [
 
-                'branner1' => 'image|mimes:png,jpg,jpeg|max:5000',
-                'branner2' => 'image|mimes:png,jpg,jpeg|max:5000',
-                'branner3' => 'image|mimes:png,jpg,jpeg|max:5000',
+                'branner1' => 'image|mimes:png,jpg,jpeg|max:6000',
+                'branner2' => 'image|mimes:png,jpg,jpeg|max:6000',
+                'branner3' => 'image|mimes:png,jpg,jpeg|max:6000',
                 'header1'  => 'max:400',
                 'header2'  => 'max:400',
 
@@ -132,7 +132,7 @@ class HomepageController extends Controller
                 Toastr::error($message, 'Failed', ['timeOut' => 30000]);
             }
         }
-        return redirect()->back();
+        return redirect()->back()->withInput();
     }
 
     /**

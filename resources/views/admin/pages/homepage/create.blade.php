@@ -62,7 +62,7 @@
                                         Image One</label>
                                     <div class="d-flex">
                                         <div class="" style="width: 70%">
-                                            <input name="branner1" id="image" accept="image/*" type="file"
+                                            <input name="branner1" value="{{old('branner1')}}" id="image" accept="image/*" type="file"
                                                 class="form-control form-control-sm"
                                                 placeholder="Enter Banner Image One">
                                         </div>
@@ -82,7 +82,7 @@
                                         class="col-form-label label_style col-lg-2 p-0 text-start text-black label_style">Banner
                                         Title One</label>
                                     <div class="input-group">
-                                        <input name="banner1_title" maxlength="255" type="text"
+                                        <input name="banner1_title" value="{{old('banner1_title')}}" maxlength="255" type="text"
                                             class="form-control form-control-sm" placeholder="Enter Banner Title One"
                                             >
                                     </div>
@@ -93,7 +93,7 @@
                                         class="col-form-label label_style col-lg-2 p-0 text-start text-black label_style">One
                                         ShortDescription</label>
                                     <div class="input-group">
-                                        <input name="banner1_short_description" type="text"
+                                        <input name="banner1_short_description" value="{{old('banner1_short_description')}}" type="text"
                                             class="form-control form-control-sm"
                                             placeholder="Enter Banner One ShortDescription" >
                                     </div>
@@ -104,7 +104,7 @@
                                         class="col-form-label label_style col-lg-2 p-0 text-start text-black label_style">Banner
                                         One Button Name</label>
                                     <div class="input-group">
-                                        <input name="banner1_button_name" type="text" maxlength="255"
+                                        <input name="banner1_button_name" value="{{old('banner1_button_name')}}" type="text" maxlength="255"
                                             class="form-control form-control-sm"
                                             placeholder="Enter Banner One Button Name" >
                                     </div>
@@ -115,7 +115,7 @@
                                         class="col-form-label label_style col-lg-2 p-0 text-start text-black label_style">Banner
                                         One Button Link</label>
                                     <div class="input-group">
-                                        <input name="banner1_button_link" maxlength="255" type="url"
+                                        <input name="banner1_button_link" value="{{old('banner1_button_link')}}" maxlength="255" type="url"
                                             class="form-control form-control-sm"
                                             placeholder="Enter Banner One Button Name" >
                                     </div>
@@ -132,7 +132,7 @@
                                         Image Two</label>
                                     <div class="d-flex">
                                         <div class="" style="width: 70%">
-                                            <input name="branner2" id="image" accept="image/*" type="file"
+                                            <input name="branner2" value="{{old('branner2')}}" id="image" accept="image/*" type="file"
                                                 class="form-control form-control-sm"
                                                 placeholder="Enter Banner Image Two">
                                         </div>
@@ -152,7 +152,7 @@
                                         class="col-form-label label_style col-lg-2 p-0 text-start text-black label_style">Banner
                                         Title Two</label>
                                     <div class="input-group">
-                                        <input name="banner2_title" maxlength="255" type="text"
+                                        <input name="banner2_title" value="{{old('banner2_title')}}" maxlength="255" type="text"
                                             class="form-control form-control-sm" placeholder="Enter Banner Title Two"
                                             >
                                     </div>
@@ -163,7 +163,7 @@
                                         class="col-form-label label_style col-lg-2 p-0 text-start text-black label_style">Two
                                         ShortDescription</label>
                                     <div class="input-group">
-                                        <input name="banner2_short_description" type="text"
+                                        <input name="banner2_short_description" value="{{old('banner2_short_description')}}" type="text"
                                             class="form-control form-control-sm"
                                             placeholder="Enter Banner Two ShortDescription" >
                                     </div>
@@ -174,7 +174,7 @@
                                         class="col-form-label label_style col-lg-2 p-0 text-start text-black label_style">Banner
                                         Two Button Name</label>
                                     <div class="input-group">
-                                        <input name="banner2_button_name" type="text" maxlength="255"
+                                        <input name="banner2_button_name" value="{{old('banner2_button_name')}}" type="text" maxlength="255"
                                             class="form-control form-control-sm"
                                             placeholder="Enter Banner Two Button Name" >
                                     </div>
@@ -185,7 +185,7 @@
                                         class="col-form-label label_style col-lg-2 p-0 text-start text-black label_style">Banner
                                         Two Button Link</label>
                                     <div class="input-group">
-                                        <input name="banner2_button_link" maxlength="255" type="url"
+                                        <input name="banner2_button_link" value="{{old('banner2_button_link')}}" maxlength="255" type="url"
                                             class="form-control form-control-sm"
                                             placeholder="Enter Banner Two Button Name" >
                                     </div>
@@ -202,7 +202,7 @@
                                         Image Three</label>
                                     <div class="d-flex">
                                         <div class="" style="width: 70%">
-                                            <input name="branner3" id="image" accept="image/*" type="file"
+                                            <input name="branner3" value="{{old('branner3')}}" id="image" accept="image/*" type="file"
                                                 class="form-control form-control-sm"
                                                 placeholder="Enter Banner Image Three">
                                         </div>
@@ -222,7 +222,7 @@
                                         class="col-form-label label_style col-lg-2 p-0 text-start text-black label_style">Banner
                                         Title Three</label>
                                     <div class="input-group">
-                                        <input name="banner3_title" maxlength="255" type="text"
+                                        <input name="banner3_title" value="{{old('banner3_title')}}" maxlength="255" type="text"
                                             class="form-control form-control-sm"
                                             placeholder="Enter Banner Title Three" >
                                     </div>
@@ -233,7 +233,7 @@
                                         class="col-form-label label_style col-lg-2 p-0 text-start text-black label_style">Three
                                         ShortDescription</label>
                                     <div class="input-group">
-                                        <input name="banner3_short_description" type="text"
+                                        <input name="banner3_short_description" value="{{old('banner3_short_description')}}" type="text"
                                             class="form-control form-control-sm"
                                             placeholder="Enter Banner Three ShortDescription" >
                                     </div>
@@ -244,7 +244,7 @@
                                         class="col-form-label label_style col-lg-2 p-0 text-start text-black label_style">Banner
                                         Three Button Name</label>
                                     <div class="input-group">
-                                        <input name="banner3_button_name" type="text" maxlength="255"
+                                        <input name="banner3_button_name" value="{{old('banner3_button_name')}}" type="text" maxlength="255"
                                             class="form-control form-control-sm"
                                             placeholder="Enter Banner Three Button Name" >
                                     </div>
@@ -255,7 +255,7 @@
                                         class="col-form-label label_style col-lg-2 p-0 text-start text-black label_style">Banner
                                         Three Button Link</label>
                                     <div class="input-group">
-                                        <input name="banner3_button_link" maxlength="255" type="url"
+                                        <input name="banner3_button_link" value="{{old('banner3_button_link')}}" maxlength="255" type="url"
                                             class="form-control form-control-sm"
                                             placeholder="Enter Banner Three Button Name" >
                                     </div>
@@ -270,7 +270,7 @@
                                         class="col-form-label label_style col-lg-2 p-0 text-start text-black label_style">Button
                                         One Title </label>
                                     <div class="input-group">
-                                        <input name="btn1_title" maxlength="255" type="text"
+                                        <input name="btn1_title" value="{{old('btn1_title')}}" maxlength="255" type="text"
                                             class="form-control form-control-sm" placeholder="Enter Button One Title"
                                             >
                                     </div>
@@ -280,7 +280,7 @@
                                         class="col-form-label label_style col-lg-2 p-0 text-start text-black label_style">Button
                                         One Name </label>
                                     <div class="input-group">
-                                        <input name="btn1_name" maxlength="255" type="text"
+                                        <input name="btn1_name" value="{{old('btn1_name')}}" maxlength="255" type="text"
                                             class="form-control form-control-sm" placeholder="Enter Button One Name"
                                             >
                                     </div>
@@ -291,7 +291,7 @@
                                         class="col-form-label label_style col-lg-2 p-0 text-start text-black label_style">Button
                                         One Link </label>
                                     <div class="input-group">
-                                        <input name="btn1_link" maxlength="255" type="url"
+                                        <input name="btn1_link" value="{{old('btn1_link')}}" maxlength="255" type="url"
                                             class="form-control form-control-sm" placeholder="Enter Button One Link"
                                             >
                                     </div>
@@ -309,7 +309,7 @@
                                         class="col-form-label label_style col-lg-2 p-0 text-start text-black label_style">Button
                                         Two Title </label>
                                     <div class="input-group">
-                                        <input name="btn2_title" maxlength="255" type="text"
+                                        <input name="btn2_title" value="{{old('btn2_title')}}" maxlength="255" type="text"
                                             class="form-control form-control-sm" placeholder="Enter Button Two Title"
                                             >
                                     </div>
@@ -319,7 +319,7 @@
                                         class="col-form-label label_style col-lg-2 p-0 text-start text-black label_style">Button
                                         Two Name </label>
                                     <div class="input-group">
-                                        <input name="btn2_name" maxlength="255" type="text"
+                                        <input name="btn2_name" value="{{old('btn2_name')}}" maxlength="255" type="text"
                                             class="form-control form-control-sm" placeholder="Enter Button Two Name"
                                             >
                                     </div>
@@ -330,7 +330,7 @@
                                         class="col-form-label label_style col-lg-2 p-0 text-start text-black label_style">Button
                                         Two Link </label>
                                     <div class="input-group">
-                                        <input name="btn2_link" maxlength="255" type="url"
+                                        <input name="btn2_link" value="{{old('btn2_link')}}" maxlength="255" type="url"
                                             class="form-control form-control-sm" placeholder="Enter Button Two Link"
                                             >
                                     </div>
@@ -341,13 +341,13 @@
                                 <div class="row rounded bg-ligh align-items-center mt-1">
                                     <div class="form-group col-lg-12 col-md-6 col-sm-12">
                                         <label>Header 1 <span class="text-danger">*</span></label>
-                                        <input type="text" name="header1" class="form-control form-control-sm"
+                                        <input type="text" name="header1" value="{{old('header1')}}" class="form-control form-control-sm"
                                             placeholder="Write Something..." >
                                     </div>
 
                                     <div class="form-group col-lg-12 col-md-6 col-sm-12 pt-6">
                                         <label>Header 2 <span class="text-danger">*</span></label>
-                                        <input type="text" name="header2" class="form-control form-control-sm"
+                                        <input type="text" name="header2" value="{{old('header2')}}" class="form-control form-control-sm"
                                             placeholder="Write Something..." >
                                     </div>
                                 </div>
@@ -357,7 +357,7 @@
                                         class="col-form-label label_style col-lg-2 p-0 text-start text-black label_style">Feature
                                         One</label>
                                     <div class="input-group">
-                                        <select name="story1_id" class="form-select" data-control="select2" data-placeholder="Select an option"
+                                        <select name="story1_id" value="{{old('story1_id')}}" class="form-select" data-control="select2" data-placeholder="Select an option"
                                             id="select1" placeholder="Choose iTEM">
                                             <option>Choose Features One</option>
                                             @foreach ($client_experiences as $item)
@@ -374,7 +374,7 @@
                                         class="col-form-label label_style col-lg-2 p-0 text-start text-black label_style">Feature
                                         Two</label>
                                     <div class="input-group">
-                                        <select name="story2_id" class="form-select" data-control="select2" data-placeholder="Select an option"
+                                        <select name="story2_id" value="{{old('story2_id')}}" class="form-select" data-control="select2" data-placeholder="Select an option"
                                             id="select2">
                                             <option>Choose Features Two</option>
                                             @foreach ($client_experiences as $item)
@@ -391,7 +391,7 @@
                                         class="col-form-label label_style col-lg-2 p-0 text-start text-black label_style">Feature
                                         Three</label>
                                     <div class="input-group">
-                                        <select name="story3_id" class="form-select" data-control="select2" data-placeholder="Select an option"
+                                        <select name="story3_id" value="{{old('story3_id')}}" class="form-select" data-control="select2" data-placeholder="Select an option"
                                             id="select3">
                                             <option>Choose Features Three</option>
                                             @foreach ($client_experiences as $item)
@@ -408,7 +408,7 @@
                                         class="col-form-label label_style col-lg-2 p-0 text-start text-black label_style">Feature
                                         Four</label>
                                     <div class="input-group">
-                                        <select name="story4_id" class="form-select" data-control="select2" data-placeholder="Select an option"
+                                        <select name="story4_id" value="{{old('story4_id')}}" class="form-select" data-control="select2" data-placeholder="Select an option"
                                             id="select4">
                                             <option>Choose Features Four</option>
                                             @foreach ($client_experiences as $item)
@@ -425,7 +425,7 @@
                                         class="col-form-label label_style col-lg-2 p-0 text-start text-black label_style">Feature
                                         Five</label>
                                     <div class="input-group">
-                                        <select name="story5_id" class="form-select" data-control="select2" data-placeholder="Select an option"
+                                        <select name="story5_id" value="{{old('story5_id')}}" class="form-select" data-control="select2" data-placeholder="Select an option"
                                             id="select5">
                                             <option>Choose Features Five</option>
                                             @foreach ($client_experiences as $item)
@@ -444,7 +444,7 @@
                                         class="col-form-label label_style col-lg-2 p-0 text-start text-black label_style">Client
                                         Story One</label>
                                     <div class="input-group">
-                                        <select name="solution1_id" class="form-select" data-control="select2" data-placeholder="Select an option"
+                                        <select name="solution1_id" value="{{old('solution1_id')}}" class="form-select" data-control="select2" data-placeholder="Select an option"
                                             id="select">
                                             <option>Choose Client Story One</option>
                                             @foreach ($storys as $item)
@@ -461,7 +461,7 @@
                                         class="col-form-label label_style col-lg-2 p-0 text-start text-black label_style">Client
                                         Story Two</label>
                                     <div class="input-group">
-                                        <select name="solution2_id" class="form-select" data-control="select2" data-placeholder="Select an option"
+                                        <select name="solution2_id" value="{{old('solution2_id')}}" class="form-select" data-control="select2" data-placeholder="Select an option"
                                             id="select7">
                                             <option>Choose Client Story Two</option>
                                             @foreach ($storys as $item)
@@ -478,7 +478,7 @@
                                         class="col-form-label label_style col-lg-2 p-0 text-start text-black label_style">Client
                                         Story Three</label>
                                     <div class="input-group">
-                                        <select name="solution3_id" class="form-select" data-control="select2" data-placeholder="Select an option"
+                                        <select name="solution3_id" value="{{old('solution3_id')}}" class="form-select" data-control="select2" data-placeholder="Select an option"
                                             id="select8">
                                             <option>Choose Client Story Three</option>
                                             @foreach ($storys as $item)
@@ -495,7 +495,7 @@
                                         class="col-form-label label_style col-lg-2 p-0 text-start text-black label_style">Client
                                         Story Four</label>
                                     <div class="input-group">
-                                        <select name="solution4_id" class="form-select" data-control="select2" data-placeholder="Select an option"
+                                        <select name="solution4_id" value="{{old('solution4_id')}}" class="form-select" data-control="select2" data-placeholder="Select an option"
                                             id="select9">
                                             <option>Choose Client Story Four</option>
                                             @foreach ($storys as $item)
@@ -515,7 +515,7 @@
                                         class="col-form-label label_style col-lg-2 p-0 text-start text-black label_style">Sigle
                                         Tech Glossy</label>
                                     <div class="input-group">
-                                        <select name="techglossy_id" class="form-select" data-control="select2" data-placeholder="Select an option">
+                                        <select name="techglossy_id" value="{{old('techglossy_id')}}" class="form-select" data-control="select2" data-placeholder="Select an option">
                                             <option>Choose Sigle Tech Glossy</option>
                                             @foreach ($techglossys as $item)
                                                 <option class="form-control" value="{{ $item->id }}">
@@ -534,7 +534,7 @@
                                         class="col-form-label label_style col-12 p-0 text-start text-black label_style">Client
                                         Success One</label>
                                     <div class="input-group">
-                                        <select name="success1_id" class="form-select" data-control="select2" data-placeholder="Select an option"
+                                        <select name="success1_id" value="{{old('success1_id')}}" class="form-select" data-control="select2" data-placeholder="Select an option"
                                             id="select10">
                                             <option>Choose Client Success One</option>
                                             @foreach ($techglossys as $item)
@@ -550,7 +550,7 @@
                                         class="col-form-label label_style col-lg-12 p-0 text-start text-black label_style">Client
                                         Success Two</label>
                                     <div class="input-group">
-                                        <select name="success2_id" class="form-select" data-control="select2" data-placeholder="Select an option"
+                                        <select name="success2_id" value="{{old('success2_id')}}" class="form-select" data-control="select2" data-placeholder="Select an option"
                                             id="select11">
                                             <option>Choose Client Success Two</option>
                                             @foreach ($techglossys as $item)
@@ -566,7 +566,7 @@
                                         class="col-form-label label_style col-lg-12 p-0 text-start text-black label_style">Client
                                         Success Three</label>
                                     <div class="input-group">
-                                        <select name="success3_id" class="form-select" data-control="select2" data-placeholder="Select an option"
+                                        <select name="success3_id" value="{{old('success3_id')}}" class="form-select" data-control="select2" data-placeholder="Select an option"
                                             id="select12">
                                             <option>Choose Client Success Three</option>
                                             @foreach ($techglossys as $item)
