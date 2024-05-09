@@ -1,6 +1,6 @@
 
 <!--=======// Footer Section//=========-->
-<footer class="container-fluid p-0" style="background: #222222;">
+<footer class="container-fluid p-0 row" style="background: #222222;">
     <!-- footyer gradient -->
     <div class="footer_top">
         <p class="mb-0">We determined to pace with Next Generation Information Technology.</p>

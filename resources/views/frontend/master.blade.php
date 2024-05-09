@@ -37,17 +37,15 @@
     <!--======// Nav Menu //========-->
     @include('frontend.partials.header')
     <!--------End---------->
-    <div class="page-wrapper">
+    <div class="page-wrapper row p-0">
         @yield('content')
-
-        <!--=======// Footer Section//=========-->
-        @if (Route::current() && Route::current()->getName() && str_contains(Route::current()->getName(), 'client'))
-        @else
-            @include('frontend.partials.footer')
-        @endif
-
     </div>
     <!----------End--------->
+    <!--=======// Footer Section//=========-->
+    @if (Route::current() && Route::current()->getName() && str_contains(Route::current()->getName(), 'client'))
+    @else
+        @include('frontend.partials.footer')
+    @endif
 
     <!--=======// Cookises Modals //=======-->
     @include('frontend.partials.cookies')

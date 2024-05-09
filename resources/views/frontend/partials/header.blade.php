@@ -1,5 +1,5 @@
 <section class="main_header_area">
-    <div class="fixed-section header">
+    <div class="fixed-section header row">
         {{-- Top Bar Area --}}
         <div class="container-fluid top-bar p-0">
             <div class="row gx-0 top-bar-bg">
@@ -130,7 +130,7 @@
             </div>
         </div>
         {{-- Menu And Logo Area --}}
-        <div>
+        <div class="row px-0">
             <nav class="navbar navbar-expand-lg p-2 main-navbar bg-white menu-section">
                 <div class="container-fluid d-flex align-items-center" style="height: 3.5rem">
                     <div class="step-img d-lg-block d-sm-none">

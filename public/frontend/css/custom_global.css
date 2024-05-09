@@ -11,8 +11,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 :root {
-    --primary-color: #ae0a46;
-    --secondary-color: #880736;
+    --primary-color: #051225;
+    --secondary-color: #0A1D5B;
+    /* --primary-color: #ae0a46;
+    --secondary-color: #880736; */
     --paragraph-color: #3e332d;
     --secondary-paragraph-color: #3d3632;
     --heading-color: #1a1715;
@@ -581,18 +583,18 @@ ul {
 /* Apply border-bottom style to the active state of the dropdown link when clicked */
 .navbar-nav .nav-item.show > .nav-link,
 .navbar-nav .nav-item.active > .nav-link {
-    border-bottom: 3px solid #ae0a46;
+    border-bottom: 3px solid var(--primary-color);
 }
 
 .top-bar-bg {
-    background: #ae0a46;
+    background: var(--primary-color);
     height: 28px;
     line-height: 1.1;
 }
 
 .top-bar-curve-area {
     background-color: white;
-    border-top: 3px solid #ae0a46;
+    border-top: 3px solid var(--primary-color);
     clip-path: polygon(0 0, 95% 0%, 100% 102%, 0% 100%);
     height: 29px;
 }
@@ -774,7 +776,8 @@ ul {
 }
 
 .Advance-Slider .item {
-    height: 65%;
+    /* height: 65%; */
+    height: 100%;
     overflow: hidden;
     outline: none;
 }
@@ -2741,10 +2744,10 @@ select:focus-visible {
 .search-box-areas {
     border-bottom-left-radius: 35px;
     border-top-left-radius: 35px;
-    background: #ae0a46;
+    background: var(--primary-color);
     color: white;
     margin: 0px;
-    border: 1px solid #ae0a46;
+    border: 1px solid var(--primary-color);
 }
 
 .search-input-field {
@@ -5044,9 +5047,11 @@ tr td:hover {
     line-height: 1;
     cursor: pointer;
     position: fixed;
-    bottom: 45%;
+    /* bottom: 45%; */
+    bottom: 30%;
     /* right: -36px; */
     right: -109px;
+    /* background-color: var(--primary-color); */
     background-color: var(--primary-color);
     color: white;
     padding: 9px 20px;
@@ -15215,12 +15220,12 @@ switch input:checked + .slider {
 }
 
 .footer_top {
-    background: #ae0a46;
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color) );
     height: 54px;
     padding: 15px 0px;
     /* Adjust the padding value as needed */
-    border-top: 1px solid #ae0a46;
-    border-bottom: 1px solid #ae0a46;
+    border-top: 1px solid var(--primary-color);
+    border-bottom: 1px solid var(--primary-color);
 }
 
 .footer_top p {
@@ -15228,6 +15233,7 @@ switch input:checked + .slider {
     text-align: center;
     font-size: var(--header-font-size);
     color: var(--white);
+    line-height: 1;
 }
 
 /*------------------------*/

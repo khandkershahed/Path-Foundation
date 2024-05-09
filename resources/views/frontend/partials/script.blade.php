@@ -63,8 +63,8 @@
 
     $slider_ini.slick({
         autoplay: true,
-        autoplaySpeed: 10000,
-        speed: 2000,
+        autoplaySpeed: 7000,
+        speed: 1500,
         slidesToShow: 1,
         slidesToScroll: 1,
         dots: false,
