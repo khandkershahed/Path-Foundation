@@ -159,7 +159,7 @@ Route::middleware(['localeSessionRedirect', 'localizationRedirect', 'localeViewP
     Route::delete('activity_logs/{activity_log}', [ActivityLogController::class, 'destroy'])->name('activity_logs.destroy');
 
     Route::get('/settings', [SettingController::class, 'index'])->name('settings.index');
-    Route::put('/settings', [SettingController::class, 'updateOrcreateSettings'])->name('settings.updateOrCreate');
+    Route::put('/settings', [SettingController::class, 'updateOrcreateSetting'])->name('settings.updateOrCreate');
 
     Route::get('/banner', [BannerController::class, 'index'])->name('banner.index');
     Route::put('/banner', [BannerController::class, 'updateOrcreateBanner'])->name('banner.updateOrCreate');

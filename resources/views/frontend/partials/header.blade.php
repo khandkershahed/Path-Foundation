@@ -138,7 +138,7 @@
                     </div>
                     <a class="navbar-brand fw-bold upper-content-menu main-logo" href="{{ route('homepage') }}">
                         <img class="img-fluid site-main-logo"
-                            src="{{ !empty(optional($setting)->logo) && file_exists(public_path('storage/' . optional($setting)->logo)) ? asset('storage/' . optional($setting)->logo) : asset('frontend/images/brandPage-logo-no-img(217-55).jpg') }}"
+                            src="{{ !empty(optional($setting)->site_logo) && file_exists(public_path('storage/' . optional($setting)->site_logo)) ? asset('storage/' . optional($setting)->site_logo) : asset('frontend/images/brandPage-logo-no-img(217-55).jpg') }}"
                             alt="NGEN IT">
                     </a>
                     <!---Category--->
@@ -902,10 +902,10 @@
     <div class="offcanvas-header">
         <a class="navbar-brand fw-bold upper-content-menu main-logo" href="">
             <img height="50px"
-                src="{{ !empty(optional($setting)->logo) && file_exists(public_path('storage/' . optional($setting)->logo)) ? asset('storage/' . optional($setting)->logo) : asset('frontend/images/brandPage-logo-no-img(217-55).jpg') }}"
+                src="{{ !empty(optional($setting)->site_logo) && file_exists(public_path('storage/' . optional($setting)->site_logo)) ? asset('storage/' . optional($setting)->site_logo) : asset('frontend/images/brandPage-logo-no-img(217-55).jpg') }}"
                 alt="NGEN IT">
             {{-- <img height="50px"
-                src="{{asset('storage/' . optional($setting)->logo)}}"
+                src="{{asset('storage/' . optional($setting)->site_logo)}}"
                 alt="NGEN IT"> --}}
         </a>
 
