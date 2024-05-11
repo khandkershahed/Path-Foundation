@@ -139,6 +139,10 @@ class HomeController extends Controller
     {
         return view('frontend.pagese.course.allCourses');
     }
+    public function courseRegistration()
+    {
+        return view('frontend.pagese.course.courseRegistration');
+    }
 
     //About
     public function about()

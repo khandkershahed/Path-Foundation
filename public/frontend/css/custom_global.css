@@ -41,8 +41,8 @@
 
 @media only screen and (min-width: 992px) and (max-width: 1400px) {
     :root {
-        --primary-color: #ae0a46;
-        --secondary-color: #880736;
+        --primary-color: #051225;
+        --secondary-color: #0a1d5b;
         --paragraph-color: #3e332d;
         --heading-color: #1a1715;
         --white: #fff;
@@ -69,8 +69,8 @@
 
 @media only screen and (max-width: 576px) {
     :root {
-        --primary-color: #ae0a46;
-        --secondary-color: #880736;
+        --primary-color: #051225;
+        --secondary-color: #0a1d5b;
         --paragraph-color: #3e332d;
         --heading-color: #1a1715;
         --white: #fff;
@@ -269,13 +269,13 @@ ul {
     padding: 15px 30px;
     cursor: pointer;
     font-family: var(--primary-font);
-    background-color: #ae0a46;
+    background-color: var(--primary-color);
     color: #fff;
     font-size: 1rem;
     font-weight: 500;
     text-align: center;
     display: inline-block;
-    border: 1px solid #ae0a46;
+    border: 1px solid var(--primary-color);
     overflow: hidden;
     position: relative;
     transition: all 0.8s ease-in-out;
@@ -4285,17 +4285,17 @@ body::-webkit-scrollbar-button {
 }
 
 body::-webkit-scrollbar-thumb {
-    background: #ae0a46;
+    background: linear-gradient(45deg, var(--secondary-color), var(--primary-color));
     border: 0px none #ffffff;
     border-radius: 0px;
 }
 
 body::-webkit-scrollbar-thumb:hover {
-    background: #ae0a46;
+    background: linear-gradient(45deg, var(--secondary-color), var(--primary-color));
 }
 
 body::-webkit-scrollbar-thumb:active {
-    background: #ae0a46;
+    background: linear-gradient(45deg, var(--secondary-color), var(--primary-color));
 }
 
 body::-webkit-scrollbar-track {
@@ -5049,14 +5049,14 @@ tr td:hover {
     position: fixed;
     bottom: 35%;
     right: -109px;
-    background-color: #F2AF29;
+    background: linear-gradient(45deg, var(--secondary-color), var(--primary-color));
     color: white;
     padding: 10px 20px;
     border: none;
     z-index: 1;
     transition: 0.5s;
     transform: rotate(-90deg);
-    border: 2px solid #F2AF29;
+    border: 2px solid linear-gradient(45deg, var(--secondary-color), var(--primary-color));
 }
 
 .upsale-button {
@@ -5066,7 +5066,7 @@ tr td:hover {
     overflow: hidden;
     border: none !important;
     padding: 0 !important;
-    background: #5D5DFF !important;
+    background: #5d5dff !important;
     color: #656565;
     background: white;
     border-radius: 8px;
@@ -5075,15 +5075,15 @@ tr td:hover {
     font-size: 14px;
     font-weight: 400;
     box-shadow: 0 4px 50px 0 rgb(0 0 0 / 7%);
-    transition: .2s all linear;
+    transition: 0.2s all linear;
     text-decoration: initial;
 }
 
-.upsale-button span{
+.upsale-button span {
     position: relative;
     z-index: 1;
-    height: calc( 100% - 4px );
-    width: calc( 100% - 4px );
+    height: calc(100% - 4px);
+    width: calc(100% - 4px);
     top: 2px;
     left: 2px;
     align-items: center;
@@ -5091,11 +5091,11 @@ tr td:hover {
     justify-content: center;
     border-radius: 8px;
     color: white;
-    background: #5D5DFF;
+    background: #5d5dff;
 }
 
-.upsale-button:after{
-   content: "";
+.upsale-button:after {
+    content: "";
     position: absolute;
     z-index: -2;
     left: -50%;
@@ -5106,11 +5106,15 @@ tr td:hover {
     background-repeat: no-repeat;
     background-size: 50% 50%, 50% 50%;
     background-position: 0 0, 100% 0, 100% 100%, 0 100%;
-    background-image: linear-gradient(90deg, rgba(255,255,255,0)    0%, rgba(255,255,255,1) 50%, rgba(255,255,255,0) 100%);
+    background-image: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 1) 50%,
+        rgba(255, 255, 255, 0) 100%
+    );
     -webkit-animation: rotate 2s linear infinite;
     animation: rotate 2s linear infinite;
 }
-
 
 @-webkit-keyframes rotate {
     100% {
@@ -5123,7 +5127,6 @@ tr td:hover {
         transform: rotate(360deg);
     }
 }
-
 
 /* Eit a Custom_style er 1882 number line e ace Please Remove and Add This */
 .openbtnfeedback {
@@ -15299,7 +15302,8 @@ switch input:checked + .slider {
 .social_areas {
     background: linear-gradient(
         45deg,
-        var(--primary-color), var(--secondary-color)
+        var(--primary-color),
+        var(--secondary-color)
     );
 }
 .footer_top p {
@@ -17263,5 +17267,19 @@ nav > div a.nav-item.nav-link.active {
 
     .industry_single_help_list {
         padding-left: 30px !important;
+    }
+    .footer_top {
+        background: linear-gradient(
+            45deg,
+            var(--secondary-color),
+            var(--primary-color)
+        );
+        height: 54px;
+        padding: 15px 0px;
+        border-top: 1px solid var(--primary-color);
+        border-bottom: 1px solid var(--primary-color);
+    }
+    .footer_top {
+        padding: 8px !important;
     }
 }
