@@ -38,6 +38,7 @@ use App\Http\Controllers\Admin\Auth\ConfirmablePasswordController;
 use App\Http\Controllers\Admin\Auth\AuthenticatedSessionController;
 use App\Http\Controllers\Admin\Auth\EmailVerificationPromptController;
 use App\Http\Controllers\Admin\Auth\EmailVerificationNotificationController;
+use App\Http\Controllers\Admin\CourseController;
 use App\Http\Controllers\Admin\FeatureController;
 use App\Http\Controllers\Admin\HomepageController;
 use App\Http\Controllers\Admin\LearnMoreController;
@@ -122,6 +123,7 @@ Route::middleware(['localeSessionRedirect', 'localizationRedirect', 'localeViewP
             'brands'          => BrandController::class, //done
             'contacts'        => ContactController::class,
             'feature'         => FeatureController::class,
+            'course'          => CourseController::class,
             'row'             => RowController::class,
             'news-trend'      => NewsTrendController::class,
             'homepage'        => HomepageController::class,
