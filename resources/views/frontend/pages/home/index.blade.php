@@ -166,7 +166,7 @@
         </section>
     @endif
     {{-- Banner Bottom Card --}}
-    @if (!empty(optional($home)->btn1_title) && !empty(optional($home)->btn2_title))
+    {{-- @if (!empty(optional($home)->btn1_title) && !empty(optional($home)->btn2_title))
         <div class="container px-lg-4 px-2">
             <div class="row gx-5 mx-auto banner_bottom_box">
                 <div class="col px-2">
@@ -191,7 +191,7 @@
                 </div>
             </div>
         </div>
-    @endif
+    @endif --}}
     <!---------End -------->
 </section>
 <!--======// Action section //======-->
