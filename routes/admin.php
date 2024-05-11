@@ -3,14 +3,6 @@
 use App\Http\Controllers\Admin\AboutUsController;
 use App\Http\Controllers\Admin\ActivityLogController;
 use App\Http\Controllers\Admin\AdminController;
-use App\Http\Controllers\Admin\Auth\AuthenticatedSessionController;
-use App\Http\Controllers\Admin\Auth\ConfirmablePasswordController;
-use App\Http\Controllers\Admin\Auth\EmailVerificationNotificationController;
-use App\Http\Controllers\Admin\Auth\EmailVerificationPromptController;
-use App\Http\Controllers\Admin\Auth\NewPasswordController;
-use App\Http\Controllers\Admin\Auth\PasswordController;
-use App\Http\Controllers\Admin\Auth\PasswordResetLinkController;
-use App\Http\Controllers\Admin\Auth\VerifyEmailController;
 use App\Http\Controllers\Admin\BannerController;
 use App\Http\Controllers\Admin\BlogController;
 use App\Http\Controllers\Admin\BrandController;
@@ -20,10 +12,8 @@ use App\Http\Controllers\Admin\DynamicCssController;
 use App\Http\Controllers\Admin\EmailSettingController;
 use App\Http\Controllers\Admin\Auth\PasswordController;
 use App\Http\Controllers\Admin\SpecificationController;
-use App\Http\Controllers\Admin\UserManagementController;
 use App\Http\Controllers\Admin\Auth\NewPasswordController;
 use App\Http\Controllers\Admin\Auth\VerifyEmailController;
-use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 use App\Http\Controllers\Admin\Auth\PasswordResetLinkController;
 use App\Http\Controllers\Admin\Auth\ConfirmablePasswordController;
 use App\Http\Controllers\Admin\Auth\AuthenticatedSessionController;
@@ -44,7 +34,6 @@ use App\Http\Controllers\Admin\RoleController;
 use App\Http\Controllers\Admin\RowController;
 use App\Http\Controllers\Admin\ServiceController;
 use App\Http\Controllers\Admin\SettingController;
-use App\Http\Controllers\Admin\SpecificationController;
 use App\Http\Controllers\Admin\SuccessController;
 use App\Http\Controllers\Admin\TagController;
 use App\Http\Controllers\Admin\TestimonialController;
@@ -124,7 +113,7 @@ Route::middleware(['localeSessionRedirect', 'localizationRedirect', 'localeViewP
             'tags'            => TagController::class, //done
             'icons'           => IconController::class, //done
             'services'        => ServiceController::class, //done
-            'experiences'     => ExperienceController::class, //done
+            // 'experiences'     => ExperienceController::class, //done
             'projects'        => ProjectController::class,
             'testimonials'    => TestimonialController::class,
             'specifications'  => SpecificationController::class,
