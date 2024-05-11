@@ -31,8 +31,14 @@
     <link href="{{ asset('admin/assets/plugins/global/plugins.bundle.css') }}" rel="stylesheet" type="text/css" />
     <link href="{{ asset('admin/assets/css/style.bundle.css') }}" rel="stylesheet" type="text/css" />
     <!--end::Global Stylesheets Bundle-->
+
     @props(['title'])
+<<<<<<< HEAD
     <title>{{ $title ?? config('app.name', 'MD Boilarplate') }}</title>
+    
+=======
+    <title>{{ $title ?? config('app.name', 'NGen IT Training') }}</title>
+>>>>>>> 3b981eb39a83f5c492261ccef0ce1d068c6aa637
 </head>
 
 <body id="kt_body"
@@ -43,14 +49,18 @@
     <div class="d-flex flex-column flex-root">
         <!--begin::Page-->
         <div class="page d-flex flex-row flex-column-fluid">
+
             <!--begin::Aside-->
             @include('admin.layouts.sidebar')
             <!--end::Aside-->
+
             <!--begin::Wrapper-->
             <div class="wrapper d-flex flex-column flex-row-fluid" id="kt_wrapper">
+
                 <!--begin::Header-->
                 @include('admin.layouts.header')
                 <!--end::Header-->
+
                 <!--begin::Content-->
                 <div class="content d-flex flex-column flex-column-fluid" id="kt_content">
                     <!--begin::Toolbar-->
@@ -119,7 +129,7 @@
     <script src="{{ asset($hostUrl . 'js/custom/apps/chat/chat.js') }}"></script>
     <script src="{{ asset($hostUrl . 'js/custom/documentation/editors/tinymce/plugins.js') }}"></script>
     <script src="https://cdn.tiny.cloud/1/n4jpbhtanca801bcjejx1pc9j033yn0de5ral6e7r0wd6383/tinymce/6/tinymce.min.js"
-    referrerpolicy="origin"></script>
+        referrerpolicy="origin"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     {{-- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> --}}
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js" async></script>
