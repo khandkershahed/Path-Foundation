@@ -1,50 +1,49 @@
 <?php
 
-use App\Http\Controllers\Controller;
-use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Admin\FaqController;
-use App\Http\Controllers\Admin\LogController;
-use App\Http\Controllers\Admin\TagController;
-use App\Http\Controllers\Admin\BlogController;
-use App\Http\Controllers\Admin\IconController;
-use App\Http\Controllers\Admin\RoleController;
-use App\Http\Controllers\Admin\UserController;
-use App\Http\Controllers\Admin\AdminController;
-use App\Http\Controllers\Admin\BrandController;
-use App\Http\Controllers\Admin\BannerController;
-use App\Http\Controllers\Admin\FooterController;
 use App\Http\Controllers\Admin\AboutUsController;
+use App\Http\Controllers\Admin\ActivityLogController;
+use App\Http\Controllers\Admin\AdminController;
+use App\Http\Controllers\Admin\Auth\AuthenticatedSessionController;
+use App\Http\Controllers\Admin\Auth\ConfirmablePasswordController;
+use App\Http\Controllers\Admin\Auth\EmailVerificationNotificationController;
+use App\Http\Controllers\Admin\Auth\EmailVerificationPromptController;
+use App\Http\Controllers\Admin\Auth\NewPasswordController;
+use App\Http\Controllers\Admin\Auth\PasswordController;
+use App\Http\Controllers\Admin\Auth\PasswordResetLinkController;
+use App\Http\Controllers\Admin\Auth\VerifyEmailController;
+use App\Http\Controllers\Admin\BannerController;
+use App\Http\Controllers\Admin\BlogController;
+use App\Http\Controllers\Admin\BrandController;
+use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\ContactController;
-use App\Http\Controllers\Admin\CounterController;
+use App\Http\Controllers\Admin\DynamicCssController;
+use App\Http\Controllers\Admin\EmailSettingController;
+use App\Http\Controllers\Admin\ExperienceController;
+use App\Http\Controllers\Admin\FaqController;
+use App\Http\Controllers\Admin\FeatureController;
+use App\Http\Controllers\Admin\FooterController;
+use App\Http\Controllers\Admin\HomepageController;
+use App\Http\Controllers\Admin\IconController;
+use App\Http\Controllers\Admin\LearnMoreController;
+use App\Http\Controllers\Admin\LogController;
+use App\Http\Controllers\Admin\NewsletterController;
+use App\Http\Controllers\Admin\NewsTrendController;
+use App\Http\Controllers\Admin\PermissionController;
 use App\Http\Controllers\Admin\ProjectController;
+use App\Http\Controllers\Admin\RoleController;
+use App\Http\Controllers\Admin\RowController;
 use App\Http\Controllers\Admin\ServiceController;
 use App\Http\Controllers\Admin\SettingController;
-use App\Http\Controllers\Admin\CategoryController;
-use App\Http\Controllers\Admin\DynamicCssController;
-use App\Http\Controllers\Admin\ExperienceController;
-use App\Http\Controllers\Admin\NewsletterController;
-use App\Http\Controllers\Admin\PermissionController;
-use App\Http\Controllers\Admin\ActivityLogController;
-use App\Http\Controllers\Admin\TestimonialController;
-use App\Http\Controllers\Admin\EmailSettingController;
-use App\Http\Controllers\Admin\Auth\PasswordController;
 use App\Http\Controllers\Admin\SpecificationController;
-use App\Http\Controllers\Admin\UserManagementController;
-use App\Http\Controllers\Admin\Auth\NewPasswordController;
-use App\Http\Controllers\Admin\Auth\VerifyEmailController;
-use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
-use App\Http\Controllers\Admin\Auth\PasswordResetLinkController;
-use App\Http\Controllers\Admin\Auth\ConfirmablePasswordController;
-use App\Http\Controllers\Admin\Auth\AuthenticatedSessionController;
-use App\Http\Controllers\Admin\Auth\EmailVerificationPromptController;
-use App\Http\Controllers\Admin\Auth\EmailVerificationNotificationController;
-use App\Http\Controllers\Admin\FeatureController;
-use App\Http\Controllers\Admin\HomepageController;
-use App\Http\Controllers\Admin\LearnMoreController;
-use App\Http\Controllers\Admin\NewsTrendController;
-use App\Http\Controllers\Admin\RowController;
 use App\Http\Controllers\Admin\SuccessController;
+use App\Http\Controllers\Admin\TagController;
+use App\Http\Controllers\Admin\TestimonialController;
+use App\Http\Controllers\Admin\UserController;
+use App\Http\Controllers\Admin\UserManagementController;
 use App\Http\Controllers\Admin\WhatWeDoPageController;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Route;
+use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
 // Route::get('/', function () {
 //     return redirect()->route('admin.dashboard');
@@ -71,6 +70,7 @@ Route::middleware('guest:admin')->prefix('admin')->name('admin.')->group(functio
 });
 
 Route::middleware(['localeSessionRedirect', 'localizationRedirect', 'localeViewPath', 'auth:admin'])->prefix(LaravelLocalization::setLocale() . '/admin')->name('admin.')->group(function () {
+
     Route::get('verify-email', EmailVerificationPromptController::class)
         ->name('verification.notice');
 
@@ -98,36 +98,37 @@ Route::middleware(['localeSessionRedirect', 'localizationRedirect', 'localeViewP
 
     Route::resources(
         [
-            'role'           => RoleController::class,
-            'permission'     => PermissionController::class,
+            'role' => RoleController::class,
+            'permission' => PermissionController::class,
             'email-settings' => EmailSettingController::class,
-            'faq'            => FaqController::class,
+            'faq' => FaqController::class,
         ],
         ['except' => ['show']]
     );
+    
     Route::resources(
         [
-            'user'            => UserController::class, //done
+            'user' => UserController::class, //done
             'user-management' => UserManagementController::class,
-            'categories'      => CategoryController::class, //done
-            'tags'            => TagController::class, //done
-            'icons'           => IconController::class, //done
-            'services'        => ServiceController::class, //done
-            'experiences'     => ExperienceController::class, //done
-            'projects'        => ProjectController::class,
-            'testimonials'    => TestimonialController::class,
-            'specifications'  => SpecificationController::class,
-            'blogs'           => BlogController::class,
-            'newsletters'     => NewsletterController::class,
-            'brands'          => BrandController::class, //done
-            'contacts'        => ContactController::class,
-            'feature'         => FeatureController::class,
-            'row'             => RowController::class,
-            'news-trend'      => NewsTrendController::class,
-            'homepage'        => HomepageController::class,
-            'whatwedo'        => WhatWeDoPageController::class,
-            'learnmore'       => LearnMoreController::class,
-            'success'         => SuccessController::class,
+            'categories' => CategoryController::class, //done
+            'tags' => TagController::class, //done
+            'icons' => IconController::class, //done
+            'services' => ServiceController::class, //done
+            'experiences' => ExperienceController::class, //done
+            'projects' => ProjectController::class,
+            'testimonials' => TestimonialController::class,
+            'specifications' => SpecificationController::class,
+            'blogs' => BlogController::class,
+            'newsletters' => NewsletterController::class,
+            'brands' => BrandController::class, //done
+            'contacts' => ContactController::class,
+            'feature' => FeatureController::class,
+            'row' => RowController::class,
+            'news-trend' => NewsTrendController::class,
+            'homepage' => HomepageController::class,
+            'whatwedo' => WhatWeDoPageController::class,
+            'learnmore' => LearnMoreController::class,
+            'success' => SuccessController::class,
         ],
     );
 
