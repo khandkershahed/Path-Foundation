@@ -1,5 +1,5 @@
 <section class="main_header_area">
-    <div class="fixed-section header row">
+    <div class="fixed-section header">
         {{-- Top Bar Area --}}
         <div class="container-fluid top-bar p-0">
             <div class="row gx-0 top-bar-bg">

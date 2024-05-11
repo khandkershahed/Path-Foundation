@@ -11,6 +11,7 @@
 <script src="{{ asset('frontend/js/plugin/toastr.min.js') }}"></script>
 <script src="{{ asset('frontend/js/plugin/select2.min.js') }}"></script>
 <script src="{{ asset('frontend/js/javascript.mr.js') }}"></script>
+<script src="{{ asset('frontend/js/javascript.mr.js') }}"></script>
 <!-- slick slider -->
 <script src="{{ asset('frontend/js/plugin/owl-crousel@2.3.4.js') }}"></script>
 <!-- Datatable -->
@@ -48,6 +49,7 @@
             });
         });
     });
+
     // {{-- Slider --}}
     var $slider_ini = $(".Advance-Slider");
     var total_slide = 0;
@@ -627,3 +629,4 @@
 </script>
 
 @yield('scripts')
+@stack('scripts')

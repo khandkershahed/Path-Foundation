@@ -5,6 +5,55 @@
     <!--<meta property="og:description" content="Description of your blog post">-->
     <meta property="og:image" content="{{ asset('storage/' . optional($home)->branner1) }}">
     <!--<meta property="og:url" content="URL to your blog post">-->
+    <style>
+        .training-featuer {
+            background-color: #F3F4F8;
+            border: 1px dashed #e5e6e7;
+            /* border-radius: 0px; */
+        }
+
+        .feature-title {
+            font-size: 45px;
+            width: 50%;
+            margin: auto;
+            line-height: 1.3;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        @media screen and (max-width: 769px) {
+            .feature-title {
+                font-size: 25px;
+            }
+        }
+
+        .devider {
+            margin: auto;
+            padding: 3px;
+            width: 70px;
+            margin-top: 10px;
+            height: 0px;
+            background-color: #F2AF29;
+        }
+
+        .action-btnss {
+            padding: 5px 65px;
+            background-color: transparent;
+            width: 12.5%;
+        }
+
+        .action-btnss-2 {
+            padding: 10px 83px;
+            background-color: white;
+            width: 12.5%;
+            border-radius: 5px;
+        }
+
+        .buttons-area {
+            width: 40%;
+            margin: auto;
+        }
+    </style>
 @endsection
 <section class="">
     <!--======// Banner Section //======-->
@@ -144,6 +193,192 @@
         </div>
     @endif
     <!---------End -------->
+</section>
+<!--======// Action section //======-->
+<section class="d-sm-none d-lg-block">
+    <div class="container">
+        <div class="row py-5">
+            <div class="col-lg-1">
+
+            </div>
+            <div class="col-lg-2">
+                <div class="card training-featuer">
+                    <div class="card-body py-3 ">
+                        <div class="d-flex justify-content-center flex-column text-center">
+                            <div>
+                                <img class="img-fluid" width="80px" src="https://i.ibb.co/Lv9g69R/feature1.png"
+                                    alt="">
+                            </div>
+                            <h6 class="fw-bolder pt-2">20+ Practice <br> Project</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-2">
+                <div class="card training-featuer">
+                    <div class="card-body py-3 ">
+                        <div class="d-flex justify-content-center flex-column text-center">
+                            <div>
+                                <img class="img-fluid" width="80px" src="https://i.ibb.co/Lv9g69R/feature1.png"
+                                    alt="">
+                            </div>
+                            <h6 class="fw-bolder pt-2">4 Month <br> Study Plan</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-2">
+                <div class="card training-featuer">
+                    <div class="card-body py-3 ">
+                        <div class="d-flex justify-content-center flex-column text-center">
+                            <div>
+                                <img class="img-fluid" width="80px" src="https://i.ibb.co/Lv9g69R/feature1.png"
+                                    alt="">
+                            </div>
+                            <h6 class="fw-bolder pt-2">After Course <br> Certificate</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-2">
+                <div class="card training-featuer">
+                    <div class="card-body py-3 ">
+                        <div class="d-flex justify-content-center flex-column text-center">
+                            <div>
+                                <img class="img-fluid" width="80px" src="https://i.ibb.co/Lv9g69R/feature1.png"
+                                    alt="">
+                            </div>
+                            <h6 class="fw-bolder pt-2">Lifetime Video <br> Access</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-2">
+                <div class="card training-featuer">
+                    <div class="card-body py-3 ">
+                        <div class="d-flex justify-content-center flex-column text-center">
+                            <div>
+                                <img class="img-fluid" width="80px" src="https://i.ibb.co/Lv9g69R/feature1.png"
+                                    alt="">
+                            </div>
+                            <h6 class="fw-bolder pt-2">Marketplace <br> Guideline</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-1">
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="feature-title">Carrer Guideline With Job Market Guideline!</h1>
+                <div class="devider"></div>
+                <p class="text-center py-3 fs-6" style="color: #A4A4A6">We Offer Best Cources And Guideline In Your
+                    Area.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="buttons-area py-4 pt-1">
+                    <div class="p-2 py-3 text-center d-flex justify-content-between align-items-center"
+                        style="background-color: #F3F4F8;border-radius: 5px;">
+                        <div>
+                            <a href="" class="action-btnss fw-bolder">
+                                All Cources
+                            </a>
+                        </div>
+                        <div>
+                            <a href="" class="bg-white action-btnss-2 fw-bolder">
+                                Scholarship
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="d-sm-block d-lg-none">
+    <div class="container">
+        <div class="row py-3">
+            <div class="col-lg-12">
+                <div class="trainingFeature">
+                    <div class="item border-0">
+                        <div class="card training-featuer mx-2">
+                            <div class="card-body py-3 text-center">
+                                <div class="d-flex justify-content-center flex-column text-center align-items-center">
+                                    <div>
+                                        <img class="img-fluid text-center" width="80px"
+                                            src="https://i.ibb.co/Lv9g69R/feature1.png" alt="">
+                                    </div>
+                                    <h6 class="fw-bolder pt-2">20+ Practice <br> Project</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item border-0">
+                        <div class="card training-featuer mx-2">
+                            <div class="card-body py-3 text-center">
+                                <div class="d-flex justify-content-center flex-column text-center align-items-center">
+                                    <div>
+                                        <img class="img-fluid text-center" width="80px"
+                                            src="https://i.ibb.co/Lv9g69R/feature1.png" alt="">
+                                    </div>
+                                    <h6 class="fw-bolder pt-2">20+ Practice <br> Project</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item border-0">
+                        <div class="card training-featuer mx-2">
+                            <div class="card-body py-3 text-center">
+                                <div class="d-flex justify-content-center flex-column text-center align-items-center">
+                                    <div>
+                                        <img class="img-fluid text-center" width="80px"
+                                            src="https://i.ibb.co/Lv9g69R/feature1.png" alt="">
+                                    </div>
+                                    <h6 class="fw-bolder pt-2">20+ Practice <br> Project</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item border-0">
+                        <div class="card training-featuer mx-2">
+                            <div class="card-body py-3 text-center">
+                                <div class="d-flex justify-content-center flex-column text-center align-items-center">
+                                    <div>
+                                        <img class="img-fluid text-center" width="80px"
+                                            src="https://i.ibb.co/Lv9g69R/feature1.png" alt="">
+                                    </div>
+                                    <h6 class="fw-bolder pt-2">20+ Practice <br> Project</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item border-0">
+                        <div class="card training-featuer mx-2">
+                            <div class="card-body py-3 text-center">
+                                <div class="d-flex justify-content-center flex-column text-center align-items-center">
+                                    <div>
+                                        <img class="img-fluid text-center" width="80px"
+                                            src="https://i.ibb.co/Lv9g69R/feature1.png" alt="">
+                                    </div>
+                                    <h6 class="fw-bolder pt-2">20+ Practice <br> Project</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="feature-title">Carrer Guideline With Job Market Guideline!</h1>
+                <p class="text-center py-3">We Offer Best Cources And Guideline In Your Area</p>
+            </div>
+        </div>
+    </div>
 </section>
 <!--======// Business section //======-->
 <section class="">
@@ -511,3 +746,20 @@
 
 <!---------End -------->
 @endsection
+@push('scripts')
+<script>
+    $(document).ready(function() {
+        $('.trainingFeature').slick({
+            autoplay: true,
+            autoplaySpeed: 7000,
+            speed: 1500,
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            dots: false,
+            pauseOnHover: false,
+            infinite: false,
+            prevArrow: false
+        });
+    });
+</script>
+@endpush
