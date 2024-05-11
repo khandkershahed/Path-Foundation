@@ -12,7 +12,7 @@
 
 :root {
     --primary-color: #051225;
-    --secondary-color: #0A1D5B;
+    --secondary-color: #0a1d5b;
     /* --primary-color: #ae0a46;
     --secondary-color: #880736; */
     --paragraph-color: #3e332d;
@@ -5047,19 +5047,83 @@ tr td:hover {
     line-height: 1;
     cursor: pointer;
     position: fixed;
-    /* bottom: 45%; */
-    bottom: 30%;
-    /* right: -36px; */
+    bottom: 35%;
     right: -109px;
-    /* background-color: var(--primary-color); */
-    background-color: var(--primary-color);
+    background-color: #F2AF29;
     color: white;
-    padding: 9px 20px;
+    padding: 10px 20px;
     border: none;
     z-index: 1;
     transition: 0.5s;
     transform: rotate(-90deg);
+    border: 2px solid #F2AF29;
 }
+
+.upsale-button {
+    position: relative;
+    z-index: 0;
+    height: 40px;
+    overflow: hidden;
+    border: none !important;
+    padding: 0 !important;
+    background: #5D5DFF !important;
+    color: #656565;
+    background: white;
+    border-radius: 8px;
+    width: 150px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 400;
+    box-shadow: 0 4px 50px 0 rgb(0 0 0 / 7%);
+    transition: .2s all linear;
+    text-decoration: initial;
+}
+
+.upsale-button span{
+    position: relative;
+    z-index: 1;
+    height: calc( 100% - 4px );
+    width: calc( 100% - 4px );
+    top: 2px;
+    left: 2px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    border-radius: 8px;
+    color: white;
+    background: #5D5DFF;
+}
+
+.upsale-button:after{
+   content: "";
+    position: absolute;
+    z-index: -2;
+    left: -50%;
+    top: -50%;
+    width: 200%;
+    height: 200%;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-size: 50% 50%, 50% 50%;
+    background-position: 0 0, 100% 0, 100% 100%, 0 100%;
+    background-image: linear-gradient(90deg, rgba(255,255,255,0)    0%, rgba(255,255,255,1) 50%, rgba(255,255,255,0) 100%);
+    -webkit-animation: rotate 2s linear infinite;
+    animation: rotate 2s linear infinite;
+}
+
+
+@-webkit-keyframes rotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 
 /* Eit a Custom_style er 1882 number line e ace Please Remove and Add This */
 .openbtnfeedback {
@@ -15213,14 +15277,18 @@ switch input:checked + .slider {
     line-height: 36px;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
-    background-color: var(--primary-color);
+    background-color: #ae0a46;
     color: white;
     border: 0px;
     padding: 0.9px;
 }
 
 .footer_top {
-    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color) );
+    background: linear-gradient(
+        45deg,
+        var(--secondary-color),
+        var(--primary-color)
+    );
     height: 54px;
     padding: 15px 0px;
     /* Adjust the padding value as needed */
@@ -15228,6 +15296,12 @@ switch input:checked + .slider {
     border-bottom: 1px solid var(--primary-color);
 }
 
+.social_areas {
+    background: linear-gradient(
+        45deg,
+        var(--primary-color), var(--secondary-color)
+    );
+}
 .footer_top p {
     font-family: var(--primary-font);
     text-align: center;
@@ -15268,7 +15342,7 @@ switch input:checked + .slider {
 .footer_middle_wrapper {
     font-family: var(--primary-font);
     margin: 0px;
-    background-color: #222222;
+    background-color: var(--primary-color);
 }
 
 .footer_item_wrapper {
@@ -17116,7 +17190,6 @@ nav > div a.nav-item.nav-link.active {
 }
 /* Refurbished Product Start */
 .refurbished_tabs {
-
 }
 
 .refurbished_tabs li {

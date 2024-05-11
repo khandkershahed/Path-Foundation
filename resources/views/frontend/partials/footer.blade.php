@@ -1,6 +1,6 @@
 
 <!--=======// Footer Section//=========-->
-<footer class="container-fluid p-0 row" style="background: #222222;">
+<footer class="container-fluid p-0" style="background: #051225;">
     <!-- footyer gradient -->
     <div class="footer_top">
         <p class="mb-0">We determined to pace with Next Generation Information Technology.</p>
@@ -24,10 +24,10 @@
                             method="post" enctype="multipart/form-data">
                             @csrf
                             <div class="input-group w-75 footer_subscribe">
-                                <input type="email" class="form-control" placeholder="Enter your email"
+                                <input type="email" class="form-control pt-0" placeholder="Enter your email"
                                     style="height: 37px;">
                                 <span class="input-group-btns ml-1" style="width:30%;">
-                                    <button class="newsletter-btns" type="submit"
+                                    <button class="newsletter-btns pt-0" type="submit"
                                         style="line-height: 36px;border-top-right-radius: 5px;border-bottom-right-radius: 5px;">Subscribe</button>
                                 </span>
                         </form>
@@ -110,7 +110,7 @@
     </div>
     {{-- </div> --}}
     <!-- footer social -->
-    <div class="container-fluid social_areas" style="background: #222222; border-top: 1px solid #6c6c6c; border-bottom: 1px solid #6c6c6c;">
+    <div class="container-fluid social_areas">
         <div class="row d-flex justify-content-center align-items-center">
             <div class="col-lg-12 col-md-12 col-sm-12 d-flex justify-content-center align-items-center">
                 <div class="trial-block" id="ContactUs">
