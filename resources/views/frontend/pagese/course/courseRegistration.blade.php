@@ -137,7 +137,7 @@
     </section>
     <section style="background-color: #051225;">
         <div class="container py-lg-5 py-3">
-            <div class="row">
+            {{-- <div class="row">
                 <div class="col-lg-12">
                     <div class=" pb-lg-5 pb-3">
                         <h1 class="page_title">Get Scholarship</h1>
@@ -145,7 +145,7 @@
                             Enrollment</p>
                     </div>
                 </div>
-            </div>
+            </div> --}}
             <form action="" method="post">
                 <div class="row">
                     <div class="col-lg-10 offset-lg-1">
