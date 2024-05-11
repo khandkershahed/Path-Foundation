@@ -13,6 +13,8 @@ return new class extends Migration
     {
         Schema::create('course_contents', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('course_id')->nullable()->constrained('courses')->cascadeOnUpdate();
+            $table->string('attachment')->comment('file:image/Docs/PDF');
             $table->timestamps();
         });
     }
