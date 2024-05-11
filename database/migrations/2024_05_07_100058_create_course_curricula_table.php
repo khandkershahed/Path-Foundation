@@ -13,6 +13,12 @@ return new class extends Migration
     {
         Schema::create('course_curricula', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('course_id')->nullable()->constrained('courses')->cascadeOnUpdate();
+            $table->string('badge')->nullable();
+            $table->string('title')->nullable();
+            $table->string('duration')->nullable();
+            $table->text('description')->nullable();
+            $table->text('class_number')->nullable();
             $table->timestamps();
         });
     }
