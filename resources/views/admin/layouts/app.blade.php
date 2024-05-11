@@ -33,12 +33,8 @@
     <!--end::Global Stylesheets Bundle-->
 
     @props(['title'])
-<<<<<<< HEAD
     <title>{{ $title ?? config('app.name', 'MD Boilarplate') }}</title>
     
-=======
-    <title>{{ $title ?? config('app.name', 'NGen IT Training') }}</title>
->>>>>>> 3b981eb39a83f5c492261ccef0ce1d068c6aa637
 </head>
 
 <body id="kt_body"
