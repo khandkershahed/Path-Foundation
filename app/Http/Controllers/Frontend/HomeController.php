@@ -135,6 +135,10 @@ class HomeController extends Controller
         return view('frontend.pages.learnmore.view', $data);
     }
 
+    public function allCourses()
+    {
+        return view('frontend.pagese.course.allCourses');
+    }
 
     //About
     public function about()
