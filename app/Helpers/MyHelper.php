@@ -1,9 +1,6 @@
 <?php
 
-<<<<<<< HEAD
 use App\Models\Course;
-=======
->>>>>>> 75e198236d568b8e10cc1bb8aa20a182eaf55824
 use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
