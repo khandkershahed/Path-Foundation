@@ -1,7 +1,5 @@
 <!--=====// Pageform section //=====-->
-@php
-    $setting = App\Models\Site::first();
-@endphp
+
 <section class=" solution_contact_wrapper">
     <div class="container" id="Contact">
         <div class="row d-flex justify-content-center align-items-center">

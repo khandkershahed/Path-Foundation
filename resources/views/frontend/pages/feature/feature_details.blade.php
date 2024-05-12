@@ -2,7 +2,7 @@
 @section('content')
     <style>
         .global_call_section::after {
-            background: url('{{ asset('storage/' . $learnmore->background_image) }}');
+            background: url('{{ asset('storage/' . optional($learnmore)->background_image) }}');
             content: "";
             position: absolute;
             height: 230px;
@@ -148,31 +148,33 @@
     <!----------End--------->
 
     <!--=====// Global call section //=====-->
-    <section class="global_call_section section_padding mt-2 mb-3">
-        <div class="container">
-            <!-- content -->
-            @php
-                $sentence = $feature->row_four_title;
-            @endphp
-            <div class="global_call_section_content">
-                <div class="home_title" style="width: 100%; margin: 0px;">
-                    <h5 class="home_title_heading" style="text-align: left; color: #fff;">
-                        <span>{{ \Illuminate\Support\Str::substr($sentence, 0, 1) }}</span>{{ \Illuminate\Support\Str::substr($sentence, 1) }}
-                    </h5>
-                    <p class="home_title_text text-white pt-2 text-lg-start text-center">
-                        {{ Illuminate\Support\Str::limit($feature->row_four_header, 150, '...') }}
-                    </p>
-                    <div class="business_seftion_button">
-                        <a href="{{ asset('contact') }}" class="btn-color">Explore Our Business</a>
+    @if (!empty($learnmore))
+        <section class="global_call_section section_padding mt-2 mb-3">
+            <div class="container">
+                <!-- content -->
+                @php
+                    $sentence = $feature->row_four_title;
+                @endphp
+                <div class="global_call_section_content">
+                    <div class="home_title" style="width: 100%; margin: 0px;">
+                        <h5 class="home_title_heading" style="text-align: left; color: #fff;">
+                            <span>{{ \Illuminate\Support\Str::substr($sentence, 0, 1) }}</span>{{ \Illuminate\Support\Str::substr($sentence, 1) }}
+                        </h5>
+                        <p class="home_title_text text-white pt-2 text-lg-start text-center">
+                            {{ Illuminate\Support\Str::limit($feature->row_four_header, 150, '...') }}
+                        </p>
+                        <div class="business_seftion_button">
+                            <a href="{{ asset('contact') }}" class="btn-color">Explore Our Business</a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    @endif
     <!---------End -------->
 
     <!--======// Consulting services {2} //======-->
-    @if ($row_two)
+    @if (!empty($row_two))
         <section class="my-5">
             <div class="container">
                 <div class="row">
