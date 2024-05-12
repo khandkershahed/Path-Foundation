@@ -23,9 +23,11 @@
         </div>
         <div class="card-body">
 
-            <form id="myForm" method="post" action="{{ route('admin.course.store') }}"
+            <form id="myForm" method="post" action="{{ route('admin.course.update', $course->id) }}"
                 enctype="multipart/form-data">
                 @csrf
+
+                @method('PUT')
 
                 <div class="card bg-light">
 
@@ -41,7 +43,9 @@
 
                                     @if (count($admins) > 0)
                                         @foreach ($admins as $admin)
-                                            <option class="form-control" value="{{ $admin->id }}" {{ $course->instructor_id == $admin->id ? 'selected' : '' }}>{{ $admin->name }}
+                                            <option class="form-control" value="{{ $admin->id }}"
+                                                {{ $course->instructor_id == $admin->id ? 'selected' : '' }}>
+                                                {{ $admin->name }}
                                             </option>
                                         @endforeach
                                     @endif
@@ -62,7 +66,7 @@
                         <div class="col-5 mb-3">
                             <div class="form-group">
                                 <label for="" class="mb-2">Tags</label>
-                                <input type="text" name="tags" placeholder="" class="form-control form-control-sm"
+                                <input type="text" name="tags" data-role="tagsinput" placeholder="" class="form-control form-control-sm"
                                     value="{{ $course->tags }}">
                             </div>
                         </div>
@@ -199,8 +203,8 @@
                         </div>
 
                         <div class="col-12 mb-3 mt-4">
-                            <button type="submit"
-                                class="btn btn-primary rounded-0 px-5 btn-sm float-end">Update Course</button>
+                            <button type="submit" class="btn btn-primary rounded-0 px-5 btn-sm float-end">Update
+                                Course</button>
                         </div>
 
                     </div>

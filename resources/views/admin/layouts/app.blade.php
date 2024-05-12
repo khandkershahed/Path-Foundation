@@ -31,6 +31,7 @@
     <!--begin::Global Stylesheets Bundle(used by all pages)-->
     <link href="{{ asset('admin/assets/plugins/global/plugins.bundle.css') }}" rel="stylesheet" type="text/css" />
     <link href="{{ asset('admin/assets/css/style.bundle.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('admin/css/tagsinput.css') }}" rel="stylesheet" type="text/css" />
     <!--end::Global Stylesheets Bundle-->
 
     @props(['title'])
@@ -135,6 +136,7 @@
 
     <script src="{{ asset('admin/js/custom.js') }}"></script>
     <script src="{{ asset('admin/js/validate.min.js') }}"></script>
+    <script src="{{ asset('admin/js/tagsinput.js') }}"></script>
 
     {{-- {!! Toastr::message() !!}
 

@@ -7,6 +7,7 @@ use App\Models\Admin;
 use App\Models\Course;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\File;
 
 class CourseController extends Controller
 {
@@ -36,7 +37,7 @@ class CourseController extends Controller
                 'name' => $request->name,
                 'slug' => Str::slug($request->name, "-"),
 
-                // 'course_code' => Helper::generateCourseNumber(),
+                'course_code' => 'NG-' . strtoupper(Str::random(10)),
 
                 'tags' => $request->tags,
                 'lecture' => $request->lecture,
@@ -75,7 +76,7 @@ class CourseController extends Controller
                     'name' => $request->name,
                     'slug' => Str::slug($request->name, "-"),
 
-                    // 'course_code' => Helper::generateCourseNumber(),
+                    'course_code' => 'NG-' . strtoupper(Str::random(10)),
 
                     'tags' => $request->tags,
                     'lecture' => $request->lecture,
@@ -114,10 +115,87 @@ class CourseController extends Controller
     }
 
     public function edit(Request $request, $id)
-    {   
+    {
         $course = Course::find($id);
         $admins = Admin::latest()->get();
-        return view('admin.pages.course.edit',compact('course','admins'));
+        return view('admin.pages.course.edit', compact('course', 'admins'));
+    }
+
+    public function update(Request $request, $id)
+    {
+        $course = Course::findOrFail($id);
+
+        $mainFile = $request->file('thumbnail_image');
+        $uploadPath = storage_path('app/public/course/');
+
+        if (isset($mainFile)) {
+            $globalFunImg = customUpload($mainFile, $uploadPath);
+        } else {
+            $globalFunImg['status'] = 0;
+        }
+
+        if (!empty($course)) {
+
+            if ($globalFunImg['status'] == 1) {
+                if (File::exists(public_path('storage/course/requestImg/') . $course->thumbnail_image)) {
+                    File::delete(public_path('storage/course/requestImg/') . $course->thumbnail_image);
+                }
+                if (File::exists(public_path('storage/course/') . $course->thumbnail_image)) {
+                    File::delete(public_path('storage/course/') . $course->thumbnail_image);
+                }
+            }
+
+            $course->update([
+
+                'instructor_id' => $request->instructor_id,
+
+                'name' => $request->name,
+                'slug' => Str::slug($request->name, "-"),
+
+                // 'course_code' => 'NG-' . strtoupper(Str::random(10)),
+
+                'tags' => $request->tags,
+                'lecture' => $request->lecture,
+                'project' => $request->project,
+                'course_duration' => $request->course_duration,
+
+                'course_time' => $request->course_time,
+                'available_seats' => $request->available_seats,
+
+                'price' => $request->price,
+                'discount_price' => $request->discount_price,
+                'online_price' => $request->online_price,
+
+                'discount_start_date' => $request->discount_start_date,
+                'discount_end_date' => $request->discount_end_date,
+
+                'class_start_date' => $request->class_start_date,
+                'class_end_date' => $request->class_end_date,
+
+                'registration_start_date' => $request->registration_start_date,
+                'registration_end_date' => $request->registration_end_date,
+
+                'thumbnail_image' => $globalFunImg['status'] == 1 ? $globalFunImg['file_name'] : $course->thumbnail_image,
+
+            ]);
+        }
+
+        return redirect()->route('admin.course.index')->with('success', 'Course Update Successfully!!');
+    }
+
+    public function destroy($id)
+    {
+        $course = Course::findOrFail($id);
+
+        if (File::exists(public_path('storage/course/requestImg/') . $course->thumbnail_image)) {
+            File::delete(public_path('storage/course/requestImg/') . $course->thumbnail_image);
+        }
+
+        if (File::exists(public_path('storage/course/') . $course->thumbnail_image)) {
+            File::delete(public_path('storage/course/') . $course->thumbnail_image);
+        }
+
+        $course->delete();
     }
 
 }
