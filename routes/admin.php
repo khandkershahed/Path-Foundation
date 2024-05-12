@@ -132,7 +132,7 @@ Route::middleware(['localeSessionRedirect', 'localizationRedirect', 'localeViewP
             'learnmore'       => LearnMoreController::class,
             'success'         => SuccessController::class,
 
-            'course'         => CourseController::class,
+            'course'          => CourseController::class,
         ],
     );
 
