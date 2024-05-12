@@ -44,10 +44,6 @@ require __DIR__ . '/admin.php';
 
 // Frontend Routes
 Route::get('/', [HomeController::class, 'index'])->name('homepage');
-//Learn More
-Route::get('/learn-more', [HomeController::class, 'LearnMore'])->name('learn.more');
-//What We Do
-Route::get('/what-we-do', [HomeController::class, 'whatWeDo'])->name('whatwedo');
 /// Product Search Route
 Route::post('/search', [HomeController::class, 'courseSearch'])->name('course.search');
 // Advance Search Routes
