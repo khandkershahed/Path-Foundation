@@ -14,6 +14,7 @@ use App\Http\Controllers\Controller;
 use App\Models\SolutionDetail;
 use Brian2694\Toastr\Facades\Toastr;
 use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Validator;
 
 class FeatureController extends Controller
@@ -107,15 +108,17 @@ class FeatureController extends Controller
 
             ]);
 
+            Session::flash('success', 'Data Inserted Successfully');
             Toastr::success('Data Inserted Successfully');
         } else {
 
             $messages = $validator->messages();
             foreach ($messages->all() as $message) {
+                Session::flash('error', $message);
                 Toastr::error($message, 'Failed', ['timeOut' => 30000]);
             }
         }
-        return redirect()->back();
+        return redirect()->back()->withInput();
     }
 
     /**
@@ -212,14 +215,16 @@ class FeatureController extends Controller
 
             ]);
 
+            Session::flash('success', 'Data Inserted Successfully');
             Toastr::success('Data has been updated');
         } else {
             $messages = $validator->messages();
             foreach ($messages->all() as $message) {
+                Session::flash('error', $message);
                 Toastr::error($message, 'Failed', ['timeOut' => 30000]);
             }
         }
-        return redirect()->back();
+        return redirect()->back()->withInput();
     }
 
     /**
