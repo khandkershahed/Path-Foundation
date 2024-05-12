@@ -42,14 +42,14 @@
                                 <td class="text-start">{{ $feature->title }}</td>
                                 <td class="text-start"><span title="{!! $feature->header !!}">{!! implode(' ', array_slice(str_word_count($feature->header, 1), 0, 10)) !!}</span></td>
                                 <td>
-                                    <a href="{{ route('feature.edit', $feature->id) }}"
-                                        class="text-primary">
+                                    <a href="{{ route('admin.feature.edit', $feature->id) }}"
+                                        class="text-primary"> edit
                                         <i
-                                            class="fa-solid fa-pen-to-square dash-icons"></i>
+                                            class="fas fa-pen-to-square dash-icons"></i>
                                     </a>
-                                    <a href="{{ route('feature.destroy', [$feature->id]) }}"
-                                        class="text-danger delete">
-                                        <i class="fa-solid fa-trash dash-icons"></i>
+                                    <a href="{{ route('admin.feature.destroy', [$feature->id]) }}"
+                                        class="text-danger delete"> Delete
+                                        <i class="fas fa-trash dash-icons"></i>
                                     </a>
                                 </td>
                             </tr>
