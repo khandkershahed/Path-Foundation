@@ -38,7 +38,7 @@
                                         <div class="col-lg-12">
                                             <input type="text" id="badge" name="badge" value="{{old('badge')}}"
                                                 class="form-control form-control-sm" maxlength="255" placeholder="Badge"
-                                                required />
+                                                 />
                                         </div>
                                     </div>
                                     {{--  --}}
@@ -48,7 +48,7 @@
                                         </div>
                                         <div class="col-lg-12 col-sm-12">
                                             <input type="text" name="title" value="{{old('title')}}" class="form-control form-control-sm"
-                                                maxlength="255" placeholder="Feature Title" required />
+                                                maxlength="255" placeholder="Feature Title"  />
                                         </div>
                                     </div>
                                     {{--  --}}
@@ -99,7 +99,7 @@
                                         <div class="col-lg-12">
                                             <input type="text" name="banner_btn_name" value="{{old('banner_btn_name')}}"
                                                 class="form-control form-control-sm" maxlength="255"
-                                                placeholder="Button name" required />
+                                                placeholder="Button name"  />
                                         </div>
                                     </div>
                                     <div class="row pb-7">
@@ -109,7 +109,7 @@
                                         <div class="col-lg-12">
                                             <input type="text" name="banner_btn_link" value="{{old('banner_btn_link')}}"
                                                 class="form-control form-control-sm" maxlength="255"
-                                                placeholder="Button link" required />
+                                                placeholder="Button link"  />
                                         </div>
                                     </div>
                                 </div>
@@ -160,7 +160,7 @@
                                     <div class="col-lg-12">
                                         <input type="text" name="row_four_title" value="{{old('row_four_title')}}"
                                             class="form-control form-control-sm" maxlength="255"
-                                            placeholder="Feature Title" required />
+                                            placeholder="Feature Title"  />
                                     </div>
                                 </div>
 

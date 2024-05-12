@@ -22,7 +22,7 @@
             </div>
         </div>
         <div class="card-body">
-            <form method="post" action="{{ route('feature.update', $feature->id) }}" enctype="multipart/form-data"
+            <form method="post" action="{{ route('admin.feature.update', $feature->id) }}" enctype="multipart/form-data"
                 id="myform">
                 @csrf
                 @method('PUT')
@@ -39,7 +39,7 @@
                                     <div class="col-lg-8">
                                         <input type="text" id="badge" name="badge"
                                             value="{{ $feature->badge }}" class="form-control form-control-sm"
-                                            maxlength="255" placeholder="Badge" required />
+                                            maxlength="255" placeholder="Badge" />
                                     </div>
                                 </div>
                                 {{--  --}}
@@ -50,7 +50,7 @@
                                     <div class="col-lg-8 col-sm-12">
                                         <input type="text" name="title" value="{{ $feature->title }}"
                                             class="form-control form-control-sm" maxlength="255"
-                                            placeholder="Feature Title" required />
+                                            placeholder="Feature Title" />
                                     </div>
                                 </div>
                                 {{--  --}}
@@ -122,7 +122,7 @@
                                         <input type="text"name="row_four_title"
                                             value="{{ $feature->row_four_title }}"
                                             class="form-control form-control-sm" maxlength="255"
-                                            placeholder="Contact Title" required />
+                                            placeholder="Contact Title" />
                                     </div>
                                 </div>
                                 {{--  --}}
