@@ -15,4 +15,13 @@ class Feature extends Model
      * @var array
      */
     protected $guarded = [];
+    public function rowOne()
+    {
+        return $this->belongsTo(Row::class, 'row_one_id');
+    }
+
+    public function rowTwo()
+    {
+        return $this->belongsTo(Row::class, 'row_two_id');
+    }
 }
