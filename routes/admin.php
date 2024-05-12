@@ -104,7 +104,7 @@ Route::middleware(['localeSessionRedirect', 'localizationRedirect', 'localeViewP
     //     ],
     //     ['except' => ['show']]
     // );
-    
+
     Route::resources(
         [
             'user' => UserController::class, //done
