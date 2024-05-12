@@ -52,11 +52,11 @@
                             <td class="text-start">{{ $course->price }} Tk</td>
                             <td class="text-start">{{ $course->discount_price }} Tk</td>
                             <td>
-                                <a href="" class="text-primary">
-                                    <i class="fa-solid fa-pen-to-square dash-icons"></i>
+                                <a href="{{ route('admin.course.edit',$course->id) }}" class="text-primary">
+                                    <i class="bi bi-pencil text-primary"></i>
                                 </a>
-                                <a href="" class="text-danger delete">
-                                    <i class="fa-solid fa-trash dash-icons"></i>
+                                <a href="" class="delete">
+                                    <i class="bi bi-trash3-fill text-danger"></i>
                                 </a>
                             </td>
                         </tr>

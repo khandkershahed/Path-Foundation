@@ -5,7 +5,6 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Admin;
 use App\Models\Course;
-use Helper;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 
@@ -14,7 +13,7 @@ class CourseController extends Controller
     public function index()
     {
         $courses = Course::latest()->get();
-        return view('admin.pages.course.index',compact('courses'));
+        return view('admin.pages.course.index', compact('courses'));
     }
 
     public function create()
@@ -37,7 +36,7 @@ class CourseController extends Controller
                 'name' => $request->name,
                 'slug' => Str::slug($request->name, "-"),
 
-                'course_code' => Helper::generateCourseNumber(),
+                // 'course_code' => Helper::generateCourseNumber(),
 
                 'tags' => $request->tags,
                 'lecture' => $request->lecture,
@@ -65,7 +64,7 @@ class CourseController extends Controller
             ]);
         } else {
 
-            $globalFunImg = Helper::customUpload($mainFile, $imgPath);
+            $globalFunImg = customUpload($mainFile, $imgPath);
 
             if ($globalFunImg['status'] == 1) {
 
@@ -76,7 +75,7 @@ class CourseController extends Controller
                     'name' => $request->name,
                     'slug' => Str::slug($request->name, "-"),
 
-                    'course_code' => Helper::generateCourseNumber(),
+                    // 'course_code' => Helper::generateCourseNumber(),
 
                     'tags' => $request->tags,
                     'lecture' => $request->lecture,
@@ -115,8 +114,10 @@ class CourseController extends Controller
     }
 
     public function edit(Request $request, $id)
-    {
-        return view('admin.pages.course.edit');
+    {   
+        $course = Course::find($id);
+        $admins = Admin::latest()->get();
+        return view('admin.pages.course.edit',compact('course','admins'));
     }
 
 }
