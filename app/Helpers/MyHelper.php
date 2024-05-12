@@ -5,148 +5,148 @@ use Illuminate\Support\Str;
 use Intervention\Image\Facades\Image;
 
 
-// if (!function_exists('handaleFileUpload')) {
-//     function handaleFileUpload(UploadedFile $file, $folder = 'default')
-//     {
-//         if (!$file->isValid()) {
-//             abort(422, 'Invalid file');
-//         }
-
-//         $extension = $file->getClientOriginalExtension();
-//         $folderType = in_array($extension, ['jpg', 'jpeg', 'png', 'gif']) ? 'images' : 'files';
-
-//         $path = Storage::disk('public')->putFile("$folderType/$folder", $file);
-
-//         if (!$path) {
-//             abort(500, 'Error occurred while moving the file');
-//         }
-
-//         // Return only the file path as a string
-//         return $path;
-//     }
-// }
-
-// if (!function_exists('noImage')) {
-//     function noImage()
-//     {
-//         return 'https://static.vecteezy.com/system/resources/thumbnails/004/141/669/small/no-photo-or-blank-image-icon-loading-images-or-missing-image-mark-image-not-available-or-image-coming-soon-sign-simple-nature-silhouette-in-frame-isolated-illustration-vector.jpg';
-//     }
-// }
-
-// if (!function_exists('customUpload')) {
-//     function customUpload(UploadedFile $mainFile, string $uploadPath, ?int $reqWidth = null, ?int $reqHeight = null): array
-//     {
-//         $originalName = pathinfo($mainFile->getClientOriginalName(), PATHINFO_FILENAME);
-
-//         $hashedName = substr($mainFile->hashName(), -12);
-
-//         $fileName = $originalName . '_' . $hashedName;
-
-//         if (!is_dir($uploadPath)) {
-//             if (!mkdir($uploadPath, 0777, true)) {
-//                 abort(404, "Failed to create the directory: $uploadPath");
-//             }
-//         }
-
-//         if (strpos($mainFile->getMimeType(), 'image') === 0) {
-//             $requestImgPath = "{$uploadPath}/requestImg";
-//             if (!is_dir($requestImgPath)) {
-//                 if (!mkdir($requestImgPath, 0777, true)) {
-//                     abort(404, "Failed to create the directory: $requestImgPath");
-//                 }
-//             }
-
-//             $img = Image::read($mainFile);
-//             $img->save("$uploadPath/$fileName");
-//             if ($reqWidth !== null && $reqHeight !== null) {
-//                 $img->resize($reqWidth, $reqHeight, function ($constraint) {
-//                     $constraint->aspectRatio();
-//                     $constraint->upsize();
-//                 });
-//                 $img->save("$requestImgPath/$fileName");
-//             }
-//         } else {
-//             $mainFile->storeAs('public/files/', $fileName);
-//         }
-
-//         $output = [
-//             'status'         => 1,
-//             'file_name'      => $fileName,
-//             'file_extension' => $mainFile->getClientOriginalExtension(),
-//             'file_size'      => $mainFile->getSize(),
-//             'file_type'      => $mainFile->getMimeType(),
-//         ];
-
-//         return array_map('htmlspecialchars', $output);
-//     }
-// }
-
-class Helper
-{
-    public static function customUpload($mainFile, $uploadPath, ?int $reqWidth = null, ?int $reqHeight = null): array
+if (!function_exists('handaleFileUpload')) {
+    function handaleFileUpload(UploadedFile $file, $folder = 'default')
     {
-        // Create an empty output array
-        $output = [];
+        if (!$file->isValid()) {
+            abort(422, 'Invalid file');
+        }
 
-        // Get the hashed file name
-        $fileName = $mainFile->hashName();
-        $uploadPath = str_replace('/', DIRECTORY_SEPARATOR, $uploadPath);
+        $extension = $file->getClientOriginalExtension();
+        $folderType = in_array($extension, ['jpg', 'jpeg', 'png', 'gif']) ? 'images' : 'files';
 
-        // Create the requestImg directory if it does not exist
-        if (!is_dir("{$uploadPath}/requestImg")) {
-            if (!mkdir("{$uploadPath}/requestImg", 0777, true)) {
-                throw new Exception("Failed to create the directory: {$uploadPath}/requestImg");
+        $path = Storage::disk('public')->putFile("$folderType/$folder", $file);
+
+        if (!$path) {
+            abort(500, 'Error occurred while moving the file');
+        }
+
+        // Return only the file path as a string
+        return $path;
+    }
+}
+
+if (!function_exists('noImage')) {
+    function noImage()
+    {
+        return 'https://static.vecteezy.com/system/resources/thumbnails/004/141/669/small/no-photo-or-blank-image-icon-loading-images-or-missing-image-mark-image-not-available-or-image-coming-soon-sign-simple-nature-silhouette-in-frame-isolated-illustration-vector.jpg';
+    }
+}
+
+if (!function_exists('customUpload')) {
+    function customUpload(UploadedFile $mainFile, string $uploadPath, ?int $reqWidth = null, ?int $reqHeight = null): array
+    {
+        $originalName = pathinfo($mainFile->getClientOriginalName(), PATHINFO_FILENAME);
+
+        $hashedName = substr($mainFile->hashName(), -12);
+
+        $fileName = $originalName . '_' . $hashedName;
+
+        if (!is_dir($uploadPath)) {
+            if (!mkdir($uploadPath, 0777, true)) {
+                abort(404, "Failed to create the directory: $uploadPath");
             }
         }
 
-        // Check if the uploaded file is an image
         if (strpos($mainFile->getMimeType(), 'image') === 0) {
-            // Image file upload
-            $main_image = Image::make($mainFile);
-            $main_image->save("{$uploadPath}/{$fileName}");
+            $requestImgPath = "{$uploadPath}/requestImg";
+            if (!is_dir($requestImgPath)) {
+                if (!mkdir($requestImgPath, 0777, true)) {
+                    abort(404, "Failed to create the directory: $requestImgPath");
+                }
+            }
 
-            if (!empty($reqWidth) && !empty($reqHeight)) {
-
-                $img = Image::make($mainFile)->resize($reqWidth, $reqHeight);
-                $img->save("{$uploadPath}/requestImg/{$fileName}");
-
-            };
-
+            $img = Image::read($mainFile);
+            $img->save("$uploadPath/$fileName");
+            if ($reqWidth !== null && $reqHeight !== null) {
+                $img->resize($reqWidth, $reqHeight, function ($constraint) {
+                    $constraint->aspectRatio();
+                    $constraint->upsize();
+                });
+                $img->save("$requestImgPath/$fileName");
+            }
         } else {
-            // Non-image file upload
-            $mainFile->storeAs($uploadPath, $fileName);
+            $mainFile->storeAs('public/files/', $fileName);
         }
 
-        // Populate the output array with file information
         $output = [
-            'status' => 1,
-            'file_name' => $fileName,
+            'status'         => 1,
+            'file_name'      => $fileName,
             'file_extension' => $mainFile->getClientOriginalExtension(),
-            'file_size' => $mainFile->getSize(),
+            'file_size'      => $mainFile->getSize(),
+            'file_type'      => $mainFile->getMimeType(),
         ];
 
-        // Return the output array
         return array_map('htmlspecialchars', $output);
     }
-
-    public static function generateCourseNumber()
-    {
-        $orderNumber = 'NG-' . strtoupper(Str::random(10));
-
-        try {
-            // Check if the generated order number already exists
-            $existingOrder = Course::where('course_code', $orderNumber)->first();
-        } catch (\Exception $e) {
-            // Handle any exceptions (e.g., database connection issues)
-            return $orderNumber;
-        }
-
-        // Generate a new order number if a duplicate is found
-        while ($existingOrder) {
-            $orderNumber = 'NG-' . strtoupper(Str::random(10));
-            $existingOrder = Course::where('course_code', $orderNumber)->first();
-        }
-
-        return $orderNumber;
-    }
 }
+
+// class Helper
+// {
+//     public static function customUpload($mainFile, $uploadPath, ?int $reqWidth = null, ?int $reqHeight = null): array
+//     {
+//         // Create an empty output array
+//         $output = [];
+
+//         // Get the hashed file name
+//         $fileName = $mainFile->hashName();
+//         $uploadPath = str_replace('/', DIRECTORY_SEPARATOR, $uploadPath);
+
+//         // Create the requestImg directory if it does not exist
+//         if (!is_dir("{$uploadPath}/requestImg")) {
+//             if (!mkdir("{$uploadPath}/requestImg", 0777, true)) {
+//                 throw new Exception("Failed to create the directory: {$uploadPath}/requestImg");
+//             }
+//         }
+
+//         // Check if the uploaded file is an image
+//         if (strpos($mainFile->getMimeType(), 'image') === 0) {
+//             // Image file upload
+//             $main_image = Image::make($mainFile);
+//             $main_image->save("{$uploadPath}/{$fileName}");
+
+//             if (!empty($reqWidth) && !empty($reqHeight)) {
+
+//                 $img = Image::make($mainFile)->resize($reqWidth, $reqHeight);
+//                 $img->save("{$uploadPath}/requestImg/{$fileName}");
+
+//             };
+
+//         } else {
+//             // Non-image file upload
+//             $mainFile->storeAs($uploadPath, $fileName);
+//         }
+
+//         // Populate the output array with file information
+//         $output = [
+//             'status' => 1,
+//             'file_name' => $fileName,
+//             'file_extension' => $mainFile->getClientOriginalExtension(),
+//             'file_size' => $mainFile->getSize(),
+//         ];
+
+//         // Return the output array
+//         return array_map('htmlspecialchars', $output);
+//     }
+
+//     public static function generateCourseNumber()
+//     {
+//         $orderNumber = 'NG-' . strtoupper(Str::random(10));
+
+//         try {
+//             // Check if the generated order number already exists
+//             $existingOrder = Course::where('course_code', $orderNumber)->first();
+//         } catch (\Exception $e) {
+//             // Handle any exceptions (e.g., database connection issues)
+//             return $orderNumber;
+//         }
+
+//         // Generate a new order number if a duplicate is found
+//         while ($existingOrder) {
+//             $orderNumber = 'NG-' . strtoupper(Str::random(10));
+//             $existingOrder = Course::where('course_code', $orderNumber)->first();
+//         }
+
+//         return $orderNumber;
+//     }
+// }

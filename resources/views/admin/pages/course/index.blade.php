@@ -27,7 +27,8 @@
                     <tr>
                         <th width="5%">No</th>
                         <th width="8%">Image</th>
-                        <th width="40%">Course Name</th>
+                        <th width="20%">Course Name</th>
+                        <th width="20%">Lecture</th>
                         <th width="10%">Seat</th>
                         <th width="10%">Price</th>
                         <th width="20%">Discount Price</th>
@@ -35,26 +36,32 @@
                     </tr>
                 </thead>
                 <tbody class="fw-bold text-gray-600">
-                    <tr>
-                        <td>1</td>
-                        <td class="text-center">
-                            <img class="rounded-circle" src="" height="25" width="25" alt="">
-                        </td>
 
-                        <td class="text-start">dfgdf</td>
-                        <td class="text-start">dfgfd</td>
-                        <td class="text-start">dfgdf</td>
-                        <td class="text-start">dfgfd</td>
-                        <td>
-                            <a href="" class="text-primary">
-                                <i class="fa-solid fa-pen-to-square dash-icons"></i>
-                            </a>
-                            <a href="" class="text-danger delete">
-                                <i class="fa-solid fa-trash dash-icons"></i>
-                            </a>
-                        </td>
-                    </tr>
-                    {{-- @endforeach --}}
+                    @foreach ($courses as $course)
+                        <tr>
+                            <td>1</td>
+                            <td class="text-center">
+                                <img class=""
+                                    src="{{ asset('storage/course/' . $course->thumbnail_image) }}" height="40"
+                                    width="40" alt="">
+                            </td>
+
+                            <td class="text-start">{{ $course->name }}</td>
+                            <td class="text-start">{{ $course->lecture }}</td>
+                            <td class="text-start">{{ $course->available_seats }}</td>
+                            <td class="text-start">{{ $course->price }} Tk</td>
+                            <td class="text-start">{{ $course->discount_price }} Tk</td>
+                            <td>
+                                <a href="" class="text-primary">
+                                    <i class="fa-solid fa-pen-to-square dash-icons"></i>
+                                </a>
+                                <a href="" class="text-danger delete">
+                                    <i class="fa-solid fa-trash dash-icons"></i>
+                                </a>
+                            </td>
+                        </tr>
+                    @endforeach
+
 
                 </tbody>
             </table>

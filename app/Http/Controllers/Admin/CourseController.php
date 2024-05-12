@@ -13,7 +13,8 @@ class CourseController extends Controller
 {
     public function index()
     {
-        return view('admin.pages.course.index');
+        $courses = Course::latest()->get();
+        return view('admin.pages.course.index',compact('courses'));
     }
 
     public function create()
