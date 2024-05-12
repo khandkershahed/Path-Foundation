@@ -1,8 +1,14 @@
 <?php
 
+<<<<<<< HEAD
+use App\Models\Course;
+=======
+>>>>>>> 75e198236d568b8e10cc1bb8aa20a182eaf55824
 use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
 use Intervention\Image\Laravel\Facades\Image;
+
 
 if (!function_exists('handaleFileUpload')) {
     function handaleFileUpload(UploadedFile $file, $folder = 'default')
@@ -69,13 +75,15 @@ if (!function_exists('customUpload')) {
         }
 
         $output = [
-            'status'         => 1,
-            'file_name'      => $fileName,
+            'status' => 1,
+            'file_name' => $fileName,
             'file_extension' => $mainFile->getClientOriginalExtension(),
-            'file_size'      => $mainFile->getSize(),
-            'file_type'      => $mainFile->getMimeType(),
+            'file_size' => $mainFile->getSize(),
+            'file_type' => $mainFile->getMimeType(),
         ];
 
         return array_map('htmlspecialchars', $output);
     }
 }
+
+

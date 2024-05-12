@@ -37,13 +37,12 @@
                 </thead>
                 <tbody class="fw-bold text-gray-600">
 
-                    @foreach ($courses as $course)
+                    @foreach ($courses as $key => $course)
                         <tr>
-                            <td>1</td>
+                            <td>{{ $key + 1 }}</td>
                             <td class="text-center">
-                                <img class=""
-                                    src="{{ asset('storage/course/' . $course->thumbnail_image) }}" height="40"
-                                    width="40" alt="">
+                                <img class="" src="{{ asset('storage/course/' . $course->thumbnail_image) }}"
+                                    height="40" width="40" alt="">
                             </td>
 
                             <td class="text-start">{{ $course->name }}</td>
@@ -52,12 +51,14 @@
                             <td class="text-start">{{ $course->price }} Tk</td>
                             <td class="text-start">{{ $course->discount_price }} Tk</td>
                             <td>
-                                <a href="{{ route('admin.course.edit',$course->id) }}" class="text-primary">
+                                <a href="{{ route('admin.course.edit', $course->id) }}" class="text-primary">
                                     <i class="bi bi-pencil text-primary"></i>
                                 </a>
-                                <a href="" class="delete">
+
+                                <a href="{{ route('admin.course.destroy', $course->id) }}" class="delete">
                                     <i class="bi bi-trash3-fill text-danger"></i>
                                 </a>
+
                             </td>
                         </tr>
                     @endforeach
