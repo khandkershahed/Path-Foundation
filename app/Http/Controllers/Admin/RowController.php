@@ -60,7 +60,7 @@ class RowController extends Controller
         }
 
         $mainFile = $request->file('image');
-        $filePath = storage_path('app/public/row/');
+        $filePath = storage_path('app/public/');
         $globalFunImage = !empty($mainFile) ? customUpload($mainFile, $filePath, 60, 45) : ['status' => 0];
 
         $slug = Str::slug($request->title);
@@ -137,13 +137,13 @@ class RowController extends Controller
         $row = Row::findOrFail($id);
 
         $mainFile = $request->file('image');
-        $filePath = storage_path('app/public/row/');
+        $filePath = storage_path('app/public/');
 
         if (!empty($mainFile)) {
             $globalFunImage = customUpload($mainFile, $filePath, 60, 45);
             if (!empty($row->image)) {
-                Storage::delete("public/row/requestImg/{$row->image}");
-                Storage::delete("public/row/{$row->image}");
+                Storage::delete("public/requestImg/{$row->image}");
+                Storage::delete("public/{$row->image}");
             }
         } else {
             $globalFunImage = ['status' => 0];
@@ -189,11 +189,11 @@ class RowController extends Controller
     {
         $row = Row::find($id);
 
-        if (File::exists(public_path('storage/row/') . $row->image)) {
-            File::delete(public_path('storage/row/') . $row->image);
+        if (File::exists(public_path('storage/') . $row->image)) {
+            File::delete(public_path('storage/') . $row->image);
         }
-        if (File::exists(public_path('storage/row/requestImg/') . $row->image)) {
-            File::delete(public_path('storage/row/requestImg/') . $row->image);
+        if (File::exists(public_path('storage/requestImg/') . $row->image)) {
+            File::delete(public_path('storage/requestImg/') . $row->image);
         }
         $row->delete();
     }
