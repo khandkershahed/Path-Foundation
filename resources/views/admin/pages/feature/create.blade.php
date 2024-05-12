@@ -124,7 +124,7 @@
                                         <span title="Row With List">Row with List</span>
                                     </div>
                                     <div class="col-lg-8 col-sm-12">
-                                        <select name="row_one_id" value="{{old('row_one_id')}}" data-placeholder="Select Row One.."
+                                        <select name="row_one_id" data-placeholder="Select Row One.."
                                             class="form-select" data-control="select2" data-placeholder="Select an option" style="width: 100%;">
                                             @foreach ($rows as $row)
                                                 <option class="form-control" value="{{ $row->id }}">
@@ -138,7 +138,7 @@
                                         <span title="Row With Left Image">Left Image</span>
                                     </div>
                                     <div class="col-lg-8 col-sm-12">
-                                        <select name="row_two_id" value="{{old('row_two_id')}}" data-placeholder="Select Row Two.."
+                                        <select name="row_two_id" data-placeholder="Select Row Two.."
                                             class="form-select" data-control="select2" data-placeholder="Select an option" style="width: 100%;">
                                             @foreach ($rows as $row)
                                                 <option class="form-control" value="{{ $row->id }}">

@@ -50,15 +50,15 @@ class FeatureController extends Controller
      */
     public function store(Request $request)
     {
-
+        // dd($request->all());
         $validator = Validator::make(
             $request->all(),
             [
-                'badge'  => 'required',
-                'title'  => 'required',
-                'header' => 'required',
-                'logo'   => 'required|image|mimes:png,jpg,jpeg|max:10000',
-                'image'  => 'required|image|mimes:png,jpg,jpeg|max:10000',
+                'badge'  => 'nullable',
+                'title'  => 'nullable',
+                'header' => 'nullable',
+                'logo'   => 'nullable|image|mimes:png,jpg,jpeg|max:10000',
+                'image'  => 'nullable|image|mimes:png,jpg,jpeg|max:10000',
 
             ],
             [
@@ -159,9 +159,9 @@ class FeatureController extends Controller
             $validator = Validator::make(
                 $request->all(),
                 [
-                    'badge'  => 'required',
-                    'title'  => 'required',
-                    'header' => 'required',
+                    'badge'  => 'nullable',
+                    'title'  => 'nullable',
+                    'header' => 'nullable',
                 ]
 
             );
