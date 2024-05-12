@@ -13,14 +13,14 @@ return new class extends Migration
     {
         Schema::create('courses', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('instructor_id')->nullable(); /*admin table, multi input */
+            $table->foreignId('instructor_id')->nullable()->constrained('admins')->cascadeOnUpdate();
             $table->string('name', 255);
             $table->string('slug', 255)->unique();
             $table->string('course_code', 50)->unique()->nullable();
             $table->string('tags')->nullable();
             $table->string('thumbnail_image', 255)->nullable();
-            $table->string('lecture', 150)->nullable();
-            $table->string('project', 150)->nullable();
+            $table->string('lecture', 250)->nullable();
+            $table->string('project', 250)->nullable();
             $table->string('course_duration', 150)->nullable();
             $table->string('course_time', 192)->nullable();
             $table->integer('available_seats')->default(1);
@@ -32,6 +32,9 @@ return new class extends Migration
             $table->date('class_end_date')->nullable();
             $table->date('registration_start_date')->nullable();
             $table->date('registration_end_date')->nullable();
+
+            $table->string('status')->default('active');
+
             $table->timestamps();
         });
     }
