@@ -33,8 +33,8 @@
     <!--end::Global Stylesheets Bundle-->
 
     @props(['title'])
-    <title>{{ $title ?? config('app.name', 'MD Boilarplate') }}</title>
-    
+    <title>{{ $title ?? config('app.name', '') }}</title>
+
 </head>
 
 <body id="kt_body"
@@ -59,9 +59,11 @@
 
                 <!--begin::Content-->
                 <div class="content d-flex flex-column flex-column-fluid" id="kt_content">
+
                     <!--begin::Toolbar-->
                     @include('admin.layouts.toolbar')
                     <!--end::Toolbar-->
+
                     <!--begin::Post-->
                     <div class="post d-flex flex-column-fluid" id="kt_post">
                         <!--begin::Container-->
@@ -131,9 +133,13 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js" async></script>
 
     <script src="{{ asset('admin/js/custom.js') }}"></script>
-    {!! Toastr::message() !!}
-    @include('toastr')
+
+    {{-- {!! Toastr::message() !!}
+
+    @include('toastr') --}}
+
     @stack('scripts')
+    
     <script>
         tinymce.init({
             selector: 'textarea.kt_docs_tinymce_plugins',

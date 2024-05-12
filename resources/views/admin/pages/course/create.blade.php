@@ -27,18 +27,241 @@
                 @csrf
                 <div class="container">
                     <div class="row p-1">
+
+                        <div class="card">
+                            <div class="row">
+
+                                <div class="col-8 rounded bg-light p-3">
+                                    <div class="row">
+
+                                        <div class="col-lg-12 col-sm-12 mb-3">
+                                            <span class="mt-1 fw-bold text-info">Course Section</span>
+                                        </div>
+
+                                        <div class="col-6 mb-3">
+                                            <div class="form-group">
+                                                <label for="" class="mb-2">Course Name</label>
+                                                <input type="text" name="name" placeholder="Corse Name" class="form-control form-control-sm" value="{{ old('name') }}">
+                                            </div>
+                                        </div>
+            
+                                        <div class="col-6 mb-3">
+                                            <div class="form-group">
+                                                <label for="" class="mb-2">Tags</label>
+                                                <input type="text" name="name" placeholder="" class="form-control form-control-sm" value="{{ old('tags') }}">
+                                            </div>
+                                        </div>
+            
+                                        <div class="col-4 mb-3">
+                                            <div class="form-group">
+                                                <label for="" class="mb-2">Lecture</label>
+                                                <input type="text" name="lecture" placeholder="25 Leacture" class="form-control form-control-sm" value="{{ old('lecture') }}">
+                                            </div>
+                                        </div>
+            
+                                        <div class="col-3 mb-3">
+                                            <div class="form-group">
+                                                <label for="" class="mb-2">Project</label>
+                                                <input type="text" name="project" placeholder="Five Project" class="form-control form-control-sm" value="{{ old('project') }}">
+                                            </div>
+                                        </div>
+            
+                                        <div class="col-3 mb-3">
+                                            <div class="form-group">
+                                                <label for="" class="mb-2">Course Duration</label>
+                                                <input type="text" name="course_duration" placeholder="6 Months" class="form-control form-control-sm" value="{{ old('course_duration') }}">
+                                            </div>
+                                        </div>
+            
+                                        <div class="col-3 mb-3">
+                                            <div class="form-group">
+                                                <label for="" class="mb-2">Course Time</label>
+                                                <input type="text" name="course_time" placeholder="Eg: 2.00-4.00 Pm (Sat-Fri)" class="form-control form-control-sm" value="{{ old('course_time') }}">
+                                            </div>
+                                        </div>
+            
+                                        <div class="col-3 mb-3">
+                                            <div class="form-group">
+                                                <label for="" class="mb-2">Available Seats</label>
+                                                <input type="text" name="available_seats" placeholder="Eg: 10" class="form-control form-control-sm" value="{{ old('available_seats') }}">
+                                            </div>
+                                        </div>
+            
+                                        <div class="col-3 mb-3">
+                                            <div class="form-group">
+                                                <label for="" class="mb-2">Price</label>
+                                                <input type="text" name="price" placeholder="Eg:20000" class="form-control form-control-sm" value="{{ old('price') }}">
+                                            </div>
+                                        </div>
+            
+                                        <div class="col-3 mb-3">
+                                            <div class="form-group">
+                                                <label for="" class="mb-2">Discount Price</label>
+                                                <input type="text" name="discount_price" placeholder="Eg:10000" class="form-control form-control-sm" value="{{ old('discount_price') }}">
+                                            </div>
+                                        </div>
+            
+                                        <div class="col-3 mb-3">
+                                            <div class="form-group">
+                                                <label for="" class="mb-2">Online Price</label>
+                                                <input type="text" name="online_price" placeholder="Eg:5000" class="form-control form-control-sm" value="{{ old('online_price') }}">
+                                            </div>
+                                        </div>
+            
+                                        <div class="col-3 mb-3">
+                                            <div class="form-group">
+                                                <label for="" class="mb-2">Discount Start Date</label>
+                                                <input type="date" name="discount_start_date" min="{{Carbon\Carbon::now()->format('Y-m-d')}}" class="form-control form-control-sm">
+                                            </div>
+                                        </div>
+            
+                                        <div class="col-3 mb-3">
+                                            <div class="form-group">
+                                                <label for="" class="mb-2">Discount End Date</label>
+                                                <input type="date" name="discount_end_date" min="{{Carbon\Carbon::now()->format('Y-m-d')}}" class="form-control form-control-sm">
+                                            </div>
+                                        </div>
+            
+                                        <div class="col-3 mb-3">
+                                            <div class="form-group">
+                                                <label for="" class="mb-2">Class Start Date</label>
+                                                <input type="date" name="class_start_date" min="{{Carbon\Carbon::now()->format('Y-m-d')}}" class="form-control form-control-sm">
+                                            </div>
+                                        </div>
+            
+                                        <div class="col-3 mb-3">
+                                            <div class="form-group">
+                                                <label for="" class="mb-2">Class End Date</label>
+                                                <input type="date" name="class_end_date" min="{{Carbon\Carbon::now()->format('Y-m-d')}}" class="form-control form-control-sm">
+                                            </div>
+                                        </div>
+            
+                                        <div class="col-3 mb-3">
+                                            <div class="form-group">
+                                                <label for="" class="mb-2">Registration Start Date</label>
+                                                <input type="date" name="registration_start_date" min="{{Carbon\Carbon::now()->format('Y-m-d')}}" class="form-control form-control-sm">
+                                            </div>
+                                        </div>
+            
+                                        <div class="col-3 mb-3">
+                                            <div class="form-group">
+                                                <label for="" class="mb-2">Registration End Date</label>
+                                                <input type="date" name="registration_end_date" min="{{Carbon\Carbon::now()->format('Y-m-d')}}" class="form-control form-control-sm">
+                                            </div>
+                                        </div>
+            
+                                    </div>
+                                </div>
+
+                                <div class="col-4 rounded bg-light p-3">
+                                    <div class="row">
+
+                                        <div class="col-lg-12 col-sm-12 mb-3">
+                                            <span class="mt-1 fw-bold text-info">Course Section</span>
+                                        </div>
+
+            
+                                        <div class="col-3 mb-3">
+                                            <div class="form-group">
+                                                <label for="" class="mb-2">Course Duration</label>
+                                                <input type="text" name="course_duration" placeholder="6 Months" class="form-control form-control-sm" value="{{ old('course_duration') }}">
+                                            </div>
+                                        </div>
+            
+                                        <div class="col-3 mb-3">
+                                            <div class="form-group">
+                                                <label for="" class="mb-2">Course Time</label>
+                                                <input type="text" name="course_time" placeholder="Eg: 2.00-4.00 Pm (Sat-Fri)" class="form-control form-control-sm" value="{{ old('course_time') }}">
+                                            </div>
+                                        </div>
+            
+                                        <div class="col-3 mb-3">
+                                            <div class="form-group">
+                                                <label for="" class="mb-2">Available Seats</label>
+                                                <input type="text" name="available_seats" placeholder="Eg: 10" class="form-control form-control-sm" value="{{ old('available_seats') }}">
+                                            </div>
+                                        </div>
+            
+                                        <div class="col-3 mb-3">
+                                            <div class="form-group">
+                                                <label for="" class="mb-2">Price</label>
+                                                <input type="text" name="price" placeholder="Eg:20000" class="form-control form-control-sm" value="{{ old('price') }}">
+                                            </div>
+                                        </div>
+            
+                                        <div class="col-3 mb-3">
+                                            <div class="form-group">
+                                                <label for="" class="mb-2">Discount Price</label>
+                                                <input type="text" name="discount_price" placeholder="Eg:10000" class="form-control form-control-sm" value="{{ old('discount_price') }}">
+                                            </div>
+                                        </div>
+            
+                                        <div class="col-3 mb-3">
+                                            <div class="form-group">
+                                                <label for="" class="mb-2">Online Price</label>
+                                                <input type="text" name="online_price" placeholder="Eg:5000" class="form-control form-control-sm" value="{{ old('online_price') }}">
+                                            </div>
+                                        </div>
+            
+                                        <div class="col-3 mb-3">
+                                            <div class="form-group">
+                                                <label for="" class="mb-2">Discount Start Date</label>
+                                                <input type="date" name="discount_start_date" min="{{Carbon\Carbon::now()->format('Y-m-d')}}" class="form-control form-control-sm">
+                                            </div>
+                                        </div>
+            
+                                        <div class="col-3 mb-3">
+                                            <div class="form-group">
+                                                <label for="" class="mb-2">Discount End Date</label>
+                                                <input type="date" name="discount_end_date" min="{{Carbon\Carbon::now()->format('Y-m-d')}}" class="form-control form-control-sm">
+                                            </div>
+                                        </div>
+            
+                                        <div class="col-3 mb-3">
+                                            <div class="form-group">
+                                                <label for="" class="mb-2">Class Start Date</label>
+                                                <input type="date" name="class_start_date" min="{{Carbon\Carbon::now()->format('Y-m-d')}}" class="form-control form-control-sm">
+                                            </div>
+                                        </div>
+            
+                                        <div class="col-3 mb-3">
+                                            <div class="form-group">
+                                                <label for="" class="mb-2">Class End Date</label>
+                                                <input type="date" name="class_end_date" min="{{Carbon\Carbon::now()->format('Y-m-d')}}" class="form-control form-control-sm">
+                                            </div>
+                                        </div>
+            
+                                        <div class="col-3 mb-3">
+                                            <div class="form-group">
+                                                <label for="" class="mb-2">Registration Start Date</label>
+                                                <input type="date" name="registration_start_date" min="{{Carbon\Carbon::now()->format('Y-m-d')}}" class="form-control form-control-sm">
+                                            </div>
+                                        </div>
+            
+                                        <div class="col-3 mb-3">
+                                            <div class="form-group">
+                                                <label for="" class="mb-2">Registration End Date</label>
+                                                <input type="date" name="registration_end_date" min="{{Carbon\Carbon::now()->format('Y-m-d')}}" class="form-control form-control-sm">
+                                            </div>
+                                        </div>
+            
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
                         <div class="col-lg-8 col-sm-12 bg-light rounded-2">
-                            <span class="mt-1 fw-bold text-info">Banner Section</span>
+                            
                             <div class="row">
                                 <div class="col-lg-6 pb-7">
                                     <div class="row pb-7">
                                         <div class="col-lg-12 col-sm-12">
-                                            <span>Badge</span>
+                                            <span>Name</span>
                                         </div>
                                         <div class="col-lg-12">
-                                            <input type="text" id="badge" name="badge"
-                                                class="form-control form-control-sm" maxlength="255" placeholder="Badge"
-                                                required />
+                                            <input type="text" name="name"
+                                                class="form-control form-control-sm" maxlength="255" placeholder="Course Name" required />
                                         </div>
                                     </div>
                                     {{--  --}}
@@ -126,27 +349,13 @@
                                     <div class="col-lg-8 col-sm-12">
                                         <select name="row_one_id" data-placeholder="Select Row One.."
                                             class="form-select" data-control="select2" data-placeholder="Select an option" style="width: 100%;">
-                                            @foreach ($rows as $row)
-                                                <option class="form-control" value="{{ $row->id }}">
-                                                    {{ $row->title }}</option>
-                                            @endforeach
+                                            
+                                                <option class="form-control" value=""></option>
+                                            
                                         </select>
                                     </div>
                                 </div>
-                                <div class="row mb-3 justify-content-center">
-                                    <div class="col-lg-4 col-sm-12">
-                                        <span title="Row With Left Image">Left Image</span>
-                                    </div>
-                                    <div class="col-lg-8 col-sm-12">
-                                        <select name="row_two_id" data-placeholder="Select Row Two.."
-                                            class="form-select" data-control="select2" data-placeholder="Select an option" style="width: 100%;">
-                                            @foreach ($rows as $row)
-                                                <option class="form-control" value="{{ $row->id }}">
-                                                    {{ $row->title }}</option>
-                                            @endforeach
-                                        </select>
-                                    </div>
-                                </div>
+                                
                             </div>
                         </div>
                         <div class="col-lg-6 col-sm-12 mt-2">
