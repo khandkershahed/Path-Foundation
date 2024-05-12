@@ -32,7 +32,8 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-Route::middleware(['localeSessionRedirect', 'localizationRedirect', 'localeViewPath', 'auth:admin'])->prefix(LaravelLocalization::setLocale() . '/admin')->name('admin.')->group(function () {
+Route::middleware(['auth:admin'])->prefix('admin')->name('admin.')->group(function () {
+// Route::middleware(['localeSessionRedirect', 'localizationRedirect', 'localeViewPath', 'auth:admin'])->prefix(LaravelLocalization::setLocale() . '/admin')->name('admin.')->group(function () {
     Route::get('/profile', [AdminProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [AdminProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [AdminProfileController::class, 'destroy'])->name('profile.destroy');
@@ -44,10 +45,6 @@ require __DIR__ . '/admin.php';
 
 // Frontend Routes
 Route::get('/', [HomeController::class, 'index'])->name('homepage');
-//Learn More
-Route::get('/learn-more', [HomeController::class, 'LearnMore'])->name('learn.more');
-//What We Do
-Route::get('/what-we-do', [HomeController::class, 'whatWeDo'])->name('whatwedo');
 /// Product Search Route
 Route::post('/search', [HomeController::class, 'courseSearch'])->name('course.search');
 // Advance Search Routes

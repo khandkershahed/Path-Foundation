@@ -1,5 +1,11 @@
 <?php
 
+<<<<<<< HEAD
+=======
+use App\Models\Course;
+use Illuminate\Support\Str;
+use Intervention\Image\Laravel\Facades\Image;
+>>>>>>> 922e9b7dfcced246087b34c816d94fdc9efd08c1
 use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Facades\Storage;
 use Intervention\Image\Laravel\Facades\Image;
