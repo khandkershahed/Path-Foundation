@@ -1,9 +1,10 @@
 <x-admin-app-layout :title="'Course List'">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
     <div class="card card-flash">
         <div class="card-header mt-6">
-            <div class="card-title">
-            </div>
-
+            <div class="card-title"></div>
             <div class="card-toolbar">
                 <a href="{{ route('admin.course.create') }}" class="btn btn-light-primary rounded-2">
                     <span class="svg-icon svg-icon-3">
@@ -21,46 +22,64 @@
             </div>
         </div>
         <div class="card-body pt-0">
-            <table class="bannersDT table align-middle table-row-dashed fs-6 gy-5 mb-0" id="kt_permissions_table">
+            <table id="kt_datatable_example_5" class="table table-striped table-row-bordered gy-5 gs-7 border rounded">
                 <thead>
                     <tr>
-                        <th width="3%">Id</th>
-                        <th width="8%">Logo</th>
-                        <th width="40%">Title</th>
-                        <th width="40%">Header</th>
-                        <th width="9%" class="text-center">Actions</th>
+                        <th width="5%">No</th>
+                        <th width="8%">Image</th>
+                        <th width="40%">Course Name</th>
+                        <th width="10%">Seat</th>
+                        <th width="10%">Price</th>
+                        <th width="20%">Discount Price</th>
+                        <th width="100%">Actions</th>
                     </tr>
                 </thead>
                 <tbody class="fw-bold text-gray-600">
-                    @if ($features)
-                        @foreach ($features as $key => $feature)
-                            <tr>
-                                <td>{{ ++$key }}</td>
-                                <td class="text-center"><img class="rounded-circle"
-                                        src="{{ asset('storage/thumb/' . $feature->logo) }}"
-                                        height="25" width="25" alt=""></td>
-                                <td class="text-start">{{ $feature->title }}</td>
-                                <td class="text-start"><span title="{!! $feature->header !!}">{!! implode(' ', array_slice(str_word_count($feature->header, 1), 0, 10)) !!}</span></td>
-                                <td>
-                                    <a href="{{ route('feature.edit', $feature->id) }}"
-                                        class="text-primary">
-                                        <i
-                                            class="fa-solid fa-pen-to-square dash-icons"></i>
-                                    </a>
-                                    <a href="{{ route('feature.destroy', [$feature->id]) }}"
-                                        class="text-danger delete">
-                                        <i class="fa-solid fa-trash dash-icons"></i>
-                                    </a>
-                                </td>
-                            </tr>
-                        @endforeach
-                    @endif
+                    <tr>
+                        <td>1</td>
+                        <td class="text-center">
+                            <img class="rounded-circle" src="" height="25" width="25" alt="">
+                        </td>
+
+                        <td class="text-start">dfgdf</td>
+                        <td class="text-start">dfgfd</td>
+                        <td class="text-start">dfgdf</td>
+                        <td class="text-start">dfgfd</td>
+                        <td>
+                            <a href="" class="text-primary">
+                                <i class="fa-solid fa-pen-to-square dash-icons"></i>
+                            </a>
+                            <a href="" class="text-danger delete">
+                                <i class="fa-solid fa-trash dash-icons"></i>
+                            </a>
+                        </td>
+                    </tr>
+                    {{-- @endforeach --}}
+
                 </tbody>
             </table>
         </div>
     </div>
 
     @push('scripts')
-        <script></script>
+        <script>
+            $("#kt_datatable_example_5").DataTable({
+                "language": {
+                    "lengthMenu": "Show _MENU_",
+                },
+                "dom": "<'row'" +
+                    "<'col-sm-6 d-flex align-items-center justify-conten-start'l>" +
+                    "<'col-sm-6 d-flex align-items-center justify-content-end'f>" +
+                    ">" +
+
+                    "<'table-responsive'tr>" +
+
+                    "<'row'" +
+                    "<'col-sm-12 col-md-5 d-flex align-items-center justify-content-center justify-content-md-start'i>" +
+                    "<'col-sm-12 col-md-7 d-flex align-items-center justify-content-center justify-content-md-end'p>" +
+                    ">"
+            });
+        </script>
     @endpush
+
 </x-admin-app-layout>
