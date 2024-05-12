@@ -14,6 +14,7 @@ use App\Http\Controllers\Controller;
 use App\Models\SolutionDetail;
 use Brian2694\Toastr\Facades\Toastr;
 use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Validator;
 
 class FeatureController extends Controller
@@ -49,15 +50,15 @@ class FeatureController extends Controller
      */
     public function store(Request $request)
     {
-
+        // dd($request->all());
         $validator = Validator::make(
             $request->all(),
             [
-                'badge'  => 'required',
-                'title'  => 'required',
-                'header' => 'required',
-                'logo'   => 'required|image|mimes:png,jpg,jpeg|max:10000',
-                'image'  => 'required|image|mimes:png,jpg,jpeg|max:10000',
+                'badge'  => 'nullable',
+                'title'  => 'nullable',
+                'header' => 'nullable',
+                'logo'   => 'nullable|image|mimes:png,jpg,jpeg|max:10000',
+                'image'  => 'nullable|image|mimes:png,jpg,jpeg|max:10000',
 
             ],
             [
@@ -107,15 +108,17 @@ class FeatureController extends Controller
 
             ]);
 
+            Session::flash('success', 'Data Inserted Successfully');
             Toastr::success('Data Inserted Successfully');
         } else {
 
             $messages = $validator->messages();
             foreach ($messages->all() as $message) {
+                Session::flash('error', $message);
                 Toastr::error($message, 'Failed', ['timeOut' => 30000]);
             }
         }
-        return redirect()->back();
+        return redirect()->back()->withInput();
     }
 
     /**
@@ -156,9 +159,9 @@ class FeatureController extends Controller
             $validator = Validator::make(
                 $request->all(),
                 [
-                    'badge'  => 'required',
-                    'title'  => 'required',
-                    'header' => 'required',
+                    'badge'  => 'nullable',
+                    'title'  => 'nullable',
+                    'header' => 'nullable',
                 ]
 
             );
@@ -212,14 +215,16 @@ class FeatureController extends Controller
 
             ]);
 
+            Session::flash('success', 'Data Inserted Successfully');
             Toastr::success('Data has been updated');
         } else {
             $messages = $validator->messages();
             foreach ($messages->all() as $message) {
+                Session::flash('error', $message);
                 Toastr::error($message, 'Failed', ['timeOut' => 30000]);
             }
         }
-        return redirect()->back();
+        return redirect()->back()->withInput();
     }
 
     /**

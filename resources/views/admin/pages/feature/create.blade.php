@@ -36,7 +36,7 @@
                                             <span>Badge</span>
                                         </div>
                                         <div class="col-lg-12">
-                                            <input type="text" id="badge" name="badge"
+                                            <input type="text" id="badge" name="badge" value="{{old('badge')}}"
                                                 class="form-control form-control-sm" maxlength="255" placeholder="Badge"
                                                 required />
                                         </div>
@@ -47,7 +47,7 @@
                                             <span>Title</span>
                                         </div>
                                         <div class="col-lg-12 col-sm-12">
-                                            <input type="text" name="title" class="form-control form-control-sm"
+                                            <input type="text" name="title" value="{{old('title')}}" class="form-control form-control-sm"
                                                 maxlength="255" placeholder="Feature Title" required />
                                         </div>
                                     </div>
@@ -57,7 +57,7 @@
                                             <span>Logo</span>
                                         </div>
                                         <div class="col-lg-10 col-sm-12">
-                                            <input type="file" name="logo" class="form-control form-control-sm"
+                                            <input type="file" name="logo" value="{{old('logo')}}" class="form-control form-control-sm"
                                                 id="image" accept="image/*" />
                                         </div>
                                         <div class="col-lg-2 col-sm-12 text-end">
@@ -72,7 +72,7 @@
                                             <span>Banner Image</span>
                                         </div>
                                         <div class="col-lg-10 col-sm-12">
-                                            <input type="file" name="image" class="form-control form-control-sm"
+                                            <input type="file" name="image" value="{{old('image')}}" class="form-control form-control-sm"
                                                 id="image1" accept="image/*" />
                                         </div>
                                         <div class="col-lg-2 col-sm-12 text-end">
@@ -88,7 +88,7 @@
                                             <span>Short Description</span>
                                         </div>
                                         <div class="col-lg-12 col-sm-12">
-                                            <textarea name="header" class="form-control form-control-sm" rows="3" style=" font-size: 12px; font-weight: 500;"
+                                            <textarea name="header" value="{{old('header')}}" class="form-control form-control-sm" rows="3" style=" font-size: 12px; font-weight: 500;"
                                                 placeholder="Short Description For Homepage"></textarea>
                                         </div>
                                     </div>
@@ -97,7 +97,7 @@
                                             <span>Banner Button name</span>
                                         </div>
                                         <div class="col-lg-12">
-                                            <input type="text" name="banner_btn_name"
+                                            <input type="text" name="banner_btn_name" value="{{old('banner_btn_name')}}"
                                                 class="form-control form-control-sm" maxlength="255"
                                                 placeholder="Button name" required />
                                         </div>
@@ -107,7 +107,7 @@
                                             <span>Banner Button link</span>
                                         </div>
                                         <div class="col-lg-12">
-                                            <input type="text" name="banner_btn_link"
+                                            <input type="text" name="banner_btn_link" value="{{old('banner_btn_link')}}"
                                                 class="form-control form-control-sm" maxlength="255"
                                                 placeholder="Button link" required />
                                         </div>
@@ -158,7 +158,7 @@
                                         <span>Title</span>
                                     </div>
                                     <div class="col-lg-12">
-                                        <input type="text" name="row_four_title"
+                                        <input type="text" name="row_four_title" value="{{old('row_four_title')}}"
                                             class="form-control form-control-sm" maxlength="255"
                                             placeholder="Feature Title" required />
                                     </div>
@@ -171,7 +171,7 @@
                                         <span>Background Image(Row Three) </span>
                                     </div>
                                     <div class="col-lg-11 col-sm-12">
-                                        <input type="file" name="row_four_image"
+                                        <input type="file" name="row_four_image" value="{{old('row_four_image')}}"
                                             class="form-control form-control-sm" id="image" accept="image/*" />
                                     </div>
                                     <div class="col-lg-1 col-sm-12 text-end">
@@ -185,7 +185,7 @@
                                         <span>Short Description</span>
                                     </div>
                                     <div class="col-lg-12 col-sm-12">
-                                        <textarea name="row_four_header" id="" class="form-control" cols="30" rows="8"
+                                        <textarea name="row_four_header" value="{{old('row_four_header')}}" id="" class="form-control" cols="30" rows="8"
                                             placeholder="Short Description for Contact"></textarea>
                                     </div>
                                 </div>
@@ -203,7 +203,7 @@
                                         <span>Row Five Title</span>
                                     </div>
                                     <div class="col-lg-12 col-sm-12">
-                                        <input type="text" name="row_three_title"
+                                        <input type="text" name="row_three_title" value="{{old('row_three_title')}}"
                                             class="form-control form-control-sm" maxlength="255"
                                             placeholder="Row Three Title" />
                                     </div>
@@ -214,7 +214,7 @@
                                         <span>Row Five Short Description</span>
                                     </div>
                                     <div class="col-lg-12 col-sm-12">
-                                        <textarea name="row_three_header" id="" class="form-control" cols="30" rows="1"
+                                        <textarea name="row_three_header" value="{{old('row_three_header')}}" id="" class="form-control" cols="30" rows="1"
                                             placeholder="Row Three Short Description"></textarea>
                                     </div>
                                 </div>
@@ -228,7 +228,7 @@
                                         <span>Row Seven Title</span>
                                     </div>
                                     <div class="col-lg-12 col-sm-12">
-                                        <input type="text" name="row_five_title"
+                                        <input type="text" name="row_five_title" value="{{old('row_five_title')}}"
                                             class="form-control form-control-sm maxlength" maxlength="255"
                                             placeholder="Related Feature Row Title" />
                                     </div>
@@ -239,7 +239,7 @@
                                         <span>Row Seven Short Description</span>
                                     </div>
                                     <div class="col-lg-12 col-sm-12">
-                                        <textarea name="row_five_header" id="" class="form-control" cols="30" rows="1"
+                                        <textarea name="row_five_header" value="{{old('row_five_header')}}" id="" class="form-control" cols="30" rows="1"
                                             placeholder="Related Feature Row Short Description"></textarea>
                                     </div>
                                 </div>
@@ -252,7 +252,7 @@
                             <div class="row py-7">
                                 <div class="col-lg-12 col-sm-12">
                                     <span>Footer</span>
-                                    <textarea class="form-control" name="footer" id="footer" style=" font-size: 12px; font-weight: 500;"></textarea>
+                                    <textarea class="form-control" name="footer" value="{{old('footer')}}" id="footer" style=" font-size: 12px; font-weight: 500;"></textarea>
                                 </div>
                             </div>
                         </div>

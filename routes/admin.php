@@ -96,6 +96,8 @@ Route::middleware(['localeSessionRedirect', 'localizationRedirect', 'localeViewP
 
     Route::get('/dashboard', [AdminController::class, 'dashboard'])->middleware(['verified'])->name('dashboard');
 
+
+
     Route::resources(
         [
             'role' => RoleController::class,
@@ -105,10 +107,10 @@ Route::middleware(['localeSessionRedirect', 'localizationRedirect', 'localeViewP
         ],
         ['except' => ['show']]
     );
-    
+
     Route::resources(
         [
-            'user' => UserController::class, //done
+            'user'            => UserController::class, //done
             'user-management' => UserManagementController::class,
             'categories'      => CategoryController::class, //done
             'tags'            => TagController::class, //done
@@ -130,7 +132,7 @@ Route::middleware(['localeSessionRedirect', 'localizationRedirect', 'localeViewP
             'learnmore'       => LearnMoreController::class,
             'success'         => SuccessController::class,
 
-            'course'         => CourseController::class,
+            'course'          => CourseController::class,
         ],
     );
 
