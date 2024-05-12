@@ -383,7 +383,7 @@
 <!--======// Business section //======-->
 <section class="">
     <div class="container">
-        @if (!empty($features) || array_filter($features))
+        @if (!empty($features) && array_filter($features))
             <!-- home title -->
             <div class="row">
                 @if (!empty(optional($home)->header1))
