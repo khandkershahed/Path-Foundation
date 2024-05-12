@@ -174,7 +174,7 @@ class HomeController extends Controller
     //Feature Details
     public function FeatureDetails($id)
     {
-        $data['learnmore'] = LearnMore::orderBy('id', 'DESC')->select('learn_mores.industry_header', 'learn_mores.consult_title', 'learn_mores.consult_short_des', 'learn_mores.background_image')->firstOrFail();
+        $data['learnmore'] = LearnMore::orderBy('id', 'DESC')->select('learn_mores.industry_header', 'learn_mores.consult_title', 'learn_mores.consult_short_des', 'learn_mores.background_image')->first();
         $data['feature'] = Feature::with(['rowOne', 'rowTwo'])->findOrFail($id);
 
         $data['row_one'] = $data['feature']->rowOne;
@@ -187,15 +187,15 @@ class HomeController extends Controller
 
 
     //Contact, Support, Location, RFQ
-    public function location()
-    {
-        $data['setting'] = Site::latest()->first();
-        $data['locations'] = OfficeLocation::orderBy('name', 'ASC')->get();
-        $country_ids = $data['locations']->pluck('country_id')->unique()->toArray();
-        $data['countries']  = Country::whereIn('id', $country_ids)->get();
-        $data['tech_datas'] = TechnologyData::where('category', 'location')->orderBy('id', 'desc')->limit(6)->get();
-        return view('frontend.pages.contact.location', $data);
-    }
+    // public function location()
+    // {
+    //     $data['setting'] = Site::latest()->first();
+    //     $data['locations'] = OfficeLocation::orderBy('name', 'ASC')->get();
+    //     $country_ids = $data['locations']->pluck('country_id')->unique()->toArray();
+    //     $data['countries']  = Country::whereIn('id', $country_ids)->get();
+    //     $data['tech_datas'] = TechnologyData::where('category', 'location')->orderBy('id', 'desc')->limit(6)->get();
+    //     return view('frontend.pages.contact.location', $data);
+    // }
 
     public function contact()
     {
