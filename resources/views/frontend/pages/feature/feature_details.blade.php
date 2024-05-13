@@ -79,67 +79,69 @@
 
     <!--======// Modern finance //======-->
     @if ($row_one)
-        <section class="container section_padding">
-            <div class="row">
-                <div class="col-lg-7 col-sm-12">
-                    <div class="section_text_wrapper">
-                        <h4>{{ $row_one->title }}</h4>
-                        <p style="text-align: justify;">{!! $row_one->short_des !!}</p>
+        <section>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-7 col-sm-12">
+                        <div class="section_text_wrapper">
+                            <h4>{{ $row_one->title }}</h4>
+                            <p style="text-align: justify;">{!! $row_one->description !!}</p>
+
+                        </div>
+                    </div>
+                    <div class="col-lg-5 col-sm-12">
+                        <div class="industry_single_help_list">
+                            <h5>{{ $row_one->list_title }}</h5>
+                            <ul>
+
+                                <li class="d-flex align-items-center">
+                                    <div class="me-2"><svg version="1.1" id="Layer_1"
+                                            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                            x="0px" y="0px" width="20px" height="15px" viewBox="0 0 20 20"
+                                            enable-background="new 0 0 20 20" xml:space="preserve">
+                                            <path fill="#AE1D48"
+                                                d="M10.673,19.721c-0.372,0.372-0.975,0.372-1.347,0l-9.048-9.048c-0.372-0.372-0.372-0.975,0-1.346 l9.048-9.048c0.372-0.372,0.975-0.372,1.347,0l9.048,9.048c0.372,0.372,0.372,0.974,0,1.346L10.673,19.721z" />
+                                        </svg></div>
+                                    <div class="pt-1"><span>{{ $row_one->list_one }}</span></div>
+                                </li>
+
+                                <li class="d-flex align-items-center">
+                                    <div class="me-2"><svg version="1.1" id="Layer_1"
+                                            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                            x="0px" y="0px" width="15px" height="15px" viewBox="0 0 20 20"
+                                            enable-background="new 0 0 20 20" xml:space="preserve">
+                                            <path fill="#AE1D48"
+                                                d="M10.673,19.721c-0.372,0.372-0.975,0.372-1.347,0l-9.048-9.048c-0.372-0.372-0.372-0.975,0-1.346 l9.048-9.048c0.372-0.372,0.975-0.372,1.347,0l9.048,9.048c0.372,0.372,0.372,0.974,0,1.346L10.673,19.721z" />
+                                        </svg></div>
+                                    <div class="pt-1"><span>{{ $row_one->list_two }}</span></div>
+                                </li>
+
+                                <li class="d-flex align-items-center">
+                                    <div class="me-2"><svg version="1.1" id="Layer_1"
+                                            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                            x="0px" y="0px" width="15px" height="15px" viewBox="0 0 20 20"
+                                            enable-background="new 0 0 20 20" xml:space="preserve">
+                                            <path fill="#AE1D48"
+                                                d="M10.673,19.721c-0.372,0.372-0.975,0.372-1.347,0l-9.048-9.048c-0.372-0.372-0.372-0.975,0-1.346 l9.048-9.048c0.372-0.372,0.975-0.372,1.347,0l9.048,9.048c0.372,0.372,0.372,0.974,0,1.346L10.673,19.721z" />
+                                        </svg></div>
+                                    <div class="pt-1"><span>{{ $row_one->list_three }}</span></div>
+                                </li>
+
+                                <li class="d-flex align-items-center">
+                                    <div class="me-2"><svg version="1.1" id="Layer_1"
+                                            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                            x="0px" y="0px" width="15px" height="15px" viewBox="0 0 20 20"
+                                            enable-background="new 0 0 20 20" xml:space="preserve">
+                                            <path fill="#AE1D48"
+                                                d="M10.673,19.721c-0.372,0.372-0.975,0.372-1.347,0l-9.048-9.048c-0.372-0.372-0.372-0.975,0-1.346 l9.048-9.048c0.372-0.372,0.975-0.372,1.347,0l9.048,9.048c0.372,0.372,0.372,0.974,0,1.346L10.673,19.721z" />
+                                        </svg></div>
+                                    <div class="pt-1"><span>{{ $row_one->list_four }}</span></div>
+                                </li>
+
+                            </ul>
+                        </div>
 
                     </div>
-                </div>
-                <div class="col-lg-5 col-sm-12">
-                    <div class="industry_single_help_list">
-                        <h5>{{ $row_one->list_title }}</h5>
-                        <ul>
-
-                            <li class="d-flex align-items-center">
-                                <div class="me-2"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-                                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="20px"
-                                        height="15px" viewBox="0 0 20 20" enable-background="new 0 0 20 20"
-                                        xml:space="preserve">
-                                        <path fill="#AE1D48"
-                                            d="M10.673,19.721c-0.372,0.372-0.975,0.372-1.347,0l-9.048-9.048c-0.372-0.372-0.372-0.975,0-1.346 l9.048-9.048c0.372-0.372,0.975-0.372,1.347,0l9.048,9.048c0.372,0.372,0.372,0.974,0,1.346L10.673,19.721z" />
-                                    </svg></div>
-                                <div class="pt-1"><span>{{ $row_one->list_one }}</span></div>
-                            </li>
-
-                            <li class="d-flex align-items-center">
-                                <div class="me-2"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-                                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="15px"
-                                        height="15px" viewBox="0 0 20 20" enable-background="new 0 0 20 20"
-                                        xml:space="preserve">
-                                        <path fill="#AE1D48"
-                                            d="M10.673,19.721c-0.372,0.372-0.975,0.372-1.347,0l-9.048-9.048c-0.372-0.372-0.372-0.975,0-1.346 l9.048-9.048c0.372-0.372,0.975-0.372,1.347,0l9.048,9.048c0.372,0.372,0.372,0.974,0,1.346L10.673,19.721z" />
-                                    </svg></div>
-                                <div class="pt-1"><span>{{ $row_one->list_two }}</span></div>
-                            </li>
-
-                            <li class="d-flex align-items-center">
-                                <div class="me-2"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-                                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="15px"
-                                        height="15px" viewBox="0 0 20 20" enable-background="new 0 0 20 20"
-                                        xml:space="preserve">
-                                        <path fill="#AE1D48"
-                                            d="M10.673,19.721c-0.372,0.372-0.975,0.372-1.347,0l-9.048-9.048c-0.372-0.372-0.372-0.975,0-1.346 l9.048-9.048c0.372-0.372,0.975-0.372,1.347,0l9.048,9.048c0.372,0.372,0.372,0.974,0,1.346L10.673,19.721z" />
-                                    </svg></div>
-                                <div class="pt-1"><span>{{ $row_one->list_three }}</span></div>
-                            </li>
-
-                            <li class="d-flex align-items-center">
-                                <div class="me-2"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-                                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="15px"
-                                        height="15px" viewBox="0 0 20 20" enable-background="new 0 0 20 20"
-                                        xml:space="preserve">
-                                        <path fill="#AE1D48"
-                                            d="M10.673,19.721c-0.372,0.372-0.975,0.372-1.347,0l-9.048-9.048c-0.372-0.372-0.372-0.975,0-1.346 l9.048-9.048c0.372-0.372,0.975-0.372,1.347,0l9.048,9.048c0.372,0.372,0.372,0.974,0,1.346L10.673,19.721z" />
-                                    </svg></div>
-                                <div class="pt-1"><span>{{ $row_one->list_four }}</span></div>
-                            </li>
-
-                        </ul>
-                    </div>
-
                 </div>
             </div>
         </section>
@@ -179,7 +181,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6 col-sm-12">
-                        <img class="img-fluid" style="height:300px; width:530px; border-radius:15px;"
+                        <img class="img-fluid" style="height:371px; width:100%; object-fit:cover; border-radius:15px;"
                             src="{{ !empty($row_two->image) && file_exists(public_path('storage/' . $row_two->image)) ? asset('storage/' . $row_two->image) : asset('frontend/images/no-row-img(580-326).png') }}"
                             alt="NGEN IT">
                     </div>
@@ -244,7 +246,8 @@
                                 <div class="business_item_content">
                                     <p class="business_item_title">{{ $item->badge }}</p>
                                     <p class="business_item_text text-center">{{ Str::limit($item->header, 55) }}</p>
-                                    <a href="{{ route('feature.details', $item->id) }}" class="d-flex main_color align-items-center text-center justify-content-center">
+                                    <a href="{{ route('feature.details', $item->id) }}"
+                                        class="d-flex main_color align-items-center text-center justify-content-center">
                                         <span>Learn More</span>
                                         <span class="business_item_button_icon">
                                             <i class="fa-solid fa-arrow-right-long"></i>

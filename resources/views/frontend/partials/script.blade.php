@@ -21,6 +21,8 @@
 <script src="https://cdn.tiny.cloud/1/n4jpbhtanca801bcjejx1pc9j033yn0de5ral6e7r0wd6383/tinymce/6/tinymce.min.js"
     referrerpolicy="origin"></script>
 <script src="https://www.google.com/recaptcha/api.js"></script>
+<script src="https://kit.fontawesome.com/69b7156a94.js" crossorigin="anonymous"></script>
+
 <!-- Custom JS -->
 {{-- <script src="{{ asset('backend/assets/js/custom.js') }}"></script> --}}
 <script src="{{ asset('frontend/js/custom.js') }}"></script>

@@ -206,7 +206,7 @@
                     <div class="card-body py-3 ">
                         <div class="d-flex justify-content-center flex-column text-center">
                             <div>
-                                <img class="img-fluid" width="80px" src="{{asset('frontend/images/icons/01.jpg')}}"
+                                <img class="img-fluid" width="50px" src="{{asset('frontend/images/icons/01.jpg')}}"
                                     alt="">
                             </div>
                             <h6 class="fw-bolder pt-2">20+ Practice <br> Project</h6>
@@ -219,7 +219,7 @@
                     <div class="card-body py-3 ">
                         <div class="d-flex justify-content-center flex-column text-center">
                             <div>
-                                <img class="img-fluid" width="80px" src="{{asset('frontend/images/icons/02.jpg')}}"
+                                <img class="img-fluid" width="50px" src="{{asset('frontend/images/icons/02.jpg')}}"
                                     alt="">
                             </div>
                             <h6 class="fw-bolder pt-2">4 Month <br> Study Plan</h6>
@@ -232,7 +232,7 @@
                     <div class="card-body py-3 ">
                         <div class="d-flex justify-content-center flex-column text-center">
                             <div>
-                                <img class="img-fluid" width="80px" src="{{asset('frontend/images/icons/03.jpg')}}"
+                                <img class="img-fluid" width="50px" src="{{asset('frontend/images/icons/03.jpg')}}"
                                     alt="">
                             </div>
                             <h6 class="fw-bolder pt-2">After Course <br> Certificate</h6>
@@ -245,7 +245,7 @@
                     <div class="card-body py-3 ">
                         <div class="d-flex justify-content-center flex-column text-center">
                             <div>
-                                <img class="img-fluid" width="80px" src="{{asset('frontend/images/icons/04.jpg')}}"
+                                <img class="img-fluid" width="50px" src="{{asset('frontend/images/icons/04.jpg')}}"
                                     alt="">
                             </div>
                             <h6 class="fw-bolder pt-2">Lifetime Video <br> Access</h6>
@@ -258,7 +258,7 @@
                     <div class="card-body py-3 ">
                         <div class="d-flex justify-content-center flex-column text-center">
                             <div>
-                                <img class="img-fluid" width="80px" src="{{asset('frontend/images/icons/05.jpg')}}"
+                                <img class="img-fluid" width="50px" src="{{asset('frontend/images/icons/05.jpg')}}"
                                     alt="">
                             </div>
                             <h6 class="fw-bolder pt-2">Marketplace <br> Guideline</h6>
@@ -309,7 +309,7 @@
                             <div class="card-body py-3 text-center">
                                 <div class="d-flex justify-content-center flex-column text-center align-items-center">
                                     <div>
-                                        <img class="img-fluid text-center" width="80px"
+                                        <img class="img-fluid text-center" width="50px"
                                             src="{{asset('frontend/images/icons/01.jpg')}}" alt="">
                                     </div>
                                     <h6 class="fw-bolder pt-2">20+ Practice <br> Project</h6>
@@ -322,7 +322,7 @@
                             <div class="card-body py-3 text-center">
                                 <div class="d-flex justify-content-center flex-column text-center align-items-center">
                                     <div>
-                                        <img class="img-fluid text-center" width="80px"
+                                        <img class="img-fluid text-center" width="50px"
                                             src="{{asset('frontend/images/icons/02.jpg')}}" alt="">
                                     </div>
                                     <h6 class="fw-bolder pt-2">20+ Practice <br> Project</h6>
@@ -335,7 +335,7 @@
                             <div class="card-body py-3 text-center">
                                 <div class="d-flex justify-content-center flex-column text-center align-items-center">
                                     <div>
-                                        <img class="img-fluid text-center" width="80px"
+                                        <img class="img-fluid text-center" width="50px"
                                             src="{{asset('frontend/images/icons/03.jpg')}}" alt="">
                                     </div>
                                     <h6 class="fw-bolder pt-2">20+ Practice <br> Project</h6>
@@ -348,7 +348,7 @@
                             <div class="card-body py-3 text-center">
                                 <div class="d-flex justify-content-center flex-column text-center align-items-center">
                                     <div>
-                                        <img class="img-fluid text-center" width="80px"
+                                        <img class="img-fluid text-center" width="50px"
                                             src="{{asset('frontend/images/icons/04.jpg')}}" alt="">
                                     </div>
                                     <h6 class="fw-bolder pt-2">20+ Practice <br> Project</h6>
@@ -361,7 +361,7 @@
                             <div class="card-body py-3 text-center">
                                 <div class="d-flex justify-content-center flex-column text-center align-items-center">
                                     <div>
-                                        <img class="img-fluid text-center" width="80px"
+                                        <img class="img-fluid text-center" width="50px"
                                             src="{{asset('frontend/images/icons/05.jpg')}}" alt="">
                                     </div>
                                     <h6 class="fw-bolder pt-2">20+ Practice <br> Project</h6>

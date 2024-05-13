@@ -50,14 +50,9 @@
                                         alt="{{ $newsTrend->title }} Logo">
                                 </td>
                                 <td class="d-flex justify-content-between align-items-center">
-                                    <a href="#"
-                                        class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm me-1"
-                                        data-bs-toggle="modal" data-bs-target="#categoryViewModal">
-                                        <i class="fa-solid fa-expand"></i>
-                                    </a>
-                                    <a href="{{ route('admin.news-trend.create') }}"
-                                        class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm me-1"
-                                        data-bs-toggle="modal" data-bs-target="#categorymentEditModal">
+                                    
+                                    <a href="{{ route('admin.news-trend.edit', $newsTrend->id) }}"
+                                        class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm me-1">
                                         <i class="fa-solid fa-pen"></i>
                                     </a>
                                     <a href="{{ route('admin.news-trend.destroy', $newsTrend->id) }}"
