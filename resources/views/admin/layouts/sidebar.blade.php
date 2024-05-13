@@ -297,8 +297,7 @@
 
 
                   {{-- Course  --}}
-                  <div data-kt-menu-trigger="click"
-                      class="menu-item menu-accordion">
+                  <div data-kt-menu-trigger="click" class="menu-item menu-accordion">
                       <span class="menu-link">
                           <span class="menu-icon">
                               <!--begin::Svg Icon | path: icons/duotune/ecommerce/ecm002.svg-->
@@ -325,14 +324,40 @@
                       <div class="menu-sub menu-sub-accordion">
 
                           <div class="menu-item">
-                              <a class="menu-link"
-                                  href="{{ route('admin.course.index') }}">
+                              <a class="menu-link" href="{{ route('admin.course.index') }}">
                                   <span class="menu-bullet">
                                       <span class="bullet bullet-dot"></span>
                                   </span>
-                                  <span class="menu-title">courses</span>
+                                  <span class="menu-title">Courses</span>
                               </a>
                           </div>
+
+                          <div class="menu-item">
+                              <a class="menu-link" href="{{ route('admin.course_curriculam.index') }}">
+                                  <span class="menu-bullet">
+                                      <span class="bullet bullet-dot"></span>
+                                  </span>
+                                  <span class="menu-title">Course Curriculam</span>
+                              </a>
+                          </div>
+
+                          <div class="menu-item">
+                              <a class="menu-link" href="{{ route('admin.course_content.index') }}">
+                                  <span class="menu-bullet">
+                                      <span class="bullet bullet-dot"></span>
+                                  </span>
+                                  <span class="menu-title">Course Content</span>
+                              </a>
+                          </div>
+
+                          <div class="menu-item">
+                            <a class="menu-link" href="{{ route('admin.coupon.index') }}">
+                                <span class="menu-bullet">
+                                    <span class="bullet bullet-dot"></span>
+                                </span>
+                                <span class="menu-title">Coupon</span>
+                            </a>
+                        </div>
 
                       </div>
                   </div>

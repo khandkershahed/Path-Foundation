@@ -15,4 +15,9 @@ class CourseContent extends Model
      * @var array
      */
     protected $guarded = [];
+
+    public function course()
+    {
+        return $this->belongsTo(Course::class,'course_id','id');
+    }
 }
