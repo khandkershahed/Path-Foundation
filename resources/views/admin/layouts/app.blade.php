@@ -33,7 +33,7 @@
     <link href="{{ asset('admin/assets/css/style.bundle.css') }}" rel="stylesheet" type="text/css" />
     <link href="{{ asset('admin/css/tagsinput.css') }}" rel="stylesheet" type="text/css" />
     <!--end::Global Stylesheets Bundle-->
-
+    <script src="https://kit.fontawesome.com/69b7156a94.js" crossorigin="anonymous"></script>
     @props(['title'])
     <title>{{ $title ?? config('app.name', '') }}</title>
 
@@ -143,7 +143,7 @@
     @include('toastr') --}}
 
     @stack('scripts')
-    
+
     <script>
         tinymce.init({
             selector: 'textarea.kt_docs_tinymce_plugins',

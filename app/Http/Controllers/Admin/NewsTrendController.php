@@ -85,7 +85,7 @@ class NewsTrendController extends Controller
         ]);
 
         toastr()->success('Data has been saved successfully!');
-        return redirect()->back();
+        return redirect()->back()->withInput()->with('success','Data has been saved successfully!');
     }
 
     /**
