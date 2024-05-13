@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class CourseCurriculum extends Model
+class Coupon extends Model
 {
     use HasFactory;
 
@@ -15,9 +15,4 @@ class CourseCurriculum extends Model
      * @var array
      */
     protected $guarded = [];
-
-    public function course()
-    {
-        return $this->belongsTo(Course::class,'course_id','id');
-    }
 }

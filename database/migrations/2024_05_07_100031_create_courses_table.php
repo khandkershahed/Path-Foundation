@@ -26,6 +26,7 @@ return new class extends Migration
             $table->integer('available_seats')->default(1);
             $table->double('price')->nullable();
             $table->double('discount_price')->nullable();
+            $table->double('online_price')->nullable();
             $table->date('discount_start_date')->nullable();
             $table->date('discount_end_date')->nullable();
             $table->date('class_start_date')->nullable();

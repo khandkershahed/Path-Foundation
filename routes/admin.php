@@ -3,23 +3,25 @@
 use App\Http\Controllers\Admin\AboutUsController;
 use App\Http\Controllers\Admin\ActivityLogController;
 use App\Http\Controllers\Admin\AdminController;
+use App\Http\Controllers\Admin\Auth\AuthenticatedSessionController;
+use App\Http\Controllers\Admin\Auth\ConfirmablePasswordController;
+use App\Http\Controllers\Admin\Auth\EmailVerificationNotificationController;
+use App\Http\Controllers\Admin\Auth\EmailVerificationPromptController;
+use App\Http\Controllers\Admin\Auth\NewPasswordController;
+use App\Http\Controllers\Admin\Auth\PasswordController;
+use App\Http\Controllers\Admin\Auth\PasswordResetLinkController;
+use App\Http\Controllers\Admin\Auth\VerifyEmailController;
 use App\Http\Controllers\Admin\BannerController;
 use App\Http\Controllers\Admin\BlogController;
 use App\Http\Controllers\Admin\BrandController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\ContactController;
+use App\Http\Controllers\Admin\CouponController;
+use App\Http\Controllers\Admin\CourseContentController;
+use App\Http\Controllers\Admin\CourseController;
+use App\Http\Controllers\Admin\CourseCurriculamController;
 use App\Http\Controllers\Admin\DynamicCssController;
 use App\Http\Controllers\Admin\EmailSettingController;
-use App\Http\Controllers\Admin\Auth\PasswordController;
-use App\Http\Controllers\Admin\SpecificationController;
-use App\Http\Controllers\Admin\Auth\NewPasswordController;
-use App\Http\Controllers\Admin\Auth\VerifyEmailController;
-use App\Http\Controllers\Admin\Auth\PasswordResetLinkController;
-use App\Http\Controllers\Admin\Auth\ConfirmablePasswordController;
-use App\Http\Controllers\Admin\Auth\AuthenticatedSessionController;
-use App\Http\Controllers\Admin\Auth\EmailVerificationPromptController;
-use App\Http\Controllers\Admin\Auth\EmailVerificationNotificationController;
-use App\Http\Controllers\Admin\CourseController;
 use App\Http\Controllers\Admin\FaqController;
 use App\Http\Controllers\Admin\FeatureController;
 use App\Http\Controllers\Admin\FooterController;
@@ -35,6 +37,7 @@ use App\Http\Controllers\Admin\RoleController;
 use App\Http\Controllers\Admin\RowController;
 use App\Http\Controllers\Admin\ServiceController;
 use App\Http\Controllers\Admin\SettingController;
+use App\Http\Controllers\Admin\SpecificationController;
 use App\Http\Controllers\Admin\SuccessController;
 use App\Http\Controllers\Admin\TagController;
 use App\Http\Controllers\Admin\TestimonialController;
@@ -43,7 +46,6 @@ use App\Http\Controllers\Admin\UserManagementController;
 use App\Http\Controllers\Admin\WhatWeDoPageController;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Route;
-use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
 // Route::get('/', function () {
 //     return redirect()->route('admin.dashboard');
@@ -70,7 +72,7 @@ Route::middleware('guest:admin')->prefix('admin')->name('admin.')->group(functio
 });
 
 // Route::middleware(['localeSessionRedirect', 'localizationRedirect', 'localeViewPath', 'auth:admin'])->prefix(LaravelLocalization::setLocale() . '/admin')->name('admin.')->group(function () {
-    Route::middleware(['auth:admin'])->prefix('admin')->name('admin.')->group(function () {
+Route::middleware(['auth:admin'])->prefix('admin')->name('admin.')->group(function () {
     Route::get('verify-email', EmailVerificationPromptController::class)
         ->name('verification.notice');
 
@@ -96,8 +98,6 @@ Route::middleware('guest:admin')->prefix('admin')->name('admin.')->group(functio
 
     Route::get('/dashboard', [AdminController::class, 'dashboard'])->middleware(['verified'])->name('dashboard');
 
-
-
     Route::resources(
         [
             'role' => RoleController::class,
@@ -110,29 +110,33 @@ Route::middleware('guest:admin')->prefix('admin')->name('admin.')->group(functio
 
     Route::resources(
         [
-            'user'            => UserController::class, //done
+            'user' => UserController::class, //done
             'user-management' => UserManagementController::class,
-            'categories'      => CategoryController::class, //done
-            'tags'            => TagController::class, //done
-            'icons'           => IconController::class, //done
-            'services'        => ServiceController::class, //done
+            'categories' => CategoryController::class, //done
+            'tags' => TagController::class, //done
+            'icons' => IconController::class, //done
+            'services' => ServiceController::class, //done
             // 'experiences'     => ExperienceController::class, //done
-            'projects'        => ProjectController::class,
-            'testimonials'    => TestimonialController::class,
-            'specifications'  => SpecificationController::class,
-            'blogs'           => BlogController::class,
-            'newsletters'     => NewsletterController::class,
-            'brands'          => BrandController::class, //done
-            'contacts'        => ContactController::class,
-            'feature'         => FeatureController::class,
-            'row'             => RowController::class,
-            'news-trend'      => NewsTrendController::class,
-            'homepage'        => HomepageController::class,
-            'whatwedo'        => WhatWeDoPageController::class,
-            'learnmore'       => LearnMoreController::class,
-            'success'         => SuccessController::class,
+            'projects' => ProjectController::class,
+            'testimonials' => TestimonialController::class,
+            'specifications' => SpecificationController::class,
+            'blogs' => BlogController::class,
+            'newsletters' => NewsletterController::class,
+            'brands' => BrandController::class, //done
+            'contacts' => ContactController::class,
+            'feature' => FeatureController::class,
+            'row' => RowController::class,
+            'news-trend' => NewsTrendController::class,
+            'homepage' => HomepageController::class,
+            'whatwedo' => WhatWeDoPageController::class,
+            'learnmore' => LearnMoreController::class,
+            'success' => SuccessController::class,
 
-            'course'          => CourseController::class,
+            //Created By Ashiquzzaman
+            'course' => CourseController::class,
+            'course_curriculam' => CourseCurriculamController::class,
+            'course_content' => CourseContentController::class,
+            'coupon' => CouponController::class,
         ],
     );
 
