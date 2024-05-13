@@ -20,9 +20,10 @@
                 </a>
             </div>
         </div>
-        <form action="{{ route('admin.news-trend.store') }}" class="needs-validation" method="POST"
+        <form action="{{ route('admin.news-trend.update',$newsTrend->id) }}" class="needs-validation" method="POST"
             enctype="multipart/form-data" novalidate>
             @csrf
+            @method('PUT')
             <div class="card-body">
                 <div class="container px-0">
                     <div class="row">
