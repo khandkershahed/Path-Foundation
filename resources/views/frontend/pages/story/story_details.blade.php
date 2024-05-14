@@ -159,8 +159,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-3 col-sm-12 ">
-                    {{-- Releted Industry --}}
+                {{-- <div class="col-lg-3 col-md-3 col-sm-12 ">
                     <div class="border my-3">
                         <h4 class="text-center py-1 tag_title">Releted Industry</h4>
                         <div class="btn-group d-flex flex-wrap justify-content-center">
@@ -175,11 +174,9 @@
                             @endif
                         </div>
                     </div>
-                    {{-- Releted Categories --}}
                     <div class="border my-3">
                         <img class="img-fluid" src="https://source.unsplash.com/random/580x360" alt="">
                     </div>
-                    {{-- Releted Brand --}}
                     <div class="border my-3">
                         <h4 class="text-center py-1 tag_title">Releted Categories</h4>
                         <div class="btn-group d-flex flex-wrap justify-content-center">
@@ -194,7 +191,6 @@
                             @endif
                         </div>
                     </div>
-                    {{-- Releted Categories --}}
                     <div class="border my-3">
                         <h4 class="text-center py-1 tag_title">Releted Brand</h4>
                         <div class="btn-group d-flex flex-wrap justify-content-center">
@@ -209,12 +205,10 @@
                             @endif
                         </div>
                     </div>
-                    {{-- Add Image --}}
                     <div class="border my-3">
                         <img class="img-fluid" src="https://source.unsplash.com/random/480x360" alt="">
                     </div>
 
-                    {{-- Releted Solution --}}
                     <div class="border my-3 ">
                         <h4 class="text-center py-1 tag_title">Releted Solution</h4>
                         <div class="btn-group d-flex flex-wrap justify-content-center">
@@ -229,11 +223,9 @@
                             @endif
                         </div>
                     </div>
-                    {{-- Add Image --}}
                     <div class="border my-3">
                         <img class="img-fluid" src="https://source.unsplash.com/random/680x360" alt="">
                     </div>
-                    {{-- Releted Solution --}}
                     <div class="border my-3 ">
                         <h4 class="text-center py-1 tag_title">TAGS</h4>
                         <div class="blogins_tags d-flex flex-wrap justify-content-center">
@@ -242,7 +234,7 @@
                             @endforeach
                         </div>
                     </div>
-                </div>
+                </div> --}}
             </div>
         </div>
     </section>
