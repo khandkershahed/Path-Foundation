@@ -20,6 +20,7 @@ use App\Http\Controllers\Admin\CouponController;
 use App\Http\Controllers\Admin\CourseContentController;
 use App\Http\Controllers\Admin\CourseController;
 use App\Http\Controllers\Admin\CourseCurriculamController;
+use App\Http\Controllers\Admin\CourseQueryController;
 use App\Http\Controllers\Admin\DynamicCssController;
 use App\Http\Controllers\Admin\EmailSettingController;
 use App\Http\Controllers\Admin\FaqController;
@@ -137,6 +138,7 @@ Route::middleware(['auth:admin'])->prefix('admin')->name('admin.')->group(functi
             'course_curriculam' => CourseCurriculamController::class,
             'course_content' => CourseContentController::class,
             'coupon' => CouponController::class,
+            'course-query' => CourseQueryController::class,
         ],
     );
 

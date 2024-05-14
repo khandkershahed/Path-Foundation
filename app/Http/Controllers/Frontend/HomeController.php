@@ -142,7 +142,10 @@ class HomeController extends Controller
     }
     public function courseRegistration()
     {
-        return view('frontend.pagese.course.courseRegistration');
+        $data = [
+            'courses' => Course::latest('id')->get(),
+        ];
+        return view('frontend.pagese.course.courseRegistration',$data);
     }
 
     //About
