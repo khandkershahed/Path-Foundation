@@ -96,20 +96,35 @@
                                     <div class="invalid-feedback"> Please Enter Author </div>
                                 </div>
                                 <div class="col-md-4 pb-7">
-                                    <label for="validationCustom01" class="form-label ">Banner
-                                        Image</label>
-                                    <input type="file" class="form-control form-control-solid form-control-sm"
-                                        id="validationCustom01" placeholder="Enter Banner Image" name="banner_image" value="{{$newsTrend->banner_image}}"
-                                    >
-                                    <div class="invalid-feedback"> Please Enter Banner Image </div>
+                                    <div class="row">
+                                        <div class="col-lg-10">
+                                            <label for="validationCustom01" class="form-label ">Banner
+                                                Image</label>
+                                                <input type="file" class="form-control form-control-solid form-control-sm"
+                                                id="validationCustom01" placeholder="Enter Banner Image" name="banner_image">
+                                            <div class="invalid-feedback"> Please Enter Banner Image </div>
+                                        </div>
+                                        <div class="col-lg-2">
+                                            <label for="validationCustom01" class="form-label "></label>
+                                            <img src="{{ !empty($newsTrend->banner_image) && file_exists(public_path('storage/' . $newsTrend->banner_image)) ? asset('storage/' . $newsTrend->banner_image) : asset('frontend/images/banner-demo.png') }}" alt="" class="img-fluid" width="50px">
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="col-md-4 pb-7">
-                                    <label for="validationCustom01" class="form-label ">Thumbnail
-                                        Image</label>
-                                    <input type="file" class="form-control form-control-solid form-control-sm"
-                                        id="validationCustom01" placeholder="Enter Thumbnail Image"
-                                        name="thumbnail_image">
-                                    <div class="invalid-feedback"> Please Enter Thumbnail Image </div>
+                                    <div class="row">
+                                        <div class="col-lg-10">
+                                            <label for="validationCustom01" class="form-label ">Thumbnail
+                                                Image</label>
+                                            <input type="file" class="form-control form-control-solid form-control-sm"
+                                                id="validationCustom01" placeholder="Enter Thumbnail Image"
+                                                name="thumbnail_image">
+                                            <div class="invalid-feedback"> Please Enter Thumbnail Image </div>
+                                        </div>
+                                        <div class="col-lg-2">
+                                            <label for="validationCustom01" class="form-label "></label>
+                                            <img src="{{ !empty($newsTrend->thumbnail_image) && file_exists(public_path('storage/' . $newsTrend->thumbnail_image)) ? asset('storage/' . $newsTrend->thumbnail_image) : asset('frontend/images/banner-demo.png') }}" alt="" class="img-fluid" width="50px">
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="col-md-4 pb-7">
                                     <label for="validationCustom01" class="form-label ">Aditional

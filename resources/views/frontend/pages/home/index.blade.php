@@ -572,7 +572,7 @@
                                 </div>
                                 <div class="grid-river">
                                     <figure class="effect-oscar">
-                                        <img src="{{ isset($story->thumbnail_image) && file_exists(public_path('storage/' . $story->thumbnail_image)) ? asset('storage/' . $story->thumbnail_image) : asset('frontend/images/banner-demo.png') }} "
+                                        <img src="{{ !empty($story->thumbnail_image) && file_exists(public_path('storage/' . $story->thumbnail_image)) ? asset('storage/' . $story->thumbnail_image) : asset('frontend/images/banner-demo.png') }}"
                                             alt="">
                                         <figcaption>
                                             <h6> {{ Str::words($story->title, 6) }}</h6>
