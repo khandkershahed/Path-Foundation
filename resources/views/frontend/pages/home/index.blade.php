@@ -272,25 +272,24 @@
         </div>
         <div class="row">
             <div class="col-lg-12">
-                <h1 class="feature-title">Carrer Guideline With Job Market Guideline!</h1>
+                <h1 class="feature-title"> {{ optional($home)->header1 }}</h1>
                 <div class="devider"></div>
-                <p class="text-center py-3 fs-6" style="color: #A4A4A6">We Offer Best Cources And Guideline In Your
-                    Area.</p>
+                <p class="text-center py-3 fs-6" style="color: #A4A4A6">{{ optional($home)->header2 }}</p>
             </div>
         </div>
         <div class="row">
             <div class="col-lg-12">
-                <div class="buttons-area py-4 pt-1">
+                <div class="buttons-area pt-1">
                     <div class="p-2 py-3 text-center d-flex justify-content-between align-items-center"
                         style="background-color: #F3F4F8;border-radius: 5px;">
                         <div>
-                            <a href="" class="action-btnss fw-bolder">
-                                All Cources
+                            <a href="{{ optional($home)->btn1_link }}" class="action-btnss fw-bolder">
+                                {{ optional($home)->btn1_name }}
                             </a>
                         </div>
                         <div>
-                            <a href="" class="bg-white action-btnss-2 fw-bolder">
-                                Scholarship
+                            <a href="{{ optional($home)->btn2_link }}" class="bg-white action-btnss-2 fw-bolder">
+                                {{ optional($home)->btn2_name }}
                             </a>
                         </div>
                     </div>
@@ -374,8 +373,8 @@
         </div>
         <div class="row">
             <div class="col-lg-12">
-                <h1 class="feature-title">Carrer Guideline With Job Market Guideline!</h1>
-                <p class="text-center py-3">We Offer Best Cources And Guideline In Your Area</p>
+                <h1 class="feature-title"> {{ optional($home)->header1 }}</h1>
+                <p class="text-center py-3">{{ optional($home)->header2 }}</p>
             </div>
         </div>
     </div>
@@ -385,7 +384,7 @@
     <div class="container">
         @if (!empty($features) && array_filter($features))
             <!-- home title -->
-            <div class="row">
+            {{-- <div class="row">
                 @if (!empty(optional($home)->header1))
                     <div class="home_banner_bottom_title mx-auto py-3 px-lg-4">
                         <h6 class="home_title_heading home_banner_bt-title pb-2"> {{ optional($home)->header1 }}
@@ -393,7 +392,7 @@
                         <p class="home_title_text">{{ optional($home)->header2 }}</p>
                     </div>
                 @endif
-            </div>
+            </div> --}}
             <!-- business content -->
             @if (!empty($features))
                 <div class="d-lg-block d-sm-none">
