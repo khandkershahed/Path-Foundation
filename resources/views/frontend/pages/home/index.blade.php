@@ -572,7 +572,7 @@
                                 </div>
                                 <div class="grid-river">
                                     <figure class="effect-oscar">
-                                        <img src="{{ isset($story->image) && file_exists(public_path('storage/' . $story->image)) ? asset('storage/' . $story->image) : asset('frontend/images/banner-demo.png') }} "
+                                        <img src="{{ isset($story->thumbnail_image) && file_exists(public_path('storage/' . $story->thumbnail_image)) ? asset('storage/' . $story->thumbnail_image) : asset('frontend/images/banner-demo.png') }} "
                                             alt="">
                                         <figcaption>
                                             <h6> {{ Str::words($story->title, 6) }}</h6>
@@ -615,7 +615,7 @@
                                 </div>
                                 <div class="grid-river">
                                     <figure class="effect-oscar">
-                                        <img src="{{ isset($story->image) && file_exists(public_path('storage/' . $story->image)) ? asset('storage/' . $story->image) : asset('frontend/images/banner-demo.png') }} "
+                                        <img src="{{ !empty($story->thumbnail_image) && file_exists(public_path('storage/' . $story->thumbnail_image)) ? asset('storage/' . $story->thumbnail_image) : asset('frontend/images/no-shop-imge.png') }}"
                                             alt="">
                                         <figcaption>
                                             <h6> {{ Str::words($story->title, 6) }}</h6>
@@ -669,7 +669,7 @@
                                 <!-- Add a pseudo-element for the overlay -->
                                 <div class="gradient-overlay"></div>
                                 <img class="img-fluid overlays-img"
-                                    src="{{ isset($techglossy->image) && file_exists(public_path('storage/' . $techglossy->image)) ? asset('storage/' . $techglossy->image) : asset('frontend/images/banner-demo.png') }}"
+                                    src="{{ isset($techglossy->thumbnail_image) && file_exists(public_path('storage/' . $techglossy->thumbnail_image)) ? asset('storage/' . $techglossy->thumbnail_image) : asset('frontend/images/banner-demo.png') }}"
                                     alt="Picture" style="border-top-right-radius: 60px;">
                             </div>
                         </div>
