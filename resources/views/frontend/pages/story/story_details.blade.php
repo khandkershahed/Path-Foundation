@@ -52,11 +52,11 @@
     </style>
 
     <!--======// Header Title //======-->
-    <section class="blog_header" style="background-image: url('{{ !empty($techglossy->banner_image) && file_exists(public_path('storage/' . $techglossy->banner_image)) ? asset('storage/' . $techglossy->banner_image) : asset('frontend/images/no-banner(1920-330).png') }}');">
+    <section class="blog_header" style="background-image: url('{{ !empty($blog->banner_image) && file_exists(public_path('storage/' . $blog->banner_image)) ? asset('storage/' . $blog->banner_image) : asset('frontend/images/no-banner(1920-330).png') }}');">
         <h1 class="text-center text-white pt-5">{{ $blog->badge }}</h1>
         <div class="container ">
             <div class="row ">
-                
+
             </div>
         </div>
     </section>
