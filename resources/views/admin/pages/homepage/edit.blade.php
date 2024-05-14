@@ -377,6 +377,7 @@
                                     <div class="input-group" style="width: 275px;">
                                         <select name="story1_id" class="form-control select form-control-sm"
                                             data-allow-clear="true" id="select1" data-placeholder="Select Feature">
+                                            <option value="" selected disabled>Select Feature</option>
                                             @foreach ($client_experiences as $item)
                                                 <option value="{{ $item->id }}"
                                                     {{ $item->id == $homePage->story1_id ? 'selected' : '' }}>
@@ -394,6 +395,7 @@
                                     <div class="input-group" style="width: 275px;">
                                         <select name="story2_id" class="form-select form-select-solid" data-control="select2"
                                             data-allow-clear="true" id="select2" data-placeholder="Select Feature">
+                                            <option value="" selected disabled>Select Feature</option>
                                             @foreach ($client_experiences as $item)
                                                 <option value="{{ $item->id }}"
                                                     {{ $item->id == $homePage->story2_id ? 'selected' : '' }}>
@@ -411,6 +413,7 @@
                                     <div class="input-group" style="width: 275px;">
                                         <select name="story3_id" class="form-select form-select-solid" data-control="select2"
                                             data-allow-clear="true" id="select3" data-placeholder="Select Feature">
+                                            <option value="" selected disabled>Select Feature</option>
                                             @foreach ($client_experiences as $item)
                                                 <option value="{{ $item->id }}"
                                                     {{ $item->id == $homePage->story3_id ? 'selected' : '' }}>
@@ -427,6 +430,7 @@
                                     <div class="input-group" style="width: 275px;">
                                         <select name="story4_id" class="form-select form-select-solid" data-control="select2"
                                             data-allow-clear="true" id="select4" data-placeholder="Select Feature">
+                                            <option value="" selected disabled>Select Feature</option>
                                             @foreach ($client_experiences as $item)
                                                 <option value="{{ $item->id }}"
                                                     {{ $item->id == $homePage->story4_id ? 'selected' : '' }}>
@@ -443,6 +447,7 @@
                                     <div class="input-group" style="width: 275px;">
                                         <select name="story5_id" class="form-select form-select-solid" data-control="select2"
                                             data-allow-clear="true" id="select5" data-placeholder="Select Feature">
+                                            <option value="" selected disabled>Select Feature</option>
                                             @foreach ($client_experiences as $item)
                                                 <option value="{{ $item->id }}"
                                                     {{ $item->id == $homePage->story5_id ? 'selected' : '' }}>
@@ -539,6 +544,7 @@
                                         <select name="techglossy_id" class="form-select form-select-solid" data-control="select2"
                                             data-allow-clear="true" data-placeholder="Select Tech Glossy"
                                             id="select6">
+                                            <option value="" selected disabled>Select Client Story</option>
                                             @foreach ($techglossys as $item)
                                                 <option value="{{ $item->id }}"
                                                     {{ $item->id == $homePage->techglossy_id ? 'selected' : '' }}>

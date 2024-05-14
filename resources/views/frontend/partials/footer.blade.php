@@ -28,7 +28,7 @@
                                     style="height: 37px;">
                                 <span class="input-group-btns ml-1" style="width:30%;">
                                     <button class="newsletter-btns pt-0" type="submit"
-                                        style="line-height: 36px;border-top-right-radius: 5px;border-bottom-right-radius: 5px;">Subscribe</button>
+                                        style="line-height: 37px;border-top-right-radius: 5px;border-bottom-right-radius: 5px;">Subscribe</button>
                                 </span>
                         </form>
                     </div>

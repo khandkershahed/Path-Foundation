@@ -13,7 +13,7 @@
         }
 
         .feature-title {
-            font-size: 45px;
+            font-size: 40px;
             width: 50%;
             margin: auto;
             line-height: 1.3;
@@ -274,7 +274,7 @@
             <div class="col-lg-12">
                 <h1 class="feature-title"> {{ optional($home)->header1 }}</h1>
                 <div class="devider"></div>
-                <p class="text-center py-3 fs-6" style="color: #A4A4A6">{{ optional($home)->header2 }}</p>
+                <p class="text-center py-3 fs-5" style="color: #4d4d58">{{ optional($home)->header2 }}</p>
             </div>
         </div>
         <div class="row">
@@ -381,7 +381,7 @@
 </section>
 <!--======// Business section //======-->
 <section class="">
-    <div class="container">
+    <div class="container pt-5">
         @if (!empty($features) && array_filter($features))
             <!-- home title -->
             {{-- <div class="row">
@@ -560,7 +560,11 @@
 @if (!empty($storys) && array_filter($storys))
     <section>
         <div class="container my-4 mb-5 d-lg-block d-sm-none">
-            <h2 class="text-center"><span class="main_color">Storys</span></h2>
+            <h2 class="text-center">
+                <span style="color: #07163b;font-weight: 600;">
+                    UpComing Courses
+                </span>
+            </h2>
             <div class="row">
                 @foreach ($storys as $story)
                     @if (!empty($story))

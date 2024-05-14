@@ -142,7 +142,7 @@
                             alt="NGEN IT">
                     </a>
                     <!---Category--->
-                    <div class="category-mobile">
+                    {{-- <div class="category-mobile">
                         <div class="dropdown position-static header-category-button-60">
                             <a class="tab_btn_icon upper-content-menu" href="#" role="button"
                                 id="dropdownMenuLink2" data-bs-toggle="dropdown" data-bs-auto-close="outside"
@@ -156,7 +156,7 @@
                                         <div class="row tab_area_main category-center">
                                             <!-- Assuming $categories is already available in your controller or view -->
 
-                                            {{-- <div class="col-md-2 tab_key_btns p-0 ">
+                                            <div class="col-md-2 tab_key_btns p-0 ">
                                                 <div class="nav nav-custom flex-column nav-pills2 nav-pills-custom2"
                                                     id="v-pills-tab" role="tablist" aria-orientation="vertical">
                                                     @foreach ($categories as $key => $category)
@@ -208,14 +208,14 @@
                                                         </div>
                                                     @endforeach
                                                 </div>
-                                            </div> --}}
+                                            </div>
 
                                         </div>
                                     </div>
                                 </section>
                             </ul>
                         </div>
-                    </div>
+                    </div> --}}
                     <!---Category--->
                     <form method="post" action="{{ route('course.search') }}"
                         class="d-flex upper-content-menu justify-content-center align-items-center d-lg-none"
