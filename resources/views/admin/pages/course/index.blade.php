@@ -41,8 +41,11 @@
                         <tr>
                             <td>{{ $key + 1 }}</td>
                             <td class="text-center">
-                                <img class="" src="{{ asset('storage/course/' . $course->thumbnail_image) }}"
+
+                                <img class=""
+                                    src="{{ !empty($course->thumbnail_image) ? url('storage/course/' . $course->thumbnail_image) : 'https://ui-avatars.com/api/?name=' . urlencode($course->name) }}"
                                     height="40" width="40" alt="">
+
                             </td>
 
                             <td class="text-start">{{ $course->name }}</td>
