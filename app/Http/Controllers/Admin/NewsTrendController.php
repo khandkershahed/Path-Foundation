@@ -33,7 +33,7 @@ class NewsTrendController extends Controller
     public function create()
     {
         return view('admin.pages.newsTrend.create', [
-            'courses' => Course::latest('id')->get(['name','id','logo']),
+            'courses' => Course::latest('id')->get(['name','id']),
         ]);
     }
 
@@ -109,7 +109,7 @@ class NewsTrendController extends Controller
     {
         return view('admin.pages.newsTrend.edit', [
             'newsTrend' =>  NewsTrend::find($id),
-            'courses'    => Course::latest('id')->get(['name','id','logo']),
+            'courses'    => Course::latest('id')->get(['name','id']),
         ]);
     }
 

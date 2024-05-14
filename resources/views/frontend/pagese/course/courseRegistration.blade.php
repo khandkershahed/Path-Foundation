@@ -147,6 +147,7 @@
                 </div>
             </div> --}}
             <form action="" method="post">
+                @csrf
                 <div class="row">
                     <div class="col-lg-10 offset-lg-1">
                         <div class="row">
@@ -158,30 +159,31 @@
                                 </div>
                                 <div class="input-field-gap">
                                     <input type="text" class="form-control form-color" id="exampleInputEmail1"
-                                        aria-describedby="emailHelp" placeholder="Your Name Here">
+                                        aria-describedby="emailHelp" name="name" placeholder="Your Name Here">
                                 </div>
                                 <div class="input-field-gap">
                                     <input type="text" class="form-control form-color" id="exampleInputEmail1"
-                                        aria-describedby="emailHelp" placeholder="Your Name Email">
+                                        aria-describedby="emailHelp" name="email" placeholder="Email Id:example@example.com">
                                 </div>
                                 <div class="input-field-gap">
                                     <input type="text" class="form-control form-color" id="exampleInputEmail1"
-                                        aria-describedby="emailHelp" placeholder="Your Name Phone">
+                                        aria-describedby="emailHelp" name="phone" placeholder="Phone;Eg:017*******">
                                 </div>
                                 <div class="input-field-gap">
-                                    <select class="form-select form-color" aria-label="Default select example">
-                                        <option selected style="color: #212529 !important;">Open this select menu</option>
-                                        <option value="1">One</option>
-                                        <option value="2">Two</option>
-                                        <option value="3">Three</option>
+                                    <select class="form-select form-color" name="course_id" aria-label="Select Course" placeholder="Select Course">
+                                        <option value="" disabled selected>Select Course</option>
+                                        @foreach ($courses as $course)
+                                            <option value="{{$course->id}}">{{$course->name}}</option>
+                                        @endforeach
                                     </select>
                                 </div>
+
                                 <div class="input-field-gap">
-                                    <textarea class="form-select form-color" name="" id="" cols="30" rows="3"
-                                        placeholder="Your Name Address"></textarea>
+                                    <textarea class="form-control form-color" name="address" rows="3"
+                                        placeholder="Your Address"></textarea>
                                 </div>
                                 <div>
-                                    <button class="btn btn-white w-100">Submit</button>
+                                    <button type="submit" class="btn btn-white w-100">Submit</button>
                                 </div>
                             </div>
                             <div class="col-lg-6 d-lg-block d-sm-none">

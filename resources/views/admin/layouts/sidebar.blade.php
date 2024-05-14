@@ -351,6 +351,15 @@
                           </div>
 
                           <div class="menu-item">
+                            <a class="menu-link" href="{{ route('admin.course_query.index') }}">
+                                <span class="menu-bullet">
+                                    <span class="bullet bullet-dot"></span>
+                                </span>
+                                <span class="menu-title">Course Query</span>
+                            </a>
+                        </div>
+
+                          <div class="menu-item">
                             <a class="menu-link" href="{{ route('admin.coupon.index') }}">
                                 <span class="menu-bullet">
                                     <span class="bullet bullet-dot"></span>

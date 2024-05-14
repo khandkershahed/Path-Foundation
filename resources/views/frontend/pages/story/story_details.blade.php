@@ -52,19 +52,11 @@
     </style>
 
     <!--======// Header Title //======-->
-    <section class="blog_header" style="background-image: url('{{ asset('storage/' . $blog->image) }}');">
+    <section class="blog_header" style="background-image: url('{{ !empty($blog->banner_image) && file_exists(public_path('storage/' . $blog->banner_image)) ? asset('storage/' . $blog->banner_image) : asset('frontend/images/no-banner(1920-330).png') }}');">
         <h1 class="text-center text-white pt-5">{{ $blog->badge }}</h1>
         <div class="container ">
             <div class="row ">
-                <!--BUTTON START-->
-                {{-- <div class="d-flex justify-content-center align-items-center">
-                <div class="m-4">
-                    <a href="{{route()}}" class="common_button2" href="product_filters.html">All Client Storys</a>
-                  </div>
-                  <div class="m-4">
-                    <a href="{{route()}}" class="common_button3" href="#">All Tech Glossys</a>
-                  </div>
-              </div> --}}
+
             </div>
         </div>
     </section>
@@ -103,11 +95,11 @@
                             @endforeach
                             <span class="special_character">{{ $last_word }} </span>
                         </p>
-                        <div class="bySocial col-3">
+                        {{-- <div class="bySocial col-3">
                             <ul class="social-icon-links pull-right" style="font-size: 1.5rem;">
                                 {!! Share::page(url('/blog/' . $blog->id . '/details'))->facebook()->twitter()->whatsapp() !!}
                             </ul>
-                        </div>
+                        </div> --}}
                     </div>
 
                 </div>
@@ -159,8 +151,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-3 col-sm-12 ">
-                    {{-- Releted Industry --}}
+                {{-- <div class="col-lg-3 col-md-3 col-sm-12 ">
                     <div class="border my-3">
                         <h4 class="text-center py-1 tag_title">Releted Industry</h4>
                         <div class="btn-group d-flex flex-wrap justify-content-center">
@@ -175,11 +166,9 @@
                             @endif
                         </div>
                     </div>
-                    {{-- Releted Categories --}}
                     <div class="border my-3">
                         <img class="img-fluid" src="https://source.unsplash.com/random/580x360" alt="">
                     </div>
-                    {{-- Releted Brand --}}
                     <div class="border my-3">
                         <h4 class="text-center py-1 tag_title">Releted Categories</h4>
                         <div class="btn-group d-flex flex-wrap justify-content-center">
@@ -194,7 +183,6 @@
                             @endif
                         </div>
                     </div>
-                    {{-- Releted Categories --}}
                     <div class="border my-3">
                         <h4 class="text-center py-1 tag_title">Releted Brand</h4>
                         <div class="btn-group d-flex flex-wrap justify-content-center">
@@ -209,12 +197,10 @@
                             @endif
                         </div>
                     </div>
-                    {{-- Add Image --}}
                     <div class="border my-3">
                         <img class="img-fluid" src="https://source.unsplash.com/random/480x360" alt="">
                     </div>
 
-                    {{-- Releted Solution --}}
                     <div class="border my-3 ">
                         <h4 class="text-center py-1 tag_title">Releted Solution</h4>
                         <div class="btn-group d-flex flex-wrap justify-content-center">
@@ -229,11 +215,9 @@
                             @endif
                         </div>
                     </div>
-                    {{-- Add Image --}}
                     <div class="border my-3">
                         <img class="img-fluid" src="https://source.unsplash.com/random/680x360" alt="">
                     </div>
-                    {{-- Releted Solution --}}
                     <div class="border my-3 ">
                         <h4 class="text-center py-1 tag_title">TAGS</h4>
                         <div class="blogins_tags d-flex flex-wrap justify-content-center">
@@ -242,7 +226,7 @@
                             @endforeach
                         </div>
                     </div>
-                </div>
+                </div> --}}
             </div>
         </div>
     </section>

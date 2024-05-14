@@ -6,11 +6,11 @@
         }
     </style>
         <!--======// Header Title //======-->
-        @if (!empty($techglossy->image))
+        @if (!empty($techglossy->banner_image))
         <section>
             <div>
                 <img class="page_top_banner" width="1920px" height="330px"
-                    src="{{ !empty($techglossy->image) && file_exists(public_path('storage/' . $techglossy->image)) ? asset('storage/' . $techglossy->image) : asset('frontend/images/no-banner(1920-330).png') }}"
+                    src="{{ !empty($techglossy->banner_image) && file_exists(public_path('storage/' . $techglossy->banner_image)) ? asset('storage/' . $techglossy->banner_image) : asset('frontend/images/no-banner(1920-330).png') }}"
                     alt="NGEN IT Software">
             </div>
         </section>
@@ -25,11 +25,11 @@
                     </span><span>{{ date('d-m-Y', strtotime($techglossy->created_at)) }}</span>
                 </p>
             </div>
-            <div class="bySocial col-3">
+            {{-- <div class="bySocial col-3">
                 <ul class="social-icon-links pull-right d-flex justify-content-end" style="font-size: 1.5rem;">
                     {!! Share::page(url('/techglossy/' . $techglossy->id . '/details'))->facebook()->twitter()->whatsapp() !!}
                 </ul>
-            </div>
+            </div> --}}
         </div>
         <div class="row content_wrapper">
             <!---------/// Content & blog ///-------->

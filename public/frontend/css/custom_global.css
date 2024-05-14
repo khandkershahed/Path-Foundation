@@ -4406,7 +4406,10 @@ body::-webkit-scrollbar-corner {
 
 /* Project & Support */
 .btn:hover {
-    background-color: #4da2b7;
+    /* background-color: #4da2b7; */
+    /* background-color: var(--primary-color); */
+    background: linear-gradient(45deg, var(--secondary-color), var(--primary-color));
+    border-color: white;
 }
 
 @-webkit-keyframes sonar_button {
@@ -5053,7 +5056,7 @@ tr td:hover {
     color: white;
     padding: 10px 20px;
     border: none;
-    z-index: 1;
+    z-index: 99;
     transition: 0.5s;
     transform: rotate(-90deg);
     border: 2px solid linear-gradient(45deg, var(--secondary-color), var(--primary-color));

@@ -43,6 +43,7 @@ use App\Models\TechnologyData;
 use Brian2694\Toastr\Facades\Toastr;
 use App\Models\PortfolioClient;
 use App\Models\HardwareInfoPage;
+use App\Models\NewsTrend;
 use App\Models\PortfolioDetails;
 use App\Models\SoftwareInfoPage;
 use App\Models\PortfolioCategory;
@@ -141,7 +142,10 @@ class HomeController extends Controller
     }
     public function courseRegistration()
     {
-        return view('frontend.pagese.course.courseRegistration');
+        $data = [
+            'courses' => Course::latest('id')->get(),
+        ];
+        return view('frontend.pagese.course.courseRegistration',$data);
     }
 
     //About
@@ -278,4 +282,20 @@ class HomeController extends Controller
 
         return response()->json(view('frontend.partials.search', $data)->render());
     } // end method
+
+    public function TechGlossyDetails($id)
+    {
+        $data['techglossy'] = NewsTrend::where('id', $id)->firstOrFail();
+        //$data['industry'] = Industry::where('id',$id)->first();
+        //$data['industry_page'] = IndustryPage::where('industry_id', $data['industry']->id)->get();
+        $data['storys'] = NewsTrend::inRandomOrder()->limit(7)->get();
+        return view('frontend.pages.tech.techglossy_details', $data);
+    }
+    public function StoryDetails($id)
+    {
+
+        $data['blog'] = NewsTrend::where('id', $id)->firstOrFail();
+        $data['storys'] = NewsTrend::inRandomOrder()->limit(4)->get();
+        return view('frontend.pages.story.story_details', $data);
+    }
 }
