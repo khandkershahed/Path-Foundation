@@ -103,11 +103,11 @@
                             @endforeach
                             <span class="special_character">{{ $last_word }} </span>
                         </p>
-                        <div class="bySocial col-3">
+                        {{-- <div class="bySocial col-3">
                             <ul class="social-icon-links pull-right" style="font-size: 1.5rem;">
                                 {!! Share::page(url('/blog/' . $blog->id . '/details'))->facebook()->twitter()->whatsapp() !!}
                             </ul>
-                        </div>
+                        </div> --}}
                     </div>
 
                 </div>

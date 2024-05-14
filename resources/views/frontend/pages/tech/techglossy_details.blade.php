@@ -25,11 +25,11 @@
                     </span><span>{{ date('d-m-Y', strtotime($techglossy->created_at)) }}</span>
                 </p>
             </div>
-            <div class="bySocial col-3">
+            {{-- <div class="bySocial col-3">
                 <ul class="social-icon-links pull-right d-flex justify-content-end" style="font-size: 1.5rem;">
                     {!! Share::page(url('/techglossy/' . $techglossy->id . '/details'))->facebook()->twitter()->whatsapp() !!}
                 </ul>
-            </div>
+            </div> --}}
         </div>
         <div class="row content_wrapper">
             <!---------/// Content & blog ///-------->
