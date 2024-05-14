@@ -562,7 +562,7 @@
         <div class="container my-4 mb-5 d-lg-block d-sm-none">
             <h2 class="text-center">
                 <span style="color: #07163b;font-weight: 600;">
-                    UpComing Courses
+                    Upcoming Courses
                 </span>
             </h2>
             <div class="row">
@@ -598,7 +598,7 @@
         <div class="container my-4 mb-5 d-lg-none d-sm-block">
             <div class="d-flex justify-content-center align-items-center mx-3 border-bottom">
                 <div class="text-start w-75">
-                    <h3 class="main_color">Storys</h3>
+                    <h3 style="color: #07163b;font-weight: 600;">Upcoming Courses</h3>
                 </div>
                 <div class="text-end w-25">
                     <a class="Arrows custom-responsive-slider-prev"><i
