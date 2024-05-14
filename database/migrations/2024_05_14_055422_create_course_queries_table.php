@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('course_queries', function (Blueprint $table) {
             $table->id();
+
             $table->foreignId('course_id')->nullable()->constrained('courses')->onDelete('cascade');
             $table->string('name', 200)->nullable();
             $table->string('email', 200)->nullable();
@@ -22,6 +23,8 @@ return new class extends Migration
             $table->string('ip_address', 150)->nullable();
             $table->double('offer_price')->nullable();
             $table->enum('call', ['0', '1'])->default('0')->nullable();
+
+            
             $table->timestamps();
         });
     }

@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Course;
+use App\Models\CourseQuery;
 use Illuminate\Http\Request;
 
 class CourseQueryController extends Controller
@@ -12,7 +14,8 @@ class CourseQueryController extends Controller
      */
     public function index()
     {
-        //
+        $querys = CourseQuery::latest()->get();
+        return view('admin.pages.course_query.index', compact('querys'));
     }
 
     /**
@@ -20,7 +23,8 @@ class CourseQueryController extends Controller
      */
     public function create()
     {
-        //
+        $courses = Course::latest()->get();
+        return view('admin.pages.course_query.create', compact('courses'));
     }
 
     /**
@@ -28,7 +32,26 @@ class CourseQueryController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        CourseQuery::insert([
+
+            'course_id' => $request->course_id,
+
+            'name' => $request->name,
+            'email' => $request->email,
+
+            'phone' => $request->phone,
+            'offer_price' => $request->offer_price,
+            'message' => $request->message,
+            'address' => $request->address,
+
+            'call' => $request->call,
+            'ip_address' => $request->ip(),
+
+            'created_at' => now(),
+
+        ]);
+
+        return redirect()->route('admin.course_query.index')->with('success', 'Course Query Inserted Successfully!!');
     }
 
     /**

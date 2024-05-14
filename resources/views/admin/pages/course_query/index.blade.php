@@ -1,4 +1,4 @@
-<x-admin-app-layout :title="'Course List'">
+<x-admin-app-layout :title="'Course Query'">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 
@@ -6,7 +6,7 @@
         <div class="card-header mt-6">
             <div class="card-title"></div>
             <div class="card-toolbar">
-                <a href="{{ route('admin.course.create') }}" class="btn btn-light-primary rounded-2">
+                <a href="{{ route('admin.course_query.create') }}" class="btn btn-light-primary rounded-2">
                     <span class="svg-icon svg-icon-3">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                             fill="none">
@@ -26,39 +26,33 @@
                 <thead>
                     <tr>
                         <th width="5%">No</th>
-                        <th width="8%">Image</th>
-                        <th width="20%">Course Name</th>
-                        <th width="20%">Lecture</th>
-                        <th width="10%">Seat</th>
-                        <th width="10%">Price</th>
-                        <th width="20%">Discount Price</th>
+                        <th width="8%">Course Name</th>
+                        <th width="20%">Name</th>
+                        <th width="20%">Email</th>
+                        <th width="10%">Phone</th>
+                        <th width="10%">Offer Price</th>
+                        <th width="20%">Message</th>
                         <th width="100%">Actions</th>
                     </tr>
                 </thead>
                 <tbody class="fw-bold text-gray-600">
 
-                    @foreach ($courses as $key => $course)
+                    @foreach ($querys as $key => $query)
                         <tr>
                             <td>{{ $key + 1 }}</td>
-                            <td class="text-center">
+                            <td class="text-start">{{ $query->course_id }}</td>
 
-                                <img class=""
-                                    src="{{ !empty($course->thumbnail_image) ? url('storage/course/' . $course->thumbnail_image) : 'https://ui-avatars.com/api/?name=' . urlencode($course->name) }}"
-                                    height="40" width="40" alt="">
-
-                            </td>
-
-                            <td class="text-start">{{ $course->name }}</td>
-                            <td class="text-start">{{ $course->lecture }}</td>
-                            <td class="text-start">{{ $course->available_seats }}</td>
-                            <td class="text-start">{{ $course->price }} Tk</td>
-                            <td class="text-start">{{ $course->discount_price }} Tk</td>
+                            <td class="text-start">{{ $query->name }}</td>
+                            <td class="text-start">{{ $query->email }}</td>
+                            <td class="text-start">{{ $query->phone }}</td>
+                            <td class="text-start">{{ $query->offer_price }} Tk</td>
+                            <td class="text-start">{{ $query->message }} Tk</td>
                             <td>
-                                <a href="{{ route('admin.course.edit', $course->id) }}" class="text-primary">
+                                <a href="{{ route('admin.course_query.edit', $query->id) }}" class="text-primary">
                                     <i class="bi bi-pencil text-primary"></i>
                                 </a>
 
-                                <a href="{{ route('admin.course.destroy', $course->id) }}" class="delete">
+                                <a href="{{ route('admin.course_query.destroy', $query->id) }}" class="delete">
                                     <i class="bi bi-trash3-fill text-danger"></i>
                                 </a>
 

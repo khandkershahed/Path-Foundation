@@ -73,6 +73,7 @@ Route::middleware('guest:admin')->prefix('admin')->name('admin.')->group(functio
 });
 
 // Route::middleware(['localeSessionRedirect', 'localizationRedirect', 'localeViewPath', 'auth:admin'])->prefix(LaravelLocalization::setLocale() . '/admin')->name('admin.')->group(function () {
+    
 Route::middleware(['auth:admin'])->prefix('admin')->name('admin.')->group(function () {
     Route::get('verify-email', EmailVerificationPromptController::class)
         ->name('verification.notice');
@@ -138,7 +139,7 @@ Route::middleware(['auth:admin'])->prefix('admin')->name('admin.')->group(functi
             'course_curriculam' => CourseCurriculamController::class,
             'course_content' => CourseContentController::class,
             'coupon' => CouponController::class,
-            'course-query' => CourseQueryController::class,
+            'course_query' => CourseQueryController::class,
         ],
     );
 
@@ -182,4 +183,5 @@ Route::middleware(['auth:admin'])->prefix('admin')->name('admin.')->group(functi
         Route::get('/dynamic-css', 'index')->name('css.index');
         Route::put('/dynamic-css/{id}/update', 'update')->name('css.update');
     });
+
 });
