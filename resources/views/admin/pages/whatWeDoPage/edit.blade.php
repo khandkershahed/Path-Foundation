@@ -30,9 +30,9 @@
                     <div class="row g-2 p-1">
                         <div class="col-lg-6 col-sm-12">
                             <span class="mt-1 fw-bold text-info">Banner Area</span>
-                            <div class="px-2 py-2 rounded bg-light mb-1">
+                            <div class="px-2 py-5 rounded bg-light mb-7">
 
-                                <div class="row align-items-center pt-1">
+                                <div class="row align-items-center pt-7">
                                     <label
                                         class="col-form-label label_style col-lg-12 p-0 text-start text-black label_style">Banner
                                         Title</label>
@@ -44,7 +44,7 @@
                                 </div>
 
 
-                                <div class="row align-items-center pt-1">
+                                <div class="row align-items-center pt-7">
                                     <label
                                         class="col-form-label label_style col-lg-12 p-0 text-start text-black label_style">Bannner
                                         Description</label>
@@ -57,8 +57,8 @@
 
                             </div>
                             <span class="mt-1 fw-bold text-info">Bannner Btn One</span>
-                            <div class="px-2 py-2 rounded bg-light mb-1">
-                                <div class="row align-items-center pt-1">
+                            <div class="px-2 py-5 rounded bg-light mb-7">
+                                <div class="row align-items-center pt-7">
                                     <label
                                         class="col-form-label label_style col-lg-12 p-0 text-start text-black label_style">Bannner
                                         Button One Name</label>
@@ -70,7 +70,7 @@
                                     </div>
                                 </div>
 
-                                <div class="row align-items-center pt-1">
+                                <div class="row align-items-center pt-7">
                                     <label
                                         class="col-form-label label_style col-lg-12 p-0 text-start text-black label_style">Bannner
                                         Btn One Link</label>
@@ -82,7 +82,7 @@
                                     </div>
                                 </div>
 
-                                <div class="row align-items-center pt-1">
+                                <div class="row align-items-center pt-7">
                                     <label
                                         class="col-form-label label_style col-lg-12 p-0 text-start text-black label_style">Bannner
                                         Btn One Icon</label>
@@ -96,8 +96,8 @@
 
                             </div>
                             <span class="mt-1 fw-bold text-info">Bannner Btn Two</span>
-                            <div class="px-2 py-2 rounded bg-light mb-1">
-                                <div class="row align-items-center pt-1">
+                            <div class="px-2 py-5 rounded bg-light mb-7">
+                                <div class="row align-items-center pt-7">
                                     <label
                                         class="col-form-label label_style col-lg-12 p-0 text-start text-black label_style">Bannner
                                         Btn Two Name</label>
@@ -109,7 +109,7 @@
                                     </div>
                                 </div>
 
-                                <div class="row align-items-center pt-1">
+                                <div class="row align-items-center pt-7">
                                     <label
                                         class="col-form-label label_style col-lg-12 p-0 text-start text-black label_style">Bannner
                                         Btn Two Link</label>
@@ -121,7 +121,7 @@
                                     </div>
                                 </div>
 
-                                <div class="row align-items-center pt-1">
+                                <div class="row align-items-center pt-7">
                                     <label
                                         class="col-form-label label_style col-lg-12 p-0 text-start text-black label_style">Bannner
                                         Btn Two Icon</label>
@@ -135,8 +135,8 @@
 
                             </div>
                             <span class="mt-1 fw-bold text-info">Bannner Btn Three</span>
-                            <div class="px-2 py-2 rounded bg-light mb-1">
-                                <div class="row align-items-center pt-1">
+                            <div class="px-2 py-5 rounded bg-light mb-7">
+                                <div class="row align-items-center pt-7">
                                     <label
                                         class="col-form-label label_style col-lg-12 p-0 text-start text-black label_style">Bannner
                                         Btn Three Name</label>
@@ -148,7 +148,7 @@
                                     </div>
                                 </div>
 
-                                <div class="row align-items-center pt-1">
+                                <div class="row align-items-center pt-7">
                                     <label
                                         class="col-form-label label_style col-lg-12 p-0 text-start text-black label_style">Bannner
                                         Btn Three Link</label>
@@ -160,7 +160,7 @@
                                     </div>
                                 </div>
 
-                                <div class="row align-items-center pt-1">
+                                <div class="row align-items-center pt-7">
                                     <label
                                         class="col-form-label label_style col-lg-12 p-0 text-start text-black label_style">Bannner
                                         Btn Three Icon</label>
@@ -174,8 +174,8 @@
 
                             </div>
                             <span class="mt-1 fw-bold text-info">Bannner Btn Four</span>
-                            <div class="px-2 py-2 rounded bg-light mb-1">
-                                <div class="row align-items-center pt-1">
+                            <div class="px-2 py-5 rounded bg-light mb-7">
+                                <div class="row align-items-center pt-7">
                                     <label
                                         class="col-form-label label_style col-lg-12 p-0 text-start text-black label_style">Bannner
                                         Btn Four Name</label>
@@ -187,7 +187,7 @@
                                     </div>
                                 </div>
 
-                                <div class="row align-items-center pt-1">
+                                <div class="row align-items-center pt-7">
                                     <label
                                         class="col-form-label label_style col-lg-12 p-0 text-start text-black label_style">Bannner
                                         Btn Four Link</label>
@@ -199,7 +199,7 @@
                                     </div>
                                 </div>
 
-                                <div class="row align-items-center pt-1">
+                                <div class="row align-items-center pt-7">
                                     <label
                                         class="col-form-label label_style col-lg-12 p-0 text-start text-black label_style">Bannner
                                         Btn Four Icon</label>
@@ -212,9 +212,9 @@
                                 </div>
                             </div>
                             <span class="mt-1 fw-bold text-info">Row One Area</span>
-                            <div class="px-2 py-2 rounded bg-light mb-1">
+                            <div class="px-2 py-5 rounded bg-light mb-7">
 
-                                <div class="row align-items-center pt-1">
+                                <div class="row align-items-center pt-7">
                                     <label
                                         class="col-form-label label_style col-lg-12 p-0 text-start text-black label_style">Row
                                         One Header</label>
@@ -225,7 +225,7 @@
                                     </div>
                                 </div>
 
-                                <div class="row align-items-center pt-1">
+                                <div class="row align-items-center pt-7">
                                     <label
                                         class="col-form-label label_style col-lg-12 p-0 text-start text-black label_style">Row
                                         One Short Description</label>
@@ -237,7 +237,7 @@
                                     </div>
                                 </div>
 
-                                <div class="row align-items-center pt-1">
+                                <div class="row align-items-center pt-7">
                                     <label
                                         class="col-form-label label_style col-lg-12 p-0 text-start text-black label_style">Row
                                         One Image</label>
@@ -248,7 +248,7 @@
                                     </div>
                                 </div>
 
-                                <div class="row align-items-center pt-1">
+                                <div class="row align-items-center pt-7">
                                     <label
                                         class="col-form-label label_style col-lg-12 p-0 text-start text-black label_style">Row
                                         One Sub Title</label>
@@ -259,7 +259,7 @@
                                     </div>
                                 </div>
 
-                                <div class="row align-items-center pt-1">
+                                <div class="row align-items-center pt-7">
                                     <label
                                         class="col-form-label label_style col-lg-12 p-0 text-start text-black label_style">Row
                                         One Sub Description</label>
@@ -273,8 +273,8 @@
 
                             </div>
                             <span class="mt-1 fw-bold text-info">Row One Btn One</span>
-                            <div class="px-2 py-2 rounded bg-light mb-1">
-                                <div class="row align-items-center pt-1">
+                            <div class="px-2 py-5 rounded bg-light mb-7">
+                                <div class="row align-items-center pt-7">
                                     <label
                                         class="col-form-label label_style col-lg-12 p-0 text-start text-black label_style">Row
                                         One Btn One Name</label>
@@ -286,7 +286,7 @@
                                     </div>
                                 </div>
 
-                                <div class="row align-items-center pt-1">
+                                <div class="row align-items-center pt-7">
                                     <label
                                         class="col-form-label label_style col-lg-12 p-0 text-start text-black label_style">Row
                                         One Btn One Link</label>
@@ -298,7 +298,7 @@
                                     </div>
                                 </div>
 
-                                <div class="row align-items-center pt-1">
+                                <div class="row align-items-center pt-7">
                                     <label
                                         class="col-form-label label_style col-lg-12 p-0 text-start text-black label_style">Row
                                         One Btn One Icon</label>
@@ -314,8 +314,8 @@
                         </div>
                         <div class="col-lg-6 col-sm-12">
                             <span class="mt-1 fw-bold text-info">Row One Btn Two</span>
-                            <div class="px-2 py-2 rounded bg-light ">
-                                <div class="row align-items-center pt-1">
+                            <div class="px-2 py-5 rounded bg-light ">
+                                <div class="row align-items-center pt-7">
                                     <label
                                         class="col-form-label label_style col-lg-12 p-0 text-start text-black label_style">Row
                                         One Btn Two Name</label>
@@ -327,7 +327,7 @@
                                     </div>
                                 </div>
 
-                                <div class="row align-items-center pt-1">
+                                <div class="row align-items-center pt-7">
                                     <label
                                         class="col-form-label label_style col-lg-12 p-0 text-start text-black label_style">Row
                                         One Btn Two Link</label>
@@ -339,7 +339,7 @@
                                     </div>
                                 </div>
 
-                                <div class="row align-items-center pt-1">
+                                <div class="row align-items-center pt-7">
                                     <label
                                         class="col-form-label label_style col-lg-12 p-0 text-start text-black label_style">Row
                                         One Btn Two Icon</label>
@@ -353,9 +353,9 @@
 
                             </div>
                             <span class="mt-1 fw-bold text-info">Row One Btn Three</span>
-                            <div class="px-2 py-2 rounded bg-light">
+                            <div class="px-2 py-5 rounded bg-light">
 
-                                <div class="row align-items-center pt-1">
+                                <div class="row align-items-center pt-7">
                                     <label
                                         class="col-form-label label_style col-lg-12 p-0 text-start text-black label_style">Row
                                         One Btn Three Name</label>
@@ -367,7 +367,7 @@
                                     </div>
                                 </div>
 
-                                <div class="row align-items-center pt-1">
+                                <div class="row align-items-center pt-7">
                                     <label
                                         class="col-form-label label_style col-lg-12 p-0 text-start text-black label_style">Row
                                         One Btn Three Link</label>
@@ -379,7 +379,7 @@
                                     </div>
                                 </div>
 
-                                <div class="row align-items-center pt-1">
+                                <div class="row align-items-center pt-7">
                                     <label
                                         class="col-form-label label_style col-lg-12 p-0 text-start text-black label_style">Row
                                         One Btn Three Icon</label>
@@ -393,8 +393,8 @@
 
                             </div>
                             <span class="mt-1 fw-bold text-info">Row One Btn Four</span>
-                            <div class="px-2 py-2 rounded bg-light">
-                                <div class="row align-items-center pt-1">
+                            <div class="px-2 py-5 rounded bg-light">
+                                <div class="row align-items-center pt-7">
                                     <label
                                         class="col-form-label label_style col-lg-12 p-0 text-start text-black label_style">Row
                                         One Btn Four Name</label>
@@ -406,7 +406,7 @@
                                     </div>
                                 </div>
 
-                                <div class="row align-items-center pt-1">
+                                <div class="row align-items-center pt-7">
                                     <label
                                         class="col-form-label label_style col-lg-12 p-0 text-start text-black label_style">Row
                                         One Btn Four Link</label>
@@ -418,7 +418,7 @@
                                     </div>
                                 </div>
 
-                                <div class="row align-items-center pt-1">
+                                <div class="row align-items-center pt-7">
                                     <label
                                         class="col-form-label label_style col-lg-12 p-0 text-start text-black label_style">Row
                                         One Btn Four Icon</label>
@@ -432,8 +432,8 @@
 
                             </div>
                             <span class="mt-1 fw-bold text-info">Row One Btn Five</span>
-                            <div class="px-2 py-2 rounded bg-light">
-                                <div class="row align-items-center pt-1">
+                            <div class="px-2 py-5 rounded bg-light">
+                                <div class="row align-items-center pt-7">
                                     <label
                                         class="col-form-label label_style col-lg-12 p-0 text-start text-black label_style">Row
                                         One Btn Five Name</label>
@@ -445,7 +445,7 @@
                                     </div>
                                 </div>
 
-                                <div class="row align-items-center pt-1">
+                                <div class="row align-items-center pt-7">
                                     <label
                                         class="col-form-label label_style col-lg-12 p-0 text-start text-black label_style">Row
                                         One Btn Five Link</label>
@@ -457,7 +457,7 @@
                                     </div>
                                 </div>
 
-                                <div class="row align-items-center pt-1">
+                                <div class="row align-items-center pt-7">
                                     <label
                                         class="col-form-label label_style col-lg-12 p-0 text-start text-black label_style">Row
                                         One Btn Five Icon</label>
@@ -471,8 +471,8 @@
 
                             </div>
                             <span class="mt-1 fw-bold text-info">Row One Btn Six</span>
-                            <div class="px-2 py-2 rounded bg-light">
-                                <div class="row align-items-center pt-1">
+                            <div class="px-2 py-5 rounded bg-light">
+                                <div class="row align-items-center pt-7">
                                     <label
                                         class="col-form-label label_style col-lg-12 p-0 text-start text-black label_style">Row
                                         One Btn Six Name</label>
@@ -484,7 +484,7 @@
                                     </div>
                                 </div>
 
-                                <div class="row align-items-center pt-1">
+                                <div class="row align-items-center pt-7">
                                     <label
                                         class="col-form-label label_style col-lg-12 p-0 text-start text-black label_style">Row
                                         One Btn Six Link</label>
@@ -496,7 +496,7 @@
                                     </div>
                                 </div>
 
-                                <div class="row align-items-center pt-1">
+                                <div class="row align-items-center pt-7">
                                     <label
                                         class="col-form-label label_style col-lg-12 p-0 text-start text-black label_style">Row
                                         One Btn Six Icon</label>
@@ -511,8 +511,8 @@
                             </div>
 
                             <span class="mt-1 fw-bold text-info">Row Id</span>
-                            <div class="px-2 py-2 rounded bg-light">
-                                <div class="row align-items-center pt-1">
+                            <div class="px-2 py-5 rounded bg-light">
+                                <div class="row align-items-center pt-7">
                                     <label
                                         class="col-form-label label_style col-lg-12 p-0 text-start text-black label_style">Row
                                         Three Id</label>
@@ -528,7 +528,7 @@
                                     </div>
                                 </div>
 
-                                <div class="row align-items-center pt-1">
+                                <div class="row align-items-center pt-7">
                                     <label
                                         class="col-form-label label_style col-lg-12 p-0 text-start text-black label_style">Row
                                         Two Id</label>

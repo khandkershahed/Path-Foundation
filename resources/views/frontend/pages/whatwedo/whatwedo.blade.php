@@ -165,7 +165,7 @@
     </section>
 
     <!--=======// Shop product //======-->
-    <section class="pt-5 learn_more">
+    {{-- <section class="pt-5 learn_more">
         <div class="container-fluid py-4">
             <div class="container">
                 <div class="row align-items-center">
@@ -241,7 +241,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
     <section>
         <div class="container">
             @if (!empty($whatwedo->row_one_image))
