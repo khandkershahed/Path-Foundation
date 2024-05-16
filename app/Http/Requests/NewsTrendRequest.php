@@ -24,7 +24,7 @@ class NewsTrendRequest extends FormRequest
     public function rules()
     {
         return [
-            'course_id' => 'nullable|json',
+            'course_id' => 'nullable',
             'featured' => 'nullable|in:0,1',
             'type' => 'required|in:news,trends',
             'badge' => 'nullable|string|max:50',
@@ -50,7 +50,7 @@ class NewsTrendRequest extends FormRequest
     public function messages()
     {
         return [
-            'course_id.json' => 'The category id field must be a valid JSON string.',
+            'course_id.json' => 'The Course id field must be a valid JSON string.',
             'featured.in' => 'The featured field must be either 0 or 1.',
             'type.required' => 'The type field must be required.',
             'type.in' => 'The type field must be either news or trends.',
