@@ -205,8 +205,8 @@
                 <div class="card training-featuer">
                     <div class="card-body py-3 ">
                         <div class="d-flex justify-content-center flex-column text-center">
-                            <div>
-                                <img class="img-fluid" width="50px" src="{{asset('frontend/images/icons/01.jpg')}}"
+                            <div class="home-feature">
+                                <img class="img-fluid" width="40px" src="{{asset('frontend/images/icons/Practice Project.png')}}"
                                     alt="">
                             </div>
                             <h6 class="fw-bolder pt-2">20+ Practice <br> Project</h6>
@@ -218,11 +218,11 @@
                 <div class="card training-featuer">
                     <div class="card-body py-3 ">
                         <div class="d-flex justify-content-center flex-column text-center">
-                            <div>
-                                <img class="img-fluid" width="50px" src="{{asset('frontend/images/icons/02.jpg')}}"
+                            <div class="home-feature">
+                                <img class="img-fluid" width="40px" src="{{asset('frontend/images/icons/Support Classes.png')}}"
                                     alt="">
                             </div>
-                            <h6 class="fw-bolder pt-2">4 Month <br> Study Plan</h6>
+                            <h6 class="fw-bolder pt-2">Support <br> Classes</h6>
                         </div>
                     </div>
                 </div>
@@ -231,8 +231,8 @@
                 <div class="card training-featuer">
                     <div class="card-body py-3 ">
                         <div class="d-flex justify-content-center flex-column text-center">
-                            <div>
-                                <img class="img-fluid" width="50px" src="{{asset('frontend/images/icons/03.jpg')}}"
+                            <div class="home-feature">
+                                <img class="img-fluid" width="40px" src="{{asset('frontend/images/icons/Certificate.png')}}"
                                     alt="">
                             </div>
                             <h6 class="fw-bolder pt-2">After Course <br> Certificate</h6>
@@ -244,8 +244,8 @@
                 <div class="card training-featuer">
                     <div class="card-body py-3 ">
                         <div class="d-flex justify-content-center flex-column text-center">
-                            <div>
-                                <img class="img-fluid" width="50px" src="{{asset('frontend/images/icons/04.jpg')}}"
+                            <div class="home-feature">
+                                <img class="img-fluid" width="40px" src="{{asset('frontend/images/icons/Lifetime video access.png')}}"
                                     alt="">
                             </div>
                             <h6 class="fw-bolder pt-2">Lifetime Video <br> Access</h6>
@@ -257,8 +257,8 @@
                 <div class="card training-featuer">
                     <div class="card-body py-3 ">
                         <div class="d-flex justify-content-center flex-column text-center">
-                            <div>
-                                <img class="img-fluid" width="50px" src="{{asset('frontend/images/icons/05.jpg')}}"
+                            <div class="home-feature">
+                                <img class="img-fluid" width="40px" src="{{asset('frontend/images/icons/Guideline.png')}}"
                                     alt="">
                             </div>
                             <h6 class="fw-bolder pt-2">Marketplace <br> Guideline</h6>

@@ -4671,6 +4671,16 @@ tr td:hover {
     margin-left: 20px;
 }
 
+.home-feature{
+    background: white;
+    margin: auto;
+    padding: 10PX;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    border-radius: 100%;
+    align-items: center;
+}
 /* Saju: Header */
 .client_login {
     /* width: 75%; */
