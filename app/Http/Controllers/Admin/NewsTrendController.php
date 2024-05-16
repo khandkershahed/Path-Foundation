@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\File;
 use App\Http\Requests\NewsTrendRequest;
 use App\Models\Course;
 use App\Models\NewsTrend;
+use Illuminate\Support\Facades\Session;
 
 class NewsTrendController extends Controller
 {
@@ -193,8 +194,8 @@ class NewsTrendController extends Controller
             'footer'          => $request->footer,
         ]);
 
-
-        toastr()->success('Data has been updated successfully!');
+        Session::flash('success','Data has been updated successfully!');
+        // toastr()->success('Data has been updated successfully!');
         return redirect()->back();
     }
 
