@@ -70,8 +70,8 @@
                                         data-placeholder="Select an option" data-allow-clear="true" name="type"
                                         data-hide-search="true" required>
                                         <option></option>
-                                        <option value="news"@selected($newsTrend->featured == 'news')>News</option>
-                                        <option value="trends"@selected($newsTrend->featured == 'trends')>Trends</option>
+                                        <option value="news" @selected($newsTrend->type == 'news')>News</option>
+                                        <option value="trends" @selected($newsTrend->type == 'trends')>Trends</option>
                                     </select>
                                     <div class="invalid-feedback"> Please Select Type. </div>
                                 </div>

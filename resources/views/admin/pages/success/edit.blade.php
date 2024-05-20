@@ -22,7 +22,7 @@
             </div>
         </div>
         <div class="card-body">
-            <form method="post" action="{{ route('success.update', $success->id) }}" enctype="multipart/form-data">
+            <form method="post" action="{{ route('admin.success.update', $success->id) }}" enctype="multipart/form-data">
                 @csrf
                 @method('PUT')
                 <div class="row">
