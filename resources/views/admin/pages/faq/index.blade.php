@@ -79,7 +79,7 @@
                             <thead class="table_header_bg">
                                 <tr class="text-center text-gray-900 fw-bolder fs-7 text-uppercase">
                                     <th class="" width="5%">Sl</th>
-                                    <th class="" width="20%">Category Name</th>
+                                    {{-- <th class="" width="20%">Category Name</th> --}}
                                     <th class="" width="45%">Order Number</th>
                                     <th class="" width="20%">Is Published</th>
                                     <th class="text-center" width="10%">Action</th>
@@ -91,9 +91,9 @@
                                             <td>
                                                 {{ $loop->iteration }}
                                             </td>
-                                            <td>
+                                            {{-- <td>
                                                 {{ $faq->dynamicCategoryName() ?? 'No Category' }}
-                                            </td>
+                                            </td> --}}
                                             <td>
                                                 {{ $faq->order }}
                                             </td>
@@ -148,7 +148,7 @@
                             <div class="row">
                                 <div class="col-lg-12 col-sm-12">
                                     <div class="row">
-                                        <div class="col-md-5 mb-2">
+                                        {{-- <div class="col-md-5 mb-2">
                                             <label for="validationCustom04" class="form-label required mb-0">Category
                                                 Name</label>
                                             <select class="form-select-sm form-select form-select-solid"
@@ -162,19 +162,18 @@
                                                 @endforeach
                                             </select>
                                             <div class="invalid-feedback"> Please Select Category Name. </div>
-                                        </div>
+                                        </div> --}}
                                         <div class="col-md-4 mb-2">
-                                            <label for="validationCustom04" class="form-label required mb-0">Is
-                                                Published</label>
+                                            <label for="validationCustom04" class="form-label required mb-0">Status</label>
                                             <select class="form-select-sm form-select form-select-solid"
-                                                name="is_published" data-dropdown-parent="#faqAddModal"
+                                                name="status" data-dropdown-parent="#faqAddModal"
                                                 data-control="select2" data-placeholder="Select an option"
                                                 data-allow-clear="true" data-hide-search="true" required>
                                                 <option></option>
-                                                <option value="1">Yes</option>
-                                                <option value="0">No</option>
+                                                <option value="active">Active</option>
+                                                <option value="inactive">In Active</option>
                                             </select>
-                                            <div class="invalid-feedback"> Please Select Yes Or No. </div>
+                                            <div class="invalid-feedback"> Please Select Active Or In Active. </div>
                                         </div>
                                         <div class="col-md-3 mb-2">
                                             <label for="validationCustom01" class="form-label required mb-0">Order
@@ -233,7 +232,7 @@
                                 <div class="row">
                                     <div class="col-lg-12 col-sm-12">
                                         <div class="row">
-                                            <div class="col-md-5 mb-2">
+                                            {{-- <div class="col-md-5 mb-2">
                                                 <label for="validationCustom04" class="form-label required mb-0">Category
                                                     Name</label>
                                                 <select class="form-select-sm form-select form-select-solid"
@@ -250,20 +249,19 @@
                                                     @endforeach
                                                 </select>
                                                 <div class="invalid-feedback"> Please Select Category Name. </div>
-                                            </div>
+                                            </div> --}}
                                             <div class="col-md-4 mb-2">
-                                                <label for="validationCustom04" class="form-label required mb-0">Is
-                                                    Published</label>
+                                                <label for="validationCustom04" class="form-label required mb-0">Status</label>
                                                 <select class="form-select-sm form-select form-select-solid"
-                                                    name="is_published"
+                                                    name="status"
                                                     data-dropdown-parent="#faqEditModal_{{ $faq->id }}"
                                                     data-control="select2" data-placeholder="Select an option"
                                                     data-allow-clear="true" data-hide-search="true" required>
                                                     <option></option>
-                                                    <option @selected($faq->is_published == '1') value="1">Yes</option>
-                                                    <option @selected($faq->is_published == '0') value="0">No</option>
+                                                    <option @selected($faq->status == 'active') value="active">Active</option>
+                                                    <option @selected($faq->status == 'inactive') value="inactive">In Active</option>
                                                 </select>
-                                                <div class="invalid-feedback"> Please Select Yes Or No. </div>
+                                                <div class="invalid-feedback"> Please Select Active Or In Active. </div>
                                             </div>
                                             <div class="col-md-3 mb-2">
                                                 <label for="validationCustom01" class="form-label required mb-0">Order
@@ -323,7 +321,7 @@
                                         <p class="badge badge-info custom-badge">Info</span>
                                         <div class="card-body p-1 px-2">
                                             <div class="row">
-                                                <div class="col-lg-12">
+                                                {{-- <div class="col-lg-12">
                                                     <div class="row">
                                                         <div class="col-lg-4 col-sm-5">
                                                             <p class="fw-bold" title="Country Name">Company Name :</p>
@@ -332,7 +330,7 @@
                                                             <p>  {{ $faq->dynamicCategoryName() ?? 'No Category'  }}</p>
                                                         </div>
                                                     </div>
-                                                </div>
+                                                </div> --}}
                                                 <div class="col-lg-12">
                                                     <div class="row">
                                                         <div class="col-lg-4 col-sm-5">
@@ -346,12 +344,12 @@
                                                 <div class="col-lg-12">
                                                     <div class="row">
                                                         <div class="col-lg-4 col-sm-5">
-                                                            <p class="fw-bold">Is Published :</p>
+                                                            <p class="fw-bold">Status :</p>
                                                         </div>
                                                         <div class="col-lg-8 col-sm-6">
                                                             <p>
-                                                                <span class="badge {{ $faq->is_published == 1 ? 'bg-success' : 'bg-danger' }}">
-                                                                    {{ $faq->is_published == 1 ? 'Yes' : 'No' }}</span>
+                                                                <span class="badge {{ $faq->status == 1 ? 'bg-success' : 'bg-danger' }}">
+                                                                    {{ $faq->status == 1 ? 'active' : 'inactive' }}</span>
                                                             </p>
                                                         </div>
                                                     </div>
