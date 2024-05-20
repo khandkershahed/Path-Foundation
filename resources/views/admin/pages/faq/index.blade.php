@@ -1,8 +1,5 @@
-@extends('admin.master')
-@section('content')
-    <div class="container h-100">
-        <div class="row">
-            <div class="col-lg-12 card rounded-0 shadow-lg">
+<x-admin-app-layout :title="'FAQ LIst'">
+
                 <div class="card card-p-0 card-flush">
                     <div class="card-header align-items-center py-5 gap-2 gap-md-5">
                         <div class="container px-0">
@@ -127,9 +124,7 @@
                         </table>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
+
     {{-- Add Modal --}}
     <div class="modal fade" id="faqAddModal" data-backdrop="static">
         <div class="modal-dialog modal-dialog-centered">
@@ -377,4 +372,4 @@
             </div>
         </div>
     @endforeach
-@endsection
+</x-admin-app-layout>
