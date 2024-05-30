@@ -72,7 +72,7 @@
                             </div>
                         </a>
                     </div>
-                    <div class="" style="background-color: #ae0a46; width: 5%;" >
+                    <div class="" style="background-color: #0a1d59; width: 5%;" >
                         <div class="button_rfq" style="height: 300px;transform: rotate(-90deg);" onclick="toggleSidebar()">
                             <p class="d-flex justify-content-center align-items-center"
                                 style="color: white;
@@ -99,7 +99,7 @@
         aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-content">
-                <div class="modal-header py-2" style="background: #ae0a46;">
+                <div class="modal-header py-2" style="background: #0a1d59;">
                     <h5 class="modal-title text-white" id="staticBackdropLabel">Get Quote
                     </h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -171,7 +171,7 @@
                                 </div>
                                 <div class="col-lg-3 mb-3">
                                     <button type="submit" class="btn rounded-0 p-2"
-                                        style="background: #ae0a46; color: white; width:150px; font-size:20px"
+                                        style="background: #0a1d59; color: white; width:150px; font-size:20px"
                                         role="button">Submit</button>
                                 </div>
                             </div>
@@ -218,7 +218,7 @@
                             }
 
                             .cls-4 {
-                                fill: #ae0a46;
+                                fill: #0a1d59;
                             }
 
                             .cls-5 {

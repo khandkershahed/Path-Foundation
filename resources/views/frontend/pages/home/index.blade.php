@@ -401,7 +401,7 @@
                             @if (!empty($feature))
                                 <div class="custom_col-2 col-md-6 col-sm-12">
                                     <div class="text-center">
-                                        <img class="img-fluid" height="85px"
+                                        <img class="img-fluid" width="70px"
                                             src="{{ !empty($feature->logo) && file_exists(public_path('storage/' . $feature->logo)) ? asset('storage/' . $feature->logo) : asset('frontend/images/service-no-img.png') }}"
                                             alt="NGEN IT">
                                         <h5 class="business_services pt-2">
@@ -579,8 +579,8 @@
                                             alt="">
                                         <figcaption>
                                             <h6> {{ Str::words($story->title, 6) }}</h6>
-                                            <p>{{ Str::words($story->header, 10) }}</p>
-                                            <h5 class="download-hover-btn">
+                                            {{-- <p>{{ Str::words($story->header, 10) }}</p> --}}
+                                            <h5 class="download-hover-btn mt-5 pt-3">
                                                 <a class="text-white"
                                                     href="{{ route('story.details', $story->id) }}">Read Story
                                                     <i class="fa-solid fa-chevron-right" style="font-size: 12px;"></i>
