@@ -401,7 +401,7 @@
                             @if (!empty($feature))
                                 <div class="custom_col-2 col-md-6 col-sm-12">
                                     <div class="text-center">
-                                        <img class="img-fluid" width="70px"
+                                        <img class="" width="70px"
                                             src="{{ !empty($feature->logo) && file_exists(public_path('storage/' . $feature->logo)) ? asset('storage/' . $feature->logo) : asset('frontend/images/service-no-img.png') }}"
                                             alt="NGEN IT">
                                         <h5 class="business_services pt-2">
