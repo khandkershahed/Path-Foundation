@@ -598,7 +598,7 @@
         <div class="container my-4 mb-5 d-lg-none d-sm-block">
             <div class="d-flex justify-content-center align-items-center mx-3 border-bottom">
                 <div class="text-start w-75">
-                    <h3 style="color: #07163b;font-weight: 600;">Upcoming Courses</h3>
+                    <h3 style="color: #07163b;font-weight: 600;">Soon To Start Courses!</h3>
                 </div>
                 <div class="text-end w-25">
                     <a class="Arrows custom-responsive-slider-prev"><i
