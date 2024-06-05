@@ -88,10 +88,10 @@
           </div>
         </div>
       </section> --}}
-      <section>
+    <section>
         <div class="container py-5">
-          <div class="row">
-            {{-- <div class="col-lg-3 sidebar-area-cources">
+            <div class="row">
+                {{-- <div class="col-lg-3 sidebar-area-cources">
               <ul class="nav nav-tabs flex-column border-0 px-0" id="myTab" role="tablist">
                 <li class="nav-item" role="presentation">
                   <button class="nav-link w-100 border-0 cources-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">
@@ -110,221 +110,65 @@
                 </li>
               </ul>
             </div> --}}
-            <div class="col-lg-12">
-              <div class="tab-content" id="myTabContent">
-                <div class="tab-pane fade active show" id="home" role="tabpanel" aria-labelledby="home-tab">
-                  <div class="row">
-                    <div class="col-lg-4 mb-4">
-                      <div class="card border-0 bg-light shadow-sm rounded-2">
-                        <div class="card-header p-0 bg-transparent">
-                          <div>
-                            <img class="rounded-2 img-fluid" src="https://cdn.ostad.app/course/cover/2023-12-04T11-05-21.903Z-Flutter.jpg" alt="">
-                          </div>
-                          <div class="p-2 text-center">
-                            <small class="pe-1"><span class="cource-badge rounded-2">ব্যাচ ২</span></small>
-                            <small class="pe-1"><span class="cource-badge rounded-2"><i class="fa-solid fa-users pe-2" aria-hidden="true"></i>৭০ সিট
-                                বাকি</span></small>
-                            <small class="pe-1"><span class="cource-badge rounded-2"><i class="fa-regular fa-clock pe-2" aria-hidden="true"></i>২৭ দিন
-                                বাকি</span></small>
-                          </div>
+                <div class="col-lg-12">
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade active show" id="home" role="tabpanel" aria-labelledby="home-tab">
+                            <div class="row">
+
+                                @forelse ($courses as $course)
+                                    <div class="col-lg-3 mb-4">
+                                        <div class="card border-0 bg-light shadow-sm rounded-2">
+                                            <div class="card-header p-0 bg-transparent">
+
+                                                <div>
+                                                    <img class="rounded-2 img-fluid"
+                                                        src="{{ asset(!empty($course->thumbnail_image) ? url('storage/course/' . $course->thumbnail_image) : url('images/no-shop-imge.png')) }}"
+                                                        alt="">
+                                                </div>
+
+                                                <div class="p-2 text-center">
+
+                                                    <small class="pe-1"><span class="cource-badge rounded-2">ব্যাচ
+                                                            ২</span></small>
+
+                                                    <small class="pe-1"><span class="cource-badge rounded-2"><i
+                                                                class="fa-solid fa-users pe-2" aria-hidden="true"></i>
+                                                            {{ $course->available_seats }}</span></small>
+
+                                                    <small class="pe-1"><span class="cource-badge rounded-2"><i
+                                                                class="fa-regular fa-clock pe-2" aria-hidden="true"></i>২৭
+                                                            দিন
+                                                            বাকি</span></small>
+                                                </div>
+                                            </div>
+                                            <div class="card-body">
+                                                <h6>
+                                                    {{ $course->name }}
+                                                </h6>
+                                                <div class="pt-3">
+                                                    <a href="{{ url('course' . '/' . $course->id . '/' . $course->slug) }}"
+                                                        class="btn btn-light bg-white border w-100 bistatiro-btn">বিস্তারিত
+                                                        দেখি
+                                                        <i class="fa-solid fa-arrow-right ps-2" aria-hidden="true"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                @empty
+                                    <p>No Course Avaiable</p>
+                                @endforelse
+
+                            </div>
                         </div>
-                        <div class="card-body">
-                          <h6>
-                            Mastering Social Media Banner Design: The Next Level
-                          </h6>
-                          <div class="pt-3">
-                            <a href="" class="btn btn-light bg-white border w-100 bistatiro-btn">বিস্তারিত দেখি
-                              <i class="fa-solid fa-arrow-right ps-2" aria-hidden="true"></i></a>
-                          </div>
+                        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                            Management, Leadership &amp; Strategy
                         </div>
-                      </div>
+                        <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                            Finance, Accounting &amp; Budgeting
+                        </div>
                     </div>
-                    <div class="col-lg-4 mb-4">
-                      <div class="card border-0 bg-light shadow-sm rounded-2">
-                        <div class="card-header p-0 bg-transparent">
-                          <div>
-                            <img class="rounded-2 img-fluid" src="https://cdn.ostad.app/course/cover/2023-12-04T11-05-21.903Z-Flutter.jpg" alt="">
-                          </div>
-                          <div class="p-2 text-center">
-                            <small class="pe-1"><span class="cource-badge rounded-2">ব্যাচ ২</span></small>
-                            <small class="pe-1"><span class="cource-badge rounded-2"><i class="fa-solid fa-users pe-2" aria-hidden="true"></i>৭০ সিট
-                                বাকি</span></small>
-                            <small class="pe-1"><span class="cource-badge rounded-2"><i class="fa-regular fa-clock pe-2" aria-hidden="true"></i>২৭ দিন
-                                বাকি</span></small>
-                          </div>
-                        </div>
-                        <div class="card-body">
-                          <h6>
-                            Mastering Social Media Banner Design: The Next Level
-                          </h6>
-                          <div class="pt-3">
-                            <a href="" class="btn btn-light bg-white border w-100 bistatiro-btn">বিস্তারিত দেখি
-                              <i class="fa-solid fa-arrow-right ps-2" aria-hidden="true"></i></a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-lg-4 mb-4">
-                      <div class="card border-0 bg-light shadow-sm rounded-2">
-                        <div class="card-header p-0 bg-transparent">
-                          <div>
-                            <img class="rounded-2 img-fluid" src="https://cdn.ostad.app/course/cover/2023-12-04T11-05-21.903Z-Flutter.jpg" alt="">
-                          </div>
-                          <div class="p-2 text-center">
-                            <small class="pe-1"><span class="cource-badge rounded-2">ব্যাচ ২</span></small>
-                            <small class="pe-1"><span class="cource-badge rounded-2"><i class="fa-solid fa-users pe-2" aria-hidden="true"></i>৭০ সিট
-                                বাকি</span></small>
-                            <small class="pe-1"><span class="cource-badge rounded-2"><i class="fa-regular fa-clock pe-2" aria-hidden="true"></i>২৭ দিন
-                                বাকি</span></small>
-                          </div>
-                        </div>
-                        <div class="card-body">
-                          <h6>
-                            Mastering Social Media Banner Design: The Next Level
-                          </h6>
-                          <div class="pt-3">
-                            <a href="" class="btn btn-light bg-white border w-100 bistatiro-btn">বিস্তারিত দেখি
-                              <i class="fa-solid fa-arrow-right ps-2" aria-hidden="true"></i></a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-lg-4 mb-4">
-                      <div class="card border-0 bg-light shadow-sm rounded-2">
-                        <div class="card-header p-0 bg-transparent">
-                          <div>
-                            <img class="rounded-2 img-fluid" src="https://cdn.ostad.app/course/cover/2023-12-04T11-05-21.903Z-Flutter.jpg" alt="">
-                          </div>
-                          <div class="p-2 text-center">
-                            <small class="pe-1"><span class="cource-badge rounded-2">ব্যাচ ২</span></small>
-                            <small class="pe-1"><span class="cource-badge rounded-2"><i class="fa-solid fa-users pe-2" aria-hidden="true"></i>৭০ সিট
-                                বাকি</span></small>
-                            <small class="pe-1"><span class="cource-badge rounded-2"><i class="fa-regular fa-clock pe-2" aria-hidden="true"></i>২৭ দিন
-                                বাকি</span></small>
-                          </div>
-                        </div>
-                        <div class="card-body">
-                          <h6>
-                            Mastering Social Media Banner Design: The Next Level
-                          </h6>
-                          <div class="pt-3">
-                            <a href="" class="btn btn-light bg-white border w-100 bistatiro-btn">বিস্তারিত দেখি
-                              <i class="fa-solid fa-arrow-right ps-2" aria-hidden="true"></i></a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-lg-4 mb-4">
-                      <div class="card border-0 bg-light shadow-sm rounded-2">
-                        <div class="card-header p-0 bg-transparent">
-                          <div>
-                            <img class="rounded-2 img-fluid" src="https://cdn.ostad.app/course/cover/2023-12-04T11-05-21.903Z-Flutter.jpg" alt="">
-                          </div>
-                          <div class="p-2 text-center">
-                            <small class="pe-1"><span class="cource-badge rounded-2">ব্যাচ ২</span></small>
-                            <small class="pe-1"><span class="cource-badge rounded-2"><i class="fa-solid fa-users pe-2" aria-hidden="true"></i>৭০ সিট
-                                বাকি</span></small>
-                            <small class="pe-1"><span class="cource-badge rounded-2"><i class="fa-regular fa-clock pe-2" aria-hidden="true"></i>২৭ দিন
-                                বাকি</span></small>
-                          </div>
-                        </div>
-                        <div class="card-body">
-                          <h6>
-                            Mastering Social Media Banner Design: The Next Level
-                          </h6>
-                          <div class="pt-3">
-                            <a href="" class="btn btn-light bg-white border w-100 bistatiro-btn">বিস্তারিত দেখি
-                              <i class="fa-solid fa-arrow-right ps-2" aria-hidden="true"></i></a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-lg-4 mb-4">
-                      <div class="card border-0 bg-light shadow-sm rounded-2">
-                        <div class="card-header p-0 bg-transparent">
-                          <div>
-                            <img class="rounded-2 img-fluid" src="https://cdn.ostad.app/course/cover/2023-12-04T11-05-21.903Z-Flutter.jpg" alt="">
-                          </div>
-                          <div class="p-2 text-center">
-                            <small class="pe-1"><span class="cource-badge rounded-2">ব্যাচ ২</span></small>
-                            <small class="pe-1"><span class="cource-badge rounded-2"><i class="fa-solid fa-users pe-2" aria-hidden="true"></i>৭০ সিট
-                                বাকি</span></small>
-                            <small class="pe-1"><span class="cource-badge rounded-2"><i class="fa-regular fa-clock pe-2" aria-hidden="true"></i>২৭ দিন
-                                বাকি</span></small>
-                          </div>
-                        </div>
-                        <div class="card-body">
-                          <h6>
-                            Mastering Social Media Banner Design: The Next Level
-                          </h6>
-                          <div class="pt-3">
-                            <a href="" class="btn btn-light bg-white border w-100 bistatiro-btn">বিস্তারিত দেখি
-                              <i class="fa-solid fa-arrow-right ps-2" aria-hidden="true"></i></a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-lg-4 mb-4">
-                      <div class="card border-0 bg-light shadow-sm rounded-2">
-                        <div class="card-header p-0 bg-transparent">
-                          <div>
-                            <img class="rounded-2 img-fluid" src="https://cdn.ostad.app/course/cover/2023-12-04T11-05-21.903Z-Flutter.jpg" alt="">
-                          </div>
-                          <div class="p-2 text-center">
-                            <small class="pe-1"><span class="cource-badge rounded-2">ব্যাচ ২</span></small>
-                            <small class="pe-1"><span class="cource-badge rounded-2"><i class="fa-solid fa-users pe-2" aria-hidden="true"></i>৭০ সিট
-                                বাকি</span></small>
-                            <small class="pe-1"><span class="cource-badge rounded-2"><i class="fa-regular fa-clock pe-2" aria-hidden="true"></i>২৭ দিন
-                                বাকি</span></small>
-                          </div>
-                        </div>
-                        <div class="card-body">
-                          <h6>
-                            Mastering Social Media Banner Design: The Next Level
-                          </h6>
-                          <div class="pt-3">
-                            <a href="" class="btn btn-light bg-white border w-100 bistatiro-btn">বিস্তারিত দেখি
-                              <i class="fa-solid fa-arrow-right ps-2" aria-hidden="true"></i></a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-lg-4 mb-4">
-                      <div class="card border-0 bg-light shadow-sm rounded-2">
-                        <div class="card-header p-0 bg-transparent">
-                          <div>
-                            <img class="rounded-2 img-fluid" src="https://cdn.ostad.app/course/cover/2023-12-04T11-05-21.903Z-Flutter.jpg" alt="">
-                          </div>
-                          <div class="p-2 text-center">
-                            <small class="pe-1"><span class="cource-badge rounded-2">ব্যাচ ২</span></small>
-                            <small class="pe-1"><span class="cource-badge rounded-2"><i class="fa-solid fa-users pe-2" aria-hidden="true"></i>৭০ সিট
-                                বাকি</span></small>
-                            <small class="pe-1"><span class="cource-badge rounded-2"><i class="fa-regular fa-clock pe-2" aria-hidden="true"></i>২৭ দিন
-                                বাকি</span></small>
-                          </div>
-                        </div>
-                        <div class="card-body">
-                          <h6>
-                            Mastering Social Media Banner Design: The Next Level
-                          </h6>
-                          <div class="pt-3">
-                            <a href="" class="btn btn-light bg-white border w-100 bistatiro-btn">বিস্তারিত দেখি
-                              <i class="fa-solid fa-arrow-right ps-2" aria-hidden="true"></i></a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
                 </div>
-                <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                  Management, Leadership &amp; Strategy
-                </div>
-                <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
-                  Finance, Accounting &amp; Budgeting
-                </div>
-              </div>
             </div>
-          </div>
         </div>
-      </section>
+    </section>
 @endsection

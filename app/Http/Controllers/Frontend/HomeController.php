@@ -139,8 +139,17 @@ class HomeController extends Controller
 
     public function allCourses()
     {
-        return view('frontend.pagese.course.allCourses');
+        $courses = Course::latest()->get();
+        return view('frontend.pagese.course.allCourses',compact('courses'));
     }
+
+    public function courseDetails($id,$slug)
+    {
+        // $course = Course::find($id);
+        return view('frontend.pagese.course.allCoursesDetails');
+    }
+
+
     public function courseRegistration()
     {
         $data = [
