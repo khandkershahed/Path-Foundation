@@ -134,7 +134,7 @@
             <nav class="navbar navbar-expand-lg p-2 main-navbar bg-white menu-section">
                 <div class="container-fluid d-flex align-items-center" style="height: 3.5rem">
                     <div class="step-img d-lg-block d-sm-none">
-                        <img src="https://i.ibb.co/3WKt3Mw/NGen-IT-left-color.png" alt="">
+                        <img src="https://i.ibb.co/t3Zrbj2/Asset-1-8.png" alt="">
                     </div>
                     <a class="navbar-brand fw-bold upper-content-menu main-logo" href="{{ route('homepage') }}">
                         <img class="img-fluid site-main-logo"

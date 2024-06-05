@@ -367,7 +367,7 @@
                             @if (!empty($feature))
                                 <div class="custom_col-2 col-md-6 col-sm-12">
                                     <div class="text-center">
-                                        <img class="img-fluid" height="85px"
+                                        <img class="" width="70px"
                                             src="{{ !empty($feature->logo) && file_exists(public_path('storage/' . $feature->logo)) ? asset('storage/' . $feature->logo) : asset('frontend/images/service-no-img.png') }}"
                                             alt="NGEN IT">
                                         <h5 class="business_services pt-2">
@@ -545,8 +545,8 @@
                                             alt="">
                                         <figcaption>
                                             <h6> {{ Str::words($story->title, 6) }}</h6>
-                                            <p>{{ Str::words($story->header, 10) }}</p>
-                                            <h5 class="download-hover-btn">
+                                            {{-- <p>{{ Str::words($story->header, 10) }}</p> --}}
+                                            <h5 class="download-hover-btn mt-5 pt-3">
                                                 <a class="text-white"
                                                     href="{{ route('story.details', $story->id) }}">Read Story
                                                     <i class="fa-solid fa-chevron-right" style="font-size: 12px;"></i>
@@ -564,7 +564,7 @@
         <div class="container my-4 mb-5 d-lg-none d-sm-block">
             <div class="d-flex justify-content-center align-items-center mx-3 border-bottom">
                 <div class="text-start w-75">
-                    <h3 style="color: #07163b;font-weight: 600;">Upcoming Courses</h3>
+                    <h3 style="color: #07163b;font-weight: 600;">Soon To Start Courses!</h3>
                 </div>
                 <div class="text-end w-25">
                     <a class="Arrows custom-responsive-slider-prev"><i

@@ -95,7 +95,7 @@
                                 </div>
                                 <div class="col-lg-3 mb-3">
                                     <button type="submit" class="btn rounded-0 p-2"
-                                        style="background: #ae0a46; color: white; width:150px; font-size:20px"
+                                        style="background: #0a1d59; color: white; width:150px; font-size:20px"
                                         role="button">Submit</button>
                                 </div>
                             </div>
@@ -142,7 +142,7 @@
                             }
 
                             .cls-4 {
-                                fill: #ae0a46;
+                                fill: #0a1d59;
                             }
 
                             .cls-5 {
