@@ -651,60 +651,17 @@
 @endif
 <!----------End--------->
 <!--=======// Popular products //======-->
-<div class="slider-related-courses">
-    @forelse ($courses as $course)
-        <div class="releted-course-items">
-            <div class="card border-0 bg-light shadow-sm rounded-2">
-                <div class="card-header p-0 bg-transparent">
 
-                    <div>
-                        <img class="rounded-2 img-fluid"
-                            src="{{ asset(!empty($course->thumbnail_image) ? url('storage/course/' . $course->thumbnail_image) : url('images/no-shop-imge.png')) }}"
-                            alt="">
-                    </div>
-
-                    <div class="p-2 text-center">
-
-                        <small class="pe-1"><span class="cource-badge rounded-2">ব্যাচ
-                                ২</span></small>
-
-                        <small class="pe-1"><span class="cource-badge rounded-2"><i class="fa-solid fa-users pe-2"
-                                    aria-hidden="true"></i>
-                                {{ $course->available_seats }}</span></small>
-
-                        <small class="pe-1"><span class="cource-badge rounded-2"><i
-                                    class="fa-regular fa-clock pe-2" aria-hidden="true"></i>২৭
-                                দিন
-                                বাকি</span></small>
-                    </div>
-                </div>
-                <div class="card-body">
-                    <h6>
-                        {{ $course->name }}
-                    </h6>
-                    <div class="pt-3">
-                        <a href="{{ url('course' . '/' . $course->id . '/' . $course->slug) }}"
-                            class="btn btn-light bg-white border w-100 bistatiro-btn">বিস্তারিত
-                            দেখি
-                            <i class="fa-solid fa-arrow-right ps-2" aria-hidden="true"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    @empty
-        <p>No Course Avaiable</p>
-    @endforelse
-</div>
 {{-- =========================== --}}
 <!---------End -------->
 <section>
     <div class="container p-0 my-4">
         <div class="Container spacer">
-            <h3 class="Head main_color">Recent Products <span class="Arrows"></span></h3>
+            <h3 class="Head main_color">Recent Courses <span class="Arrows"></span></h3>
             <!-- Carousel Container -->
             <div class="SlickCarousel">
                 @if ($courses)
-                    @foreach ($courses as $item)
+                    @foreach ($courses as $course)
                         <!-- Item -->
                         <div class="ProductBlock mb-3 mt-3">
                             <div class="card border-0 bg-light shadow-sm rounded-2">
