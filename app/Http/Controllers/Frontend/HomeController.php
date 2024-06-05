@@ -50,6 +50,7 @@ use App\Models\PortfolioCategory;
 use App\Models\PortfolioChooseUs;
 use App\Models\SubSubSubCategory;
 use App\Models\PortfolioClientFeedback;
+use App\Models\CourseQuery;
 
 class HomeController extends Controller
 {
@@ -146,6 +147,31 @@ class HomeController extends Controller
             'courses' => Course::latest('id')->get(),
         ];
         return view('frontend.pagese.course.courseRegistration',$data);
+    }
+
+    //Course Registration Store
+    public function courseRegistrationStore(Request $request)
+    {
+        CourseQuery::insert([
+
+            'course_id' => $request->course_id,
+
+            'name' => $request->name,
+            'email' => $request->email,
+
+            'phone' => $request->phone,
+            
+            'message' => $request->message,
+            'address' => $request->address,
+
+            
+            'ip_address' => $request->ip(),
+
+            'created_at' => now(),
+
+        ]);
+
+        return redirect()->back()->with('success', 'Course Registerd Successfully!!');
     }
 
     //About

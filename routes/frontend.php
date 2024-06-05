@@ -39,6 +39,7 @@ Route::get('/hardware/info', [HomeController::class, 'hardwareInfo'])->name('har
 Route::get('/training', [HomeController::class, 'training'])->name('training');
 Route::get('/all-courses', [HomeController::class, 'allCourses'])->name('courses.all');
 Route::get('/course-registration', [HomeController::class, 'courseRegistration'])->name('course.registration');
+Route::post('/course-registration/store', [HomeController::class, 'courseRegistrationStore'])->name('course.registration.store');
 
 //Books
 Route::get('/books', [HomeController::class, 'books'])->name('books');

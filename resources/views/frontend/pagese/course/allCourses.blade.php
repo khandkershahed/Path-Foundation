@@ -91,7 +91,7 @@
       <section>
         <div class="container py-5">
           <div class="row">
-            <div class="col-lg-3 sidebar-area-cources">
+            {{-- <div class="col-lg-3 sidebar-area-cources">
               <ul class="nav nav-tabs flex-column border-0 px-0" id="myTab" role="tablist">
                 <li class="nav-item" role="presentation">
                   <button class="nav-link w-100 border-0 cources-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">
@@ -109,8 +109,8 @@
                   </button>
                 </li>
               </ul>
-            </div>
-            <div class="col-lg-9">
+            </div> --}}
+            <div class="col-lg-12">
               <div class="tab-content" id="myTabContent">
                 <div class="tab-pane fade active show" id="home" role="tabpanel" aria-labelledby="home-tab">
                   <div class="row">

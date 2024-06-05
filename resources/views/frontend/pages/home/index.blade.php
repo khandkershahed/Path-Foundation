@@ -165,33 +165,7 @@
             </div>
         </section>
     @endif
-    {{-- Banner Bottom Card --}}
-    {{-- @if (!empty(optional($home)->btn1_title) && !empty(optional($home)->btn2_title))
-        <div class="container px-lg-4 px-2">
-            <div class="row gx-5 mx-auto banner_bottom_box">
-                <div class="col px-2">
-                    @if (!empty(optional($home)->btn1_title))
-                        <div class="border bg-light custom_shadow px-lg-3 px-sm-1 home_banner_card">
-                            <h2 class="text-center home_banner_card_title">{{ optional($home)->btn1_title }}</h2>
-                            <div class="home_card_button d-flex justify-content-center pt-2">
-                                <a class="home-btn"
-                                    href="{{ optional($home)->btn1_link }}">{{ optional($home)->btn1_name }}</a>
-                            </div>
-                        </div>
-                    @endif
-                </div>
-                <div class="col px-2">
-                    <div class="border bg-light custom_shadow px-lg-3 px-sm-1 home_banner_card">
-                        <h2 class="text-center home_banner_card_title">{{ optional($home)->btn2_title }}</h2>
-                        <div class="home_card_button d-flex justify-content-center pt-2">
-                            <a class="home-btn"
-                                href="{{ optional($home)->btn2_link }}">{{ optional($home)->btn2_name }}</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    @endif --}}
+
     <!---------End -------->
 </section>
 <!--======// Action section //======-->
@@ -384,15 +358,7 @@
     <div class="container pt-5">
         @if (!empty($features) && array_filter($features))
             <!-- home title -->
-            {{-- <div class="row">
-                @if (!empty(optional($home)->header1))
-                    <div class="home_banner_bottom_title mx-auto py-3 px-lg-4">
-                        <h6 class="home_title_heading home_banner_bt-title pb-2"> {{ optional($home)->header1 }}
-                        </h6>
-                        <p class="home_title_text">{{ optional($home)->header2 }}</p>
-                    </div>
-                @endif
-            </div> --}}
+           
             <!-- business content -->
             @if (!empty($features))
                 <div class="d-lg-block d-sm-none">
@@ -685,7 +651,7 @@
 <!----------End--------->
 <!--=======// Popular products //======-->
 
-
+{{-- =========================== --}}
 <!---------End -------->
 <!---------Our Success Section-------->
 

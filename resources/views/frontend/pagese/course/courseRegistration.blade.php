@@ -146,7 +146,9 @@
                     </div>
                 </div>
             </div> --}}
-            <form action="" method="post">
+
+            <form action="{{ route('course.registration.store') }}" method="post" enctype="multipart/form-data">
+
                 @csrf
                 <div class="row">
                     <div class="col-lg-10 offset-lg-1">
@@ -157,20 +159,24 @@
                                     <p class="text-white form-desc">Let's align our constellations! Reach out and let the
                                         magic of collaboration illuminate our skies.</p>
                                 </div>
+
                                 <div class="input-field-gap">
                                     <input type="text" class="form-control form-color" id="exampleInputEmail1"
-                                        aria-describedby="emailHelp" name="name" placeholder="Your Name Here">
+                                        aria-describedby="emailHelp" required name="name" placeholder="Your Name Here">
                                 </div>
+
                                 <div class="input-field-gap">
                                     <input type="text" class="form-control form-color" id="exampleInputEmail1"
-                                        aria-describedby="emailHelp" name="email" placeholder="Email Id:example@example.com">
+                                        aria-describedby="emailHelp" required name="email" placeholder="Email Id:example@example.com">
                                 </div>
+
                                 <div class="input-field-gap">
-                                    <input type="text" class="form-control form-color" id="exampleInputEmail1"
-                                        aria-describedby="emailHelp" name="phone" placeholder="Phone;Eg:017*******">
+                                    <input type="tel" class="form-control form-color" id="exampleInputEmail1"
+                                        aria-describedby="emailHelp" required name="phone" placeholder="Phone;Eg:017*******">
                                 </div>
+
                                 <div class="input-field-gap">
-                                    <select class="form-select form-color" name="course_id" aria-label="Select Course" placeholder="Select Course">
+                                    <select class="form-select form-color" required name="course_id" aria-label="Select Course" placeholder="Select Course">
                                         <option value="" disabled selected>Select Course</option>
                                         @foreach ($courses as $course)
                                             <option value="{{$course->id}}">{{$course->name}}</option>
@@ -179,17 +185,24 @@
                                 </div>
 
                                 <div class="input-field-gap">
-                                    <textarea class="form-control form-color" name="address" rows="3"
+                                    <textarea class="form-control form-color" name="message" rows="1"
+                                        placeholder="Something Note Here"></textarea>
+                                </div>
+
+                                <div class="input-field-gap">
+                                    <textarea class="form-control form-color" name="address" rows="2"
                                         placeholder="Your Address"></textarea>
                                 </div>
+
                                 <div>
                                     <button type="submit" class="btn btn-white w-100">Submit</button>
                                 </div>
+
                             </div>
                             <div class="col-lg-6 d-lg-block d-sm-none">
                                 <div class="sidebar-areas">
                                     <img class="form-side-area" width="516px" height="580px"
-                                        src="https://s3-alpha-sig.figma.com/img/e06f/81ea/ca7373a32f6ed29f5b5f2700f7440159?Expires=1716163200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=QMmGlf6A86NGhvbQsjuT9fW-vCTRFHD-6fIOUg7DYnPV0LoNOQdstOCyehUaSKDtEJ2B-WT8l-CmtT8tKAQBfnEzW6FuKY5gv-QFJIiGEf8oCXN-mTiDQgJcUaSUyZUILTmDNfvO6ul6dHMtQEjuQd7MRHXZsL-AqTAP7AAft4GUAgJn~AflAzAdaIqWVdRmcl2emt7-Prgaki-Iy3yLFjH-q2vNX1BpPPnYGwXTzInK61ORqH8UxR8oG1geVBsBe2ioKVdHJ6jaS5MytjBfdxlZUzxWf~91T1Oe7xIMujQ78A5Ji5GE--UrpxQLjXZghGxIgxaKGQbJgX6JySgVHg__"
+                                        src="https://s3-alpha-sig.figma.com/img/e06f/81ea/ca7373a32f6ed29f5b5f2700f7440159?Expires=1716163200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=QMmGlf6A86NGhvbQsjuT9fW-vCTRFHD-6fIOUg7DYnPV0LoNOQdstOCyehUaSKDtEJ2B-WT8l-CmtT8tKAQBfnEzW6FuKY5gv-QFJIiGEf8oCXN-mTiDQgJcUaSUyZUILTmDNfvO6ul6dHMtQEjuQd7MRHXZsL-AqTAP7AAft4GUAgJn~AflAzAdaIqWVdRmcl2emt7-Prgaki-Iy3yLFjH-q2vNX1BpPPnYGwXTzInK61ORqH8UxR8oG1geVBsBe2ioKVdHJ6jaS5MytjBfdxlZUzxWf~91T1Oe7xIMujQ78A5Ji5GE--UrpxQLjXZghGxIgxaKGQbJgX6JySgVHg"
                                         alt="">
                                     <div class="sidebar-content">
                                         <p>"Skill development is not just about acquiring knowledge;
