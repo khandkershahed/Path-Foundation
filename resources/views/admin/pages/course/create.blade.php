@@ -108,6 +108,22 @@
 
                         <div class="col-3 mb-3">
                             <div class="form-group">
+                                <label for="" class="mb-2">Total Student</label>
+                                <input type="number" name="total_student" placeholder="Eg: 12,255"
+                                    class="form-control form-control-sm" value="{{ old('total_student') }}">
+                            </div>
+                        </div>
+
+                        <div class="col-3 mb-3">
+                            <div class="form-group">
+                                <label for="" class="mb-2">Currency</label>
+                                <input type="text" name="currency" placeholder="Eg: 10"
+                                    class="form-control form-control-sm" value="{{ old('currency') }}">
+                            </div>
+                        </div>
+
+                        <div class="col-3 mb-3">
+                            <div class="form-group">
                                 <label for="" class="mb-2">Price</label>
                                 <input type="number" name="price" placeholder="Eg:20000"
                                     class="form-control form-control-sm" value="{{ old('price') }}">
@@ -181,6 +197,27 @@
                                 <input type="date" name="registration_end_date"
                                     min="{{ Carbon\Carbon::now()->format('Y-m-d') }}"
                                     class="form-control form-control-sm">
+                            </div>
+                        </div>
+
+                        <div class="col-6 mb-3">
+                            <div class="form-group">
+                                <label for="" class="mb-2">Short Description</label>
+                                <textarea name="short_descp" class="form-control" id="" cols="3" rows="3"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="col-6 mb-3">
+                            <div class="form-group">
+                                <label for="" class="mb-2">Overview</label>
+                                <textarea name="overview" class="form-control" id="" cols="3" rows="3"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="col-7 mb-3">
+                            <div class="form-group">
+                                <label for="" class="mb-2">Description</label>
+                                <textarea name="description" class="form-control" id="" cols="2" rows="2"></textarea>
                             </div>
                         </div>
 

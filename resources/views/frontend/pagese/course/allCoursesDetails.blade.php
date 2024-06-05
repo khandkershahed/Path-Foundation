@@ -53,7 +53,7 @@
                                             Turn Your Passion into an Artistic Profession
                                         </h6>
                                         <h2 class="fw-bold text-lg-start text-center">
-                                            Professional Graphic Design
+                                            {{ $coursedetail->name }}
                                         </h2>
                                         <div class="row py-3">
                                             <div class="col-md-4">
@@ -61,7 +61,8 @@
                                                     <div class="card-body">
                                                         <div class="text-center">
                                                             <p class="mb-0">Duration</p>
-                                                            <h3 class="fw-bold pt-2">6 Month</h3>
+                                                            <h3 class="fw-bold pt-2">{{ $coursedetail->course_duration }}
+                                                            </h3>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -71,7 +72,7 @@
                                                     <div class="card-body">
                                                         <div class="text-center">
                                                             <p class="mb-0">Lectures</p>
-                                                            <h3 class="fw-bold pt-2">48</h3>
+                                                            <h3 class="fw-bold pt-2">{{ $coursedetail->lecture }}</h3>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -81,27 +82,27 @@
                                                     <div class="card-body">
                                                         <div class="text-center">
                                                             <p class="mb-0">Projects</p>
-                                                            <h3 class="fw-bold pt-2">30+</h3>
+                                                            <h3 class="fw-bold pt-2">{{ $coursedetail->project }}</h3>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <p class="text-justify">
-                                            Considering the growing demand for visual content,
-                                            marketers are promoting their products through
-                                            graphical ideas nowadays. The increasing need for
-                                            graphic designers has unlocked many opportunities for
-                                            the people who prefer working independently. A study
-                                            shows, all the companies prioritize their visual
-                                            acceptance, even a small company spends up to 500
-                                            dollars to create a perfect logo. If you are
-                                            passionate about making designs, this updated Graphic
-                                            Design course is for you.
-                                        </p>
-                                        <p class="text-success text-lg-start text-center">
-                                            18,000 Student
-                                        </p>
+
+                                        @if (!empty($coursedetail->short_descp))
+                                            <p class="text-justify">
+                                                {!! $coursedetail->short_descp !!}
+                                            </p>
+                                        @endif
+
+                                        @if (!empty($coursedetail->total_student))
+                                            <p class="text-success text-lg-start text-center">
+                                                {{ $coursedetail->total_student }} Students
+                                            </p>
+                                        @endif
+
+
+
                                         <div class="d-flex mb-lg-0 mb-4">
                                             <a href="" class="primary-btn-one me-3">Admission</a>
                                             <a href="" class="primary-btn-one">Course Curriculum</a>
@@ -110,29 +111,22 @@
                                 </div>
                                 <div class="col-lg-7">
                                     <img class="img-fluid rounded-5"
-                                        src="https://www.creativeitinstitute.com/images/course/course_1665409737.jpg"
+                                        src="{{ !empty($coursedetail->thumbnail_image) ? url('storage/course/' . $coursedetail->thumbnail_image) : 'https://ui-avatars.com/api/?name=' . urlencode($coursedetail->name) }}"
                                         alt="" />
                                 </div>
                                 <div class="col-lg-8 py-5">
-                                    <div class="">
-                                        <h5 class="primary-text-color fw-bold">
-                                            Course Overview
-                                        </h5>
-                                        <p class="pt-3" style="text-align: justify">
-                                            Our updated curriculum, along with the project-based
-                                            work, prepares you to be a Professional Graphic
-                                            Designer. The course module covers a wide range of
-                                            topics, through which you learn how to use digital
-                                            tools to create unique designs. Using Adobe Photoshop
-                                            or Adobe Illustrator, you will be able to design a
-                                            variety of things including banners, t-shirts,
-                                            products, etc during the course. The lab facilities
-                                            that we provide make you competent to perform better
-                                            in the global marketplace. So, if you are interested
-                                            to explore the field of innovative designs, enroll in
-                                            this course now.
-                                        </p>
-                                    </div>
+
+                                    @if (!empty($coursedetail->overview))
+                                        <div class="">
+                                            <h5 class="primary-text-color fw-bold">
+                                                Course Overview
+                                            </h5>
+                                            <p class="pt-3" style="text-align: justify">
+                                                {!! $coursedetail->overview !!}
+                                            </p>
+                                        </div>
+                                    @endif
+
                                     <div>
                                         <!-- Course Curriculum -->
                                         <div id="curriculum" class="py-3 extra-space">
@@ -578,14 +572,14 @@
                                             <div class="card join_offline">
                                                 <div class="card-body">
                                                     <h5>Course Fee Offline</h5>
-                                                    <h3 class="fw-bold">BDT 50,000</h3>
+                                                    <h3 class="fw-bold">BDT {{ $coursedetail->price }}</h3>
                                                     <a href="" class="primary-btn-one">Enroll Now</a>
                                                 </div>
                                             </div>
                                             <div class="card join_offline">
                                                 <div class="card-body">
                                                     <h5>Course Fee Online</h5>
-                                                    <h3 class="fw-bold">BDT 20,000</h3>
+                                                    <h3 class="fw-bold">BDT {{ $coursedetail->online_price }}</h3>
                                                     <a href="" class="primary-btn-one">Enroll Now</a>
                                                 </div>
                                             </div>
@@ -726,4 +720,3 @@
         </script>
     @endpush
 @endsection
-
