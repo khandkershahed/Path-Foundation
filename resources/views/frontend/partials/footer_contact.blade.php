@@ -10,9 +10,9 @@
                     </h4>
                     <p>Get assistance with tracking an order, requesting a quote, contacting your account representative
                         and more by phone or over chat.</p>
-                    <h5>NGen IT Global Headquarters</h5>
+                    <h5>NGen IT Training</h5>
                     <p>{{ !empty($setting->address) ? $setting->address : '' }}</p>
-                    <p>Billing & invoice: <span
+                    {{-- <p>Billing & invoice: <span
                             class="font-number">{{ !empty($setting->support_email) ? $setting->support_email : '' }}</span>
                         <br> Information and sales: <span
                             class="">{{ !empty($setting->sales_email) ? $setting->sales_email : '' }}</span>
@@ -20,7 +20,9 @@
                             class="font-number">{{ !empty($setting->phone_one) ? $setting->phone_one : '' }}</span>
                         <br> Returns: <span
                             class="font-number">{{ !empty($setting->whatsapp_number) ? $setting->whatsapp_number : '' }}</span>
-                    </p>
+                    </p> --}}
+                    <p><strong>Address: </strong>36-37, Probal Housing, Ring Road, Mohammadpur, Dhaka-1207, Bangladesh</p>
+                    <p><strong>Phone: </strong>01958025050</p>
                     <!-- <h5><i class="fa-solid fa-phone"></i>NgenIT</h5> -->
                 </div>
             </div>

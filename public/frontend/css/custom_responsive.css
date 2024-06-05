@@ -34,6 +34,7 @@
         border-top-right-radius: 50px;
         border-bottom-left-radius: 50px;
         border: 1px solid #dbdbdb;
+        margin: 30px;
     }
 
     .success-area-content:hover {
@@ -1449,7 +1450,7 @@
     }
 
     .footer_item_wrapper h6 {
-        text-align: center;
+        text-align: start !important;
     }
 
     .footer_item_wrapper p {

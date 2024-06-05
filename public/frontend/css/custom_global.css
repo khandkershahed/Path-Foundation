@@ -1430,8 +1430,8 @@ figure.effect-oscar:hover {
     background: -webkit-linear-gradient(
         45deg,
         var(--third-color) 0%,
-        var(--third-color)d1 40%,
-        var(--third-color)9c 100%
+        var(--third-color) d1 40%,
+        var(--third-color) 9c 100%
     );
     /* background: linear-gradient(
         45deg,
@@ -1458,6 +1458,7 @@ figure.effect-oscar figcaption::before {
 }
 
 figure.effect-oscar h6 {
+    height: 2.5rem;
     color: white;
     margin: 0% 0 10px 0;
     -webkit-transition: -webkit-transform 0.35s;
@@ -1606,7 +1607,7 @@ figure.effect-oscar:hover p {
 /* Footer CSS Start */
 .details_icon {
     padding: 12px;
-    background: var(--third-color)ab;
+    background: var(--third-color) ab;
     border-radius: 50%;
     color: white;
 }
@@ -2494,7 +2495,7 @@ footer p a:hover {
     content: "";
     width: 7px;
     height: 93px;
-    background: var(--third-color)bf;
+    background: var(--third-color) bf;
     position: absolute;
     top: -78px;
     z-index: -2;
@@ -2971,7 +2972,7 @@ select:focus-visible {
 .dropdown_area_here:hover {
     background: #f7f6f5;
     padding: 22px;
-    color:var(--third-color);
+    color: var(--third-color);
 }
 
 .nav-pills-custom .nav-link {
@@ -4286,17 +4287,29 @@ body::-webkit-scrollbar-button {
 }
 
 body::-webkit-scrollbar-thumb {
-    background: linear-gradient(45deg, var(--secondary-color), var(--primary-color));
+    background: linear-gradient(
+        45deg,
+        var(--secondary-color),
+        var(--primary-color)
+    );
     border: 0px none #ffffff;
     border-radius: 0px;
 }
 
 body::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(45deg, var(--secondary-color), var(--primary-color));
+    background: linear-gradient(
+        45deg,
+        var(--secondary-color),
+        var(--primary-color)
+    );
 }
 
 body::-webkit-scrollbar-thumb:active {
-    background: linear-gradient(45deg, var(--secondary-color), var(--primary-color));
+    background: linear-gradient(
+        45deg,
+        var(--secondary-color),
+        var(--primary-color)
+    );
 }
 
 body::-webkit-scrollbar-track {
@@ -4409,7 +4422,11 @@ body::-webkit-scrollbar-corner {
 .btn:hover {
     /* background-color: #4da2b7; */
     /* background-color: var(--primary-color); */
-    background: linear-gradient(45deg, var(--secondary-color), var(--primary-color));
+    background: linear-gradient(
+        45deg,
+        var(--secondary-color),
+        var(--primary-color)
+    );
     border-color: white;
 }
 
@@ -4615,7 +4632,7 @@ body::-webkit-scrollbar-corner {
 }
 
 tr td:hover {
-    background-color: var(--third-color)29;
+    background-color: var(--third-color) 29;
     /* Change the background color on hover as a visual cue */
 }
 
@@ -4671,10 +4688,10 @@ tr td:hover {
     margin-left: 20px;
 }
 
-.home-feature{
+.home-feature {
     background: white;
     margin: auto;
-    padding: 10PX;
+    padding: 10px;
     text-align: center;
     display: flex;
     justify-content: center;
@@ -4700,11 +4717,23 @@ tr td:hover {
         left top,
         right top,
         color-stop(4%, var(--third-color)),
-        to(var(--third-color)bb)
+        to(var(--third-color) bb)
     );
-    background-image: -webkit-linear-gradient(left, var(--third-color) 4%, var(--third-color)bb 100%);
-    background-image: -o-linear-gradient(left, var(--third-color) 4%, var(--third-color)bb 100%);
-    background-image: linear-gradient(to right, var(--third-color) 4%, var(--third-color)bb 100%);
+    background-image: -webkit-linear-gradient(
+        left,
+        var(--third-color) 4%,
+        var(--third-color) bb 100%
+    );
+    background-image: -o-linear-gradient(
+        left,
+        var(--third-color) 4%,
+        var(--third-color) bb 100%
+    );
+    background-image: linear-gradient(
+        to right,
+        var(--third-color) 4%,
+        var(--third-color) bb 100%
+    );
     position: relative;
     text-transform: uppercase;
     -webkit-background-clip: text;
@@ -4911,8 +4940,8 @@ tr td:hover {
 
 .overlay {
     background: var(--third-color);
-    background: linear-gradient(to right, var(--third-color), #e12268) no-repeat 0 0 /
-        cover;
+    background: linear-gradient(to right, var(--third-color), #e12268) no-repeat
+        0 0 / cover;
     color: var(--white);
     position: relative;
     left: -100%;
@@ -5063,14 +5092,19 @@ tr td:hover {
     position: fixed;
     bottom: 35%;
     right: -109px;
-    background: linear-gradient(45deg, var(--secondary-color), var(--primary-color));
+    background: linear-gradient(
+        45deg,
+        var(--secondary-color),
+        var(--primary-color)
+    );
     color: white;
     padding: 10px 20px;
     border: none;
     z-index: 99;
     transition: 0.5s;
     transform: rotate(-90deg);
-    border: 2px solid linear-gradient(45deg, var(--secondary-color), var(--primary-color));
+    border: 2px solid
+        linear-gradient(45deg, var(--secondary-color), var(--primary-color));
 }
 
 .upsale-button {
@@ -7070,6 +7104,7 @@ ul {
     font-weight: 800;
     letter-spacing: 0.05rem;
     color: #212529;
+    height: 150px;
     transition: 0.15s all;
 }
 
@@ -7139,6 +7174,7 @@ ul {
 .service_card {
     font-size: 14px;
     color: #303030;
+    height: 75px;
 }
 
 /* .service_card:hover {
@@ -15503,7 +15539,11 @@ switch input:checked + .slider {
 
 .wrap:hover {
     transition: 0.5s ease-in-out;
-    background: linear-gradient(135deg, var(--third-color) 0%, var(--third-color) 100%);
+    background: linear-gradient(
+        135deg,
+        var(--third-color) 0%,
+        var(--third-color) 100%
+    );
     color: white;
 }
 
@@ -17029,7 +17069,11 @@ nav > div a.nav-item.nav-link.active:after {
     transition: all 0.5s;
     box-shadow: 0 0 25px 0 rgba(20, 27, 201, 0.05);
     cursor: pointer;
-    background-image: linear-gradient(-45deg, var(--third-color) 0%, var(--third-color) 100%);
+    background-image: linear-gradient(
+        -45deg,
+        var(--third-color) 0%,
+        var(--third-color) 100%
+    );
 }
 
 .icon img {

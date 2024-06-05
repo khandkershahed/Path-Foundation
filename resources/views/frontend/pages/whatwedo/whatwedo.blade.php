@@ -245,7 +245,7 @@
     <section>
         <div class="container">
             @if (!empty($whatwedo->row_one_image))
-                <div class="row section-margin">
+                <div class="row section-margin align-items-center">
                     <div class="col-lg-6 col-md-6">
                         <div>
                             <img class="img-fluid"
@@ -321,7 +321,7 @@
         <div class="container">
             <!-- Managed Service Start -->
             @if (!empty($row_two))
-                <div class="row section-margin">
+                <div class="row section-margin align-items-center">
                     <div class="col-lg-6 col-md-6 d-sm-block d-lg-none">
                         <div>
                             <img class="img-fluid pt-3"
@@ -355,7 +355,7 @@
         <div class="container">
             <!-- Hardware Service Start -->
             @if (!empty($row_three))
-                <div class="row section-margin">
+                <div class="row section-margin align-items-center">
                     <div class="col-lg-6 col-md-6">
                         <div>
                             <img class="img-fluid"
