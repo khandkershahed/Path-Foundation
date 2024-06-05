@@ -62,10 +62,10 @@
                             </div>
                         </div>
                         <div class="d-flex align-items-center ">
-                            <div class="d-lg-block d-sm-none">
+                            {{-- <div class="d-lg-block d-sm-none">
                                 <a href="" class="top-info-text text-white pe-3"><i
                                         class="fa-regular fa-circle-question me-1"></i> RFQ</a>
-                            </div>
+                            </div> --}}
                             <div>
                                 {{-- <span class="text-white">My</span><span class="text-white">NGen It</span> --}}
                                 <div class="dropdown drop-top">
