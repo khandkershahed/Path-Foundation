@@ -11,13 +11,15 @@
 <script src="{{ asset('frontend/js/plugin/toastr.min.js') }}"></script>
 <script src="{{ asset('frontend/js/plugin/select2.min.js') }}"></script>
 <script src="{{ asset('frontend/js/javascript.mr.js') }}"></script>
-<script src="{{ asset('frontend/js/script-new.js') }}"></script>
+<script src="{{ asset('frontend/js/javascript.mr.js') }}"></script>
 <!-- slick slider -->
 <script src="{{ asset('frontend/js/plugin/-crousel@2.3.4.js') }}"></script>
 <!-- Datatable -->
 <script src="{{ asset('backend/assets/js/vendor/tables/datatables/datatables.min.js') }}"></script>
 <script src="{{ asset('backend/assets/demo/pages/datatables_advanced.js') }}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 <!-- Tiny MCe -->
+<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 <script src="https://cdn.tiny.cloud/1/n4jpbhtanca801bcjejx1pc9j033yn0de5ral6e7r0wd6383/tinymce/6/tinymce.min.js"
     referrerpolicy="origin"></script>
 <script src="https://www.google.com/recaptcha/api.js"></script>

@@ -60,6 +60,12 @@ class CourseController extends Controller
                 'registration_start_date' => $request->registration_start_date,
                 'registration_end_date' => $request->registration_end_date,
 
+                'short_descp' => $request->short_descp,
+                'overview' => $request->overview,
+                'currency' => $request->currency,
+                'total_student' => $request->total_student,
+                'description' => $request->description,
+
                 'created_at' => now(),
 
             ]);
@@ -100,6 +106,12 @@ class CourseController extends Controller
                     'registration_end_date' => $request->registration_end_date,
 
                     'thumbnail_image' => $globalFunImg['file_name'],
+
+                    'short_descp' => $request->short_descp,
+                    'overview' => $request->overview,
+                    'currency' => $request->currency,
+                    'total_student' => $request->total_student,
+                    'description' => $request->description,
 
                     'created_at' => now(),
 
@@ -174,6 +186,12 @@ class CourseController extends Controller
 
                 'registration_start_date' => $request->registration_start_date,
                 'registration_end_date' => $request->registration_end_date,
+
+                'short_descp' => $request->short_descp,
+                'overview' => $request->overview,
+                'currency' => $request->currency,
+                'total_student' => $request->total_student,
+                'description' => $request->description,
 
                 'thumbnail_image' => $globalFunImg['status'] == 1 ? $globalFunImg['file_name'] : $course->thumbnail_image,
 

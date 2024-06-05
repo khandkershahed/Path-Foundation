@@ -36,6 +36,12 @@ return new class extends Migration
 
             $table->string('status')->default('active');
 
+            $table->string('short_descp')->nullable();
+            $table->string('overview')->nullable();
+            $table->string('currency')->nullable();
+            $table->string('total_student')->nullable();
+            $table->string('description')->nullable();
+
             $table->timestamps();
         });
     }
