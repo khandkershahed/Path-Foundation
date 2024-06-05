@@ -351,22 +351,31 @@
                           </div>
 
                           <div class="menu-item">
-                            <a class="menu-link" href="{{ route('admin.course_query.index') }}">
+                              <a class="menu-link" href="{{ route('admin.course_query.index') }}">
+                                  <span class="menu-bullet">
+                                      <span class="bullet bullet-dot"></span>
+                                  </span>
+                                  <span class="menu-title">Course Query</span>
+                              </a>
+                          </div>
+
+                          <div class="menu-item">
+                            <a class="menu-link" href="{{ route('admin.course_management.index') }}">
                                 <span class="menu-bullet">
                                     <span class="bullet bullet-dot"></span>
                                 </span>
-                                <span class="menu-title">Course Query</span>
+                                <span class="menu-title">Course Management</span>
                             </a>
                         </div>
 
                           <div class="menu-item">
-                            <a class="menu-link" href="{{ route('admin.coupon.index') }}">
-                                <span class="menu-bullet">
-                                    <span class="bullet bullet-dot"></span>
-                                </span>
-                                <span class="menu-title">Coupon</span>
-                            </a>
-                        </div>
+                              <a class="menu-link" href="{{ route('admin.coupon.index') }}">
+                                  <span class="menu-bullet">
+                                      <span class="bullet bullet-dot"></span>
+                                  </span>
+                                  <span class="menu-title">Coupon</span>
+                              </a>
+                          </div>
 
                       </div>
                   </div>
