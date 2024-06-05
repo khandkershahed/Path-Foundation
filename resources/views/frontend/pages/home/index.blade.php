@@ -43,7 +43,7 @@
         }
 
         .action-btnss-2 {
-            padding: 10px 83px;
+            padding: 10px 50px;
             background-color: white;
             width: 12.5%;
             border-radius: 5px;
@@ -52,6 +52,12 @@
         .buttons-area {
             width: 40%;
             margin: auto;
+        }
+
+        .recent-course-name {
+            height: 2.5rem;
+            display: flex;
+            align-items: center;
         }
     </style>
 @endsection
@@ -258,13 +264,19 @@
                     <div class="p-2 py-3 text-center d-flex justify-content-between align-items-center"
                         style="background-color: #F3F4F8;border-radius: 5px;">
                         <div>
-                            <a href="{{ optional($home)->btn1_link }}" class="action-btnss fw-bolder">
+                            {{-- <a href="{{ optional($home)->btn1_link }}" class="action-btnss fw-bolder">
                                 {{ optional($home)->btn1_name }}
+                            </a> --}}
+                            <a href="{{ optional($home)->btn1_link }}" class="action-btnss fw-bolder">
+                                What We Do
                             </a>
                         </div>
                         <div>
-                            <a href="{{ optional($home)->btn2_link }}" class="bg-white action-btnss-2 fw-bolder">
+                            {{-- <a href="{{ optional($home)->btn2_link }}" class="bg-white action-btnss-2 fw-bolder">
                                 {{ optional($home)->btn2_name }}
+                            </a> --}}
+                            <a href="{{ optional($home)->btn2_link }}" class="bg-white action-btnss-2 fw-bolder">
+                                Course Registration
                             </a>
                         </div>
                     </div>
@@ -678,8 +690,8 @@
                                         <small class="pe-1"><span class="cource-badge rounded-2">ব্যাচ
                                                 ২</span></small>
 
-                                        <small class="pe-1"><span class="cource-badge rounded-2"><i class="fa-solid fa-users pe-2"
-                                                    aria-hidden="true"></i>
+                                        <small class="pe-1"><span class="cource-badge rounded-2"><i
+                                                    class="fa-solid fa-users pe-2" aria-hidden="true"></i>
                                                 {{ $course->available_seats }}</span></small>
 
                                         <small class="pe-1"><span class="cource-badge rounded-2"><i
@@ -689,7 +701,7 @@
                                     </div>
                                 </div>
                                 <div class="card-body">
-                                    <h6>
+                                    <h6 class="recent-course-name">
                                         {{ $course->name }}
                                     </h6>
                                     <div class="pt-3">

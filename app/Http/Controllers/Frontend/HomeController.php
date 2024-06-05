@@ -126,9 +126,11 @@ class HomeController extends Controller
             $data['story1'] = $learnmore->successStoryOne;
             $data['story2'] = $learnmore->successStoryTwo;
             $data['story3'] = $learnmore->successStoryThree;
+            return view('frontend.pages.learnmore.view', $data);
         }
+    return redirect()->back()->with('error','No Page Found');
+    // return redirect()->route('admin.course_query.index')->with('success', 'Course Query Inserted Successfully!!');
 
-        return view('frontend.pages.learnmore.view', $data);
     }
 
     public function allCourses()
