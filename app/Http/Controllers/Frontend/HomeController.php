@@ -81,7 +81,7 @@ class HomeController extends Controller
             'techglossy'
         ])->first();
 
-
+        $data['courses'] = Course::latest('id')->get();
         $data['features'] = [
             'feature1' => $data['home']->feature1 ?? null,
             'feature2' => $data['home']->feature2 ?? null,
@@ -146,7 +146,8 @@ class HomeController extends Controller
     public function courseDetails($id,$slug)
     {
         // $course = Course::find($id);
-        return view('frontend.pagese.course.allCoursesDetails');
+        $data['courses'] = Course::latest('id')->get();
+        return view('frontend.pagese.course.allCoursesDetails',$data);
     }
 
 
@@ -169,11 +170,11 @@ class HomeController extends Controller
             'email' => $request->email,
 
             'phone' => $request->phone,
-            
+
             'message' => $request->message,
             'address' => $request->address,
 
-            
+
             'ip_address' => $request->ip(),
 
             'created_at' => now(),

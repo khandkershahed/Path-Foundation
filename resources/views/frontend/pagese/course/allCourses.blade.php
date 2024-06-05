@@ -71,7 +71,7 @@
             <p>One-Stop Learning &amp; Development Solutions</p>
         </div>
     </section>
-    {{-- <section style="background-color: #eee;">
+    <section style="background-color: #eee;">
         <div class="container">
           <div class="text-center px-5 py-5">
             <h3 class="section-title">Popular Courses We Offer</h3>
@@ -87,7 +87,7 @@
             </p>
           </div>
         </div>
-      </section> --}}
+      </section>
     <section>
         <div class="container py-5">
             <div class="row">

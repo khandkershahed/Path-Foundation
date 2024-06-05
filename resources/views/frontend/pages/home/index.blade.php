@@ -180,8 +180,8 @@
                     <div class="card-body py-3 ">
                         <div class="d-flex justify-content-center flex-column text-center">
                             <div class="home-feature">
-                                <img class="img-fluid" width="40px" src="{{asset('frontend/images/icons/Practice Project.png')}}"
-                                    alt="">
+                                <img class="img-fluid" width="40px"
+                                    src="{{ asset('frontend/images/icons/Practice Project.png') }}" alt="">
                             </div>
                             <h6 class="fw-bolder pt-2">20+ Practice <br> Project</h6>
                         </div>
@@ -193,8 +193,8 @@
                     <div class="card-body py-3 ">
                         <div class="d-flex justify-content-center flex-column text-center">
                             <div class="home-feature">
-                                <img class="img-fluid" width="40px" src="{{asset('frontend/images/icons/Support Classes.png')}}"
-                                    alt="">
+                                <img class="img-fluid" width="40px"
+                                    src="{{ asset('frontend/images/icons/Support Classes.png') }}" alt="">
                             </div>
                             <h6 class="fw-bolder pt-2">Support <br> Classes</h6>
                         </div>
@@ -206,8 +206,8 @@
                     <div class="card-body py-3 ">
                         <div class="d-flex justify-content-center flex-column text-center">
                             <div class="home-feature">
-                                <img class="img-fluid" width="40px" src="{{asset('frontend/images/icons/Certificate.png')}}"
-                                    alt="">
+                                <img class="img-fluid" width="40px"
+                                    src="{{ asset('frontend/images/icons/Certificate.png') }}" alt="">
                             </div>
                             <h6 class="fw-bolder pt-2">After Course <br> Certificate</h6>
                         </div>
@@ -219,7 +219,8 @@
                     <div class="card-body py-3 ">
                         <div class="d-flex justify-content-center flex-column text-center">
                             <div class="home-feature">
-                                <img class="img-fluid" width="40px" src="{{asset('frontend/images/icons/Lifetime video access.png')}}"
+                                <img class="img-fluid" width="40px"
+                                    src="{{ asset('frontend/images/icons/Lifetime video access.png') }}"
                                     alt="">
                             </div>
                             <h6 class="fw-bolder pt-2">Lifetime Video <br> Access</h6>
@@ -232,8 +233,8 @@
                     <div class="card-body py-3 ">
                         <div class="d-flex justify-content-center flex-column text-center">
                             <div class="home-feature">
-                                <img class="img-fluid" width="40px" src="{{asset('frontend/images/icons/Guideline.png')}}"
-                                    alt="">
+                                <img class="img-fluid" width="40px"
+                                    src="{{ asset('frontend/images/icons/Guideline.png') }}" alt="">
                             </div>
                             <h6 class="fw-bolder pt-2">Marketplace <br> Guideline</h6>
                         </div>
@@ -283,7 +284,7 @@
                                 <div class="d-flex justify-content-center flex-column text-center align-items-center">
                                     <div>
                                         <img class="img-fluid text-center" width="50px"
-                                            src="{{asset('frontend/images/icons/01.jpg')}}" alt="">
+                                            src="{{ asset('frontend/images/icons/01.jpg') }}" alt="">
                                     </div>
                                     <h6 class="fw-bolder pt-2">20+ Practice <br> Project</h6>
                                 </div>
@@ -296,7 +297,7 @@
                                 <div class="d-flex justify-content-center flex-column text-center align-items-center">
                                     <div>
                                         <img class="img-fluid text-center" width="50px"
-                                            src="{{asset('frontend/images/icons/02.jpg')}}" alt="">
+                                            src="{{ asset('frontend/images/icons/02.jpg') }}" alt="">
                                     </div>
                                     <h6 class="fw-bolder pt-2">20+ Practice <br> Project</h6>
                                 </div>
@@ -309,7 +310,7 @@
                                 <div class="d-flex justify-content-center flex-column text-center align-items-center">
                                     <div>
                                         <img class="img-fluid text-center" width="50px"
-                                            src="{{asset('frontend/images/icons/03.jpg')}}" alt="">
+                                            src="{{ asset('frontend/images/icons/03.jpg') }}" alt="">
                                     </div>
                                     <h6 class="fw-bolder pt-2">20+ Practice <br> Project</h6>
                                 </div>
@@ -322,7 +323,7 @@
                                 <div class="d-flex justify-content-center flex-column text-center align-items-center">
                                     <div>
                                         <img class="img-fluid text-center" width="50px"
-                                            src="{{asset('frontend/images/icons/04.jpg')}}" alt="">
+                                            src="{{ asset('frontend/images/icons/04.jpg') }}" alt="">
                                     </div>
                                     <h6 class="fw-bolder pt-2">20+ Practice <br> Project</h6>
                                 </div>
@@ -335,7 +336,7 @@
                                 <div class="d-flex justify-content-center flex-column text-center align-items-center">
                                     <div>
                                         <img class="img-fluid text-center" width="50px"
-                                            src="{{asset('frontend/images/icons/05.jpg')}}" alt="">
+                                            src="{{ asset('frontend/images/icons/05.jpg') }}" alt="">
                                     </div>
                                     <h6 class="fw-bolder pt-2">20+ Practice <br> Project</h6>
                                 </div>
@@ -358,7 +359,7 @@
     <div class="container pt-5">
         @if (!empty($features) && array_filter($features))
             <!-- home title -->
-           
+
             <!-- business content -->
             @if (!empty($features))
                 <div class="d-lg-block d-sm-none">
@@ -650,9 +651,106 @@
 @endif
 <!----------End--------->
 <!--=======// Popular products //======-->
+<div class="slider-related-courses">
+    @forelse ($courses as $course)
+        <div class="releted-course-items">
+            <div class="card border-0 bg-light shadow-sm rounded-2">
+                <div class="card-header p-0 bg-transparent">
 
+                    <div>
+                        <img class="rounded-2 img-fluid"
+                            src="{{ asset(!empty($course->thumbnail_image) ? url('storage/course/' . $course->thumbnail_image) : url('images/no-shop-imge.png')) }}"
+                            alt="">
+                    </div>
+
+                    <div class="p-2 text-center">
+
+                        <small class="pe-1"><span class="cource-badge rounded-2">ব্যাচ
+                                ২</span></small>
+
+                        <small class="pe-1"><span class="cource-badge rounded-2"><i class="fa-solid fa-users pe-2"
+                                    aria-hidden="true"></i>
+                                {{ $course->available_seats }}</span></small>
+
+                        <small class="pe-1"><span class="cource-badge rounded-2"><i
+                                    class="fa-regular fa-clock pe-2" aria-hidden="true"></i>২৭
+                                দিন
+                                বাকি</span></small>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <h6>
+                        {{ $course->name }}
+                    </h6>
+                    <div class="pt-3">
+                        <a href="{{ url('course' . '/' . $course->id . '/' . $course->slug) }}"
+                            class="btn btn-light bg-white border w-100 bistatiro-btn">বিস্তারিত
+                            দেখি
+                            <i class="fa-solid fa-arrow-right ps-2" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    @empty
+        <p>No Course Avaiable</p>
+    @endforelse
+</div>
 {{-- =========================== --}}
 <!---------End -------->
+<section>
+    <div class="container p-0 my-4">
+        <div class="Container spacer">
+            <h3 class="Head main_color">Recent Products <span class="Arrows"></span></h3>
+            <!-- Carousel Container -->
+            <div class="SlickCarousel">
+                @if ($courses)
+                    @foreach ($courses as $item)
+                        <!-- Item -->
+                        <div class="ProductBlock mb-3 mt-3">
+                            <div class="card border-0 bg-light shadow-sm rounded-2">
+                                <div class="card-header p-0 bg-transparent">
+
+                                    <div>
+                                        <img class="rounded-2 img-fluid"
+                                            src="{{ asset(!empty($course->thumbnail_image) ? url('storage/course/' . $course->thumbnail_image) : url('images/no-shop-imge.png')) }}"
+                                            alt="">
+                                    </div>
+
+                                    <div class="p-2 text-center">
+
+                                        <small class="pe-1"><span class="cource-badge rounded-2">ব্যাচ
+                                                ২</span></small>
+
+                                        <small class="pe-1"><span class="cource-badge rounded-2"><i class="fa-solid fa-users pe-2"
+                                                    aria-hidden="true"></i>
+                                                {{ $course->available_seats }}</span></small>
+
+                                        <small class="pe-1"><span class="cource-badge rounded-2"><i
+                                                    class="fa-regular fa-clock pe-2" aria-hidden="true"></i>২৭
+                                                দিন
+                                                বাকি</span></small>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <h6>
+                                        {{ $course->name }}
+                                    </h6>
+                                    <div class="pt-3">
+                                        <a href="{{ url('course' . '/' . $course->id . '/' . $course->slug) }}"
+                                            class="btn btn-light bg-white border w-100 bistatiro-btn">বিস্তারিত
+                                            দেখি
+                                            <i class="fa-solid fa-arrow-right ps-2" aria-hidden="true"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    @endforeach
+                @endif
+            </div>
+            <!-- Carousel Container -->
+        </div>
+    </div>
+</section>
 <!---------Our Success Section-------->
 
 @if (!empty($successItems) && array_filter($successItems))
