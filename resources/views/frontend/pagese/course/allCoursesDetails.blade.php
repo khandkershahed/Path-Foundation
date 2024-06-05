@@ -609,7 +609,7 @@
                                                     <div class="card border-0 bg-light shadow-sm rounded-2">
                                                         <div class="card-header p-0 bg-transparent">
 
-<<<<<<< HEAD
+
                                                             <div>
                                                                 <img class="rounded-2 img-fluid"
                                                                     src="{{ asset(!empty($course->thumbnail_image) ? url('storage/course/' . $course->thumbnail_image) : url('images/no-shop-imge.png')) }}"
@@ -726,6 +726,4 @@
         </script>
     @endpush
 @endsection
-=======
-@endsection
->>>>>>> 632b643bdc0aacf011bf340d03430e5ff2841883
+

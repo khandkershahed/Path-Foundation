@@ -145,9 +145,9 @@ class HomeController extends Controller
 
     public function courseDetails($id,$slug)
     {
-        // $course = Course::find($id);
-        $data['courses'] = Course::latest('id')->get();
-        return view('frontend.pagese.course.allCoursesDetails',$data);
+        $coursedetail = Course::find($id);
+        $courses = Course::latest()->get();
+        return view('frontend.pagese.course.allCoursesDetails',compact('courses','coursedetail'));
     }
 
 
