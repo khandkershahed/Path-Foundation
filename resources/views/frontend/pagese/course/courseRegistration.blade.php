@@ -202,7 +202,7 @@
                             <div class="col-lg-6 d-lg-block d-sm-none">
                                 <div class="sidebar-areas">
                                     <img class="form-side-area" width="516px" height="580px"
-                                        src="https://s3-alpha-sig.figma.com/img/e06f/81ea/ca7373a32f6ed29f5b5f2700f7440159?Expires=1716163200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=QMmGlf6A86NGhvbQsjuT9fW-vCTRFHD-6fIOUg7DYnPV0LoNOQdstOCyehUaSKDtEJ2B-WT8l-CmtT8tKAQBfnEzW6FuKY5gv-QFJIiGEf8oCXN-mTiDQgJcUaSUyZUILTmDNfvO6ul6dHMtQEjuQd7MRHXZsL-AqTAP7AAft4GUAgJn~AflAzAdaIqWVdRmcl2emt7-Prgaki-Iy3yLFjH-q2vNX1BpPPnYGwXTzInK61ORqH8UxR8oG1geVBsBe2ioKVdHJ6jaS5MytjBfdxlZUzxWf~91T1Oe7xIMujQ78A5Ji5GE--UrpxQLjXZghGxIgxaKGQbJgX6JySgVHg"
+                                        src="{{ asset('frontend/images/registration.jpg') }}"
                                         alt="">
                                     <div class="sidebar-content">
                                         <p>"Skill development is not just about acquiring knowledge;

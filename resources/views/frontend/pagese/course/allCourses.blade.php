@@ -135,10 +135,27 @@
                                                                 class="fa-solid fa-users pe-2" aria-hidden="true"></i>
                                                             {{ $course->available_seats }}</span></small>
 
-                                                    <small class="pe-1"><span class="cource-badge rounded-2"><i
-                                                                class="fa-regular fa-clock pe-2" aria-hidden="true"></i>২৭
-                                                            দিন
-                                                            বাকি</span></small>
+                                                    @php
+                                                        // Convert registration end date to Unix timestamp
+                                                        $registrationEndTimestamp = strtotime(
+                                                            $course->registration_end_date,
+                                                        );
+                                                        // Current time
+                                                        $currentTime = time();
+                                                        // Calculate remaining time in seconds
+                                                        $remainingTime = $registrationEndTimestamp - $currentTime;
+                                                        // Convert remaining time to days
+                                                        $remainingDays = floor($remainingTime / (60 * 60 * 24));
+                                                    @endphp
+
+                                                    <small class="pe-1">
+                                                        <span class="course-badge rounded-2">
+                                                            <i class="far fa-clock pe-2" aria-hidden="true"></i>
+                                                            {{ $remainingDays }} days
+                                                            remaining
+                                                        </span>
+                                                    </small>
+
                                                 </div>
                                             </div>
                                             <div class="card-body">
