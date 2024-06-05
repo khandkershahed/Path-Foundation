@@ -702,7 +702,7 @@
                                     </div>
                                 </div>
                                 <div class="card-body">
-                                    <h6 class="recent-course-name">
+                                    <h6 class="recent-course-name px-2">
                                         {{ $course->name }}
                                     </h6>
                                     <div class="pt-3">
