@@ -30,51 +30,36 @@
                 </div>
                 <div class="modal-body">
                     <div class="container">
-                        <form action="" enctype="multipart/form-data" method="POST">
+                        <form action="{{ route('course.registration.store') }}" enctype="multipart/form-data" method="POST">
                             @csrf
+                           
                             <div class="row mb-4">
-                                <div class="col-lg-9">
-                                    <label class="mb-2" for="product_name">Course Name <span
-                                            class="text-danger">*</span></label>
-                                    <input type="text" class="form-control" name="product_name" id="product_name"
-                                        value="{{ old('product_name') }}" required>
-                                </div>
-                                <div class="col-lg-3">
-                                    <label class="mb-2" for="qty">Custom Quantity</label>
-                                    <input type="number" class="form-control" name="qty" id="qty"
-                                        placeholder="Example: 0,1,2..." value="{{ old('qty') }}">
-                                </div>
-                            </div>
-                            <div class="row mb-4">
+
                                 <div class="col-lg-4 mb-3 pe-0">
-                                    <input type="text" class="form-control rounded-0" required id="name"
-                                        name="name" placeholder="Your Name *"
-                                        value="{{ optional(Auth::user())->name }}" />
+                                    <input type="text" class="form-control rounded-0" required
+                                        name="name" placeholder="Your Name *" />
                                 </div>
+
                                 <div class="col-lg-4 mb-3 pe-0">
-                                    <input type="number" class="form-control rounded-0" id="phone"
-                                        name="phone" placeholder="Your Phone Number *" required
-                                        value="{{ optional(Auth::user())->phone }}" />
-                                </div>
-                                <div class="col-lg-4 mb-3">
-                                    <input type="text" class="form-control rounded-0" id="contact"
-                                        name="company_name" placeholder="Your Company Name *" required
-                                        value="{{ optional(Auth::user())->company_name }}" />
-                                </div>
-                                <div class="col-lg-5 mb-3 pe-0">
                                     <input type="email" required class="form-control rounded-0" id="email"
-                                        name="email" placeholder="Your Email *"
-                                        value="{{ optional(Auth::user())->email }}" />
+                                        name="email" placeholder="Your Email *" />
                                     <span class="text-danger text-start p-0 m-0 email_validation"
                                         style="display: none">Please input valid email</span>
                                 </div>
-                                <div class="col-lg-7 mb-3">
-                                    <input type="file" name="image" class="form-control rounded-0"
-                                        id="image" accept="image/*" placeholder="Your Custom Image" />
+
+                                <div class="col-lg-4 mb-3 pe-0">
+                                    <input type="number" class="form-control rounded-0" id="phone"
+                                        name="phone" placeholder="Your Phone Number *" required />
                                 </div>
+
                                 <div class="col-lg-12 mb-3">
-                                    <textarea class="form-control rounded-0" id="message" name="message" rows="3" placeholder="Your Message"></textarea>
+                                    <textarea class="form-control rounded-0" id="message" name="message" rows="1" placeholder="Your Message"></textarea>
                                 </div>
+                                
+                                <div class="col-lg-12 mb-3">
+                                    <textarea class="form-control rounded-0" id="message" name="address" rows="2" placeholder="Your Address"></textarea>
+                                </div>
+
                             </div>
 
 
@@ -88,11 +73,13 @@
                                         </label>
                                     </div>
                                 </div>
+
                                 <div class="col-lg-6 mb-3">
-                                    <div class="form-group px-3 mx-1 message g-recaptcha w-100"
+                                    {{-- <div class="form-group px-3 mx-1 message g-recaptcha w-100"
                                         data-sitekey="{{ config('app.recaptcha_site_key') }}">
-                                    </div>
+                                    </div> --}}
                                 </div>
+
                                 <div class="col-lg-3 mb-3">
                                     <button type="submit" class="btn rounded-0 p-2"
                                         style="background: #0a1d59; color: white; width:150px; font-size:20px"
