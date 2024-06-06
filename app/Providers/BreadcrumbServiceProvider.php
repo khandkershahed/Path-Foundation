@@ -39,6 +39,8 @@ class BreadcrumbServiceProvider extends ServiceProvider
                         // Log or handle the exception as needed
                         Log::error("Error resolving model instance for {$namespace}: " . $e->getMessage());
                     }
+                } else {
+                    Log::error("Class {$namespace} does not exist.");
                 }
                 return null;
             };
@@ -101,6 +103,7 @@ class BreadcrumbServiceProvider extends ServiceProvider
 
         View::share('breadcrumbs', $breadcrumbs);
     }
+
 
 
 
