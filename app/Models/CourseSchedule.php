@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class CourseQuery extends Model
+class CourseSchedule extends Model
 {
     use HasFactory;
 
@@ -15,9 +15,4 @@ class CourseQuery extends Model
      * @var array
      */
     protected $guarded = [];
-
-    public function courseName()
-    {
-        return $this->belongsTo(Course::class,'course_id','id');
-    }
 }

@@ -2,56 +2,30 @@
 
 namespace App\Http\Controllers\Frontend;
 
-use App\Models\Site;
-use App\Models\User;
-use App\Models\Faq;
-use App\Models\Rfq;
-use App\Models\Row;
+use App\Http\Controllers\Controller;
+use App\Models\AboutUs;
 use App\Models\Blog;
 use App\Models\Brand;
-use App\Models\Policy;
-use Illuminate\Http\Request;
-use App\Models\AboutUs;
-use App\Models\Country;
-use App\Models\Feature;
-use App\Models\Product;
-use App\Models\Setting;
-use App\Models\Success;
-use App\Models\Category;
-use App\Models\Homepage;
-use App\Models\Industry;
 use App\Models\BrandPage;
-use App\Models\LearnMore;
-use App\Models\RfqProduct;
-use App\Models\TechGlossy;
+use App\Models\Category;
 use App\Models\ClientStory;
-use App\Models\DocumentPdf;
-use App\Models\SubCategory;
-use App\Models\IndustryPage;
-use App\Models\SolutionCard;
-use App\Models\WhatWeDoPage;
-use Illuminate\Support\Facades\DB;
-use App\Models\MultiIndustry;
-use App\Models\PortfolioPage;
-use App\Models\PortfolioTeam;
-use App\Http\Controllers\Controller;
 use App\Models\Course;
 use App\Models\CourseCurriculum;
-use App\Models\OfficeLocation;
-use App\Models\SolutionDetail;
-use App\Models\SubSubCategory;
-use App\Models\TechnologyData;
-use Brian2694\Toastr\Facades\Toastr;
-use App\Models\PortfolioClient;
-use App\Models\HardwareInfoPage;
-use App\Models\NewsTrend;
-use App\Models\PortfolioDetails;
-use App\Models\SoftwareInfoPage;
-use App\Models\PortfolioCategory;
-use App\Models\PortfolioChooseUs;
-use App\Models\SubSubSubCategory;
-use App\Models\PortfolioClientFeedback;
 use App\Models\CourseQuery;
+use App\Models\DocumentPdf;
+use App\Models\Feature;
+use App\Models\Homepage;
+use App\Models\Industry;
+use App\Models\LearnMore;
+use App\Models\NewsTrend;
+use App\Models\Row;
+use App\Models\Setting;
+use App\Models\SolutionDetail;
+use App\Models\SubCategory;
+use App\Models\SubSubCategory;
+use App\Models\TechGlossy;
+use App\Models\WhatWeDoPage;
+use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
@@ -68,8 +42,6 @@ class HomeController extends Controller
         return view('frontend.auth.register');
     }
 
-
-
     //Homepage
 
     public function index()
@@ -79,7 +51,7 @@ class HomeController extends Controller
             'feature1', 'feature2', 'feature3', 'feature4', 'feature5',
             'success1', 'success2', 'success3',
             'story1', 'story2', 'story3', 'story4',
-            'techglossy'
+            'techglossy',
         ])->first();
 
         $data['courses'] = Course::latest('id')->get();
@@ -103,16 +75,10 @@ class HomeController extends Controller
         ];
         $data['techglossy'] = $data['home']->techglossy ?? null;
 
-
-
         return view('frontend.pages.home.index', $data);
     }
 
-
-
-
     //Learn More
-
 
     public function LearnMore()
     {
@@ -129,34 +95,33 @@ class HomeController extends Controller
             $data['story3'] = $learnmore->successStoryThree;
             return view('frontend.pages.learnmore.view', $data);
         }
-    return redirect()->back()->with('error','No Page Found');
-    // return redirect()->route('admin.course_query.index')->with('success', 'Course Query Inserted Successfully!!');
+        return redirect()->back()->with('error', 'No Page Found');
+        // return redirect()->route('admin.course_query.index')->with('success', 'Course Query Inserted Successfully!!');
 
     }
 
     public function allCourses()
     {
         $courses = Course::latest()->get();
-        return view('frontend.pagese.course.allCourses',compact('courses'));
+        return view('frontend.pagese.course.allCourses', compact('courses'));
     }
 
-    public function courseDetails($id,$slug)
+    public function courseDetails($id, $slug)
     {
         $coursedetail = Course::find($id);
         $courses = Course::latest()->get();
 
         $courseCurriculams = CourseCurriculum::where('course_id', $coursedetail->id)->get();
 
-        return view('frontend.pagese.course.allCoursesDetails',compact('courses','coursedetail','courseCurriculams'));
+        return view('frontend.pagese.course.allCoursesDetails', compact('courses', 'coursedetail', 'courseCurriculams'));
     }
-
 
     public function courseRegistration()
     {
         $data = [
             'courses' => Course::latest('id')->get(),
         ];
-        return view('frontend.pagese.course.courseRegistration',$data);
+        return view('frontend.pagese.course.courseRegistration', $data);
     }
 
     //Course Registration Store
@@ -175,7 +140,6 @@ class HomeController extends Controller
             'address' => $request->address,
             'call' => $request->call,
 
-
             'ip_address' => $request->ip(),
 
             'created_at' => now(),
@@ -184,6 +148,7 @@ class HomeController extends Controller
 
         return redirect()->back()->with('success', 'Course Registerd Successfully!!');
     }
+
 
     //About
     public function about()
@@ -211,7 +176,6 @@ class HomeController extends Controller
         return view('frontend.pages.whatwedo.whatwedo', $data);
     }
 
-
     //Feature Details
     public function FeatureDetails($id)
     {
@@ -225,7 +189,6 @@ class HomeController extends Controller
             ->where('id', '!=', $id)->select('logo', 'id', 'badge', 'header')->get();
         return view('frontend.pages.feature.feature_details', $data);
     }
-
 
     //Contact, Support, Location, RFQ
     // public function location()
@@ -276,10 +239,10 @@ class HomeController extends Controller
             $data['brand'] = Brand::where('id', $data['sproduct']->brand_id)->select('id', 'slug', 'title', 'image')->first();
             $data['brandpage'] = BrandPage::where('brand_id', $data['brand']->id)->first(['id', 'banner_image', 'brand_logo', 'header']);
             $data['related_search'] = [
-                'categories' =>  Category::where('id', '!=', $data['sproduct']->cat_id)->inRandomOrder()->limit(2)->get(),
-                'brands' =>  Brand::where('id', '!=', $data['sproduct']->brand_id)->inRandomOrder()->where('status', 'active')->limit(20)->get(),
-                'solutions' =>  SolutionDetail::inRandomOrder()->limit(4)->get('id', 'slug', 'name'),
-                'industries' =>  Industry::inRandomOrder()->limit(4)->get('id', 'slug', 'title'),
+                'categories' => Category::where('id', '!=', $data['sproduct']->cat_id)->inRandomOrder()->limit(2)->get(),
+                'brands' => Brand::where('id', '!=', $data['sproduct']->brand_id)->inRandomOrder()->where('status', 'active')->limit(20)->get(),
+                'solutions' => SolutionDetail::inRandomOrder()->limit(4)->get('id', 'slug', 'name'),
+                'industries' => Industry::inRandomOrder()->limit(4)->get('id', 'slug', 'title'),
             ];
             $data['brand_products'] = Course::where('brand_id', $data['sproduct']->brand_id)->where('id', '!=', $data['sproduct']->id)->inRandomOrder()->where('product_status', 'product')->limit(20)->get();
 
@@ -294,7 +257,6 @@ class HomeController extends Controller
             return view('frontend.pages.product.shop_page', $data);
         }
     } // end method
-
 
     /// Advance Search Options
     public function globalSearch(Request $request)

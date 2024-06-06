@@ -14,7 +14,8 @@
 
 <section>
     <div class="">
-        <button class="feedback_upper_modal d-lg-block d-sm-none" data-bs-toggle="modal" data-bs-target="#rfqModal">Course Register
+        <button class="feedback_upper_modal d-lg-block d-sm-none" data-bs-toggle="modal" data-bs-target="#rfqModal">Course
+            Register
             <i class="fa-solid fa-question" style="font-size: 14px;"></i>
         </button>
     </div>
@@ -30,32 +31,46 @@
                 </div>
                 <div class="modal-body">
                     <div class="container">
-                        <form action="{{ route('course.registration.store') }}" enctype="multipart/form-data" method="POST">
+                        <form action="{{ route('course.registration.store') }}" enctype="multipart/form-data"
+                            method="POST">
                             @csrf
-                           
+
                             <div class="row mb-4">
 
-                                <div class="col-lg-4 mb-3 pe-0">
-                                    <input type="text" class="form-control rounded-0" required
-                                        name="name" placeholder="Your Name *" />
+                                @php
+                                    $courses = App\Models\Course::latest()->get();
+                                @endphp
+
+                                <div class="col-lg-3 mb-3 pe-0">
+                                    <select class="form-select form-select-sm rounded-0 form-select-solid" required name="course_id">
+                                        <option value="" disabled selected>Select Course</option>
+                                        @foreach ($courses as $course)
+                                            <option value="{{ $course->id }}">{{ $course->name }}</option>
+                                        @endforeach
+                                    </select>
                                 </div>
 
-                                <div class="col-lg-4 mb-3 pe-0">
+                                <div class="col-lg-3 mb-3 pe-0">
+                                    <input type="text" class="form-control rounded-0" required name="name"
+                                        placeholder="Your Name *" />
+                                </div>
+
+                                <div class="col-lg-3 mb-3 pe-0">
                                     <input type="email" required class="form-control rounded-0" id="email"
                                         name="email" placeholder="Your Email *" />
                                     <span class="text-danger text-start p-0 m-0 email_validation"
                                         style="display: none">Please input valid email</span>
                                 </div>
 
-                                <div class="col-lg-4 mb-3 pe-0">
-                                    <input type="number" class="form-control rounded-0" id="phone"
-                                        name="phone" placeholder="Your Phone Number *" required />
+                                <div class="col-lg-3 mb-3 pe-0">
+                                    <input type="number" class="form-control rounded-0" id="phone" name="phone"
+                                        placeholder="Your Phone Number *" required />
                                 </div>
 
                                 <div class="col-lg-12 mb-3">
                                     <textarea class="form-control rounded-0" id="message" name="message" rows="1" placeholder="Your Message"></textarea>
                                 </div>
-                                
+
                                 <div class="col-lg-12 mb-3">
                                     <textarea class="form-control rounded-0" id="message" name="address" rows="2" placeholder="Your Address"></textarea>
                                 </div>
