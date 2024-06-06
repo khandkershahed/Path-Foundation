@@ -135,177 +135,52 @@
                                             </h5>
                                             <div>
                                                 <div class="accordion" id="accordionExample">
-                                                    <div class="accordion-item border-0 shadow-sm">
-                                                        <h2 class="accordion-header mb-1">
-                                                            <button class="accordion-button border-0 shadow-sm"
-                                                                type="button" data-bs-toggle="collapse"
-                                                                data-bs-target="#collapseOne" aria-expanded="true"
-                                                                aria-controls="collapseOne">
-                                                                <i class="fa-solid fa-arrow-right-long pe-3"></i>
-                                                                ১ম মডিউলে পরিচিত হবো ওয়েব ডেভেলপমেন্ট ও HTML
-                                                                এর সাথে
-                                                            </button>
-                                                        </h2>
-                                                        <div id="collapseOne" class="accordion-collapse collapse show"
-                                                            data-bs-parent="#accordionExample">
-                                                            <div class="accordion-body">
-                                                                <div class="mb-3 text-center">
-                                                                    <small class="bg-warning-light p-2 rounded-2 badges"><i
-                                                                            class="fa-solid fa-tv primary-text-color"></i>
-                                                                        12 recorded video</small>
-                                                                    <small class="bg-warning-light p-2 rounded-2 badges"><i
-                                                                            class="fa-solid fa-tv primary-text-color"></i>
-                                                                        2 live class</small>
-                                                                    <small class="bg-warning-light p-2 rounded-2 badges"><i
-                                                                            class="fa-solid fa-tv primary-text-color"></i>
-                                                                        1 Quiz</small>
+
+                                                    @forelse ($courseCurriculams as $courseCurriculam)
+                                                        <div class="accordion-item border-0 shadow-sm">
+                                                            <h2 class="accordion-header mb-1">
+
+                                                                <button class="accordion-button border-0 shadow-sm"
+                                                                    type="button" data-bs-toggle="collapse"
+                                                                    data-bs-target="#collapseOne{{ $courseCurriculam->id }}"
+                                                                    aria-expanded="true" aria-controls="collapseOne">
+                                                                    <i class="fa-solid fa-arrow-right-long pe-3"></i>
+                                                                    {{ $courseCurriculam->title }}
+                                                                </button>
+
+                                                            </h2>
+                                                            <div id="collapseOne{{ $courseCurriculam->id }}"
+                                                                class="accordion-collapse collapse"
+                                                                data-bs-parent="#accordionExample">
+                                                                <div class="accordion-body">
+                                                                    <div class="mb-3 text-center">
+
+                                                                        {{-- <small
+                                                                            class="bg-warning-light p-2 rounded-2 badges"><i
+                                                                                class="fa-solid fa-tv primary-text-color"></i>
+                                                                            12 recorded video</small> --}}
+
+                                                                        <small
+                                                                            class="bg-warning-light p-2 rounded-2 badges"><i
+                                                                                class="fa-solid fa-tv primary-text-color"></i>
+                                                                            {{ $courseCurriculam->class_number }} live
+                                                                            class</small>
+                                                                            
+                                                                        {{-- <small
+                                                                            class="bg-warning-light p-2 rounded-2 badges"><i
+                                                                                class="fa-solid fa-tv primary-text-color"></i>
+                                                                            1 Quiz</small> --}}
+                                                                    </div>
+                                                                    <p>
+                                                                        {!! $courseCurriculam->description !!}
+                                                                    </p>
                                                                 </div>
-                                                                <p>
-                                                                    আপনার বেসিক শেখাটা যেন মিস না হয় তাই
-                                                                    Python, Django শেখার জার্নিটা আমরা শুরু
-                                                                    করবো HTML ও ওয়েব ডেভেলপমেন্ট দিয়ে; শিখবো A
-                                                                    to Z সবকিছু। VS Code Setup for HTML | HTML
-                                                                    Structural Tags | Text Formatting |
-                                                                    Interactive Element Tags | Special Purpose
-                                                                    Tags | Advance web page structure | SEO
-                                                                    Meta Tags | HTTP-Equiv Meta | Open Graph
-                                                                    Meta | Twitter Card Meta | Mobile Device
-                                                                    Meta | Security Meta | Web Application
-                                                                    Meta | Authorship Meta | Cache-Control
-                                                                    Meta Tags | Manifest Configurations | Meta
-                                                                    tags for progressive web application
-                                                                </p>
                                                             </div>
                                                         </div>
-                                                    </div>
-                                                    <div class="accordion-item border-0 shadow-sm">
-                                                        <h2 class="accordion-header mb-1">
-                                                            <button class="accordion-button border-0 shadow-sm"
-                                                                type="button" data-bs-toggle="collapse"
-                                                                data-bs-target="#collapseOne1" aria-expanded="true"
-                                                                aria-controls="collapseOne1">
-                                                                <i class="fa-solid fa-arrow-right-long pe-3"></i>
-                                                                এবার শিখবেন CSS এর বেসিক টু এডভান্স সবকিছু!
-                                                            </button>
-                                                        </h2>
-                                                        <div id="collapseOne1" class="accordion-collapse collapse"
-                                                            data-bs-parent="#accordionExample">
-                                                            <div class="accordion-body">
-                                                                <div class="mb-3 text-center">
-                                                                    <small class="bg-warning-light p-2 rounded-2"><i
-                                                                            class="fa-solid fa-tv primary-text-color"></i>
-                                                                        12 recorded video</small>
-                                                                    <small class="bg-warning-light p-2 rounded-2"><i
-                                                                            class="fa-solid fa-tv primary-text-color"></i>
-                                                                        2 live class</small>
-                                                                    <small class="bg-warning-light p-2 rounded-2"><i
-                                                                            class="fa-solid fa-tv primary-text-color"></i>
-                                                                        1 Quiz</small>
-                                                                </div>
-                                                                <p>
-                                                                    আপনার বেসিক শেখাটা যেন মিস না হয় তাই
-                                                                    Python, Django শেখার জার্নিটা আমরা শুরু
-                                                                    করবো HTML ও ওয়েব ডেভেলপমেন্ট দিয়ে; শিখবো A
-                                                                    to Z সবকিছু। VS Code Setup for HTML | HTML
-                                                                    Structural Tags | Text Formatting |
-                                                                    Interactive Element Tags | Special Purpose
-                                                                    Tags | Advance web page structure | SEO
-                                                                    Meta Tags | HTTP-Equiv Meta | Open Graph
-                                                                    Meta | Twitter Card Meta | Mobile Device
-                                                                    Meta | Security Meta | Web Application
-                                                                    Meta | Authorship Meta | Cache-Control
-                                                                    Meta Tags | Manifest Configurations | Meta
-                                                                    tags for progressive web application
-                                                                </p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="accordion-item border-0 shadow-sm">
-                                                        <h2 class="accordion-header mb-1">
-                                                            <button class="accordion-button border-0 shadow-sm"
-                                                                type="button" data-bs-toggle="collapse"
-                                                                data-bs-target="#collapseOne2" aria-expanded="true"
-                                                                aria-controls="collapseOne2">
-                                                                <i class="fa-solid fa-arrow-right-long pe-3"></i>
-                                                                শেখার জার্নির এই ধাপে শিখবেন জাভাস্ক্রিপ্ট
-                                                                (JS)
-                                                            </button>
-                                                        </h2>
-                                                        <div id="collapseOne2" class="accordion-collapse collapse"
-                                                            data-bs-parent="#accordionExample">
-                                                            <div class="accordion-body">
-                                                                <div class="mb-3 text-center">
-                                                                    <small class="bg-warning-light p-2 rounded-2"><i
-                                                                            class="fa-solid fa-tv primary-text-color"></i>
-                                                                        12 recorded video</small>
-                                                                    <small class="bg-warning-light p-2 rounded-2"><i
-                                                                            class="fa-solid fa-tv primary-text-color"></i>
-                                                                        2 live class</small>
-                                                                    <small class="bg-warning-light p-2 rounded-2"><i
-                                                                            class="fa-solid fa-tv primary-text-color"></i>
-                                                                        1 Quiz</small>
-                                                                </div>
-                                                                <p>
-                                                                    আপনার বেসিক শেখাটা যেন মিস না হয় তাই
-                                                                    Python, Django শেখার জার্নিটা আমরা শুরু
-                                                                    করবো HTML ও ওয়েব ডেভেলপমেন্ট দিয়ে; শিখবো A
-                                                                    to Z সবকিছু। VS Code Setup for HTML | HTML
-                                                                    Structural Tags | Text Formatting |
-                                                                    Interactive Element Tags | Special Purpose
-                                                                    Tags | Advance web page structure | SEO
-                                                                    Meta Tags | HTTP-Equiv Meta | Open Graph
-                                                                    Meta | Twitter Card Meta | Mobile Device
-                                                                    Meta | Security Meta | Web Application
-                                                                    Meta | Authorship Meta | Cache-Control
-                                                                    Meta Tags | Manifest Configurations | Meta
-                                                                    tags for progressive web application
-                                                                </p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="accordion-item border-0 shadow-sm">
-                                                        <h2 class="accordion-header mb-1">
-                                                            <button class="accordion-button border-0 shadow-sm"
-                                                                type="button" data-bs-toggle="collapse"
-                                                                data-bs-target="#collapseOne3" aria-expanded="true"
-                                                                aria-controls="collapseOne3">
-                                                                <i class="fa-solid fa-arrow-right-long pe-3"></i>
-                                                                জাভাস্ক্রিপ্ট OOP শিখে শুরু করুন এবার পাইথন
-                                                                শেখার জার্নি!
-                                                            </button>
-                                                        </h2>
-                                                        <div id="collapseOne3" class="accordion-collapse collapse"
-                                                            data-bs-parent="#accordionExample">
-                                                            <div class="accordion-body">
-                                                                <div class="mb-3 text-center">
-                                                                    <small class="bg-warning-light p-2 rounded-2"><i
-                                                                            class="fa-solid fa-tv primary-text-color"></i>
-                                                                        12 recorded video</small>
-                                                                    <small class="bg-warning-light p-2 rounded-2"><i
-                                                                            class="fa-solid fa-tv primary-text-color"></i>
-                                                                        2 live class</small>
-                                                                    <small class="bg-warning-light p-2 rounded-2"><i
-                                                                            class="fa-solid fa-tv primary-text-color"></i>
-                                                                        1 Quiz</small>
-                                                                </div>
-                                                                <p>
-                                                                    আপনার বেসিক শেখাটা যেন মিস না হয় তাই
-                                                                    Python, Django শেখার জার্নিটা আমরা শুরু
-                                                                    করবো HTML ও ওয়েব ডেভেলপমেন্ট দিয়ে; শিখবো A
-                                                                    to Z সবকিছু। VS Code Setup for HTML | HTML
-                                                                    Structural Tags | Text Formatting |
-                                                                    Interactive Element Tags | Special Purpose
-                                                                    Tags | Advance web page structure | SEO
-                                                                    Meta Tags | HTTP-Equiv Meta | Open Graph
-                                                                    Meta | Twitter Card Meta | Mobile Device
-                                                                    Meta | Security Meta | Web Application
-                                                                    Meta | Authorship Meta | Cache-Control
-                                                                    Meta Tags | Manifest Configurations | Meta
-                                                                    tags for progressive web application
-                                                                </p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
+                                                    @empty
+                                                        <p>No Course Curriculam Avaiable</p>
+                                                    @endforelse
+
                                                 </div>
                                             </div>
                                         </div>
