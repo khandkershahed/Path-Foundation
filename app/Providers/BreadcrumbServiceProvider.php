@@ -17,7 +17,7 @@ class BreadcrumbServiceProvider extends ServiceProvider
     {
         // Define the directory where your models are located
         $modelsDirectory = app_path('Models');
-        
+
         // Scan the directory for subdirectories (e.g., 'Admin', 'HR', 'Sales')
         $directories = File::directories($modelsDirectory);
 
@@ -35,7 +35,9 @@ class BreadcrumbServiceProvider extends ServiceProvider
                     $namespace = 'App\Models\\' . $directoryName;
 
                     // Find the model instance using the segment value as the ID
-                    $modelInstance = $namespace::find($segment);
+                    if (!empty($segment)) {
+                        $modelInstance = $namespace::find($segment);
+                    }
 
                     // If a model instance is found, retrieve its name attribute
                     if ($modelInstance) {
