@@ -34,7 +34,7 @@
     <link href="{{ asset('admin/assets/css/style.bundle.css') }}" rel="stylesheet" type="text/css" />
     <!--end::Global Stylesheets Bundle-->
     @props(['title'])
-    <title>{{ $title ?? config('app.name', 'MD Boilarplate') }}</title>
+    <title>{{ $title ?? config('app.name', 'NGen IT Training') }}</title>
 </head>
 
 <body id="kt_body"

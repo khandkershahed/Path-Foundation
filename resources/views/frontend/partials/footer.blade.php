@@ -12,7 +12,7 @@
                     <!-- item -->
                     <div class="col-lg-6 col-md-6 col-sm-12 footer_item_wrapper">
                         <!-- title -->
-                        <h6><span style="border-bottom: 5px solid #0a1d59;">Lea</span>rn IT, Lead IT</h6>
+                        <h2 class="text-white"><span style="border-bottom: 5px solid #e5e2e0;color: #ae0a46;">Lea</span>rn IT, <span style="border-bottom: 5px solid #e5e2e0;color: #ae0a46;">Lea</span>d IT</h2>
                         <!-- text -->
                         <p class="footer_text pt-4">
                             NGenIT is the top choice for skill development, offering programs for students,
@@ -32,7 +32,7 @@
                         </form> --}}
                     </div>
                     <!-- item -->
-                    <div class="col-lg-2 col-md-2 col-6 footer_item_wrapper">
+                    <div class="col-lg-2 col-md-2 col-sm-12 footer_item_wrapper">
                         <!-- title -->
                         <h6 class="home_title_text" style="text-align: start;"><span
                                 style="border-bottom: 5px solid #0a1d59;">Abo</span>ut & Contact</h6>
@@ -66,7 +66,7 @@
                         </div>
                     </div>
                     <!-- item -->
-                    <div class="col-lg-2 col-md-2 col-6 footer_item_wrapper">
+                    <div class="col-lg-2 col-md-2 col-sm-12 footer_item_wrapper">
                         <!-- title -->
                         <h6 class="home_title_text" style="text-align: start;"><span
                                 style="border-bottom: 5px solid #0a1d59;">FAQ</span> & Policies</h6>
