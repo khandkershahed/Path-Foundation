@@ -994,6 +994,7 @@
     }
 
     .offcanvas {
+        width: 100% !important;
         z-index: 10000 !important;
     }
 
@@ -1054,7 +1055,7 @@
 
     .site-main-logo {
         height: 50px;
-        width: 85px;
+        width: 100%;
     }
 
     .popover__content {
@@ -1538,6 +1539,7 @@
         position: relative;
         top: 0rem;
         z-index: 9999;
+        left: -20px;
     }
 
     .our-team .title_name:before,

@@ -19,7 +19,7 @@
                             You can update your preferences or unsubscribe any time.
                         </p>
                         <!-- button -->
-                        <form class="p-0 pt-3 m-0" id="myform" action="{{ route('newsletter.store') }}"
+                        {{-- <form class="p-0 pt-3 m-0" id="myform" action="{{ route('newsletter.store') }}"
                             method="post" enctype="multipart/form-data">
                             @csrf
                             <div class="input-group w-75 footer_subscribe">
@@ -29,61 +29,60 @@
                                     <button class="newsletter-btns pt-0" type="submit"
                                         style="line-height: 37px;border-top-right-radius: 5px;border-bottom-right-radius: 5px;">Subscribe</button>
                                 </span>
-                        </form>
+                        </form> --}}
+                    </div>
+                    <!-- item -->
+                    <div class="col-lg-2 col-md-2 col-6 footer_item_wrapper">
+                        <!-- title -->
+                        <h6 class="home_title_text" style="text-align: start;"><span
+                                style="border-bottom: 5px solid #0a1d59;">Abo</span>ut & Contact</h6>
+                        <!-- nav list -->
+                        <div class="footer_nav_list pt-lg-4 pt-2">
+                            <ul class="footer_link_text">
+                                <li>
+                                    <a href="{{ route('about') }}">About Us</a>
+                                </li>
+                                <li>
+                                    <a href="{{ route('contact') }}">Contact Us</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- item -->
+                    <div class="col-lg-2 col-md-2 col-sm-12 footer_item_wrapper">
+                        <!-- title -->
+                        <h6 class="home_title_text" style="text-align: start;"><span
+                                style="border-bottom: 5px solid #0a1d59;">Tra</span>ining & Services</h6>
+                        <!-- nav list -->
+                        <div class="footer_nav_list pt-lg-4 pt-2">
+                            <ul class="footer_link_text">
+                                <li>
+                                    <a href="javascript:void(0)">Corporate Training</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)">Certification</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- item -->
+                    <div class="col-lg-2 col-md-2 col-6 footer_item_wrapper">
+                        <!-- title -->
+                        <h6 class="home_title_text" style="text-align: start;"><span
+                                style="border-bottom: 5px solid #0a1d59;">FAQ</span> & Policies</h6>
+                        <!-- nav list -->
+                        <div class="footer_nav_list pt-lg-4 pt-2">
+                            <ul class="footer_link_text">
+                                <li>
+                                    <a href="{{ route('faq') }}">FAQs</a>
+                                </li>
+                                <li>
+                                    <a href="{{ route('privacy.policy') }}">Course Policy</a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-                <!-- item -->
-                <div class="col-lg-2 col-md-2 col-6 footer_item_wrapper">
-                    <!-- title -->
-                    <h6 class="home_title_text" style="text-align: start;"><span
-                            style="border-bottom: 5px solid #0a1d59;">Abo</span>ut & Contact</h6>
-                    <!-- nav list -->
-                    <div class="footer_nav_list pt-lg-4 pt-2">
-                        <ul class="footer_link_text">
-                            <li>
-                                <a href="{{ route('about') }}">About Us</a>
-                            </li>
-                            <li>
-                                <a href="{{ route('contact') }}">Contact Us</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- item -->
-                <div class="col-lg-2 col-md-2 col-sm-12 footer_item_wrapper">
-                    <!-- title -->
-                    <h6 class="home_title_text" style="text-align: start;"><span
-                            style="border-bottom: 5px solid #0a1d59;">Tra</span>ining & Services</h6>
-                    <!-- nav list -->
-                    <div class="footer_nav_list pt-lg-4 pt-2">
-                        <ul class="footer_link_text">
-                            <li>
-                                <a href="javascript:void(0)">Corporate Training</a>
-                            </li>
-                            <li>
-                                <a href="javascript:void(0)">Certification</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- item -->
-                <div class="col-lg-2 col-md-2 col-6 footer_item_wrapper">
-                    <!-- title -->
-                    <h6 class="home_title_text" style="text-align: start;"><span
-                            style="border-bottom: 5px solid #0a1d59;">FAQ</span> & Policies</h6>
-                    <!-- nav list -->
-                    <div class="footer_nav_list pt-lg-4 pt-2">
-                        <ul class="footer_link_text">
-                            <li>
-                                <a href="{{ route('faq') }}">FAQs</a>
-                            </li>
-                            <li>
-                                <a href="{{ route('privacy.policy') }}">Course Policy</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
             </div>
         </div>
     </div>

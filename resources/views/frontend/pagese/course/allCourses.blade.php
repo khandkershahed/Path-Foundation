@@ -77,13 +77,7 @@
                 <h3 class="section-title">Popular Courses We Offer</h3>
                 <div class="divider"></div>
                 <p class="text-muted py-3 px-5">
-                    Promise Training and Consultancy offers short-term workshops and
-                    training seminars for various work streams including management,
-                    leadership, finance, HR and Oil &amp; Gas. Participants of our public
-                    training program will also have a chance to share their
-                    experiences with professionals from other organisations. This
-                    enables them to gain new perspectives on the common challenges
-                    they face at the workplace.
+                    NGenIT Training provides short workshops and seminars covering management, leadership, finance, HR, and Oil & Gas. Participants can connect with professionals from different organizations, gaining fresh insights into common workplace challenges.
                 </p>
             </div>
         </div>
@@ -121,7 +115,7 @@
                                             <div class="card-header p-0 bg-transparent">
 
                                                 <div>
-                                                    <img class="rounded-2 img-fluid"
+                                                    <img class="rounded-2 img-fluid course-images"
                                                         src="{{ asset(!empty($course->thumbnail_image) ? url('storage/course/' . $course->thumbnail_image) : url('images/no-shop-imge.png')) }}"
                                                         alt="">
                                                 </div>
@@ -165,10 +159,12 @@
                                                 </div>
                                             </div>
                                             <div class="card-body">
-                                                <h6>
-                                                    {{ $course->name }}
-                                                </h6>
-                                                <div class="pt-3">
+                                                <div class="course-title">
+                                                    <h6 class="mb-0">
+                                                        {{ $course->name }}
+                                                    </h6>
+                                                </div>
+                                                <div class="pt-2">
                                                     <a href="{{ url('course' . '/' . $course->id . '/' . $course->slug) }}"
                                                         class="btn btn-light border w-100">See Details
                                                         <i class="fa-solid fa-arrow-right ps-2" aria-hidden="true"></i></a>

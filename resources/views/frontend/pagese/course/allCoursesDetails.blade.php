@@ -11,7 +11,7 @@
     <section>
         <div class="container">
             <div class="row">
-                <div class="col-lg-12 px-0 sticky-top-menu">
+                <div class="col-lg-12 px-0 sticky-top-menu d-none">
                     <div class="card p-0 rounded-0 shadow-sm border-0 menu-card">
                         <div class="card-body p-0 rounded-0 py-3">
                             <ul class="ps-0 details-menus mb-0" style="list-style-type: none">
@@ -135,12 +135,11 @@
                                             </h5>
                                             <div>
                                                 <div class="accordion" id="accordionExample">
-
                                                     @forelse ($courseCurriculams as $courseCurriculam)
                                                         <div class="accordion-item border-0 shadow-sm">
                                                             <h2 class="accordion-header mb-1">
 
-                                                                <button class="accordion-button border-0 shadow-sm"
+                                                                <button class="accordion-button border-0 shadow-sm collapsed"
                                                                     type="button" data-bs-toggle="collapse"
                                                                     data-bs-target="#collapseOne{{ $courseCurriculam->id }}"
                                                                     aria-expanded="true" aria-controls="collapseOne">
@@ -478,43 +477,60 @@
                                                     <div class="card border-0 bg-light shadow-sm rounded-2">
                                                         <div class="card-header p-0 bg-transparent">
 
-
                                                             <div>
-                                                                <img class="rounded-2 img-fluid"
+                                                                <img class="rounded-2 img-fluid course-images"
                                                                     src="{{ asset(!empty($course->thumbnail_image) ? url('storage/course/' . $course->thumbnail_image) : url('images/no-shop-imge.png')) }}"
                                                                     alt="">
                                                             </div>
 
                                                             <div class="p-2 text-center">
 
-                                                                <small class="pe-1"><span
-                                                                        class="cource-badge rounded-2">ব্যাচ
-                                                                        ২</span></small>
+                                                                <small class="pe-3">
+                                                                    <span class="cource-badge rounded-2">
+                                                                        <i class="fa-solid fa-graduation-cap"></i>
+                                                                        Batch 2
+                                                                    </span>
+                                                                </small>
+                                                                <small class="pe-3">
+                                                                    <span class="cource-badge rounded-2">
+                                                                        {{-- <i class="fa-solid fa-chair pe-2" aria-hidden="true"></i> --}}
+                                                                        <i class="fa-solid fa-user"></i>
+                                                                        {{ $course->available_seats }}
+                                                                    </span>
+                                                                </small>
+                                                                @php
+                                                                    // Convert registration end date to Unix timestamp
+                                                                    $registrationEndTimestamp = strtotime(
+                                                                        $course->registration_end_date,
+                                                                    );
+                                                                    // Current time
+                                                                    $currentTime = time();
+                                                                    // Calculate remaining time in seconds
+                                                                    $remainingTime = $registrationEndTimestamp - $currentTime;
+                                                                    // Convert remaining time to days
+                                                                    $remainingDays = floor($remainingTime / (60 * 60 * 24));
+                                                                @endphp
 
-                                                                <small class="pe-1"><span
-                                                                        class="cource-badge rounded-2"><i
-                                                                            class="fa-solid fa-users pe-2"
-                                                                            aria-hidden="true"></i>
-                                                                        {{ $course->available_seats }}</span></small>
+                                                                <small class="pe-3">
+                                                                    <span class="course-badge rounded-2">
+                                                                        {{-- <i class="far fa-clock " aria-hidden="true"></i> --}}
+                                                                        <i class="fa-solid fa-clock"></i>
+                                                                        {{ $remainingDays }} Days
+                                                                    </span>
+                                                                </small>
 
-                                                                <small class="pe-1"><span
-                                                                        class="cource-badge rounded-2"><i
-                                                                            class="fa-regular fa-clock pe-2"
-                                                                            aria-hidden="true"></i>২৭
-                                                                        দিন
-                                                                        বাকি</span></small>
                                                             </div>
                                                         </div>
                                                         <div class="card-body">
-                                                            <h6>
-                                                                {{ $course->name }}
-                                                            </h6>
-                                                            <div class="pt-3">
+                                                            <div class="course-title">
+                                                                <h6 class="mb-0">
+                                                                    {{ $course->name }}
+                                                                </h6>
+                                                            </div>
+                                                            <div class="pt-2">
                                                                 <a href="{{ url('course' . '/' . $course->id . '/' . $course->slug) }}"
-                                                                    class="btn btn-light bg-white border w-100 bistatiro-btn">বিস্তারিত
-                                                                    দেখি
-                                                                    <i class="fa-solid fa-arrow-right ps-2"
-                                                                        aria-hidden="true"></i></a>
+                                                                    class="btn btn-light border w-100">See Details
+                                                                    <i class="fa-solid fa-arrow-right ps-2" aria-hidden="true"></i></a>
                                                             </div>
                                                         </div>
                                                     </div>

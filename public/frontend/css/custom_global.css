@@ -4431,6 +4431,18 @@ body::-webkit-scrollbar-corner {
     color: white;
 }
 
+.course-images {
+    width: 100%;
+    height: 180px;
+    object-fit: fill;
+}
+.course-title {
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
 @-webkit-keyframes sonar_button {
     from {
         width: 40px;
@@ -5091,7 +5103,7 @@ tr td:hover {
     line-height: 1;
     cursor: pointer;
     position: fixed;
-    bottom: 35%;
+    bottom: 50%;
     right: -109px;
     background: linear-gradient(
         45deg,
@@ -5806,7 +5818,7 @@ tr td:hover {
     position: fixed;
     width: 100%;
     height: 100vh;
-    background: #fff url("../images/preloader.gif") no-repeat center center;
+    background: hsl(208deg 61.22% 80.78%) url("https://i.pinimg.com/originals/e8/28/13/e82813ff553d60346f2895ee8f2175c7.gif") no-repeat center center;
     z-index: 9999;
     margin-top: -1.5rem;
 }
@@ -5817,7 +5829,7 @@ tr td:hover {
     position: fixed;
     z-index: 9000;
     overflow: auto;
-    background: #e6e6e6;
+    background: hsl(208deg 61.22% 80.78%);
     text-align: center;
     padding: 10px 0;
     transition: all 0.15s linear;
