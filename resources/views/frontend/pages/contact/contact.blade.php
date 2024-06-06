@@ -4,8 +4,7 @@
     <section class="common_product_header" style="background:url('{{ asset('frontend/images/Contact.jpg') }}');">
         <div class="container ">
             <h1>Contact Us</h1>
-            <p class="text-center text-white">Browse and Explore exclusive Refurbished products from NGen IT. <br> We offer
-                quality assurance for products, software and services.</p>
+            <p class="text-center text-white">Call or contact us for any help!</p>
         </div>
     </section>
     <!----------End--------->
@@ -17,22 +16,18 @@
                 <div class="col-lg-5 col-sm-12">
                     <div class="thing_together_wrapper_contactpage">
                         <h4>
-                            <span class="why_Choose_lineTop">L</span>et’s do big things together.
+                            <span class="why_Choose_lineTop">F</span>eel Free To Contact Us.
                         </h4>
-                        <p>Get assistance with tracking an order, requesting a quote, contacting your account representative
-                            and more by phone or over chat.</p>
-                        <h5 class="text-black">NGen IT Global Headquarters</h5>
+                        <h5 class="text-black">NGen IT Training Institute</h5>
                         <p>{{ $setting->address ?? '' }}</p>
                         <p>
-                            Whatsapp Number: <span class="main_color">{{ $setting->whatsapp_number ?? '' }}</span> <br>
-                            Information and sales: <span class="main_color">
-                                <a href="mailto:{{ $setting->sales_email ?? '' }}">{{ $setting->sales_email ?? '' }}</a>
-                            </span> <br>
-                            Support Email: <span class="main_color">
-                                <a href="mailto:{{ $setting->support_email ?? '' }}">{{ $setting->support_email ?? '' }}</a>
-                            </span> <br>
-                            Returns: <span class="main_color">
-                                <a href="tel:+{{ $setting->phone_one ?? '' }}">{{ $setting->phone_one ?? '' }}</a>
+                            Address: <span class="main_color">
+                                36-37, Probal Housing, Ring Road, Mohammadpur, Dhaka-1207, Bangladesh
+                            </span>
+                            <br>
+                            Phone Number: <span class="main_color">01958025050</span> <br>
+                            Email: <span class="main_color">
+                                <a href="mailto:info@ngenitltd.com">info@ngenitltd.com</a>
                             </span>
                         </p>
                         <!-- <h5><i class="fa-solid fa-phone"></i>NgenIT</h5> -->

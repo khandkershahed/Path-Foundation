@@ -15,8 +15,8 @@
                         <h6><span style="border-bottom: 5px solid #0a1d59;">Lea</span>rn IT, Lead IT</h6>
                         <!-- text -->
                         <p class="footer_text pt-4">
-                            Sign up to receive the IT content that matters most to you.
-                            You can update your preferences or unsubscribe any time.
+                            NGenIT is the top choice for skill development, offering programs for students,
+                            professionals, and freelancers, guaranteeing success domestically and internationally.
                         </p>
                         <!-- button -->
                         {{-- <form class="p-0 pt-3 m-0" id="myform" action="{{ route('newsletter.store') }}"
