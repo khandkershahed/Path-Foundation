@@ -92,7 +92,7 @@
                             <div class="form-group">
                                 <label for="" class="mb-2">Description</label>
                                 <textarea name="description" id="" placeholder="Description" cols="2" rows="2"
-                                    class="form-control">{{ $courseCurriculam->description }}</textarea>
+                                    class="form-control editor">{{ $courseCurriculam->description }}</textarea>
                             </div>
                         </div>
 
