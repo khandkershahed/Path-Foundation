@@ -401,8 +401,6 @@
                   {{-- Site Content  --}}
                   <div data-kt-menu-trigger="click"
                       class="menu-item menu-accordion  {{ Route::is('admin.contacts.index', 'admin.newsletters.index') ? 'here show' : '' }}">
-<<<<<<< HEAD
-=======
                       <span class="menu-link">
                           <span class="menu-icon">
                               <!--begin::Svg Icon | path: icons/duotune/ecommerce/ecm002.svg-->
@@ -496,7 +494,6 @@
 
                   <div data-kt-menu-trigger="click"
                       class="menu-item menu-accordion  {{ Route::is('admin.contacts.index', 'admin.newsletters.index') ? 'here show' : '' }}">
->>>>>>> 3904b4c4ffee3787409dd88f2358e40294013869
                       <span class="menu-link">
                           <span class="menu-icon">
                               <!--begin::Svg Icon | path: icons/duotune/ecommerce/ecm002.svg-->
