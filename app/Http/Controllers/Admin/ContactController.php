@@ -64,7 +64,9 @@ class ContactController extends Controller
 
         if ($validator->fails()) {
             foreach ($validator->messages()->all() as $message) {
+
                 // error($message, 'Failed', ['timeOut' => 3000]);
+
             }
             return redirect()->back()->withInput();
         }
@@ -95,7 +97,7 @@ class ContactController extends Controller
         ]);
 
         // success('Thank You. We have received your message. We will contact with you very soon.');
-        return redirect()->back();
+        return redirect()->back()->with('success', 'Thank You. We have received your message. We will contact with you very soon');
     }
 
     /**
