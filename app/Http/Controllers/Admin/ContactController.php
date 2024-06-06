@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Contact;
 use Illuminate\Http\Request;
 use App\Rules\Recaptcha;
+use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Validator;
 
 class ContactController extends Controller
@@ -64,6 +65,8 @@ class ContactController extends Controller
 
         if ($validator->fails()) {
             foreach ($validator->messages()->all() as $message) {
+                Session::flash('error',$message);
+                // toaster()->error($message, 'Failed', ['timeOut' => 3000]);
                 // error($message, 'Failed', ['timeOut' => 3000]);
             }
             return redirect()->back()->withInput();

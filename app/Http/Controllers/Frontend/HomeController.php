@@ -2,30 +2,31 @@
 
 namespace App\Http\Controllers\Frontend;
 
-use App\Http\Controllers\Controller;
-use App\Models\AboutUs;
+use App\Models\Faq;
+use App\Models\Row;
 use App\Models\Blog;
 use App\Models\Brand;
-use App\Models\BrandPage;
-use App\Models\Category;
-use App\Models\ClientStory;
 use App\Models\Course;
-use App\Models\CourseCurriculum;
-use App\Models\CourseQuery;
-use App\Models\DocumentPdf;
+use App\Models\AboutUs;
 use App\Models\Feature;
+use App\Models\Setting;
+use App\Models\Category;
 use App\Models\Homepage;
 use App\Models\Industry;
+use App\Models\BrandPage;
 use App\Models\LearnMore;
 use App\Models\NewsTrend;
-use App\Models\Row;
-use App\Models\Setting;
-use App\Models\SolutionDetail;
-use App\Models\SubCategory;
-use App\Models\SubSubCategory;
 use App\Models\TechGlossy;
+use App\Models\ClientStory;
+use App\Models\CourseQuery;
+use App\Models\DocumentPdf;
+use App\Models\SubCategory;
 use App\Models\WhatWeDoPage;
 use Illuminate\Http\Request;
+use App\Models\SolutionDetail;
+use App\Models\SubSubCategory;
+use App\Models\CourseCurriculum;
+use App\Http\Controllers\Controller;
 
 class HomeController extends Controller
 {
