@@ -21,6 +21,8 @@ use App\Http\Controllers\Admin\CourseContentController;
 use App\Http\Controllers\Admin\CourseController;
 use App\Http\Controllers\Admin\CourseCurriculamController;
 use App\Http\Controllers\Admin\CourseManagentController;
+use App\Http\Controllers\Admin\CourseOutlineController;
+use App\Http\Controllers\Admin\CourseProjectController;
 use App\Http\Controllers\Admin\CourseQueryController;
 use App\Http\Controllers\Admin\DynamicCssController;
 use App\Http\Controllers\Admin\EmailSettingController;
@@ -74,7 +76,7 @@ Route::middleware('guest:admin')->prefix('admin')->name('admin.')->group(functio
 });
 
 // Route::middleware(['localeSessionRedirect', 'localizationRedirect', 'localeViewPath', 'auth:admin'])->prefix(LaravelLocalization::setLocale() . '/admin')->name('admin.')->group(function () {
-    
+
 Route::middleware(['auth:admin'])->prefix('admin')->name('admin.')->group(function () {
     Route::get('verify-email', EmailVerificationPromptController::class)
         ->name('verification.notice');
@@ -143,6 +145,8 @@ Route::middleware(['auth:admin'])->prefix('admin')->name('admin.')->group(functi
             'course_query' => CourseQueryController::class,
 
             'course_management' => CourseManagentController::class,
+            'course_project' => CourseProjectController::class,
+            'course_outline' => CourseOutlineController::class,
 
         ],
     );

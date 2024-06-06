@@ -342,6 +342,24 @@
                           </div>
 
                           <div class="menu-item">
+                              <a class="menu-link" href="{{ route('admin.course_project.index') }}">
+                                  <span class="menu-bullet">
+                                      <span class="bullet bullet-dot"></span>
+                                  </span>
+                                  <span class="menu-title">Course Project</span>
+                              </a>
+                          </div>
+
+                          <div class="menu-item">
+                              <a class="menu-link" href="{{ route('admin.course_outline.index') }}">
+                                  <span class="menu-bullet">
+                                      <span class="bullet bullet-dot"></span>
+                                  </span>
+                                  <span class="menu-title">Course Outline</span>
+                              </a>
+                          </div>
+
+                          <div class="menu-item">
                               <a class="menu-link" href="{{ route('admin.course_content.index') }}">
                                   <span class="menu-bullet">
                                       <span class="bullet bullet-dot"></span>
@@ -360,13 +378,13 @@
                           </div>
 
                           <div class="menu-item">
-                            <a class="menu-link" href="{{ route('admin.course_management.index') }}">
-                                <span class="menu-bullet">
-                                    <span class="bullet bullet-dot"></span>
-                                </span>
-                                <span class="menu-title">Course Management</span>
-                            </a>
-                        </div>
+                              <a class="menu-link" href="{{ route('admin.course_management.index') }}">
+                                  <span class="menu-bullet">
+                                      <span class="bullet bullet-dot"></span>
+                                  </span>
+                                  <span class="menu-title">Course Management</span>
+                              </a>
+                          </div>
 
                           <div class="menu-item">
                               <a class="menu-link" href="{{ route('admin.coupon.index') }}">

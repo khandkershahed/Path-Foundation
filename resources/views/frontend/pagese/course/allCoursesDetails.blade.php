@@ -53,7 +53,7 @@
                                             Turn Your Passion into an Artistic Profession
                                         </h6>
                                         <h2 class="fw-bold text-lg-start text-center">
-                                            Professional Graphic Design
+                                            {{ $coursedetail->name }}
                                         </h2>
                                         <div class="row py-3">
                                             <div class="col-md-4">
@@ -61,7 +61,8 @@
                                                     <div class="card-body">
                                                         <div class="text-center">
                                                             <p class="mb-0">Duration</p>
-                                                            <h3 class="fw-bold pt-2">6 Month</h3>
+                                                            <h3 class="fw-bold pt-2">{{ $coursedetail->course_duration }}
+                                                            </h3>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -71,7 +72,7 @@
                                                     <div class="card-body">
                                                         <div class="text-center">
                                                             <p class="mb-0">Lectures</p>
-                                                            <h3 class="fw-bold pt-2">48</h3>
+                                                            <h3 class="fw-bold pt-2">{{ $coursedetail->lecture }}</h3>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -81,27 +82,27 @@
                                                     <div class="card-body">
                                                         <div class="text-center">
                                                             <p class="mb-0">Projects</p>
-                                                            <h3 class="fw-bold pt-2">30+</h3>
+                                                            <h3 class="fw-bold pt-2">{{ $coursedetail->project }}</h3>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <p class="text-justify">
-                                            Considering the growing demand for visual content,
-                                            marketers are promoting their products through
-                                            graphical ideas nowadays. The increasing need for
-                                            graphic designers has unlocked many opportunities for
-                                            the people who prefer working independently. A study
-                                            shows, all the companies prioritize their visual
-                                            acceptance, even a small company spends up to 500
-                                            dollars to create a perfect logo. If you are
-                                            passionate about making designs, this updated Graphic
-                                            Design course is for you.
-                                        </p>
-                                        <p class="text-success text-lg-start text-center">
-                                            18,000 Student
-                                        </p>
+
+                                        @if (!empty($coursedetail->short_descp))
+                                            <p class="text-justify">
+                                                {!! $coursedetail->short_descp !!}
+                                            </p>
+                                        @endif
+
+                                        @if (!empty($coursedetail->total_student))
+                                            <p class="text-success text-lg-start text-center">
+                                                {{ $coursedetail->total_student }} Students
+                                            </p>
+                                        @endif
+
+
+
                                         <div class="d-flex mb-lg-0 mb-4">
                                             <a href="" class="primary-btn-one me-3">Admission</a>
                                             <a href="" class="primary-btn-one">Course Curriculum</a>
@@ -110,29 +111,22 @@
                                 </div>
                                 <div class="col-lg-7">
                                     <img class="img-fluid rounded-5"
-                                        src="https://www.creativeitinstitute.com/images/course/course_1665409737.jpg"
+                                        src="{{ !empty($coursedetail->thumbnail_image) ? url('storage/course/' . $coursedetail->thumbnail_image) : 'https://ui-avatars.com/api/?name=' . urlencode($coursedetail->name) }}"
                                         alt="" />
                                 </div>
                                 <div class="col-lg-8 py-5">
-                                    <div class="">
-                                        <h5 class="primary-text-color fw-bold">
-                                            Course Overview
-                                        </h5>
-                                        <p class="pt-3" style="text-align: justify">
-                                            Our updated curriculum, along with the project-based
-                                            work, prepares you to be a Professional Graphic
-                                            Designer. The course module covers a wide range of
-                                            topics, through which you learn how to use digital
-                                            tools to create unique designs. Using Adobe Photoshop
-                                            or Adobe Illustrator, you will be able to design a
-                                            variety of things including banners, t-shirts,
-                                            products, etc during the course. The lab facilities
-                                            that we provide make you competent to perform better
-                                            in the global marketplace. So, if you are interested
-                                            to explore the field of innovative designs, enroll in
-                                            this course now.
-                                        </p>
-                                    </div>
+
+                                    @if (!empty($coursedetail->overview))
+                                        <div class="">
+                                            <h5 class="primary-text-color fw-bold">
+                                                Course Overview
+                                            </h5>
+                                            <p class="pt-3" style="text-align: justify">
+                                                {!! $coursedetail->overview !!}
+                                            </p>
+                                        </div>
+                                    @endif
+
                                     <div>
                                         <!-- Course Curriculum -->
                                         <div id="curriculum" class="py-3 extra-space">
@@ -141,177 +135,52 @@
                                             </h5>
                                             <div>
                                                 <div class="accordion" id="accordionExample">
-                                                    <div class="accordion-item border-0 shadow-sm">
-                                                        <h2 class="accordion-header mb-1">
-                                                            <button class="accordion-button border-0 shadow-sm"
-                                                                type="button" data-bs-toggle="collapse"
-                                                                data-bs-target="#collapseOne" aria-expanded="true"
-                                                                aria-controls="collapseOne">
-                                                                <i class="fa-solid fa-arrow-right-long pe-3"></i>
-                                                                ১ম মডিউলে পরিচিত হবো ওয়েব ডেভেলপমেন্ট ও HTML
-                                                                এর সাথে
-                                                            </button>
-                                                        </h2>
-                                                        <div id="collapseOne" class="accordion-collapse collapse show"
-                                                            data-bs-parent="#accordionExample">
-                                                            <div class="accordion-body">
-                                                                <div class="mb-3 text-center">
-                                                                    <small class="bg-warning-light p-2 rounded-2 badges"><i
-                                                                            class="fa-solid fa-tv primary-text-color"></i>
-                                                                        12 recorded video</small>
-                                                                    <small class="bg-warning-light p-2 rounded-2 badges"><i
-                                                                            class="fa-solid fa-tv primary-text-color"></i>
-                                                                        2 live class</small>
-                                                                    <small class="bg-warning-light p-2 rounded-2 badges"><i
-                                                                            class="fa-solid fa-tv primary-text-color"></i>
-                                                                        1 Quiz</small>
+
+                                                    @forelse ($courseCurriculams as $courseCurriculam)
+                                                        <div class="accordion-item border-0 shadow-sm">
+                                                            <h2 class="accordion-header mb-1">
+
+                                                                <button class="accordion-button border-0 shadow-sm"
+                                                                    type="button" data-bs-toggle="collapse"
+                                                                    data-bs-target="#collapseOne{{ $courseCurriculam->id }}"
+                                                                    aria-expanded="true" aria-controls="collapseOne">
+                                                                    <i class="fa-solid fa-arrow-right-long pe-3"></i>
+                                                                    {{ $courseCurriculam->title }}
+                                                                </button>
+
+                                                            </h2>
+                                                            <div id="collapseOne{{ $courseCurriculam->id }}"
+                                                                class="accordion-collapse collapse"
+                                                                data-bs-parent="#accordionExample">
+                                                                <div class="accordion-body">
+                                                                    <div class="mb-3 text-center">
+
+                                                                        {{-- <small
+                                                                            class="bg-warning-light p-2 rounded-2 badges"><i
+                                                                                class="fa-solid fa-tv primary-text-color"></i>
+                                                                            12 recorded video</small> --}}
+
+                                                                        <small
+                                                                            class="bg-warning-light p-2 rounded-2 badges"><i
+                                                                                class="fa-solid fa-tv primary-text-color"></i>
+                                                                            {{ $courseCurriculam->class_number }} live
+                                                                            class</small>
+
+                                                                        {{-- <small
+                                                                            class="bg-warning-light p-2 rounded-2 badges"><i
+                                                                                class="fa-solid fa-tv primary-text-color"></i>
+                                                                            1 Quiz</small> --}}
+                                                                    </div>
+                                                                    <p>
+                                                                        {!! $courseCurriculam->description !!}
+                                                                    </p>
                                                                 </div>
-                                                                <p>
-                                                                    আপনার বেসিক শেখাটা যেন মিস না হয় তাই
-                                                                    Python, Django শেখার জার্নিটা আমরা শুরু
-                                                                    করবো HTML ও ওয়েব ডেভেলপমেন্ট দিয়ে; শিখবো A
-                                                                    to Z সবকিছু। VS Code Setup for HTML | HTML
-                                                                    Structural Tags | Text Formatting |
-                                                                    Interactive Element Tags | Special Purpose
-                                                                    Tags | Advance web page structure | SEO
-                                                                    Meta Tags | HTTP-Equiv Meta | Open Graph
-                                                                    Meta | Twitter Card Meta | Mobile Device
-                                                                    Meta | Security Meta | Web Application
-                                                                    Meta | Authorship Meta | Cache-Control
-                                                                    Meta Tags | Manifest Configurations | Meta
-                                                                    tags for progressive web application
-                                                                </p>
                                                             </div>
                                                         </div>
-                                                    </div>
-                                                    <div class="accordion-item border-0 shadow-sm">
-                                                        <h2 class="accordion-header mb-1">
-                                                            <button class="accordion-button border-0 shadow-sm"
-                                                                type="button" data-bs-toggle="collapse"
-                                                                data-bs-target="#collapseOne1" aria-expanded="true"
-                                                                aria-controls="collapseOne1">
-                                                                <i class="fa-solid fa-arrow-right-long pe-3"></i>
-                                                                এবার শিখবেন CSS এর বেসিক টু এডভান্স সবকিছু!
-                                                            </button>
-                                                        </h2>
-                                                        <div id="collapseOne1" class="accordion-collapse collapse"
-                                                            data-bs-parent="#accordionExample">
-                                                            <div class="accordion-body">
-                                                                <div class="mb-3 text-center">
-                                                                    <small class="bg-warning-light p-2 rounded-2"><i
-                                                                            class="fa-solid fa-tv primary-text-color"></i>
-                                                                        12 recorded video</small>
-                                                                    <small class="bg-warning-light p-2 rounded-2"><i
-                                                                            class="fa-solid fa-tv primary-text-color"></i>
-                                                                        2 live class</small>
-                                                                    <small class="bg-warning-light p-2 rounded-2"><i
-                                                                            class="fa-solid fa-tv primary-text-color"></i>
-                                                                        1 Quiz</small>
-                                                                </div>
-                                                                <p>
-                                                                    আপনার বেসিক শেখাটা যেন মিস না হয় তাই
-                                                                    Python, Django শেখার জার্নিটা আমরা শুরু
-                                                                    করবো HTML ও ওয়েব ডেভেলপমেন্ট দিয়ে; শিখবো A
-                                                                    to Z সবকিছু। VS Code Setup for HTML | HTML
-                                                                    Structural Tags | Text Formatting |
-                                                                    Interactive Element Tags | Special Purpose
-                                                                    Tags | Advance web page structure | SEO
-                                                                    Meta Tags | HTTP-Equiv Meta | Open Graph
-                                                                    Meta | Twitter Card Meta | Mobile Device
-                                                                    Meta | Security Meta | Web Application
-                                                                    Meta | Authorship Meta | Cache-Control
-                                                                    Meta Tags | Manifest Configurations | Meta
-                                                                    tags for progressive web application
-                                                                </p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="accordion-item border-0 shadow-sm">
-                                                        <h2 class="accordion-header mb-1">
-                                                            <button class="accordion-button border-0 shadow-sm"
-                                                                type="button" data-bs-toggle="collapse"
-                                                                data-bs-target="#collapseOne2" aria-expanded="true"
-                                                                aria-controls="collapseOne2">
-                                                                <i class="fa-solid fa-arrow-right-long pe-3"></i>
-                                                                শেখার জার্নির এই ধাপে শিখবেন জাভাস্ক্রিপ্ট
-                                                                (JS)
-                                                            </button>
-                                                        </h2>
-                                                        <div id="collapseOne2" class="accordion-collapse collapse"
-                                                            data-bs-parent="#accordionExample">
-                                                            <div class="accordion-body">
-                                                                <div class="mb-3 text-center">
-                                                                    <small class="bg-warning-light p-2 rounded-2"><i
-                                                                            class="fa-solid fa-tv primary-text-color"></i>
-                                                                        12 recorded video</small>
-                                                                    <small class="bg-warning-light p-2 rounded-2"><i
-                                                                            class="fa-solid fa-tv primary-text-color"></i>
-                                                                        2 live class</small>
-                                                                    <small class="bg-warning-light p-2 rounded-2"><i
-                                                                            class="fa-solid fa-tv primary-text-color"></i>
-                                                                        1 Quiz</small>
-                                                                </div>
-                                                                <p>
-                                                                    আপনার বেসিক শেখাটা যেন মিস না হয় তাই
-                                                                    Python, Django শেখার জার্নিটা আমরা শুরু
-                                                                    করবো HTML ও ওয়েব ডেভেলপমেন্ট দিয়ে; শিখবো A
-                                                                    to Z সবকিছু। VS Code Setup for HTML | HTML
-                                                                    Structural Tags | Text Formatting |
-                                                                    Interactive Element Tags | Special Purpose
-                                                                    Tags | Advance web page structure | SEO
-                                                                    Meta Tags | HTTP-Equiv Meta | Open Graph
-                                                                    Meta | Twitter Card Meta | Mobile Device
-                                                                    Meta | Security Meta | Web Application
-                                                                    Meta | Authorship Meta | Cache-Control
-                                                                    Meta Tags | Manifest Configurations | Meta
-                                                                    tags for progressive web application
-                                                                </p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="accordion-item border-0 shadow-sm">
-                                                        <h2 class="accordion-header mb-1">
-                                                            <button class="accordion-button border-0 shadow-sm"
-                                                                type="button" data-bs-toggle="collapse"
-                                                                data-bs-target="#collapseOne3" aria-expanded="true"
-                                                                aria-controls="collapseOne3">
-                                                                <i class="fa-solid fa-arrow-right-long pe-3"></i>
-                                                                জাভাস্ক্রিপ্ট OOP শিখে শুরু করুন এবার পাইথন
-                                                                শেখার জার্নি!
-                                                            </button>
-                                                        </h2>
-                                                        <div id="collapseOne3" class="accordion-collapse collapse"
-                                                            data-bs-parent="#accordionExample">
-                                                            <div class="accordion-body">
-                                                                <div class="mb-3 text-center">
-                                                                    <small class="bg-warning-light p-2 rounded-2"><i
-                                                                            class="fa-solid fa-tv primary-text-color"></i>
-                                                                        12 recorded video</small>
-                                                                    <small class="bg-warning-light p-2 rounded-2"><i
-                                                                            class="fa-solid fa-tv primary-text-color"></i>
-                                                                        2 live class</small>
-                                                                    <small class="bg-warning-light p-2 rounded-2"><i
-                                                                            class="fa-solid fa-tv primary-text-color"></i>
-                                                                        1 Quiz</small>
-                                                                </div>
-                                                                <p>
-                                                                    আপনার বেসিক শেখাটা যেন মিস না হয় তাই
-                                                                    Python, Django শেখার জার্নিটা আমরা শুরু
-                                                                    করবো HTML ও ওয়েব ডেভেলপমেন্ট দিয়ে; শিখবো A
-                                                                    to Z সবকিছু। VS Code Setup for HTML | HTML
-                                                                    Structural Tags | Text Formatting |
-                                                                    Interactive Element Tags | Special Purpose
-                                                                    Tags | Advance web page structure | SEO
-                                                                    Meta Tags | HTTP-Equiv Meta | Open Graph
-                                                                    Meta | Twitter Card Meta | Mobile Device
-                                                                    Meta | Security Meta | Web Application
-                                                                    Meta | Authorship Meta | Cache-Control
-                                                                    Meta Tags | Manifest Configurations | Meta
-                                                                    tags for progressive web application
-                                                                </p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
+                                                    @empty
+                                                        <p>No Course Curriculam Avaiable</p>
+                                                    @endforelse
+
                                                 </div>
                                             </div>
                                         </div>
@@ -578,14 +447,14 @@
                                             <div class="card join_offline">
                                                 <div class="card-body">
                                                     <h5>Course Fee Offline</h5>
-                                                    <h3 class="fw-bold">BDT 50,000</h3>
+                                                    <h3 class="fw-bold">BDT {{ number_format($coursedetail->price, 2) }}</h3>
                                                     <a href="" class="primary-btn-one">Enroll Now</a>
                                                 </div>
                                             </div>
                                             <div class="card join_offline">
                                                 <div class="card-body">
                                                     <h5>Course Fee Online</h5>
-                                                    <h3 class="fw-bold">BDT 20,000</h3>
+                                                    <h3 class="fw-bold">BDT {{ number_format($coursedetail->online_price, 2) }}</h3>
                                                     <a href="" class="primary-btn-one">Enroll Now</a>
                                                 </div>
                                             </div>
@@ -726,4 +595,3 @@
         </script>
     @endpush
 @endsection
-

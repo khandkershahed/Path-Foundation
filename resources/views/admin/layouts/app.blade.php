@@ -154,6 +154,23 @@
     <!--end::Page Custom Javascript-->
     <!--end::Javascript-->
 
+    <script src="https://cdn.ckeditor.com/ckeditor5/41.4.2/classic/ckeditor.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Initialize CKEditor for each textarea with the class 'editor'
+            document.querySelectorAll('.editor').forEach(function(textarea) {
+                ClassicEditor
+                    .create(textarea)
+                    .then(editor => {
+                        console.log("CKEditor initialized successfully:", editor);
+                    })
+                    .catch(error => {
+                        console.error("CKEditor initialization error:", error);
+                    });
+            });
+        });
+    </script>
+
 </body>
 
 </html>

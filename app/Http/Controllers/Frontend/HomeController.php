@@ -36,6 +36,7 @@ use App\Models\PortfolioPage;
 use App\Models\PortfolioTeam;
 use App\Http\Controllers\Controller;
 use App\Models\Course;
+use App\Models\CourseCurriculum;
 use App\Models\OfficeLocation;
 use App\Models\SolutionDetail;
 use App\Models\SubSubCategory;
@@ -110,12 +111,6 @@ class HomeController extends Controller
 
 
 
-
-
-
-
-
-
     //Learn More
 
 
@@ -149,7 +144,10 @@ class HomeController extends Controller
     {
         $coursedetail = Course::find($id);
         $courses = Course::latest()->get();
-        return view('frontend.pagese.course.allCoursesDetails',compact('courses','coursedetail'));
+
+        $courseCurriculams = CourseCurriculum::where('course_id', $coursedetail->id)->get();
+
+        return view('frontend.pagese.course.allCoursesDetails',compact('courses','coursedetail','courseCurriculams'));
     }
 
 

@@ -1,11 +1,11 @@
-<x-admin-app-layout :title="'Course Create'">
+<x-admin-app-layout :title="'Course Project'">
     <div class="card card-flash">
         <div class="card-header">
             <div class="card-title">
             </div>
 
             <div class="card-toolbar">
-                <a href="{{ route('admin.course_curriculam.index') }}" class="btn btn-light-primary rounded-2">
+                <a href="{{ route('admin.course_project.index') }}" class="btn btn-light-primary rounded-2">
                     <span class="svg-icon svg-icon-3">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                             fill="none">
@@ -23,8 +23,7 @@
         </div>
         <div class="card-body">
 
-            <form id="myForm" method="post"
-                action="{{ route('admin.course_curriculam.update', $courseCurriculam->id) }}"
+            <form id="myForm" method="post" action="{{ route('admin.course_project.update', $item->id) }}"
                 enctype="multipart/form-data">
                 @csrf
 
@@ -34,7 +33,7 @@
 
                     <div class="row p-4">
 
-                        <div class="col-3 mb-3">
+                        <div class="col-4 mb-3">
 
                             <div class="form-group">
                                 <label for="" class="mb-2">Course Name</label>
@@ -45,7 +44,7 @@
                                     @if (count($courses) > 0)
                                         @foreach ($courses as $course)
                                             <option class="form-control" value="{{ $course->id }}"
-                                                {{ $courseCurriculam->course_id == $course->id ? 'selected' : '' }}>
+                                                {{ $item->course_id == $course->id ? 'selected' : '' }}>
                                                 {{ $course->name }}
                                             </option>
                                         @endforeach
@@ -58,47 +57,57 @@
 
                         <div class="col-4 mb-3">
                             <div class="form-group">
-                                <label for="" class="mb-2">Badge Name</label>
-                                <input type="text" name="badge" placeholder="Badge Name"
-                                    class="form-control form-control-sm" value="{{ $courseCurriculam->badge }}">
+                                <label for="" class="mb-2">Title</label>
+                                <input type="text" name="title" placeholder="Title Name"
+                                    class="form-control form-control-sm" value="{{ $item->title }}">
+                            </div>
+                        </div>
+
+                      
+
+                        <div class="col-6 mb-3">
+                            <div class="form-group">
+                                <label for="" class="mb-2">Short Description</label>
+                                <textarea name="short_description" class="form-control editor" id="" cols="2" rows="2">{!! $item->short_description !!}</textarea>
+                            </div>
+                        </div>
+
+                        <div class="col-6 mb-3">
+                            <div class="form-group">
+                                <label for="" class="mb-2">Description</label>
+                                <textarea name="description" class="form-control editor" id="" cols="2" rows="2">{!! $item->description !!}</textarea>
+                            </div>
+                        </div>
+
+                        
+
+                        <div class="col-5 mb-3">
+                            <div class="">
+                                <label for="" class="mb-2">Image</label>
+                                <input type="file" name="image" accept="image/*"
+                                    class="form-control form-control-sm mb-3">
+
+                                <img class="" src="{{ asset('storage/course_project/' . $item->image) }}"
+                                    height="40" width="40" alt="">
                             </div>
                         </div>
 
                         <div class="col-5 mb-3">
-                            <div class="form-group">
-                                <label for="" class="mb-2">Title</label>
-                                <input type="text" name="title" placeholder="Course Title"
-                                    class="form-control form-control-sm" value="{{ $courseCurriculam->title }}">
+                            <div class="">
+                                <label for="" class="mb-2">Banner Image</label>
+                                <input type="file" name="banner_image" accept="image/*"
+                                    class="form-control form-control-sm mb-3">
+
+                                <img class="" src="{{ asset('storage/course_project/' . $item->banner_image) }}"
+                                    height="40" width="40" alt="">
                             </div>
                         </div>
 
-                        <div class="col-3 mb-3">
-                            <div class="form-group">
-                                <label for="" class="mb-2">Duration</label>
-                                <input type="text" name="duration" placeholder="Eg: 5 Hours"
-                                    class="form-control form-control-sm" value="{{ $courseCurriculam->duration }}">
-                            </div>
-                        </div>
 
-                        <div class="col-3 mb-3">
-                            <div class="form-group">
-                                <label for="" class="mb-2">Class Number</label>
-                                <input type="number" name="class_number" placeholder="10"
-                                    class="form-control form-control-sm" value="{{ $courseCurriculam->class_number }}">
-                            </div>
-                        </div>
-
-                        <div class="col-12 mb-3">
-                            <div class="form-group">
-                                <label for="" class="mb-2">Description</label>
-                                <textarea name="description" id="" placeholder="Description" cols="2" rows="2"
-                                    class="form-control editor">{{ $courseCurriculam->description }}</textarea>
-                            </div>
-                        </div>
 
                         <div class="col-12 mb-3 mt-4">
-                            <button type="submit"
-                                class="btn btn-primary rounded-0 px-5 btn-sm float-end">Update</button>
+                            <button type="submit" class="btn btn-primary rounded-0 px-5 btn-sm float-end">Update
+                                Course</button>
                         </div>
 
                     </div>
@@ -124,33 +133,20 @@
                             required: true,
                         },
 
-                        duration: {
-                            required: true,
-                        },
-
-                        class_number: {
-                            required: true,
-                        },
+                       
 
 
                     },
                     messages: {
 
                         course_id: {
-                            required: 'Please Enter Instructor Name',
+                            required: 'Please Enter Course Name',
                         },
 
                         title: {
-                            required: 'Please Enter Course Title',
+                            required: 'Please Enter Title',
                         },
 
-                        duration: {
-                            required: 'Please Fill Up this field',
-                        },
-
-                        class_number: {
-                            required: 'Please Enter Class Number',
-                        },
 
                     },
                     errorElement: 'span',
@@ -168,6 +164,23 @@
             });
         </script>
     @endpush
+
+    <script src="https://cdn.ckeditor.com/ckeditor5/41.4.2/classic/ckeditor.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Initialize CKEditor for each textarea with the class 'editor'
+            document.querySelectorAll('.editor').forEach(function(textarea) {
+                ClassicEditor
+                    .create(textarea)
+                    .then(editor => {
+                        console.log("CKEditor initialized successfully:", editor);
+                    })
+                    .catch(error => {
+                        console.error("CKEditor initialization error:", error);
+                    });
+            });
+        });
+    </script>
 
 
 </x-admin-app-layout>

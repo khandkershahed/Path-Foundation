@@ -680,9 +680,9 @@
                                 <div class="card-header p-0 bg-transparent">
 
                                     <div>
-                                        <img class="rounded-2 img-fluid"
+                                        <img class="rounded-2"
                                             src="{{ asset(!empty($course->thumbnail_image) ? url('storage/course/' . $course->thumbnail_image) : url('images/no-shop-imge.png')) }}"
-                                            alt="">
+                                            alt="" style="width: 311px;height: 160px;">
                                     </div>
 
                                     <div class="p-2 text-center">
@@ -694,14 +694,15 @@
                                                     class="fa-solid fa-users pe-2" aria-hidden="true"></i>
                                                 {{ $course->available_seats }}</span></small>
 
-                                        <small class="pe-1"><span class="cource-badge rounded-2"><i
-                                                    class="fa-regular fa-clock pe-2" aria-hidden="true"></i>২৭
-                                                দিন
-                                                বাকি</span></small>
+                                        <small class="pe-1">
+                                            <span class="cource-badge rounded-2">
+                                                <i class="fa-regular fa-clock pe-2" aria-hidden="true"></i>২৭দিন বাকি
+                                            </span>
+                                        </small>
                                     </div>
                                 </div>
                                 <div class="card-body">
-                                    <h6 class="recent-course-name">
+                                    <h6 class="recent-course-name px-2">
                                         {{ $course->name }}
                                     </h6>
                                     <div class="pt-3">
