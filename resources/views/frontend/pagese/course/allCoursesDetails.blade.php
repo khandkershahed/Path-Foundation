@@ -165,7 +165,7 @@
                                                                                 class="fa-solid fa-tv primary-text-color"></i>
                                                                             {{ $courseCurriculam->class_number }} live
                                                                             class</small>
-                                                                            
+
                                                                         {{-- <small
                                                                             class="bg-warning-light p-2 rounded-2 badges"><i
                                                                                 class="fa-solid fa-tv primary-text-color"></i>
@@ -447,14 +447,14 @@
                                             <div class="card join_offline">
                                                 <div class="card-body">
                                                     <h5>Course Fee Offline</h5>
-                                                    <h3 class="fw-bold">BDT {{ $coursedetail->price }}</h3>
+                                                    <h3 class="fw-bold">BDT {{ number_format($coursedetail->price, 2) }}</h3>
                                                     <a href="" class="primary-btn-one">Enroll Now</a>
                                                 </div>
                                             </div>
                                             <div class="card join_offline">
                                                 <div class="card-body">
                                                     <h5>Course Fee Online</h5>
-                                                    <h3 class="fw-bold">BDT {{ $coursedetail->online_price }}</h3>
+                                                    <h3 class="fw-bold">BDT {{ number_format($coursedetail->online_price, 2) }}</h3>
                                                     <a href="" class="primary-btn-one">Enroll Now</a>
                                                 </div>
                                             </div>
