@@ -165,7 +165,7 @@
                                                                                 class="fa-solid fa-tv primary-text-color"></i>
                                                                             {{ $courseCurriculam->class_number }} live
                                                                             class</small>
-                                                                            
+
                                                                         {{-- <small
                                                                             class="bg-warning-light p-2 rounded-2 badges"><i
                                                                                 class="fa-solid fa-tv primary-text-color"></i>

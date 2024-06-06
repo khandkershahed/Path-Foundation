@@ -360,6 +360,15 @@
                           </div>
 
                           <div class="menu-item">
+                              <a class="menu-link" href="{{ route('admin.course_schedule.index') }}">
+                                  <span class="menu-bullet">
+                                      <span class="bullet bullet-dot"></span>
+                                  </span>
+                                  <span class="menu-title">Course Schedule</span>
+                              </a>
+                          </div>
+
+                          <div class="menu-item">
                               <a class="menu-link" href="{{ route('admin.course_content.index') }}">
                                   <span class="menu-bullet">
                                       <span class="bullet bullet-dot"></span>
@@ -732,8 +741,19 @@
                                   <span class="menu-title">Email Setting</span>
                               </a>
                           </div>
+                          <div class="menu-item">
+                            <a class="menu-link"
+                                href="{{ route('admin.all.registration') }}">
+                                <span class="menu-bullet">
+                                    <span class="bullet bullet-dot"></span>
+                                </span>
+                                <span class="menu-title">Registration</span>
+                            </a>
+                        </div>
                       </div>
                   </div>
+
+                  
 
               </div>
           </div>

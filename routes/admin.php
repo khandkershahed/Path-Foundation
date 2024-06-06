@@ -24,6 +24,7 @@ use App\Http\Controllers\Admin\CourseManagentController;
 use App\Http\Controllers\Admin\CourseOutlineController;
 use App\Http\Controllers\Admin\CourseProjectController;
 use App\Http\Controllers\Admin\CourseQueryController;
+use App\Http\Controllers\Admin\CourseScheduleController;
 use App\Http\Controllers\Admin\DynamicCssController;
 use App\Http\Controllers\Admin\EmailSettingController;
 use App\Http\Controllers\Admin\FaqController;
@@ -37,6 +38,7 @@ use App\Http\Controllers\Admin\NewsletterController;
 use App\Http\Controllers\Admin\NewsTrendController;
 use App\Http\Controllers\Admin\PermissionController;
 use App\Http\Controllers\Admin\ProjectController;
+use App\Http\Controllers\Admin\RegistrationController;
 use App\Http\Controllers\Admin\RoleController;
 use App\Http\Controllers\Admin\RowController;
 use App\Http\Controllers\Admin\ServiceController;
@@ -113,6 +115,10 @@ Route::middleware(['auth:admin'])->prefix('admin')->name('admin.')->group(functi
         ['except' => ['show']]
     );
 
+    //Registration
+    Route::get('/registration', [RegistrationController::class, 'AllRegistration'])->name('all.registration');
+    Route::get('/registration-delete/{id}', [RegistrationController::class, 'DeleteRegistration'])->name('delete.registration');
+
     Route::resources(
         [
             'user' => UserController::class, //done
@@ -147,6 +153,7 @@ Route::middleware(['auth:admin'])->prefix('admin')->name('admin.')->group(functi
             'course_management' => CourseManagentController::class,
             'course_project' => CourseProjectController::class,
             'course_outline' => CourseOutlineController::class,
+            'course_schedule' => CourseScheduleController::class,
 
         ],
     );

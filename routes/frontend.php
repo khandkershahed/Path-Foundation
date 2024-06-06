@@ -44,6 +44,8 @@ Route::get('/course/{id}/{slug}', [HomeController::class, 'courseDetails']);
 Route::get('/course-registration', [HomeController::class, 'courseRegistration'])->name('course.registration');
 Route::post('/course-registration/store', [HomeController::class, 'courseRegistrationStore'])->name('course.registration.store');
 
+
+
 //Books
 Route::get('/books', [HomeController::class, 'books'])->name('books');
 Route::get('/books', [HomeController::class, 'books'])->name('books');
