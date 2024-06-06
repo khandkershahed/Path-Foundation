@@ -17,7 +17,7 @@
                                     data-bs-auto-close="outside" aria-expanded="false">
                                     <i class="fa-solid fa-phone-volume me-1" style="transform: rotate(7deg);"></i>
                                     SUPPORT <span class="number-font header_top_phone">|
-                                        {{ optional($setting)->phone_one }}</span>
+                                        {{ optional($setting)->primary_phone }}</span>
                                 </a>
                                 <div class="dropdown-menu drop-down-menus2" aria-labelledby="dropdownMenuButton">
                                     <div class="popover__content text-start">
@@ -28,22 +28,22 @@
                                         </div> --}}
                                         <hr class="text-muted" />
                                         <div class="d-flex flex-column align-items-center">
-                                            <a href="https://wa.me/{{ optional($setting)->whatsapp_number }}"
+                                            <a href="https://wa.me/{{ optional($setting)->secondary_phone }}"
                                                 class="mx-auto py-2 btn-color mb-2 top-info-text w-100"
                                                 style="font-size: 13px">
                                                 <i class="fa-brands fa-whatsapp"></i> <span>Whats App</span>
                                             </a>
-                                            <a href="skype:<ngenit>?chat"
+                                            {{-- <a href="skype:<ngenit>?chat"
                                                 class="mx-auto py-2 btn-color top-info-text w-100"
                                                 style="font-size: 13px">
                                                 <i class="fa-brands fa-skype"></i> <span>Skype</span>
-                                            </a>
+                                            </a> --}}
                                         </div>
                                         <hr class="text-muted" />
                                         <div class="text-center">
                                             <small class="main_color">Hotline:</small> <br>
-                                            <small><a href="">+8801714243446</a></small>
-                                            <small><a href="">sales@ngenitltd.com</a></small>
+                                            <small><a href="">{{ optional($setting)->primary_phone }}</a></small>
+                                            <small><a href="">{{ optional($setting)->primary_email }}</a></small>
                                         </div>
                                         {{-- <ul class="account p-0 text-muted text-start">
                                             <li>

@@ -44,22 +44,50 @@
                         <x-metronic.input id="site_logo" type="file" name="site_logo"
                             :value="old('site_logo', optional($setting->first())->site_logo)"></x-metronic.input>
                     </div>
-
-                    <div class="col-lg-3 mb-7">
-                        <x-metronic.label for="email" class="col-form-label fw-bold fs-6 ">{{ __('Email') }}
+                    <div class="col-lg-4 mb-7">
+                        <x-metronic.label for="site_favicon" class="col-form-label fw-bold fs-6 ">{{ __('Site Favicon') }}
                         </x-metronic.label>
 
-                        <x-metronic.input id="email" type="email" name="email" :value="old('email', optional($setting->first())->email)"
-                            placeholder="Enter the email address"></x-metronic.input>
+                        <x-metronic.input id="site_favicon" type="file" name="site_favicon"
+                            :value="old('site_favicon', optional($setting->first())->site_favicon)"></x-metronic.input>
                     </div>
 
                     <div class="col-lg-3 mb-7">
-                        <x-metronic.label for="phone" class="col-form-label fw-bold fs-6 ">{{ __('Phone') }}
+                        <x-metronic.label for="primary_email" class="col-form-label fw-bold fs-6 ">{{ __('primary_email') }}
                         </x-metronic.label>
 
-                        <x-metronic.input id="phone" type="number" name="phone" :value="old('phone', optional($setting->first())->phone)"
-                            placeholder="Enter the Phone"></x-metronic.input>
+                        <x-metronic.input id="primary_email" type="primary_email" name="primary_email" :value="old('primary_email', optional($setting->first())->primary_email)"
+                            placeholder="Enter the primary_email address"></x-metronic.input>
                     </div>
+                    <div class="col-lg-3 mb-7">
+                        <x-metronic.label for="support_email" class="col-form-label fw-bold fs-6 ">{{ __('support_email') }}
+                        </x-metronic.label>
+
+                        <x-metronic.input id="support_email" type="support_email" name="support_email" :value="old('support_email', optional($setting->first())->support_email)"
+                            placeholder="Enter the support_email address"></x-metronic.input>
+                    </div>
+                    <div class="col-lg-3 mb-7">
+                        <x-metronic.label for="sales_email" class="col-form-label fw-bold fs-6 ">{{ __('sales_email') }}
+                        </x-metronic.label>
+
+                        <x-metronic.input id="sales_email" type="sales_email" name="sales_email" :value="old('sales_email', optional($setting->first())->sales_email)"
+                            placeholder="Enter the sales_email address"></x-metronic.input>
+                    </div>
+                    <div class="col-lg-3 mb-7">
+                        <x-metronic.label for="primary_phone" class="col-form-label fw-bold fs-6 ">{{ __('Primary primary_phone') }}
+                        </x-metronic.label>
+
+                        <x-metronic.input id="primary_phone" type="number" name="primary_phone" :value="old('primary_phone', optional($setting->first())->primary_phone)"
+                            placeholder="Enter the primary_phone"></x-metronic.input>
+                    </div>
+                    <div class="col-lg-3 mb-7">
+                        <x-metronic.label for="secondary_phone" class="col-form-label fw-bold fs-6 ">{{ __('Secondary phone') }}
+                        </x-metronic.label>
+
+                        <x-metronic.input id="secondary_phone" type="number" name="secondary_phone" :value="old('secondary_phone', optional($setting->first())->secondary_phone)"
+                            placeholder="Enter the secondary_phone"></x-metronic.input>
+                    </div>
+
                 </div>
 
                 <div class="row">
