@@ -295,7 +295,7 @@
 
 
                   <div data-kt-menu-trigger="click"
-                      class="menu-item menu-accordion  {{ Route::is('admin.contacts.index', 'admin.newsletter.index') ? 'here show' : '' }}">
+                      class="menu-item menu-accordion  {{ Route::is('admin.contacts.index', 'admin.newsletters.index') ? 'here show' : '' }}">
                       <span class="menu-link">
                           <span class="menu-icon">
                               <!--begin::Svg Icon | path: icons/duotune/ecommerce/ecm002.svg-->
@@ -319,7 +319,7 @@
                           <span class="menu-arrow"></span>
                       </span>
                       <div
-                          class="menu-sub menu-sub-accordion {{ Route::is('admin.contacts.index', 'admin.faq.index', 'admin.newsletter.index') ? 'menu-active-bg' : '' }}">
+                          class="menu-sub menu-sub-accordion {{ Route::is('admin.contacts.index', 'admin.faq.index', 'admin.newsletters.index') ? 'menu-active-bg' : '' }}">
                           <div class="menu-item">
                               <a class="menu-link {{ Route::is('admin.contacts.index') ? 'active' : '' }}"
                                   href="{{ route('admin.contacts.index') }}">
@@ -339,8 +339,8 @@
                               </a>
                           </div>
                           <div class="menu-item">
-                              <a class="menu-link {{ Route::is('admin.newsletter.index') ? 'active' : '' }}"
-                                  href="{{ route('admin.newsletter.index') }}">
+                              <a class="menu-link {{ Route::is('admin.newsletters.index') ? 'active' : '' }}"
+                                  href="{{ route('admin.newsletters.index') }}">
                                   <span class="menu-bullet">
                                       <span class="bullet bullet-dot"></span>
                                   </span>
@@ -499,7 +499,7 @@
                   </div>
 
                   <div data-kt-menu-trigger="click"
-                      class="menu-item menu-accordion  {{ Route::is('admin.setting.index', 'admin.css.index', 'admin.email-settings.index') ? 'here show' : '' }}">
+                      class="menu-item menu-accordion  {{ Route::is('admin.settings.index', 'admin.css.index', 'admin.email-settings.index') ? 'here show' : '' }}">
                       <span class="menu-link">
                           <span class="menu-icon">
                               <!--begin::Svg Icon | path: icons/duotune/ecommerce/ecm002.svg-->
@@ -523,10 +523,10 @@
                           <span class="menu-arrow"></span>
                       </span>
                       <div
-                          class="menu-sub menu-sub-accordion {{ Route::is('admin.setting.index', 'admin.css.index', 'admin.email-settings.index') ? 'menu-active-bg' : '' }}">
+                          class="menu-sub menu-sub-accordion {{ Route::is('admin.settings.index', 'admin.css.index', 'admin.email-settings.index') ? 'menu-active-bg' : '' }}">
                           <div class="menu-item">
-                              <a class="menu-link {{ Route::is('admin.setting.index') ? 'active' : '' }}"
-                                  href="{{ route('admin.setting.index') }}">
+                              <a class="menu-link {{ Route::is('admin.settings.index') ? 'active' : '' }}"
+                                  href="{{ route('admin.settings.index') }}">
                                   <span class="menu-bullet">
                                       <span class="bullet bullet-dot"></span>
                                   </span>
