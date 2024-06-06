@@ -4428,6 +4428,7 @@ body::-webkit-scrollbar-corner {
         var(--primary-color)
     );
     border-color: white;
+    color: white;
 }
 
 @-webkit-keyframes sonar_button {

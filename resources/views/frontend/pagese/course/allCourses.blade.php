@@ -73,21 +73,21 @@
     </section>
     <section style="background-color: #eee;">
         <div class="container">
-          <div class="text-center px-5 py-5">
-            <h3 class="section-title">Popular Courses We Offer</h3>
-            <div class="divider"></div>
-            <p class="text-muted py-3 px-5">
-              Promise Training and Consultancy offers short-term workshops and
-              training seminars for various work streams including management,
-              leadership, finance, HR and Oil &amp; Gas. Participants of our public
-              training program will also have a chance to share their
-              experiences with professionals from other organisations. This
-              enables them to gain new perspectives on the common challenges
-              they face at the workplace.
-            </p>
-          </div>
+            <div class="text-center px-5 py-5">
+                <h3 class="section-title">Popular Courses We Offer</h3>
+                <div class="divider"></div>
+                <p class="text-muted py-3 px-5">
+                    Promise Training and Consultancy offers short-term workshops and
+                    training seminars for various work streams including management,
+                    leadership, finance, HR and Oil &amp; Gas. Participants of our public
+                    training program will also have a chance to share their
+                    experiences with professionals from other organisations. This
+                    enables them to gain new perspectives on the common challenges
+                    they face at the workplace.
+                </p>
+            </div>
         </div>
-      </section>
+    </section>
     <section>
         <div class="container py-5">
             <div class="row">
@@ -128,13 +128,19 @@
 
                                                 <div class="p-2 text-center">
 
-                                                    <small class="pe-1"><span class="cource-badge rounded-2">ব্যাচ
-                                                            ২</span></small>
-
-                                                    <small class="pe-1"><span class="cource-badge rounded-2"><i
-                                                                class="fa-solid fa-users pe-2" aria-hidden="true"></i>
-                                                            {{ $course->available_seats }}</span></small>
-
+                                                    <small class="pe-3">
+                                                        <span class="cource-badge rounded-2">
+                                                            <i class="fa-solid fa-graduation-cap"></i>
+                                                            Batch 2
+                                                        </span>
+                                                    </small>
+                                                    <small class="pe-3">
+                                                        <span class="cource-badge rounded-2">
+                                                            {{-- <i class="fa-solid fa-chair pe-2" aria-hidden="true"></i> --}}
+                                                            <i class="fa-solid fa-user"></i>
+                                                            {{ $course->available_seats }}
+                                                        </span>
+                                                    </small>
                                                     @php
                                                         // Convert registration end date to Unix timestamp
                                                         $registrationEndTimestamp = strtotime(
@@ -148,11 +154,11 @@
                                                         $remainingDays = floor($remainingTime / (60 * 60 * 24));
                                                     @endphp
 
-                                                    <small class="pe-1">
+                                                    <small class="pe-3">
                                                         <span class="course-badge rounded-2">
-                                                            <i class="far fa-clock pe-2" aria-hidden="true"></i>
-                                                            {{ $remainingDays }} days
-                                                            remaining
+                                                            {{-- <i class="far fa-clock " aria-hidden="true"></i> --}}
+                                                            <i class="fa-solid fa-clock"></i>
+                                                            {{ $remainingDays }} Days
                                                         </span>
                                                     </small>
 
@@ -164,8 +170,7 @@
                                                 </h6>
                                                 <div class="pt-3">
                                                     <a href="{{ url('course' . '/' . $course->id . '/' . $course->slug) }}"
-                                                        class="btn btn-light bg-white border w-100 bistatiro-btn">বিস্তারিত
-                                                        দেখি
+                                                        class="btn btn-light border w-100">See Details
                                                         <i class="fa-solid fa-arrow-right ps-2" aria-hidden="true"></i></a>
                                                 </div>
                                             </div>

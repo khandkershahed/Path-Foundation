@@ -1,10 +1,9 @@
-
 <!--=======// Footer Section//=========-->
 <footer class="container-fluid p-0" style="background: #051225;">
     <!-- footyer gradient -->
-    <div class="footer_top">
-        <p class="mb-0">Learn IT, Lead IT</p>
-    </div>
+    {{-- <div class="footer_top">
+        <p class="mb-0"></p>
+    </div> --}}
     <!-- main footer -->
     <div class="footer_middle pt-3">
         <div class="container pb-3">
@@ -13,7 +12,7 @@
                     <!-- item -->
                     <div class="col-lg-6 col-md-6 col-sm-12 footer_item_wrapper">
                         <!-- title -->
-                        <h6><span style="border-bottom: 5px solid #0a1d59;">New</span>sletter</h6>
+                        <h6><span style="border-bottom: 5px solid #0a1d59;">Lea</span>rn IT, Lead IT</h6>
                         <!-- text -->
                         <p class="footer_text pt-4">
                             Sign up to receive the IT content that matters most to you.
@@ -40,23 +39,14 @@
                             style="border-bottom: 5px solid #0a1d59;">Abo</span>ut & Contact</h6>
                     <!-- nav list -->
                     <div class="footer_nav_list pt-lg-4 pt-2">
-                        {{-- <ul class="footer_link_text">
+                        <ul class="footer_link_text">
                             <li>
-                                <a href="{{route('about')}}">Company</a> & <a
-                                    href="{{ route('portfolio') }}">Portfolios</a>
+                                <a href="{{ route('about') }}">About Us</a>
                             </li>
                             <li>
-                                <a href="{{ route('portfolio') }}">Design</a> & <a
-                                    href="{{ route('portfolio') }}">Development</a>
+                                <a href="{{ route('contact') }}">Contact Us</a>
                             </li>
-                            <li>
-                                <a href="{{route('login')}}">User Login</a>
-                            </li>
-                            <li>
-                                <a href="{{ route('contact') }}">Contact</a> & <a
-                                    href="{{ route('support') }}">Supports</a>
-                            </li>
-                        </ul> --}}
+                        </ul>
                     </div>
                 </div>
                 <!-- item -->
@@ -66,19 +56,14 @@
                             style="border-bottom: 5px solid #0a1d59;">Tra</span>ining & Services</h6>
                     <!-- nav list -->
                     <div class="footer_nav_list pt-lg-4 pt-2">
-                        {{-- <ul class="footer_link_text">
+                        <ul class="footer_link_text">
                             <li>
-                                <a href="{{ route('software.common') }}">Software</a> & <a
-                                    href="{{ route('hardware.common') }}">Hardware</a>
+                                <a href="javascript:void(0)">Corporate Training</a>
                             </li>
                             <li>
-                                <a href="{{ route('all.industry') }}">Industry</a> & <a
-                                    href="{{route('all.solution')}}">Solutions</a>
+                                <a href="javascript:void(0)">Certification</a>
                             </li>
-                            <li>
-                                <a href="javascript:void(0);">Training</a> & <a href="javascript:void(0);">Books</a>
-                            </li>
-                        </ul> --}}
+                        </ul>
                     </div>
                 </div>
                 <!-- item -->
@@ -88,20 +73,14 @@
                             style="border-bottom: 5px solid #0a1d59;">FAQ</span> & Policies</h6>
                     <!-- nav list -->
                     <div class="footer_nav_list pt-lg-4 pt-2">
-                        {{-- <ul class="footer_link_text">
-                            <li>
-                                <a href="{{ route('all.blog') }}">NGEN IT Blogs</a>
-                            </li>
-                            <li>
-                                <a href="{{ route('all.techglossy') }}">Tech Contents</a>
-                            </li>
-                            <li>
-                                <a href="{{ route('all.story') }}">Our Client Stories</a>
-                            </li>
+                        <ul class="footer_link_text">
                             <li>
                                 <a href="{{ route('faq') }}">FAQs</a>
                             </li>
-                        </ul> --}}
+                            <li>
+                                <a href="{{ route('privacy.policy') }}">Course Policy</a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
 
@@ -120,16 +99,20 @@
                     <div class="social-overlap process-scetion">
                         <div class="container">
                             <div class="social-icons">
-                                <a href="{{ !empty($setting->facebook_url) ? $setting->facebook_url : '' }}" class="slider-nav-item">
+                                <a href="{{ !empty($setting->facebook_url) ? $setting->facebook_url : '' }}"
+                                    class="slider-nav-item">
                                     <i class="fab fa-facebook-f"></i>
                                 </a>
-                                <a href="{{ !empty($setting->twitter_url) ? $setting->twitter_url : '' }}" class="slider-nav-item">
+                                <a href="{{ !empty($setting->twitter_url) ? $setting->twitter_url : '' }}"
+                                    class="slider-nav-item">
                                     <i class="fab fa-twitter"></i>
                                 </a>
-                                <a href="{{ !empty($setting->linkedin_url) ? $setting->linkedin_url : '' }}" target="_blank" class="slider-nav-item">
+                                <a href="{{ !empty($setting->linkedin_url) ? $setting->linkedin_url : '' }}"
+                                    target="_blank" class="slider-nav-item">
                                     <i class="fab fa-linkedin-in"></i>
                                 </a>
-                                <a href="{{ !empty($setting->youtube_url) ? $setting->youtube_url : '' }}" target="_blank" class="slider-nav-item">
+                                <a href="{{ !empty($setting->youtube_url) ? $setting->youtube_url : '' }}"
+                                    target="_blank" class="slider-nav-item">
                                     <i class="fab fa-youtube"></i>
                                 </a>
                             </div>
@@ -151,13 +134,16 @@
                 <div>
                     <ul class="footer_bottom_text">
                         <li>
-                            <a class="text-white" href="{{ route('privacy.policy') }}">Privacy policy &nbsp;|&nbsp; </a>
+                            <a class="text-white" href="{{ route('privacy.policy') }}">Privacy policy &nbsp;|&nbsp;
+                            </a>
                         </li>
                         <li>
-                            <a class="text-white" href="{{ route('terms.policy') }}">Terms & Conditions &nbsp;|&nbsp; </a>
+                            <a class="text-white" href="{{ route('terms.policy') }}">Terms & Conditions &nbsp;|&nbsp;
+                            </a>
                         </li>
                         <li>
-                            <a class="text-white" href="" data-bs-toggle="modal" data-bs-target="#cookies_modal">Cookies</a>
+                            <a class="text-white" href="" data-bs-toggle="modal"
+                                data-bs-target="#cookies_modal">Cookies</a>
                         </li>
                     </ul>
                 </div>
@@ -218,7 +204,8 @@
                                     <div class="col-sm-12">
                                         <div class="custom-control custom-switch custom-switch-sm">
                                             <input type="checkbox" class="custom-control-input" id="statisticalChk"">
-                                            <label class="custom-control-label" for="statisticalChk">Statistical</label>
+                                            <label class="custom-control-label"
+                                                for="statisticalChk">Statistical</label>
                                         </div>
                                     </div>
                                 </div>
@@ -238,25 +225,29 @@
                     {{--  --}}
                     <div class="card border-0">
                         <p class="px-3" id="marketing" style="display: none">
-                            Marketing allWe will not place cookies from this website unless you consent hereto (except for technical
+                            Marketing allWe will not place cookies from this website unless you consent hereto (except
+                            for technical
                             cookies
                         </p>
                     </div>
                     <div class="card border-0">
                         <p class="px-3" id="functional" style="display: none">
-                            functional allWe will not place cookies from this website unless you consent hereto (except for technical
+                            functional allWe will not place cookies from this website unless you consent hereto (except
+                            for technical
                             cookies
                         </p>
                     </div>
                     <div class="card border-0">
                         <p class="px-3" id="statistical" style="display: none">
-                            statistical allWe will not place cookies from this website unless you consent hereto (except for technical
+                            statistical allWe will not place cookies from this website unless you consent hereto (except
+                            for technical
                             cookies
                         </p>
                     </div>
                     <div class="card border-0">
                         <p class="px-3" id="normaal" style="display: none">
-                            normaal allWe will not place cookies from this website unless you consent hereto (except for technical
+                            normaal allWe will not place cookies from this website unless you consent hereto (except for
+                            technical
                             cookies
                         </p>
                     </div>
