@@ -31,7 +31,7 @@
                             </span>
                         </p>
                         <!-- <h5><i class="fa-solid fa-phone"></i>NgenIT</h5> -->
-                        <a href="{{ route('location') }}" class="product_button">View all NGen IT office locations</a>
+                        {{-- <a href="{{ route('location') }}" class="product_button">View all NGen IT office locations</a> --}}
                     </div>
                 </div>
                 <!----------Sidebar Privacy Policy --------->
