@@ -309,13 +309,6 @@ class HomeController extends Controller
 
         $data['solutions'] = SolutionDetail::where('name', 'LIKE', '%' . $query . '%')->limit(5)->get(['id', 'name']);
         $data['industries'] = Industry::where('title', 'LIKE', '%' . $query . '%')->limit(5)->get(['id', 'title']);
-        $data['blogs'] = Blog::where('title', 'LIKE', '%' . $query . '%')->limit(5)->get(['id', 'title']);
-        $data['categorys'] = Category::where('title', 'LIKE', '%' . $query . '%')->limit(2)->get(['id', 'title', 'slug']);
-        $data['subcategorys'] = SubCategory::where('title', 'LIKE', '%' . $query . '%')->limit(2)->get(['id', 'title', 'slug']);
-        $data['subsubcategorys'] = SubSubCategory::where('title', 'LIKE', '%' . $query . '%')->limit(1)->get(['id', 'title', 'slug']);
-        $data['brands'] = Brand::where('title', 'LIKE', '%' . $query . '%')->where('status', 'active')->limit(5)->get(['id', 'title', 'slug']);
-        $data['storys'] = ClientStory::where('title', 'LIKE', '%' . $query . '%')->limit(5)->get(['id', 'title']);
-        $data['tech_glossys'] = TechGlossy::where('title', 'LIKE', '%' . $query . '%')->limit(5)->get(['id', 'title']);
 
         return response()->json(view('frontend.partials.search', $data)->render());
     } // end method
@@ -334,5 +327,10 @@ class HomeController extends Controller
         $data['blog'] = NewsTrend::where('id', $id)->firstOrFail();
         $data['storys'] = NewsTrend::inRandomOrder()->limit(4)->get();
         return view('frontend.pages.story.story_details', $data);
+    }
+    public function faq()
+    {
+        $data['faq_categorys'] = Faq::select('category')->distinct()->get();
+        return view('frontend.pages.policy.faq', $data);
     }
 }

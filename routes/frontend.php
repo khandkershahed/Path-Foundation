@@ -155,11 +155,11 @@ Route::get('portfolio', [HomeController::class, 'Portfolio'])->name('portfolio')
 // Route::get('portfolio/{id}/details', [HomeController::class, 'portfolioDetails'])->name('portfolio.details');
 Route::get('portfolio/{id}/details/', [HomeController::class, 'portfolioDetails'])->name('portfolio.details');
 
-//Work Order Upload
-Route::put('upload/work-order/{id}', [RFQController::class,'workOrderUpload'])->name('work-order.upload');
+// //Work Order Upload
+// Route::put('upload/work-order/{id}', [RFQController::class,'workOrderUpload'])->name('work-order.upload');
 
-//Proof of Payment Upload
-Route::put('upload/payment-proof/{id}', [RFQController::class,'proofPaymentUpload'])->name('payment-proof.upload');
+// //Proof of Payment Upload
+// Route::put('upload/payment-proof/{id}', [RFQController::class,'proofPaymentUpload'])->name('payment-proof.upload');
 
 
 

@@ -12,7 +12,7 @@
                     <!-- item -->
                     <div class="col-lg-6 col-md-6 col-sm-12 footer_item_wrapper">
                         <!-- title -->
-                        <h2 class="text-white"><span style="border-bottom: 5px solid #e5e2e0;color: #ae0a46;">Lea</span>rn IT, <span style="border-bottom: 5px solid #e5e2e0;color: #ae0a46;">Lea</span>d IT</h2>
+                        <h2 class="text-white">Learn IT, Lead IT</h2>
                         <!-- text -->
                         <p class="footer_text pt-4">
                             NGenIT is the top choice for skill development, offering programs for students,
@@ -98,19 +98,19 @@
                     <div class="social-overlap process-scetion">
                         <div class="container">
                             <div class="social-icons">
-                                <a href="{{ !empty($setting->facebook_url) ? $setting->facebook_url : '' }}"
+                                <a href="{{ !empty($setting->social_facebook) ? $setting->social_facebook : '' }}"
                                     class="slider-nav-item">
                                     <i class="fab fa-facebook-f"></i>
                                 </a>
-                                <a href="{{ !empty($setting->twitter_url) ? $setting->twitter_url : '' }}"
+                                <a href="{{ !empty($setting->social_twitter) ? $setting->social_twitter : '' }}"
                                     class="slider-nav-item">
                                     <i class="fab fa-twitter"></i>
                                 </a>
-                                <a href="{{ !empty($setting->linkedin_url) ? $setting->linkedin_url : '' }}"
+                                <a href="{{ !empty($setting->social_linkedin) ? $setting->social_linkedin : '' }}"
                                     target="_blank" class="slider-nav-item">
                                     <i class="fab fa-linkedin-in"></i>
                                 </a>
-                                <a href="{{ !empty($setting->youtube_url) ? $setting->youtube_url : '' }}"
+                                <a href="{{ !empty($setting->social_youtube) ? $setting->social_youtube : '' }}"
                                     target="_blank" class="slider-nav-item">
                                     <i class="fab fa-youtube"></i>
                                 </a>
@@ -133,16 +133,19 @@
                 <div>
                     <ul class="footer_bottom_text">
                         <li>
-                            <a class="text-white" href="{{ route('privacy.policy') }}">Privacy policy &nbsp;|&nbsp;
+                            <a class="text-white" href="javascript:void(0)">Privacy policy &nbsp;|&nbsp;
                             </a>
+                            {{-- <a class="text-white" href="{{ route('privacy.policy') }}">Privacy policy &nbsp;|&nbsp;
+                            </a> --}}
                         </li>
                         <li>
-                            <a class="text-white" href="{{ route('terms.policy') }}">Terms & Conditions &nbsp;|&nbsp;
+                            <a class="text-white" href="javascript:void(0)">Terms & Conditions &nbsp;|&nbsp;
                             </a>
+                            {{-- <a class="text-white" href="{{ route('terms.policy') }}">Terms & Conditions &nbsp;|&nbsp;
+                            </a> --}}
                         </li>
                         <li>
-                            <a class="text-white" href="" data-bs-toggle="modal"
-                                data-bs-target="#cookies_modal">Cookies</a>
+                            <a class="text-white" href="javascript:void(0)">Cookies</a>
                         </li>
                     </ul>
                 </div>
@@ -151,118 +154,4 @@
     </div>
 </footer>
 <!----------End--------->
-{{-- Ask For Price Modal --}}
-<!-- Modal -->
-<div class="modal fade" id="cookies_modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-    aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg">
-        <div class="modal-content">
-            <div class="modal-header py-2">
-                <img src="http://165.22.48.109/ngenit/upload/logoimage/1766111041030883.png" width="70px"
-                    height="50px" alt="">
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <div class="bg-light p-3">
-                    <h1 class="text-center">This website uses cookies</h1>
-                    <p>DHI A/S, our affiliates, suppliers and business partners use cookies to provide the best possible
-                        service to our website users. Cookies are used for:</p>
-                    <ul>
-                        <li style="list-style: circle;">Necessary features</li>
-                        <li style="list-style: circle;">Enhanced user experience</li>
-                        <li style="list-style: circle;">Statistics and web analysis</li>
-                        <li style="list-style: circle;">Marketing</li>
-                    </ul>
 
-
-                    <div class="card border-0 shadow-lg">
-                        <div class="d-flex justify-content-between py-3 px-3  border-0">
-                            <div class="form-check form-check-inline form-check-reverse">
-                                <div class="row d-flex align-items-center">
-                                    <div class="col-sm-12">
-                                        <div class="custom-control custom-switch custom-switch-sm">
-                                            <input type="checkbox" class="custom-control-input" id="normalChek"">
-                                            <label class="custom-control-label" for="normalChek">Normal</label>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-check form-check-inline form-check-reverse">
-                                <div class="row d-flex align-items-center">
-                                    <div class="col-sm-12">
-                                        <div class="custom-control custom-switch custom-switch-sm">
-                                            <input type="checkbox" class="custom-control-input" id="functionalChk"">
-                                            <label class="custom-control-label" for="functionalChk">Function</label>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-check form-check-inline form-check-reverse">
-                                <div class="row d-flex align-items-center">
-                                    <div class="col-sm-12">
-                                        <div class="custom-control custom-switch custom-switch-sm">
-                                            <input type="checkbox" class="custom-control-input" id="statisticalChk"">
-                                            <label class="custom-control-label"
-                                                for="statisticalChk">Statistical</label>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-check form-check-inline form-check-reverse">
-                                <div class="row d-flex align-items-center">
-                                    <div class="col-sm-12">
-                                        <div class="custom-control custom-switch custom-switch-sm">
-                                            <input type="checkbox" class="custom-control-input" id="marketingChk"">
-                                            <label class="custom-control-label" for="marketingChk">Marketing</label>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    {{--  --}}
-                    <div class="card border-0">
-                        <p class="px-3" id="marketing" style="display: none">
-                            Marketing allWe will not place cookies from this website unless you consent hereto (except
-                            for technical
-                            cookies
-                        </p>
-                    </div>
-                    <div class="card border-0">
-                        <p class="px-3" id="functional" style="display: none">
-                            functional allWe will not place cookies from this website unless you consent hereto (except
-                            for technical
-                            cookies
-                        </p>
-                    </div>
-                    <div class="card border-0">
-                        <p class="px-3" id="statistical" style="display: none">
-                            statistical allWe will not place cookies from this website unless you consent hereto (except
-                            for technical
-                            cookies
-                        </p>
-                    </div>
-                    <div class="card border-0">
-                        <p class="px-3" id="normaal" style="display: none">
-                            normaal allWe will not place cookies from this website unless you consent hereto (except for
-                            technical
-                            cookies
-                        </p>
-                    </div>
-                </div>
-
-                <div class="d-flex justify-content-between align-items-center">
-                    {{-- <button class="common_button2 effect01">Necessary Cookies Only</button> --}}
-                    <a href=""><button class="common_button2 effect01" id="texts"
-                            style="display:none">Save
-                            Setting</button></a>
-                    <a href=""><button class="common_button_accept effect01 mt-2">Accept All</button></a>
-                </div>
-
-                {{-- Accordion --}}
-            </div>
-        </div>
-    </div>
-</div>
-{{-- Ask For Price Modal End --}}
