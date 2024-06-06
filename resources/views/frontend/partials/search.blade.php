@@ -19,20 +19,20 @@
     <div class="card-body">
         <div class="row">
             <div class="col-12 p-2 d-lg-none mb-3">
-                @if (count($products) > 0)
-                    <!-- First Product Start -->
-                    @foreach ($products as $product)
+                @if (count($courses) > 0)
+                    <!-- First course Start -->
+                    @foreach ($courses as $course)
                         <div class="row m-0 p-2 rounded-0  bg-white rounded-0 d-flex align-items-center"
                             style="border-bottom: 2px solid #dee2e6;">
                             <div class="col-2 m-0 p-0">
-                                <img class="" height="50px" width="50px" src="{{ asset($product->thumbnail) }}"
-                                    alt="{{ $product->name }}">
+                                <img class="" height="50px" width="50px" src="{{ asset($course->thumbnail) }}"
+                                    alt="{{ $course->name }}">
                             </div>
                             <div class="col-10 col-sm-12 ps-lg-2 ps-4">
                                 <a class="search_titles"
-                                    href="{{ route('product.details', ['id' => $product->slug]) }}">
+                                    href="{{ route('course.details', ['id' => $course->slug]) }}">
                                     <h6 class="my-1" style="color: #ae0a46;">
-                                        {{ $product->name }}
+                                        {{ $course->name }}
                                     </h6>
                                 </a>
 
@@ -54,10 +54,10 @@
                 <div class="row mb-4">
                     @if (is_countable($brands) && count($brands) > 0)
                         <div class="col-lg-6 col-5">
-                            <h5 class="fw-bold border-bottom">Brands</h5>
+                            <h5 class="fw-bold border-bottom">Courses</h5>
                             @foreach ($brands as $brand)
                                 <h6><a class="search_titles"
-                                        href="{{ route('brand.overview', $brand->slug) }}">{{ $brand->title }}</a></h6>
+                                        href="#">{{ $brand->title }}</a></h6>
                             @endforeach
                         </div>
                     @endif

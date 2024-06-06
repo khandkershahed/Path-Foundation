@@ -68,6 +68,7 @@ class ContactController extends Controller
                 Session::flash('error',$message);
                 // toaster()->error($message, 'Failed', ['timeOut' => 3000]);
                 // error($message, 'Failed', ['timeOut' => 3000]);
+
             }
             return redirect()->back()->withInput();
         }
@@ -83,7 +84,7 @@ class ContactController extends Controller
         $code = $typePrefix . '-' . $today . '-' . $newNumber;
 
         Contact::create([
-            'code' => $code,
+            // 'code' => $code,
             'name' => $request->name,
             'email' => $request->email,
             // 'phone' => $request->phone,
@@ -98,7 +99,7 @@ class ContactController extends Controller
         ]);
 
         // success('Thank You. We have received your message. We will contact with you very soon.');
-        return redirect()->back();
+        return redirect()->back()->with('success', 'Thank You. We have received your message. We will contact with you very soon');
     }
 
     /**
