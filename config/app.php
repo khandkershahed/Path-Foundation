@@ -169,8 +169,10 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
         App\Providers\BreadcrumbServiceProvider::class,
+        App\Providers\HeaderServiceProvider::class,
         Spatie\Permission\PermissionServiceProvider::class,
         Yajra\DataTables\DataTablesServiceProvider::class,
+        Brian2694\Toastr\ToastrServiceProvider::class,
     ])->toArray(),
 
     /*
@@ -186,6 +188,7 @@ return [
 
     'aliases' => Facade::defaultAliases()->merge([
         'DataTables' => Yajra\DataTables\Facades\DataTables::class,
+        'Toastr'  => Brian2694\Toastr\Facades\Toastr::class,
         // 'Example' => App\Facades\Example::class,
     ])->toArray(),
 

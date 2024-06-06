@@ -15,6 +15,7 @@
     <meta property="og:url" content="https://keenthemes.com/metronic" />
     <meta property="og:site_name" content="Keenthemes | Metronic" />
     <link rel="canonical" href="https://preview.keenthemes.com/metronic8" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="shortcut icon" href="assets/media/logos/favicon.ico" />
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <!--begin::Fonts-->
@@ -30,9 +31,12 @@
     <!--begin::Global Stylesheets Bundle(used by all pages)-->
     <link href="{{ asset('admin/assets/plugins/global/plugins.bundle.css') }}" rel="stylesheet" type="text/css" />
     <link href="{{ asset('admin/assets/css/style.bundle.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('admin/css/tagsinput.css') }}" rel="stylesheet" type="text/css" />
     <!--end::Global Stylesheets Bundle-->
+    <script src="https://kit.fontawesome.com/69b7156a94.js" crossorigin="anonymous"></script>
     @props(['title'])
-    <title>{{ $title ?? config('app.name', 'MD Boilarplate') }}</title>
+    <title>{{ $title ?? config('app.name', '') }}</title>
+
 </head>
 
 <body id="kt_body"
@@ -43,19 +47,25 @@
     <div class="d-flex flex-column flex-root">
         <!--begin::Page-->
         <div class="page d-flex flex-row flex-column-fluid">
+
             <!--begin::Aside-->
             @include('admin.layouts.sidebar')
             <!--end::Aside-->
+
             <!--begin::Wrapper-->
             <div class="wrapper d-flex flex-column flex-row-fluid" id="kt_wrapper">
+
                 <!--begin::Header-->
                 @include('admin.layouts.header')
                 <!--end::Header-->
+
                 <!--begin::Content-->
                 <div class="content d-flex flex-column flex-column-fluid" id="kt_content">
+
                     <!--begin::Toolbar-->
                     @include('admin.layouts.toolbar')
                     <!--end::Toolbar-->
+
                     <!--begin::Post-->
                     <div class="post d-flex flex-column-fluid" id="kt_post">
                         <!--begin::Container-->
@@ -104,6 +114,7 @@
     <!--begin::Page Vendors Javascript(used by this page)-->
     <script src="{{ asset($hostUrl . 'plugins/custom/fullcalendar/fullcalendar.bundle.js') }}"></script>
     <script src="{{ asset($hostUrl . 'plugins/custom/datatables/datatables.bundle.js') }}"></script>
+    <script src="{{ asset($hostUrl . 'plugins/custom/tinymce/tinymce.bundle.js') }}"></script>
     <script src="https://cdn.datatables.net/1.11.4/js/dataTables.bootstrap5.min.js"></script>
     <script src="{{ asset($hostUrl . 'plugins/custom/formrepeater/formrepeater.bundle.js') }}"></script>
 
@@ -116,13 +127,30 @@
     <script src="{{ asset($hostUrl . 'js/widgets.bundle.js') }}"></script>
     <script src="{{ asset($hostUrl . 'js/custom/widgets.js') }}"></script>
     <script src="{{ asset($hostUrl . 'js/custom/apps/chat/chat.js') }}"></script>
+    <script src="{{ asset($hostUrl . 'js/custom/documentation/editors/tinymce/plugins.js') }}"></script>
+    <script src="https://cdn.tiny.cloud/1/n4jpbhtanca801bcjejx1pc9j033yn0de5ral6e7r0wd6383/tinymce/6/tinymce.min.js"
+        referrerpolicy="origin"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     {{-- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> --}}
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js" async></script>
 
     <script src="{{ asset('admin/js/custom.js') }}"></script>
-    @include('toastr')
+    <script src="{{ asset('admin/js/validate.min.js') }}"></script>
+    <script src="{{ asset('admin/js/tagsinput.js') }}"></script>
+
+    {{-- {!! Toastr::message() !!}
+
+    @include('toastr') --}}
+
     @stack('scripts')
+
+    <script>
+        tinymce.init({
+            selector: 'textarea.kt_docs_tinymce_plugins',
+            plugins: 'anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount',
+            toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table | align lineheight | numlist bullist indent outdent | emoticons charmap | removeformat',
+        });
+    </script>
     <!--end::Page Custom Javascript-->
     <!--end::Javascript-->
 

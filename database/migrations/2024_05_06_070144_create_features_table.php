@@ -26,13 +26,13 @@ return new class extends Migration
             $table->string('banner_btn_name')->nullable();
             $table->string('banner_btn_link')->nullable();
 
-            $table->unsignedBigInteger('row_one_id');
+            $table->unsignedBigInteger('row_one_id')->nullable();
             $table->foreign('row_one_id')->references('id')->on('rows')->onUpdate('cascade')->onDelete('cascade');
 
-            $table->unsignedBigInteger('row_two_id');
+            $table->unsignedBigInteger('row_two_id')->nullable();
             $table->foreign('row_two_id')->references('id')->on('rows')->onUpdate('cascade')->onDelete('cascade');
 
-            
+
             $table->string('row_three_title')->nullable();
             $table->text('row_three_header')->nullable();
 

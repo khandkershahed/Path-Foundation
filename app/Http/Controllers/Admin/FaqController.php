@@ -2,29 +2,25 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Models\Admin\Faq;
+use App\Models\Faq;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use Illuminate\Support\Facades\Validator;
 
 class FaqController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
+
     public function index()
     {
-        $latestOrder = Faq::latest('order')->first();
-        $order_number = $latestOrder ? $latestOrder->order + 1 : 1;
-
         return view('admin.pages.faq.index', [
-            'faqs' => Faq::oldest('order')->get(),
-            'order_number' => $order_number
+            'faqs'              => Faq::latest('id')->get(),
+            // 'dynamicCategories' => $this->dynamicCategoryRepository->allDynamicCategory(),
         ]);
     }
 
     /**
      * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
      */
     public function create()
     {
@@ -33,38 +29,21 @@ class FaqController extends Controller
 
     /**
      * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
     {
-        $validator = Validator::make(
-            $request->all(),
-            [
-                'question'  => 'required',
-                'answer'  => 'required',
-                'order' => 'required|unique:faqs,order',
-            ],
-            [
-                'unique' => 'This order has already been taken for another faq.',
-                'required' => 'This :attribute must be required.',
-            ],
-        );
-
-        if ($validator->passes()) {
-         Faq::create([
+        Faq::create([
             'category' => $request->category,
             'question' => $request->question,
             'answer'   => $request->answer,
             'order'    => $request->order,
             'status'   => $request->status,
         ]);
-        flash()->addSuccess('Data has been uploaded Successfully');
-    }else {
-            $messages = $validator->messages();
-            foreach ($messages->all() as $message) {
-                flash()->addError($message, 'Failed', ['timeOut' => 30000]);
-            }
-        }
-        return redirect()->back();
+        // toastr()->success('Data has been saved successfully!');
+        return redirect()->back()->with('success', 'Data has been saved successfully!');
     }
 
     /**
@@ -88,36 +67,17 @@ class FaqController extends Controller
      */
     public function update(Request $request, string $id)
     {
+        $coupon = Faq::findOrFail($id);
 
-        $faq = Faq::findOrFail($id);
-        $validator = Validator::make(
-            $request->all(),
-            [
-                'name'  => 'required',
-                'order' => 'required|unique:frontend_menus,order,' . $faq->id,
-                'url'   => 'required',
-            ],
-            [
-                'unique'   => 'This order has already been taken for another menu.',
-                'required' => 'The :attribute field is required.',
-            ]
-        );
-        if ($validator->passes()) {
-            $faq->update([
-                'category' => $request->category,
-                'question' => $request->question,
-                'answer'   => $request->answer,
-                'order'    => $request->order,
-                'status'   => $request->status,
-            ]);
-            flash()->addSuccess('Data has been updated Successfully');
-        } else {
-            $messages = $validator->messages();
-            foreach ($messages->all() as $message) {
-                flash()->addError($message, 'Failed', ['timeOut' => 30000]);
-            }
-        }
-        return redirect()->back();
+        $coupon->update([
+            'category' => $request->category,
+            'question' => $request->question,
+            'answer'   => $request->answer,
+            'order'    => $request->order,
+            'status'   => $request->status,
+        ]);
+        // toastr()->success('Data has been saved successfully!');
+        return redirect()->back()->with('success', 'Data has been updated successfully!');
     }
 
     /**
