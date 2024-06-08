@@ -41,10 +41,10 @@
                                     {{ isset($words[$key]) ? 'Tamplate' . ' ' . Str::ucfirst($words[$key]) : 'Number out of range' }}
                                 </td>
                                 <td>
-                                    <a href="{{ route('admin.learnMore.edit', [$learnMore->id]) }}" class="text-primary">
+                                    <a href="{{ route('admin.learnmore.edit', [$learnMore->id]) }}" class="text-primary">
                                         <i class="fa-solid fa-pen-to-square me-2 dash-icons text-primary"></i>
                                     </a>
-                                    <a href="{{ route('admin.learnMore.destroy', [$learnMore->id]) }}"
+                                    <a href="{{ route('admin.learnmore.destroy', [$learnMore->id]) }}"
                                         class="text-danger delete">
                                         <i class="fa-solid fa-trash dash-icons text-danger"></i>
                                     </a>
