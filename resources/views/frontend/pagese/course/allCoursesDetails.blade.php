@@ -139,7 +139,8 @@
                                                         <div class="accordion-item border-0 shadow-sm">
                                                             <h2 class="accordion-header mb-1">
 
-                                                                <button class="accordion-button border-0 shadow-sm collapsed"
+                                                                <button
+                                                                    class="accordion-button border-0 shadow-sm collapsed"
                                                                     type="button" data-bs-toggle="collapse"
                                                                     data-bs-target="#collapseOne{{ $courseCurriculam->id }}"
                                                                     aria-expanded="true" aria-controls="collapseOne">
@@ -446,14 +447,16 @@
                                             <div class="card join_offline">
                                                 <div class="card-body">
                                                     <h5>Course Fee Offline</h5>
-                                                    <h3 class="fw-bold">BDT {{ number_format($coursedetail->price, 2) }}</h3>
+                                                    <h3 class="fw-bold">BDT {{ number_format($coursedetail->price, 2) }}
+                                                    </h3>
                                                     <a href="" class="primary-btn-one">Enroll Now</a>
                                                 </div>
                                             </div>
                                             <div class="card join_offline">
                                                 <div class="card-body">
                                                     <h5>Course Fee Online</h5>
-                                                    <h3 class="fw-bold">BDT {{ number_format($coursedetail->online_price, 2) }}</h3>
+                                                    <h3 class="fw-bold">BDT
+                                                        {{ number_format($coursedetail->online_price, 2) }}</h3>
                                                     <a href="" class="primary-btn-one">Enroll Now</a>
                                                 </div>
                                             </div>
@@ -506,9 +509,12 @@
                                                                     // Current time
                                                                     $currentTime = time();
                                                                     // Calculate remaining time in seconds
-                                                                    $remainingTime = $registrationEndTimestamp - $currentTime;
+                                                                    $remainingTime =
+                                                                        $registrationEndTimestamp - $currentTime;
                                                                     // Convert remaining time to days
-                                                                    $remainingDays = floor($remainingTime / (60 * 60 * 24));
+                                                                    $remainingDays = floor(
+                                                                        $remainingTime / (60 * 60 * 24),
+                                                                    );
                                                                 @endphp
 
                                                                 <small class="pe-3">
@@ -530,7 +536,8 @@
                                                             <div class="pt-2">
                                                                 <a href="{{ url('course' . '/' . $course->id . '/' . $course->slug) }}"
                                                                     class="btn btn-light border w-100">See Details
-                                                                    <i class="fa-solid fa-arrow-right ps-2" aria-hidden="true"></i></a>
+                                                                    <i class="fa-solid fa-arrow-right ps-2"
+                                                                        aria-hidden="true"></i></a>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -560,23 +567,26 @@
                 <div class="container">
                     <div class="row align-items-center">
                         <div class="col-lg-5">
+                            
                             <p>
                                 <span class="fw-bold primary-text-color">Call This Number:</span>
-                                <span>+8801999967723</span>
+                                <span>{{ optional($setting)->primary_phone }}</span>
                             </p>
                             <div class="d-flex align-items-center">
-                                <h2 class="pe-3 fw-bold primary-text-color">৳8,000</h2>
-                                <h6>
+                                <h2 class="pe-3 fw-bold primary-text-color">BDT {{ number_format($coursedetail->price, 2) }}</h2>
+                                {{-- <h6>
                                     <a href="" class="text-decoration-none primary-text-color"><i
                                             class="fa-solid fa-ticket pe-2"></i>Promo Code</a>
-                                </h6>
+                                </h6> --}}
                             </div>
                         </div>
-                        <div class="col-lg-7">
+
+                        {{-- <div class="col-lg-7">
                             <div class="text-end">
                                 <a href="" class="primary-btn-one ps-3 text-center">Enroll Running Batch</a>
                             </div>
-                        </div>
+                        </div> --}}
+
                     </div>
                 </div>
             </div>
