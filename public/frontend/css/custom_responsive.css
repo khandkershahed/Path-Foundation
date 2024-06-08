@@ -2396,6 +2396,18 @@
     .breadcrumb__item {
         padding: 0 30px;
     }
+    .releted-course-home{
+        width: 100% !important;
+        height: 100% !important;
+    }
+    figure.effect-oscar h5 {
+        color: white;
+        -webkit-transition: -webkit-transform 0.35s;
+        transition: transform 0.35s;
+        -webkit-transform: translate3d(0, 140%, 0);
+        transform: translate3d(0, 650%, 0);
+        font-size: 16px;
+    }
 }
 
 /* Large Devices (e.g., Desktops) */

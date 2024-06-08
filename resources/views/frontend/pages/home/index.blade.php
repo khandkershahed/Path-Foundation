@@ -557,7 +557,7 @@
                                         <img src="{{ !empty($story->thumbnail_image) && file_exists(public_path('storage/' . $story->thumbnail_image)) ? asset('storage/' . $story->thumbnail_image) : asset('frontend/images/banner-demo.png') }}"
                                             alt="">
                                         <figcaption>
-                                            <h6> {{ Str::words($story->title, 6) }}</h6>
+                                            {{-- <h6> {{ Str::words($story->title, 6) }}</h6> --}}
                                             {{-- <p>{{ Str::words($story->header, 10) }}</p> --}}
                                             <h5 class="download-hover-btn mt-5 pt-3">
                                                 <a class="text-white"
@@ -600,7 +600,7 @@
                                         <img src="{{ !empty($story->thumbnail_image) && file_exists(public_path('storage/' . $story->thumbnail_image)) ? asset('storage/' . $story->thumbnail_image) : asset('frontend/images/no-shop-imge.png') }}"
                                             alt="">
                                         <figcaption>
-                                            <h6> {{ Str::words($story->title, 6) }}</h6>
+                                            {{-- <h6> {{ Str::words($story->title, 6) }}</h6> --}}
                                             <p>{{ Str::words($story->header, 10) }}</p>
                                             <h5 class="download-hover-btn">
                                                 <a class="text-white"
@@ -680,9 +680,9 @@
                                 <div class="card-header p-0 bg-transparent">
 
                                     <div>
-                                        <img class="rounded-2"
+                                        <img class="rounded-2 releted-course-home"
                                             src="{{ asset(!empty($course->thumbnail_image) ? url('storage/course/' . $course->thumbnail_image) : url('images/no-shop-imge.png')) }}"
-                                            alt="" style="width: 311px;height: 160px;">
+                                            alt="">
                                     </div>
 
                                     <div class="p-2 text-center">

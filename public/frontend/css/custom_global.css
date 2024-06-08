@@ -1474,10 +1474,13 @@ figure.effect-oscar h5 {
     -webkit-transition: -webkit-transform 0.35s;
     transition: transform 0.35s;
     -webkit-transform: translate3d(0, 140%, 0);
-    transform: translate3d(0, 140%, 0);
+    transform: translate3d(0, 270%, 0);
     font-size: 16px;
 }
-
+.releted-course-home {
+    width: 311px;
+    height: 160px;
+}
 figure.effect-oscar figcaption::before,
 figure.effect-oscar p {
     -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
@@ -5818,7 +5821,9 @@ tr td:hover {
     position: fixed;
     width: 100%;
     height: 100vh;
-    background: white url("../images/preloader-new.gif") no-repeat center center;
+    background: #050119
+        url("https://i.ibb.co/NLv2b15/aed11d6975231b91c8e992c02b8376da.gif")
+        no-repeat center center;
     z-index: 9999;
     margin-top: -1.5rem;
 }
@@ -17319,6 +17324,10 @@ nav > div a.nav-item.nav-link.active {
 /* Refurbished Product End*/
 
 @media screen and (max-width: 767px) {
+    .releted-course-home {
+        width: 100%;
+        height: 200px;
+    }
     .solution-feature-cards {
         height: 100% !important;
     }
