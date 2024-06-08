@@ -15,4 +15,19 @@ class LearnMore extends Model
      * @var array
      */
     protected $guarded = [];
+
+    public function successStoryOne()
+    {
+        return $this->belongsTo(Success::class, 'success_story_one_id');
+    }
+
+    public function successStoryTwo()
+    {
+        return $this->belongsTo(Success::class, 'success_story_two_id');
+    }
+
+    public function successStoryThree()
+    {
+        return $this->belongsTo(Success::class, 'success_story_three_id');
+    }
 }

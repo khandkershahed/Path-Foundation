@@ -563,33 +563,48 @@
                     <i class="fa-solid fa-xmark primary-text-color"></i>
                 </button>
             </div>
-            <div class="card-body p-1">
-                <div class="container">
-                    <div class="row align-items-center">
-                        <div class="col-lg-5">
-                            
-                            <p>
-                                <span class="fw-bold primary-text-color">Call This Number:</span>
-                                <span>{{ optional($setting)->primary_phone }}</span>
-                            </p>
-                            <div class="d-flex align-items-center">
-                                <h2 class="pe-3 fw-bold primary-text-color">BDT {{ number_format($coursedetail->price, 2) }}</h2>
-                                {{-- <h6>
+
+            <form method="POST" action="{{ route('course.enroll', $course->id) }}">
+
+                <div class="card-body p-1">
+                    <div class="container">
+                        <div class="row align-items-center">
+                            <div class="col-lg-5">
+
+                                <p>
+                                    <span class="fw-bold primary-text-color">Call This Number:</span>
+                                    <span>{{ optional($setting)->primary_phone }}</span>
+                                </p>
+                                <div class="d-flex align-items-center">
+                                    <h2 class="pe-3 fw-bold primary-text-color">BDT
+                                        {{ number_format($coursedetail->price, 2) }}</h2>
+                                    {{-- <h6>
                                     <a href="" class="text-decoration-none primary-text-color"><i
                                             class="fa-solid fa-ticket pe-2"></i>Promo Code</a>
                                 </h6> --}}
+                                </div>
                             </div>
+
+                            <div class="col-lg-7">
+                                <div class="text-end">
+
+                                    @csrf
+
+                                    <input type="hidden" name="amount" value="{{ $coursedetail->price }}">
+
+                                    <button type="submit" class="primary-btn-one ps-3 text-center">Enroll Running
+                                        Batch</button>
+
+
+                                </div>
+                            </div>
+
                         </div>
-
-                        {{-- <div class="col-lg-7">
-                            <div class="text-end">
-                                <a href="" class="primary-btn-one ps-3 text-center">Enroll Running Batch</a>
-                            </div>
-                        </div> --}}
-
                     </div>
                 </div>
-            </div>
+
+            </form>
+
         </div>
     </section>
     @push('scripts')

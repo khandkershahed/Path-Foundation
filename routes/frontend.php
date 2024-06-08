@@ -11,6 +11,7 @@ use App\Http\Controllers\Admin\FeedbackController;
 use App\Http\Controllers\Payment\StripeController;
 use App\Http\Controllers\Admin\NewsLetterController;
 use App\Http\Controllers\Frontend\CheckoutController;
+use App\Http\Controllers\Frontend\CourseEnrollController;
 use App\Http\Controllers\Frontend\PageController;
 
 //Homepage
@@ -229,4 +230,9 @@ Route::controller(PageController::class)->group(function () {
     // Route::get('/{id}/contents/{id}/details', 'blogDetails')->name('brand.content.details.blog');
     // Route::get('/{id}/contents/{id}/details', 'storyDetails')->name('brand.content.details.story');
     Route::get('/{slug}/products', 'ajaxBrandProductsPagination')->name('brand.products.pagination');
+});
+
+//Kuka Pages
+Route::controller(CourseEnrollController::class)->group(function () {
+    Route::post('/course/enroll/{course_id}', 'CourseEnroll')->name('course.enroll');
 });
