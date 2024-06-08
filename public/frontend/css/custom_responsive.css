@@ -131,7 +131,11 @@
     }
 
     .Advance-Slider .img-fill img {
-        height: 11rem;
+        height: 100%;
+        object-fit: fill;
+    }
+    .slick-prev, .slick-next{
+        z-index: 55 !important;
     }
 
     .image_box_features {

@@ -409,10 +409,26 @@
                             <h3 class="main_color">Feature Contents</h3>
                         </div>
                         <div class="text-end w-25">
-                            <a class="Arrows custom-responsive-slider-prev"><i
-                                    class="fas fa-2x fa-arrow-alt-circle-left"></i></a>
-                            <a class="Arrows custom-responsive-slider-next"><i
-                                    class="fas fa-2x fa-arrow-alt-circle-right"></i></a>
+                            <a class="Arrows custom-responsive-slider-prev">
+                                <i class="fa-solid fa-chevron-left fa-2x"
+                                    style="cursor: pointer;
+    font: 18px / 36px FontAwesome;
+    text-align: center;
+    transition: all 0.5s;
+    background: #000;
+    width: 38px;
+    color: white;"></i>
+                            </a>
+                            <a class="Arrows custom-responsive-slider-next">
+                                <i class="fa-solid fa-chevron-right fa-2x"
+                                    style="cursor: pointer;
+    font: 18px / 36px FontAwesome;
+    text-align: center;
+    transition: all 0.5s;
+    background: #000;
+    width: 38px;
+    color: white;"></i>
+                            </a>
                         </div>
                     </div>
 
@@ -580,10 +596,26 @@
                     <h3 style="color: #07163b;font-weight: 600;">Soon To Start Courses!</h3>
                 </div>
                 <div class="text-end w-25">
-                    <a class="Arrows custom-responsive-slider-prev"><i
-                            class="fas fa-2x fa-arrow-alt-circle-left"></i></a>
-                    <a class="Arrows custom-responsive-slider-next"><i
-                            class="fas fa-2x fa-arrow-alt-circle-right"></i></a>
+                    <a class="Arrows custom-responsive-slider-prev">
+                        <i class="fa-solid fa-chevron-left fa-2x"
+                            style="cursor: pointer;
+    font: 18px / 36px FontAwesome;
+    text-align: center;
+    transition: all 0.5s;
+    background: #000;
+    width: 38px;
+    color: white;"></i>
+                    </a>
+                    <a class="Arrows custom-responsive-slider-next">
+                        <i class="fa-solid fa-chevron-right fa-2x"
+                            style="cursor: pointer;
+    font: 18px / 36px FontAwesome;
+    text-align: center;
+    transition: all 0.5s;
+    background: #000;
+    width: 38px;
+    color: white;"></i>
+                    </a>
                 </div>
             </div>
 
@@ -751,10 +783,26 @@
             <h3 class="text-center">Our Success <span class="main_color">Starts With</span> Our Culture.</h3>
             <div class="row">
                 <div class="d-flex justify-content-between px-4">
-                    <a class="Arrows custom-responsive-slider-prev"><i
-                            class="fas fa-2x fa-arrow-alt-circle-left"></i></a>
-                    <a class="Arrows custom-responsive-slider-next"><i
-                            class="fas fa-2x fa-arrow-alt-circle-right"></i></a>
+                    <a class="Arrows custom-responsive-slider-prev">
+                        <i class="fa-solid fa-chevron-left fa-2x"
+                            style="cursor: pointer;
+    font: 18px / 36px FontAwesome;
+    text-align: center;
+    transition: all 0.5s;
+    background: #000;
+    width: 38px;
+    color: white;"></i>
+                    </a>
+                    <a class="Arrows custom-responsive-slider-next">
+                        <i class="fa-solid fa-chevron-right fa-2x"
+                            style="cursor: pointer;
+    font: 18px / 36px FontAwesome;
+    text-align: center;
+    transition: all 0.5s;
+    background: #000;
+    width: 38px;
+    color: white;"></i>
+                    </a>
                 </div>
                 <div class="owl-carousel custom-responsive-slider" style="z-index: 0 !important;">
                     @foreach ($successItems as $key => $successItem)
