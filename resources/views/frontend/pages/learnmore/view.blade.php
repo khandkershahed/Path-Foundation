@@ -266,7 +266,7 @@
     </section>
     <!---------End -------->
     <!--=====// We serve //=====-->
-    <div class="container">
+    {{-- <div class="container">
         <!-- section title -->
         <div class="clint_help_section_heading_wrapper">
             <!-- title -->
@@ -330,7 +330,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
     <!---------End -------->
 
 
