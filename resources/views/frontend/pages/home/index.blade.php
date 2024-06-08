@@ -409,10 +409,26 @@
                             <h3 class="main_color">Feature Contents</h3>
                         </div>
                         <div class="text-end w-25">
-                            <a class="Arrows custom-responsive-slider-prev"><i
-                                    class="fas fa-2x fa-arrow-alt-circle-left"></i></a>
-                            <a class="Arrows custom-responsive-slider-next"><i
-                                    class="fas fa-2x fa-arrow-alt-circle-right"></i></a>
+                            <a class="Arrows custom-responsive-slider-prev">
+                                <i class="fa-solid fa-chevron-left fa-2x"
+                                    style="cursor: pointer;
+    font: 18px / 36px FontAwesome;
+    text-align: center;
+    transition: all 0.5s;
+    background: #000;
+    width: 38px;
+    color: white;"></i>
+                            </a>
+                            <a class="Arrows custom-responsive-slider-next">
+                                <i class="fa-solid fa-chevron-right fa-2x"
+                                    style="cursor: pointer;
+    font: 18px / 36px FontAwesome;
+    text-align: center;
+    transition: all 0.5s;
+    background: #000;
+    width: 38px;
+    color: white;"></i>
+                            </a>
                         </div>
                     </div>
 
@@ -557,7 +573,7 @@
                                         <img src="{{ !empty($story->thumbnail_image) && file_exists(public_path('storage/' . $story->thumbnail_image)) ? asset('storage/' . $story->thumbnail_image) : asset('frontend/images/banner-demo.png') }}"
                                             alt="">
                                         <figcaption>
-                                            <h6> {{ Str::words($story->title, 6) }}</h6>
+                                            {{-- <h6> {{ Str::words($story->title, 6) }}</h6> --}}
                                             {{-- <p>{{ Str::words($story->header, 10) }}</p> --}}
                                             <h5 class="download-hover-btn mt-5 pt-3">
                                                 <a class="text-white"
@@ -580,10 +596,26 @@
                     <h3 style="color: #07163b;font-weight: 600;">Soon To Start Courses!</h3>
                 </div>
                 <div class="text-end w-25">
-                    <a class="Arrows custom-responsive-slider-prev"><i
-                            class="fas fa-2x fa-arrow-alt-circle-left"></i></a>
-                    <a class="Arrows custom-responsive-slider-next"><i
-                            class="fas fa-2x fa-arrow-alt-circle-right"></i></a>
+                    <a class="Arrows custom-responsive-slider-prev">
+                        <i class="fa-solid fa-chevron-left fa-2x"
+                            style="cursor: pointer;
+    font: 18px / 36px FontAwesome;
+    text-align: center;
+    transition: all 0.5s;
+    background: #000;
+    width: 38px;
+    color: white;"></i>
+                    </a>
+                    <a class="Arrows custom-responsive-slider-next">
+                        <i class="fa-solid fa-chevron-right fa-2x"
+                            style="cursor: pointer;
+    font: 18px / 36px FontAwesome;
+    text-align: center;
+    transition: all 0.5s;
+    background: #000;
+    width: 38px;
+    color: white;"></i>
+                    </a>
                 </div>
             </div>
 
@@ -600,7 +632,7 @@
                                         <img src="{{ !empty($story->thumbnail_image) && file_exists(public_path('storage/' . $story->thumbnail_image)) ? asset('storage/' . $story->thumbnail_image) : asset('frontend/images/no-shop-imge.png') }}"
                                             alt="">
                                         <figcaption>
-                                            <h6> {{ Str::words($story->title, 6) }}</h6>
+                                            {{-- <h6> {{ Str::words($story->title, 6) }}</h6> --}}
                                             <p>{{ Str::words($story->header, 10) }}</p>
                                             <h5 class="download-hover-btn">
                                                 <a class="text-white"
@@ -680,9 +712,9 @@
                                 <div class="card-header p-0 bg-transparent">
 
                                     <div>
-                                        <img class="rounded-2"
+                                        <img class="rounded-2 releted-course-home"
                                             src="{{ asset(!empty($course->thumbnail_image) ? url('storage/course/' . $course->thumbnail_image) : url('images/no-shop-imge.png')) }}"
-                                            alt="" style="width: 311px;height: 160px;">
+                                            alt="">
                                     </div>
 
                                     <div class="p-2 text-center">
@@ -751,10 +783,26 @@
             <h3 class="text-center">Our Success <span class="main_color">Starts With</span> Our Culture.</h3>
             <div class="row">
                 <div class="d-flex justify-content-between px-4">
-                    <a class="Arrows custom-responsive-slider-prev"><i
-                            class="fas fa-2x fa-arrow-alt-circle-left"></i></a>
-                    <a class="Arrows custom-responsive-slider-next"><i
-                            class="fas fa-2x fa-arrow-alt-circle-right"></i></a>
+                    <a class="Arrows custom-responsive-slider-prev">
+                        <i class="fa-solid fa-chevron-left fa-2x"
+                            style="cursor: pointer;
+    font: 18px / 36px FontAwesome;
+    text-align: center;
+    transition: all 0.5s;
+    background: #000;
+    width: 38px;
+    color: white;"></i>
+                    </a>
+                    <a class="Arrows custom-responsive-slider-next">
+                        <i class="fa-solid fa-chevron-right fa-2x"
+                            style="cursor: pointer;
+    font: 18px / 36px FontAwesome;
+    text-align: center;
+    transition: all 0.5s;
+    background: #000;
+    width: 38px;
+    color: white;"></i>
+                    </a>
                 </div>
                 <div class="owl-carousel custom-responsive-slider" style="z-index: 0 !important;">
                     @foreach ($successItems as $key => $successItem)
