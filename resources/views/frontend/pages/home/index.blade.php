@@ -23,7 +23,7 @@
 
         @media screen and (max-width: 769px) {
             .feature-title {
-                font-size: 25px;
+                font-size: 17px;
             }
         }
 
@@ -33,7 +33,7 @@
             width: 70px;
             margin-top: 10px;
             height: 0px;
-            background-color: #F2AF29;
+            background-color: #07163b;
         }
 
         .action-btnss {
@@ -186,8 +186,8 @@
                     <div class="card-body py-3 ">
                         <div class="d-flex justify-content-center flex-column text-center">
                             <div class="home-feature">
-                                <img class="img-fluid" width="40px"
-                                    src="{{ asset('frontend/images/icons/Practice Project.png') }}" alt="">
+                                <img class="img-fluid" width="35px"
+                                    src="{{ asset('frontend/images/icons/icons2/project.png') }}" alt="">
                             </div>
                             <h6 class="fw-bolder pt-2">20+ Practice <br> Project</h6>
                         </div>
@@ -199,8 +199,9 @@
                     <div class="card-body py-3 ">
                         <div class="d-flex justify-content-center flex-column text-center">
                             <div class="home-feature">
-                                <img class="img-fluid" width="40px"
-                                    src="{{ asset('frontend/images/icons/Support Classes.png') }}" alt="">
+                                <img class="img-fluid" width="35px"
+                                    src="{{ asset('frontend/images/icons/icons2/SupportClasses.png') }}"
+                                    alt="">
                             </div>
                             <h6 class="fw-bolder pt-2">Support <br> Classes</h6>
                         </div>
@@ -212,8 +213,8 @@
                     <div class="card-body py-3 ">
                         <div class="d-flex justify-content-center flex-column text-center">
                             <div class="home-feature">
-                                <img class="img-fluid" width="40px"
-                                    src="{{ asset('frontend/images/icons/Certificate.png') }}" alt="">
+                                <img class="img-fluid" width="35px"
+                                    src="{{ asset('frontend/images/icons/icons2/certificate.png') }}" alt="">
                             </div>
                             <h6 class="fw-bolder pt-2">After Course <br> Certificate</h6>
                         </div>
@@ -225,8 +226,8 @@
                     <div class="card-body py-3 ">
                         <div class="d-flex justify-content-center flex-column text-center">
                             <div class="home-feature">
-                                <img class="img-fluid" width="40px"
-                                    src="{{ asset('frontend/images/icons/Lifetime video access.png') }}"
+                                <img class="img-fluid" width="35px"
+                                    src="{{ asset('frontend/images/icons/icons2/LifetimeVideoAccess.png') }}"
                                     alt="">
                             </div>
                             <h6 class="fw-bolder pt-2">Lifetime Video <br> Access</h6>
@@ -239,8 +240,9 @@
                     <div class="card-body py-3 ">
                         <div class="d-flex justify-content-center flex-column text-center">
                             <div class="home-feature">
-                                <img class="img-fluid" width="40px"
-                                    src="{{ asset('frontend/images/icons/Guideline.png') }}" alt="">
+                                <img class="img-fluid" width="35px"
+                                    src="{{ asset('frontend/images/icons/icons2/MarketplaceGuideLine.png') }}"
+                                    alt="">
                             </div>
                             <h6 class="fw-bolder pt-2">Marketplace <br> Guideline</h6>
                         </div>
@@ -294,9 +296,10 @@
                         <div class="card training-featuer mx-2">
                             <div class="card-body py-3 text-center">
                                 <div class="d-flex justify-content-center flex-column text-center align-items-center">
-                                    <div>
-                                        <img class="img-fluid text-center" width="50px"
-                                            src="{{ asset('frontend/images/icons/01.jpg') }}" alt="">
+                                    <div class="home-feature">
+                                        <img class="img-fluid" width="35px"
+                                            src="{{ asset('frontend/images/icons/icons2/project.png') }}"
+                                            alt="">
                                     </div>
                                     <h6 class="fw-bolder pt-2">20+ Practice <br> Project</h6>
                                 </div>
@@ -307,9 +310,10 @@
                         <div class="card training-featuer mx-2">
                             <div class="card-body py-3 text-center">
                                 <div class="d-flex justify-content-center flex-column text-center align-items-center">
-                                    <div>
-                                        <img class="img-fluid text-center" width="50px"
-                                            src="{{ asset('frontend/images/icons/02.jpg') }}" alt="">
+                                    <div class="home-feature">
+                                        <img class="img-fluid" width="35px"
+                                            src="{{ asset('frontend/images/icons/icons2/SupportClasses.png') }}"
+                                            alt="">
                                     </div>
                                     <h6 class="fw-bolder pt-2">20+ Practice <br> Project</h6>
                                 </div>
@@ -320,9 +324,10 @@
                         <div class="card training-featuer mx-2">
                             <div class="card-body py-3 text-center">
                                 <div class="d-flex justify-content-center flex-column text-center align-items-center">
-                                    <div>
-                                        <img class="img-fluid text-center" width="50px"
-                                            src="{{ asset('frontend/images/icons/03.jpg') }}" alt="">
+                                    <div class="home-feature">
+                                        <img class="img-fluid" width="35px"
+                                            src="{{ asset('frontend/images/icons/icons2/certificate.png') }}"
+                                            alt="">
                                     </div>
                                     <h6 class="fw-bolder pt-2">20+ Practice <br> Project</h6>
                                 </div>
@@ -333,9 +338,10 @@
                         <div class="card training-featuer mx-2">
                             <div class="card-body py-3 text-center">
                                 <div class="d-flex justify-content-center flex-column text-center align-items-center">
-                                    <div>
-                                        <img class="img-fluid text-center" width="50px"
-                                            src="{{ asset('frontend/images/icons/04.jpg') }}" alt="">
+                                    <div class="home-feature">
+                                        <img class="img-fluid" width="35px"
+                                            src="{{ asset('frontend/images/icons/icons2/LifetimeVideoAccess.png') }}"
+                                            alt="">
                                     </div>
                                     <h6 class="fw-bolder pt-2">20+ Practice <br> Project</h6>
                                 </div>
@@ -346,9 +352,10 @@
                         <div class="card training-featuer mx-2">
                             <div class="card-body py-3 text-center">
                                 <div class="d-flex justify-content-center flex-column text-center align-items-center">
-                                    <div>
-                                        <img class="img-fluid text-center" width="50px"
-                                            src="{{ asset('frontend/images/icons/05.jpg') }}" alt="">
+                                    <div class="home-feature">
+                                        <img class="img-fluid" width="35px"
+                                            src="{{ asset('frontend/images/icons/icons2/MarketplaceGuideLine.png') }}"
+                                            alt="">
                                     </div>
                                     <h6 class="fw-bolder pt-2">20+ Practice <br> Project</h6>
                                 </div>
@@ -408,8 +415,8 @@
                         <div class="text-start w-75">
                             <h3 class="main_color">Feature Contents</h3>
                         </div>
-                        <div class="text-end w-25">
-                            <a class="Arrows custom-responsive-slider-prev">
+                        <div class="text-end w-25 d-flex">
+                            <a class="Arrows custom-responsive-slider-prev me-1">
                                 <i class="fa-solid fa-chevron-left fa-2x"
                                     style="cursor: pointer;
     font: 18px / 36px FontAwesome;
@@ -595,8 +602,8 @@
                 <div class="text-start w-75">
                     <h3 style="color: #07163b;font-weight: 600;">Soon To Start Courses!</h3>
                 </div>
-                <div class="text-end w-25">
-                    <a class="Arrows custom-responsive-slider-prev">
+                <div class="text-end w-25 d-flex">
+                    <a class="Arrows custom-responsive-slider-prev me-1">
                         <i class="fa-solid fa-chevron-left fa-2x"
                             style="cursor: pointer;
     font: 18px / 36px FontAwesome;
@@ -606,7 +613,7 @@
     width: 38px;
     color: white;"></i>
                     </a>
-                    <a class="Arrows custom-responsive-slider-next">
+                    <a class="Arrows custom-responsive-slider-next me-1">
                         <i class="fa-solid fa-chevron-right fa-2x"
                             style="cursor: pointer;
     font: 18px / 36px FontAwesome;
