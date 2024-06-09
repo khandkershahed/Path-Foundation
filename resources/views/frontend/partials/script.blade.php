@@ -848,14 +848,16 @@
 
         var amount = element.getAttribute('data-amount');
         var course_id = element.getAttribute('data-id');
+        
 
         $.ajax({
             type: 'POST',
             dataType: 'json',
-            url: '/add-to-enroll/' + course_id,
+            url: '/add-to-enroll-online',
 
             data: {
-                payment_amount: $('input[name="payment_amount"]').val() // Include payment_amount in the data
+                course_id: course_id,
+                amount: amount,
             },
 
             success: function(data) {
