@@ -232,7 +232,7 @@
                     <a href="javascript:void(0)" class="nvabar-toggler tab_btn_icon upper-content-menu d-lg-none"
                         type="button" data-bs-toggle="offcanvas" data-bs-target="#rightOffcanvas"
                         aria-controls="rightOffcanvas">
-                        <i class="fa-solid fa-bars main_color" style="font-size: 18px !important;"></i>
+                        <i class="fa-solid fa-bars main_color" style="font-size: 15px !important;"></i>
                     </a>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <form class="d-flex ms-auto upper-content-menu" method="post"
@@ -562,26 +562,22 @@
             <hr>
             <ul class="navbar-nav justify-content-end flex-grow-1 mt-0 ps-4">
                 <li class="nav-item dropdown cool-link">
-                    <a class="nav-link dropdown-toggle" href="{{ route('homepage') }}" role="button" data-bs-toggle="dropdown"
-                        data-bs-auto-close="outside" aria-expanded="false">
+                    <a class="nav-link" href="{{ route('homepage') }}" role="button" >
                         Home
                     </a>
                 </li>
                 <li class="nav-item dropdown cool-link">
-                    <a class="nav-link dropdown-toggle" href="{{ route('courses.all') }}" role="button" data-bs-toggle="dropdown"
-                        data-bs-auto-close="outside" aria-expanded="false">
+                    <a class="nav-link" href="{{ route('courses.all') }}" role="button">
                         All Courses
                     </a>
                 </li>
                 <li class="nav-item dropdown cool-link">
-                    <a class="nav-link dropdown-toggle" href="{{ route('register') }}" role="button" data-bs-toggle="dropdown"
-                        data-bs-auto-close="outside" aria-expanded="false">
+                    <a class="nav-link" href="{{ route('register') }}" role="button">
                         Registration
                     </a>
                 </li>
                 <li class="nav-item dropdown cool-link">
-                    <a class="nav-link dropdown-toggle" href="{{ route('contact') }}" role="button" data-bs-toggle="dropdown"
-                        data-bs-auto-close="outside" aria-expanded="false">
+                    <a class="nav-link" href="{{ route('contact') }}" role="button">
                         Contact Us
                     </a>
                 </li>

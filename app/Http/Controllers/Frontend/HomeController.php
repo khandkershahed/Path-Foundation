@@ -186,19 +186,19 @@ class HomeController extends Controller
         return redirect()->back()->with('success', 'Course Registerd Successfully!!');
     }
 
-    // //About
-    // public function about()
-    // {
-    //     $data['about'] = AboutUs::latest('id', 'desc')->firstOrFail();
-    //     if ($data['about']) {
+    //About
+    public function about()
+    {
+        // $data['about'] = AboutUs::latest('id', 'desc')->firstOrFail();
+        // if ($data['about']) {
 
-    //         $data['row1'] = Row::where('id', $data['about']->row_one_id)->first();
-    //         $data['row2'] = Row::where('id', $data['about']->row_two_id)->first();
-    //         $data['row3'] = Row::where('id', $data['about']->row_three_id)->first();
-    //     }
-    //     // $data['pdfs'] = DocumentPdf::where('category', 'company')->latest('id', 'desc')->limit(4)->get(['document', 'button_name', 'button_link']);
-    //     return view('frontend.pages.about.about', $data);
-    // }
+        //     $data['row1'] = Row::where('id', $data['about']->row_one_id)->first();
+        //     $data['row2'] = Row::where('id', $data['about']->row_two_id)->first();
+        //     $data['row3'] = Row::where('id', $data['about']->row_three_id)->first();
+        // }
+        // $data['pdfs'] = DocumentPdf::where('category', 'company')->latest('id', 'desc')->limit(4)->get(['document', 'button_name', 'button_link']);
+        return view('frontend.pages.about.about');
+    }
 
     //What We Do
 

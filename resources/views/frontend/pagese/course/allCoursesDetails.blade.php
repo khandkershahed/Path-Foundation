@@ -52,7 +52,7 @@
                                         <h6 class="text-danger fw-bold text-lg-start text-center">
                                             Turn Your Passion into an Artistic Profession
                                         </h6>
-                                        <h2 class="fw-bold text-lg-start text-center">
+                                        <h2 class="fw-bold text-lg-start text-center main-color">
                                             {{ $coursedetail->name }}
                                         </h2>
                                         <div class="row py-3">
@@ -61,7 +61,7 @@
                                                     <div class="card-body">
                                                         <div class="text-center">
                                                             <p class="mb-0">Duration</p>
-                                                            <h3 class="fw-bold pt-2">{{ $coursedetail->course_duration }}
+                                                            <h3 class="fw-bold pt-2 number-font main-color">{{ $coursedetail->course_duration }}
                                                             </h3>
                                                         </div>
                                                     </div>
@@ -72,7 +72,7 @@
                                                     <div class="card-body">
                                                         <div class="text-center">
                                                             <p class="mb-0">Lectures</p>
-                                                            <h3 class="fw-bold pt-2">{{ $coursedetail->lecture }}</h3>
+                                                            <h3 class="fw-bold pt-2 number-font main-color">{{ $coursedetail->lecture }}</h3>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -82,7 +82,7 @@
                                                     <div class="card-body">
                                                         <div class="text-center">
                                                             <p class="mb-0">Projects</p>
-                                                            <h3 class="fw-bold pt-2">{{ $coursedetail->project }}</h3>
+                                                            <h3 class="fw-bold pt-2 number-font main-color">{{ $coursedetail->project }}</h3>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -129,7 +129,7 @@
 
                                     <div>
                                         <!-- Course Curriculum -->
-                                        <div id="curriculum" class="py-3 extra-space">
+                                        <div id="curriculum" class="py-3">
                                             <h5 class="primary-text-color fw-bold">
                                                 Course Curriculum
                                             </h5>
@@ -185,7 +185,7 @@
                                             </div>
                                         </div>
                                         <!-- Course Schedule -->
-                                        <div id="schedule" class="py-3 extra-space">
+                                        <div id="schedule" class="py-3">
                                             <h5 class="primary-text-color fw-bold">
                                                 Course Schedule
                                             </h5>
@@ -333,7 +333,7 @@
                                             </div>
                                         </div>
                                         <!-- Course Projects -->
-                                        <div id="projects" class="py-3 extra-space">
+                                        <div id="projects" class="py-3">
                                             <h3 class="primary-text-color fw-bold">
                                                 Course Projects
                                             </h3>
@@ -344,6 +344,27 @@
                                             <div class="slider-project pt-3">
                                                 <div class="slider-items">
                                                     <div class="project-box">
+                                                        <div class="box p-2">
+                                                            <img class="img-fluid"
+                                                                src="https://cdn.ostad.app/public/upload/2024-03-19T09-42-37.309Z-610cbb29feffc927b046279da1aa10d9.jpg"
+                                                                alt="" />
+                                                            <div class="box-content">
+                                                                <h3 class="title">Kristina</h3>
+                                                                <span class="post">Web designer</span>
+                                                                <ul class="icon">
+                                                                    <li>
+                                                                        <a href="#"><i class="fa fa-search"></i></a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a href="#"><i class="fa fa-link"></i></a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="slider-items">
+                                                    <div class="project-box p-2">
                                                         <div class="box">
                                                             <img width="288px" height="216px"
                                                                 src="https://cdn.ostad.app/public/upload/2024-03-19T09-42-37.309Z-610cbb29feffc927b046279da1aa10d9.jpg"
@@ -364,7 +385,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="slider-items">
-                                                    <div class="project-box">
+                                                    <div class="project-box p-2">
                                                         <div class="box">
                                                             <img width="288px" height="216px"
                                                                 src="https://cdn.ostad.app/public/upload/2024-03-19T09-42-37.309Z-610cbb29feffc927b046279da1aa10d9.jpg"
@@ -385,28 +406,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="slider-items">
-                                                    <div class="project-box">
-                                                        <div class="box">
-                                                            <img width="288px" height="216px"
-                                                                src="https://cdn.ostad.app/public/upload/2024-03-19T09-42-37.309Z-610cbb29feffc927b046279da1aa10d9.jpg"
-                                                                alt="" />
-                                                            <div class="box-content">
-                                                                <h3 class="title">Kristina</h3>
-                                                                <span class="post">Web designer</span>
-                                                                <ul class="icon">
-                                                                    <li>
-                                                                        <a href="#"><i class="fa fa-search"></i></a>
-                                                                    </li>
-                                                                    <li>
-                                                                        <a href="#"><i class="fa fa-link"></i></a>
-                                                                    </li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="slider-items">
-                                                    <div class="project-box">
+                                                    <div class="project-box p-2">
                                                         <div class="box">
                                                             <img width="288px" height="216px"
                                                                 src="https://cdn.ostad.app/public/upload/2024-03-19T09-42-37.309Z-610cbb29feffc927b046279da1aa10d9.jpg"
@@ -486,7 +486,7 @@
 
                                 <div class="col-lg-12">
                                     <!-- Related Courses -->
-                                    <div id="related" class="py-3 extra-space">
+                                    <div id="related" class="py-3">
                                         <h3 class="primary-text-color fw-bold">
                                             Related Courses
                                         </h3>
@@ -578,7 +578,7 @@
         </div>
     </section>
     <section class="fixed-bottom px-0" id="bottomSection">
-        <div class="card rounded-0 border-0" style="background-color: #ffc107">
+        <div class="card rounded-0 border-0" style="background-color: #0a1d5b">
             <div class="card-header border-0 bg-transparent pb-0 pt-2 pe-3 text-end"
                 style="margin-bottom: -30px; position: relative; z-index: 5">
                 <button id="closeButton" class="p-0 border-0 bg-transparent fs-4">
@@ -594,14 +594,14 @@
                             <div class="col-lg-5">
 
                                 <p>
-                                    <span class="fw-bold primary-text-color">Call This Number:</span>
+                                    <span class="fw-bold text-white">Call This Number:</span>
                                     <span>{{ optional($setting)->primary_phone }}</span>
                                 </p>
                                 <div class="d-flex align-items-center">
-                                    <h2 class="pe-3 fw-bold primary-text-color">BDT
+                                    <h2 class="pe-3 fw-bold text-white">BDT
                                         {{ number_format($coursedetail->price, 2) }}</h2>
                                     {{-- <h6>
-                                    <a href="" class="text-decoration-none primary-text-color"><i
+                                    <a href="" class="text-decoration-none text-white"><i
                                             class="fa-solid fa-ticket pe-2"></i>Promo Code</a>
                                 </h6> --}}
                                 </div>
@@ -614,7 +614,7 @@
 
                                     <input type="hidden" name="amount" value="{{ $coursedetail->price }}">
 
-                                    <button type="submit" class="primary-btn-one ps-3 text-center">Enroll Running
+                                    <button type="submit" class="primary-btn-one  ps-3 text-center" style="border: 1px solid white; color: white !important">Enroll Running
                                         Batch</button>
 
 
