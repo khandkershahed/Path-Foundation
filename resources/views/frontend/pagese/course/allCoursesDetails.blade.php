@@ -445,24 +445,45 @@
                                         </div>
                                         <div>
                                             <div class="card join_offline">
+
                                                 <div class="card-body">
+
                                                     <h5>Course Fee Offline</h5>
+
                                                     <h3 class="fw-bold">BDT {{ number_format($coursedetail->price, 2) }}
                                                     </h3>
-                                                    <a href="" class="primary-btn-one">Enroll Now</a>
+
+                                                    <input type="hidden" name="payment_amount"
+                                                        value="{{ $coursedetail->price }}">
+
+                                                    <a type="submit" id="{{ $coursedetail->id }}"
+                                                        onclick="addToEnroll(this.id)" class="primary-btn-one">Enroll
+                                                        Now</a>
+
                                                 </div>
+
                                             </div>
+
                                             <div class="card join_offline">
                                                 <div class="card-body">
+
                                                     <h5>Course Fee Online</h5>
+
                                                     <h3 class="fw-bold">BDT
                                                         {{ number_format($coursedetail->online_price, 2) }}</h3>
-                                                    <a href="" class="primary-btn-one">Enroll Now</a>
+
+                                                    
+
+                                                    <a href="javascript:void(0)" data-amount="{{ $coursedetail->online_price }}" data-id="{{ $coursedetail->id }}"
+                                                        class="primary-btn-one" onclick="addToEnrollOnline(this)">Enroll Now</a>
+
                                                 </div>
                                             </div>
+
                                         </div>
                                     </div>
                                 </div>
+
                                 <div class="col-lg-12">
                                     <!-- Related Courses -->
                                     <div id="related" class="py-3 extra-space">
@@ -475,14 +496,14 @@
                                         </p>
                                         <!-- Releted Course slider -->
                                         <div class="slider-related-courses">
-                                            @forelse ($courses as $course)
+                                            @forelse ($relatedcourses as $courses)
                                                 <div class="releted-course-items">
                                                     <div class="card border-0 bg-light shadow-sm rounded-2">
                                                         <div class="card-header p-0 bg-transparent">
 
                                                             <div>
                                                                 <img class="rounded-2 img-fluid course-images"
-                                                                    src="{{ asset(!empty($course->thumbnail_image) ? url('storage/course/' . $course->thumbnail_image) : url('images/no-shop-imge.png')) }}"
+                                                                    src="{{ asset(!empty($courses->thumbnail_image) ? url('storage/course/' . $courses->thumbnail_image) : url('images/no-shop-imge.png')) }}"
                                                                     alt="">
                                                             </div>
 
@@ -498,13 +519,13 @@
                                                                     <span class="cource-badge rounded-2">
                                                                         {{-- <i class="fa-solid fa-chair pe-2" aria-hidden="true"></i> --}}
                                                                         <i class="fa-solid fa-user"></i>
-                                                                        {{ $course->available_seats }}
+                                                                        {{ $courses->available_seats }}
                                                                     </span>
                                                                 </small>
                                                                 @php
                                                                     // Convert registration end date to Unix timestamp
                                                                     $registrationEndTimestamp = strtotime(
-                                                                        $course->registration_end_date,
+                                                                        $courses->registration_end_date,
                                                                     );
                                                                     // Current time
                                                                     $currentTime = time();
@@ -530,11 +551,11 @@
                                                         <div class="card-body">
                                                             <div class="course-title">
                                                                 <h6 class="mb-0">
-                                                                    {{ $course->name }}
+                                                                    {{ $courses->name }}
                                                                 </h6>
                                                             </div>
                                                             <div class="pt-2">
-                                                                <a href="{{ url('course' . '/' . $course->id . '/' . $course->slug) }}"
+                                                                <a href="{{ url('course' . '/' . $courses->id . '/' . $courses->slug) }}"
                                                                     class="btn btn-light border w-100">See Details
                                                                     <i class="fa-solid fa-arrow-right ps-2"
                                                                         aria-hidden="true"></i></a>
@@ -548,6 +569,7 @@
                                         </div>
                                     </div>
                                 </div>
+
                             </div>
                         </div>
                     </div>
@@ -564,7 +586,7 @@
                 </button>
             </div>
 
-            <form method="POST" action="{{ route('course.enroll', $course->id) }}">
+            <form method="POST" action="{{ route('course.enroll', $coursedetail->id) }}">
 
                 <div class="card-body p-1">
                     <div class="container">

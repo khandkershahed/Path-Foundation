@@ -154,6 +154,7 @@ Route::middleware(['auth:admin'])->prefix('admin')->name('admin.')->group(functi
             'course_project' => CourseProjectController::class,
             'course_outline' => CourseOutlineController::class,
             'course_schedule' => CourseScheduleController::class,
+            'about' => AboutUsController::class,
 
         ],
     );
