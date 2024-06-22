@@ -29,6 +29,7 @@
 {{-- <script src="{{ asset('backend/assets/js/custom.js') }}"></script> --}}
 <script src="{{ asset('frontend/js/custom.js') }}"></script>
 <script src="{{ asset('frontend/assets/js/filter.js') }}"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 {!! Toastr::message() !!}
 <!-- Google Recaptcha  -->
 <script>
@@ -769,6 +770,7 @@
             dots: false, // Display dots navigation
             arrows: true, // Display arrows navigation
             infinite: true, // Enable infinite loop
+            gap: 10,
             speed: 500, // Animation speed in milliseconds
             slidesToShow: 3, // Number of slides to show at a time
             slidesToScroll: 1, // Number of slides to scroll at a time
@@ -793,6 +795,105 @@
         $(".loader").fadeOut(3000);
     });
 </script>
+
+{{-- Add To Enroll --}}
+<script>
+    function addToEnroll(course_id) {
+        $.ajax({
+            type: 'POST',
+            dataType: 'json',
+            url: '/add-to-enroll/' + course_id,
+
+            data: {
+                payment_amount: $('input[name="payment_amount"]').val() // Include payment_amount in the data
+            },
+
+            success: function(data) {
+                // Start Message 
+
+                const Toast = Swal.mixin({
+                    toast: true,
+                    position: 'top-end',
+
+                    showConfirmButton: false,
+                    timer: 3000
+                })
+                if ($.isEmptyObject(data.error)) {
+
+                    Toast.fire({
+                        type: 'success',
+                        icon: 'success',
+                        title: data.success,
+                    })
+
+                } else {
+
+                    Toast.fire({
+                        type: 'error',
+                        icon: 'error',
+                        title: data.error,
+                    })
+                }
+
+                // End Message
+            }
+        })
+    }
+</script>
+
+{{-- Add To Enroll Online --}}
+
+<script>
+    function addToEnrollOnline(element) {
+
+        var amount = element.getAttribute('data-amount');
+        var course_id = element.getAttribute('data-id');
+        
+
+        $.ajax({
+            type: 'POST',
+            dataType: 'json',
+            url: '/add-to-enroll-online',
+
+            data: {
+                course_id: course_id,
+                amount: amount,
+            },
+
+            success: function(data) {
+                // Start Message 
+
+                const Toast = Swal.mixin({
+                    toast: true,
+                    position: 'top-end',
+
+                    showConfirmButton: false,
+                    timer: 3000
+                })
+                if ($.isEmptyObject(data.error)) {
+
+                    Toast.fire({
+                        type: 'success',
+                        icon: 'success',
+                        title: data.success,
+                    })
+
+                } else {
+
+                    Toast.fire({
+                        type: 'error',
+                        icon: 'error',
+                        title: data.error,
+                    })
+                }
+
+                // End Message
+            }
+        })
+    }
+</script>
+
+
 
 @yield('scripts')
 @stack('scripts')

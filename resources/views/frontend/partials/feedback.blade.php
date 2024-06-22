@@ -119,10 +119,10 @@
             <span class="fab-info-icon-dots fab-info-icon-dots-3"></span>
         </label>
         <div class="fab-info-icon-wheel">
-            <a href="{{ route('faq') }}" class="fab-info-icon-action fab-info-icon-action-2" data-title="FAQ">
+            <a href="" class="fab-info-icon-action fab-info-icon-action-2" data-title="FAQ">
                 <i class="fas fa-book"></i>
             </a>
-            <a href="{{ route('rfq') }}" class="fab-info-icon-action fab-info-icon-action-1" data-title="RFQ">
+            <a href="" class="fab-info-icon-action fab-info-icon-action-1" data-title="RFQ">
                 {{-- <i class="fas fa-question"></i>
                 data-bs-toggle="modal" data-bs-target="#rfqModal" --}}
 

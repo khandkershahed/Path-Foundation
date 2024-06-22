@@ -64,19 +64,19 @@
             padding-right: 0;
         }
     </style>
-    <section class="showcase-courses">
-        <img src="https://promisetrainingglobal.com/wp-content/uploads/2019/03/course-banner.jpg?id=8892" alt="Picture">
-        <div class="overlay-courses">
+    <section class="">
+        <img class="custom-banner" src="{{ asset('frontend/images/all-courses-banner.jpg') }}" alt="Picture">
+        {{-- <div class="overlay-courses">
             <h2>Our All Courses</h2>
             <p>One-Stop Learning &amp; Development Solutions</p>
-        </div>
+        </div> --}}
     </section>
     <section style="background-color: #eee;">
         <div class="container">
-            <div class="text-center px-5 py-5">
+            <div class="text-center px-0 px-lg-5 py-0 py-lg-5">
                 <h3 class="section-title">Popular Courses We Offer</h3>
                 <div class="divider"></div>
-                <p class="text-muted py-3 px-5">
+                <p class="text-muted py-0 py-lg-3 px-lg-5 px-0">
                     NGenIT Training provides short workshops and seminars covering management, leadership, finance, HR, and Oil & Gas. Participants can connect with professionals from different organizations, gaining fresh insights into common workplace challenges.
                 </p>
             </div>
