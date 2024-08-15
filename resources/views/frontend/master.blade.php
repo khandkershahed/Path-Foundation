@@ -5,30 +5,30 @@
     @include('frontend.partials.head')
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <meta name="google-site-verification" content="rvHWL3HPw7hzVuxHE37nPByXS604wH6gpUPzjZiWNy8" />
-    <meta name="title" content="Path Foundation">
-    <meta name="description"
-        content="Path Foundation is a System Integration, Software & Hardware based License Provider & Software development based company established at 2008. Our technical expertise, broad solutions portfolio and supply chain capabilities give us the right resources and scale to achieve more for you. Cloud Services.">
-    <meta name="keywords"
-        content="software, hardware, training, books, license, Microsoft, Adobe, Software License, Acronis, Veeam, Industry, Solution, Health Industry, Financial Industry,">
-    <meta name="robots" content="index, follow">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="language" content="English">
-    <meta name="revisit-after" content="7 days">
-    <meta name="author" content="NGen IT">
-    <script async data-id="9476858534" id="chatling-embed-script" type="text/javascript"
-        src="https://chatling.ai/js/embed.js"></script>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KB1NVD4FHE"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
+    <!-- Primary Meta Tags -->
+<title>PATH Foundation</title>
+<meta name="title" content="PATH Foundation" />
+<meta name="description" content="Join PATH Foundation in its commitment to a harmonious Bangladesh, focusing on rule of law, environmental care, and equitable education for all communities." />
 
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://metatags.io/" />
+<meta property="og:title" content="PATH Foundation" />
+<meta property="og:description" content="Join PATH Foundation in its commitment to a harmonious Bangladesh, focusing on rule of law, environmental care, and equitable education for all communities." />
+<meta property="og:image" content="https://metatags.io/images/meta-tags.png" />
 
-        gtag('config', 'G-KB1NVD4FHE');
-    </script>
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:url" content="https://metatags.io/" />
+<meta property="twitter:title" content="PATH Foundation" />
+<meta property="twitter:description" content="Join PATH Foundation in its commitment to a harmonious Bangladesh, focusing on rule of law, environmental care, and equitable education for all communities." />
+<meta property="twitter:image" content="https://metatags.io/images/meta-tags.png" />
+
+<!-- Meta Tags Generated with https://metatags.io -->
+    {{-- <script async data-id="9476858534" id="chatling-embed-script" type="text/javascript"
+        src="https://chatling.ai/js/embed.js"></script> --}}
+
+
 </head>
 {{-- <body onload="myFunction()"> --}}
 
@@ -59,22 +59,15 @@
     <!--============///* USE LINK *///=============-->
     @include('frontend.partials.script')
     <script>
-        // var preloader = document.getElementById('loading');
-
-        // function myFunction() {
-        //   preloader.style.display = "none";
-        // }
-
         document.addEventListener("DOMContentLoaded", function() {
             const preloader = document.getElementById('loading');
 
-            // Simulate a delay (you can replace this with actual logic)
             setTimeout(function() {
                 preloader.style.opacity = 0;
                 setTimeout(function() {
                     preloader.style.display = "none";
-                }, 100); // Same duration as preloader CSS animation
-            }, 800); // Simulated delay in milliseconds
+                }, 100);
+            }, 800);
         });
     </script>
 

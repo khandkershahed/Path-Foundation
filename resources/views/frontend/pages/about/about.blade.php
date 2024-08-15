@@ -24,7 +24,7 @@
 
                     <div class="pt-4">
                         <h6 class="main-color">{{ $about->ceo_name }}</h6>
-                        <strong class="main-color">{{ $about->ceo_designation }}/strong>
+                        <strong class="main-color">{{ $about->ceo_designation }}</strong>
                             <div>
                                 <img class="img-fluid" src="{{ asset('upload/about/' . $about->ceo_section_signature) }}"
                                     alt="{{ $about->ceo_name }}" />

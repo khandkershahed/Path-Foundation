@@ -14,7 +14,7 @@
 
 <section>
     <div class="">
-        <button class="feedback_upper_modal d-lg-block d-sm-none" data-bs-toggle="modal" data-bs-target="#rfqModal">Course
+        <button class="feedback_upper_modal d-lg-block d-sm-none" data-bs-toggle="modal" data-bs-target="#rfqModal">Member
             Register
             <i class="fa-solid fa-question" style="font-size: 14px;"></i>
         </button>

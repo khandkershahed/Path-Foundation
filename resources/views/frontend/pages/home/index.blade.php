@@ -2,9 +2,7 @@
 @section('content')
 @section('styles')
     <meta property="og:title" content="Path Foundation">
-    <!--<meta property="og:description" content="Description of your blog post">-->
     <meta property="og:image" content="{{ asset('storage/' . optional($home)->branner1) }}">
-    <!--<meta property="og:url" content="URL to your blog post">-->
     <style>
         .training-featuer {
             background-color: #F3F4F8;
@@ -150,7 +148,9 @@
                                 <div class="info w-lg-50 mb-3">
                                     @if (optional($home)->banner3_title)
                                         <div>
-                                            <h3><strong>{{ optional($home)->banner3_title }}</strong></h3>
+                                            <h3>
+                                                <strong>{{ optional($home)->banner3_title }}</strong>
+                                            </h3>
                                             <h5 class="text-white my-4 w-lg-75 mx-auto">
                                                 {{ optional($home)->banner3_short_description }}
                                             </h5>
@@ -186,7 +186,7 @@
                                 <img class="img-fluid" width="35px"
                                     src="{{ asset('frontend/images/icons/icons2/project.png') }}" alt="">
                             </div>
-                            <h6 class="fw-bolder pt-2">Peace</h6>
+                            <h6 class="fw-bolder pt-2">PEACE</h6>
                         </div>
                     </div>
                 </div>
@@ -200,7 +200,7 @@
                                     src="{{ asset('frontend/images/icons/icons2/SupportClasses.png') }}"
                                     alt="">
                             </div>
-                            <h6 class="fw-bolder pt-2">Awarness</h6>
+                            <h6 class="fw-bolder pt-2">AWARNESS</h6>
                         </div>
                     </div>
                 </div>
@@ -213,7 +213,7 @@
                                 <img class="img-fluid" width="35px"
                                     src="{{ asset('frontend/images/icons/icons2/certificate.png') }}" alt="">
                             </div>
-                            <h6 class="fw-bolder pt-2">Togetherness</h6>
+                            <h6 class="fw-bolder pt-2">TOGETHERNESS</h6>
                         </div>
                     </div>
                 </div>
@@ -227,7 +227,7 @@
                                     src="{{ asset('frontend/images/icons/icons2/LifetimeVideoAccess.png') }}"
                                     alt="">
                             </div>
-                            <h6 class="fw-bolder pt-2">Humanity</h6>
+                            <h6 class="fw-bolder pt-2">HUMANITY</h6>
                         </div>
                     </div>
                 </div>
@@ -246,19 +246,13 @@
                     <div class="p-2 py-3 text-center d-flex justify-content-between align-items-center"
                         style="background-color: #F3F4F8;border-radius: 5px;">
                         <div>
-                            {{-- <a href="{{ optional($home)->btn1_link }}" class="action-btnss fw-bolder">
-                                {{ optional($home)->btn1_name }}
-                            </a> --}}
                             <a href="{{ optional($home)->btn1_link }}" class="action-btnss fw-bolder">
-                                What We Do
+                                {{ optional($home)->btn1_name }}
                             </a>
                         </div>
                         <div>
-                            {{-- <a href="{{ optional($home)->btn2_link }}" class="bg-white action-btnss-2 fw-bolder">
-                                {{ optional($home)->btn2_name }}
-                            </a> --}}
                             <a href="{{ optional($home)->btn2_link }}" class="bg-white action-btnss-2 fw-bolder">
-                                Course Registration
+                                {{ optional($home)->btn2_name }}
                             </a>
                         </div>
                     </div>
@@ -281,7 +275,7 @@
                                             src="{{ asset('frontend/images/icons/icons2/project.png') }}"
                                             alt="">
                                     </div>
-                                    <h6 class="fw-bolder pt-2">20+ Practice <br> Project</h6>
+                                    <h6 class="fw-bolder pt-2">PEACE</h6>
                                 </div>
                             </div>
                         </div>
@@ -295,7 +289,7 @@
                                             src="{{ asset('frontend/images/icons/icons2/SupportClasses.png') }}"
                                             alt="">
                                     </div>
-                                    <h6 class="fw-bolder pt-2">20+ Practice <br> Project</h6>
+                                    <h6 class="fw-bolder pt-2">AWARNESS</h6>
                                 </div>
                             </div>
                         </div>
@@ -309,7 +303,7 @@
                                             src="{{ asset('frontend/images/icons/icons2/certificate.png') }}"
                                             alt="">
                                     </div>
-                                    <h6 class="fw-bolder pt-2">20+ Practice <br> Project</h6>
+                                    <h6 class="fw-bolder pt-2">TOGETHERNESS</h6>
                                 </div>
                             </div>
                         </div>
@@ -320,24 +314,10 @@
                                 <div class="d-flex justify-content-center flex-column text-center align-items-center">
                                     <div class="home-feature">
                                         <img class="img-fluid" width="35px"
-                                            src="{{ asset('frontend/images/icons/icons2/LifetimeVideoAccess.png') }}"
+                                            src="{{ asset('frontend/images/icons/icons2/certificate.png') }}"
                                             alt="">
                                     </div>
-                                    <h6 class="fw-bolder pt-2">20+ Practice <br> Project</h6>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item border-0">
-                        <div class="card training-featuer mx-2">
-                            <div class="card-body py-3 text-center">
-                                <div class="d-flex justify-content-center flex-column text-center align-items-center">
-                                    <div class="home-feature">
-                                        <img class="img-fluid" width="35px"
-                                            src="{{ asset('frontend/images/icons/icons2/MarketplaceGuideLine.png') }}"
-                                            alt="">
-                                    </div>
-                                    <h6 class="fw-bolder pt-2">20+ Practice <br> Project</h6>
+                                    <h6 class="fw-bolder pt-2">HUMANITY</h6>
                                 </div>
                             </div>
                         </div>
