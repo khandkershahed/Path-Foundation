@@ -204,7 +204,7 @@ class HomeController extends Controller
 
     public function researchReport()
     {
-        $data['blogs'] = NewsTrend::latest('id', 'desc')->get();
+        $data['blogs'] = NewsTrend::latest('id', 'desc')->paginate(5);
         $data['featured_storys'] = NewsTrend::latest('id', 'desc')->where('featured',1)->get();
         return view('frontend.pages.blogs.blogs_all', $data);
     }
@@ -235,16 +235,6 @@ class HomeController extends Controller
     }
 
 
-    //Contact, Support, Location, RFQ
-    // public function location()
-    // {
-    //     $data['setting'] = Site::latest()->first();
-    //     $data['locations'] = OfficeLocation::orderBy('name', 'ASC')->get();
-    //     $country_ids = $data['locations']->pluck('country_id')->unique()->toArray();
-    //     $data['countries']  = Country::whereIn('id', $country_ids)->get();
-    //     $data['tech_datas'] = TechnologyData::where('category', 'location')->orderBy('id', 'desc')->limit(6)->get();
-    //     return view('frontend.pages.contact.location', $data);
-    // }
 
     public function contact()
     {
@@ -314,7 +304,6 @@ class HomeController extends Controller
     }
     public function StoryDetails($id)
     {
-
         $data['blog'] = NewsTrend::where('id', $id)->firstOrFail();
         $data['storys'] = NewsTrend::inRandomOrder()->limit(4)->get();
         return view('frontend.pages.story.story_details', $data);

@@ -1,11 +1,8 @@
 @extends('frontend.master')
 @section('content')
     <!--======// Header Title //======-->
-    <section class="common_product_header" style="background:url('{{ asset('frontend/images/Contact.png') }}');">
-        <div class="container ">
-            <h1>Contact Us</h1>
-            <p class="text-center text-white">Call or contact us for any help!</p>
-        </div>
+    <section class="common_product_header">
+        <img class="img-fluid" src="{{ asset('frontend/images/Contact.png') }}" alt="Contact Page">
     </section>
     <!----------End--------->
 
