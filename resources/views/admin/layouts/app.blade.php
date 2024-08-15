@@ -162,7 +162,7 @@
             });
         });
     </script>
-
+{!! Toastr::message() !!}
 </body>
 
 </html>
