@@ -1,7 +1,7 @@
 @extends('frontend.master')
 @section('content')
     <!--======// Header Title //======-->
-    <section class="common_product_header">
+    <section class="">
         <img class="img-fluid" src="{{ asset('frontend/images/Contact.png') }}" alt="Contact Page">
     </section>
     <!----------End--------->
@@ -19,7 +19,7 @@
                     <p>{{ optional($setting)->site_slogan }}</p>
                     <p>{{ optional($setting)->address_line_one }}</p>
                     <p>{{ optional($setting)->address_line_two }}</p>
-                    <p><strong>Email: </strong>{{ optional($setting)->support_email }}</p>
+                    <p><strong>Email: </strong><span>{{ optional($setting)->primary_email }}</span><br><span>{{ optional($setting)->support_email }}</span></p>
                     <p><strong>Phone: </strong>{{ optional($setting)->primary_phone }}</p>
                         <!-- <h5><i class="fa-solid fa-phone"></i>NgenIT</h5> -->
                         {{-- <a href="{{ route('location') }}" class="product_button">View all NGen IT office locations</a> --}}
