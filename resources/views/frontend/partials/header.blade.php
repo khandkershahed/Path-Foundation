@@ -260,6 +260,11 @@
                     </a>
                 </li>
                 <li class="nav-item dropdown cool-link">
+                    <a class="nav-link" href="{{ route('whatwedo') }}" role="button">
+                        What We Do
+                    </a>
+                </li>
+                <li class="nav-item dropdown cool-link">
                     <a class="nav-link" href="{{ route('register') }}" role="button">
                         Registration
                     </a>

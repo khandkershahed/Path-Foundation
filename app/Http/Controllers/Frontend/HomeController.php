@@ -202,6 +202,13 @@ class HomeController extends Controller
 
     //What We Do
 
+    public function researchReport()
+    {
+        $data['blogs'] = NewsTrend::latest('id', 'desc')->get();
+        $data['featured_storys'] = NewsTrend::latest('id', 'desc')->where('featured',1)->get();
+        return view('frontend.pages.blogs.blogs_all', $data);
+    }
+
     public function whatWeDo()
     {
         $data['whatwedo'] = WhatWeDoPage::latest('id', 'desc')->firstOrFail();

@@ -15,10 +15,6 @@ return new class extends Migration
     {
         Schema::create('news_trends', function (Blueprint $table) {
             $table->id();
-            // $table->json('category_id')->nullable()->comment('multi_id');
-            // $table->json('brand_id')->nullable()->comment('multi_id');
-            // $table->json('industry_id')->nullable()->comment('multi_id');
-            // $table->json('solution_id')->nullable()->comment('multi_id');
             $table->json('course_id')->nullable()->comment('multi_id');
             $table->enum('featured', ['0', '1'])->default('0')->nullable();
             $table->enum('type', ['news', 'trends'])->default('trends');

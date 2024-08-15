@@ -137,98 +137,16 @@
     <div class="container-fluid blog_bg p-0 m-0">
         <div class="container px-4 py-5">
             <div class="row gx-3 ">
-                <div class="col-lg-3 col-12 blog_left mt-3">
-                    <div class="p-3 shadow-lg rounded-lg">
-                        {{-- Search --}}
-                        <div>
-                            <div class="input-group">
-                                <input type="text" class="form-control" placeholder="Search">
-                                <div class="input-group-append">
-                                    <button class="btn job_search_btn" type="button">
-                                        <i class="fa fa-search"></i>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        {{-- YOUR INTERESTS --}}
-                        <div>
-                            <h6 class="pt-2">By Industries</h6>
-                            <ul class="interests_list ps-3">
-                                @foreach ($industries as $item)
-                                    <li>
-                                        <a href="#">
-                                            <i class="fa-solid fa-arrow-right-long pe-1"></i> {{ $item->title }}
-                                        </a>
-                                    </li>
-                                @endforeach
+                <div class="col-lg- col-12 blog_left mt-3">
 
-                            </ul>
-                        </div>
-                        <div>
-                            <h6 class="pt-2">By Categories</h6>
-                            <ul class="interests_list ps-3">
-                                @foreach ($categories as $item)
-                                    <li>
-                                        <a href="#">
-                                            <i class="fa-solid fa-arrow-right-long pe-1"></i>{{ $item->title }}
-                                        </a>
-                                    </li>
-                                @endforeach
-
-                            </ul>
-                        </div>
-                        <div>
-                            <h6 class="pt-2">By Brands</h6>
-                            <ul class="interests_list ps-3">
-                                @foreach ($brands as $item)
-                                    <li>
-                                        <a href="#">
-                                            <i class="fa-solid fa-arrow-right-long pe-1"></i>{{ $item->title }}
-                                        </a>
-                                    </li>
-                                @endforeach
-
-                            </ul>
-                        </div>
-
-                        {{-- <div>
-                            <div class="badges">
-                                <h6 class="categories_tittle">Tags</h6>
-                                <div class="d-flex flex-column justify-content-center">
-                                    <div class="d-flex blogins_tags">
-                                        @foreach ($tag_items as $tag_item)
-                                            @php
-                                                $tags = explode(',', $tag_item);
-                                            @endphp
-                                            @if (!empty($_GET['tags']))
-                                                @php
-                                                $filterCat = explode(',',$_GET['tags']);
-                                                @endphp
-                                            @endif
-                                                @foreach ($tags as $item)
-
-                                                    <div class="form-check">
-                                                        <input name="tag" value="{{$item}}" class="form-check-input custom" name="tags[]" type="checkbox" id="flexCheckDefault" onchange="this.form.submit()">
-                                                        <a href="" class="mr-2 text-black">#{{$item}}</a>
-                                                    </div>
-                                                @endforeach
-                                            @endforeach
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div> --}}
-                        {{-- SOCIAL SHARING --}}
-
-                    </div>
                 </div>
                 <div class="col-lg-6 col-12 blog_left main_blogs mt-3">
 
                     {{-- First Blog --}}
-                    @if ($client_storys)
-                        @foreach ($client_storys as $item)
+                    @if ($blogs)
+                        @foreach ($blogs as $item)
                             <div class="p-3 border shadow-lg mt-2" style="background-color: #fff;border-radius: 5px;">
-                                <a class="text-black" href="{{ route('blog.details', $item->id) }}">
+                                <a class="text-black" href="{{ route('story.details', $item->id) }}">
                                     <div class="p-3">
                                         {{-- Blog Image --}}
                                         <img src="{{ asset('storage/' . $item->image) }}" class="img-fluid" alt="">
@@ -270,7 +188,7 @@
                             @if ($featured_storys)
                                 @foreach ($featured_storys as $item)
                                     <div class="pt-3 pb-3 d-flex justify-content-between popular_post">
-                                        <a href="{{ route('blog.details', $item->id) }}"
+                                        <a href="{{ route('story.details', $item->id) }}"
                                             class="d-flex justify-content-between">
                                             <img class="rounded-circle img-fluid"
                                                 src="{{ asset('storage/' . $item->image) }}" alt="" style="">
@@ -291,7 +209,7 @@
                     <div class="d-flex justify-content-center">
                         <nav aria-label="Page navigation example">
                             <ul class="pagination">
-                                {{ $client_storys->links() }}
+                                {{ $blogs->links() }}
                             </ul>
                         </nav>
                     </div>

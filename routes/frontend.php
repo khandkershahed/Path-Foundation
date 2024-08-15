@@ -22,6 +22,8 @@ Route::get('/learn/more', [HomeController::class, 'LearnMore'])->name('learn.mor
 //What We Do
 Route::get('/Whatwe/do', [HomeController::class, 'whatWeDo'])->name('whatwedo');
 
+Route::get('/research/reports', [HomeController::class, 'researchReport'])->name('researchReport');
+
 //Software All route
 Route::get('/software/common', [HomeController::class, 'softwareCommon'])->name('software.common');
 
