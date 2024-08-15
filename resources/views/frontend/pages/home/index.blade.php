@@ -177,7 +177,7 @@
 <!--======// Action section //======-->
 <section class="d-sm-none d-lg-block">
     <div class="container">
-        <h3 class="Head main_color">Our Core Values </h3>
+        <h3 class="main_color text-center mt-5">Our Core Values </h3>
         <div class="row py-5">
             <div class="col-lg-3">
                 <div class="card training-featuer">
@@ -241,25 +241,27 @@
                 <p class="text-center py-3 fs-5" style="color: #4d4d58">{{ optional($home)->header2 }}</p>
             </div>
         </div>
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="buttons-area pt-1">
-                    <div class="p-2 py-3 text-center d-flex justify-content-between align-items-center"
-                        style="background-color: #F3F4F8;border-radius: 5px;">
-                        <div>
-                            <a href="{{ optional($home)->btn1_link }}" class="action-btnss fw-bolder">
-                                {{ optional($home)->btn1_name }}
-                            </a>
-                        </div>
-                        <div>
-                            <a href="{{ optional($home)->btn2_link }}" class="bg-white action-btnss-2 fw-bolder">
-                                {{ optional($home)->btn2_name }}
-                            </a>
+        @if (!empty(optional($home)->btn1_name) || !empty(optional($home)->btn2_name))
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="buttons-area pt-1">
+                        <div class="p-2 py-3 text-center d-flex justify-content-between align-items-center"
+                            style="background-color: #F3F4F8;border-radius: 5px;">
+                            <div>
+                                <a href="{{ optional($home)->btn1_link }}" class="action-btnss fw-bolder">
+                                    {{ optional($home)->btn1_name }}
+                                </a>
+                            </div>
+                            <div>
+                                <a href="{{ optional($home)->btn2_link }}" class="bg-white action-btnss-2 fw-bolder">
+                                    {{ optional($home)->btn2_name }}
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        @endif
     </div>
 </section>
 <section class="d-sm-block d-lg-none">
@@ -344,7 +346,7 @@
             @if (!empty($features))
                 <div class="d-lg-block d-sm-none">
                     <div class="row d-flex justify-content-center">
-                        <h3 class="main_color">Our Foucsing Area</h3>
+                        <h3 class="main_color text-center mb-4">Our Foucs Areas</h3>
                         @foreach ($features as $feature)
                             @if (!empty($feature))
                                 <div class="custom_col-2 col-md-6 col-sm-12">
