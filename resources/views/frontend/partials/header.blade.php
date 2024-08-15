@@ -16,20 +16,23 @@
                                     id="dropdownMenuClickableInside" data-bs-toggle="dropdown"
                                     data-bs-auto-close="outside" aria-expanded="false">
                                     <i class="fa-solid fa-phone-volume me-1" style="transform: rotate(7deg);"></i>
-                                    SUPPORT <span class="number-font header_top_phone">|<a
-                                            href="tel:+{{ optional($setting)->primary_phone }}">{{ optional($setting)->primary_phone }}</a>
-                                    </span>
+                                    SUPPORT
+                                    <a href="tel:+{{ optional($setting)->primary_phone }}">
+                                        <span
+                                            class="number-font header_top_phone">|{{ optional($setting)->primary_phone }}</span>
+                                    </a>
+
                                 </a>
                                 <div class="dropdown-menu drop-down-menus2" aria-labelledby="dropdownMenuButton">
                                     <div class="popover__content text-start">
                                         <div class="text-muted">
                                             Call Us-
                                             <a href="tel:{{ optional($setting)->phone_one }}"
-                                                class="main_color">{{ optional($setting)->phone_one }}</a>
+                                                class="number">{{ optional($setting)->phone_one }}</a>
                                         </div>
                                         <hr class="text-muted" />
                                         <div class="d-flex flex-column align-items-center">
-                                            <a href="https://wa.me/{{ optional($setting)->secondary_phone }}"
+                                            <a href="https://wa.me/{{ optional($setting)->whatsapp }}"
                                                 class="mx-auto py-2 btn-color mb-2 top-info-text w-100"
                                                 style="font-size: 13px">
                                                 <i class="fa-brands fa-whatsapp"></i> <span>Whats App</span>
@@ -57,7 +60,7 @@
                                         id="dropdownMenuClickableInside" data-bs-toggle="dropdown"
                                         data-bs-auto-close="outside" aria-expanded="false">
                                         <i class="fa-regular fa-star" style="font-size: 14px"></i>
-                                        <span class="">MY</span><span class="">Path Foundation</span>
+                                        <span class="">MY</span><span class=""> Account</span>
                                     </a>
                                     <div class="dropdown-menu drop-down-menus" aria-labelledby="dropdownMenuButton">
                                         <div class="popover__content-2 text-start">
@@ -99,7 +102,7 @@
                     <div class="step-img d-lg-block d-sm-none">
                         {{-- <img src="https://i.ibb.co/t3Zrbj2/Asset-1-8.png" alt=""> --}}
                     </div>
-                    <a class="navbar-brand fw-bold upper-content-menu main-logo" href="{{ route('homepage') }}">
+                    <a class="navbar-brand fw-bold upper-content-menu main-logo ms-4" href="{{ route('homepage') }}">
                         <img class="img-fluid site-main-logo"
                             src="{{ !empty(optional($setting)->site_logo) && file_exists(public_path('storage/' . optional($setting)->site_logo)) ? asset('storage/' . optional($setting)->site_logo) : asset('frontend/images/brandPage-logo-no-img(217-55).jpg') }}"
                             alt="Path Foundation">
@@ -162,7 +165,7 @@
 {{-- Mobile Menu Offcanvas --}}
 <div class="offcanvas offcanvas-end" tabindex="-1" id="rightOffcanvas" aria-labelledby="rightOffcanvasLabel">
     <div class="offcanvas-header">
-        <a class="navbar-brand fw-bold upper-content-menu main-logo" href="">
+        <a class="navbar-brand fw-bold upper-content-menu main-logo ms-4" href="{{ route('homepage') }}">
             <img height="50px"
                 src="{{ !empty(optional($setting)->site_logo) && file_exists(public_path('storage/' . optional($setting)->site_logo)) ? asset('storage/' . optional($setting)->site_logo) : asset('frontend/images/brandPage-logo-no-img(217-55).jpg') }}"
                 alt="Path Foundation">
