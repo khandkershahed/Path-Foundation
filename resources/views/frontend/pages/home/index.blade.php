@@ -185,7 +185,7 @@
                         <div class="d-flex justify-content-center flex-column text-center">
                             <div class="home-feature">
                                 <img class="img-fluid" width="35px"
-                                    src="{{ asset('frontend/images/icons/icons2/project.png') }}" alt="">
+                                    src="{{ asset('frontend/images/icons/icons2/peace.png') }}" alt="">
                             </div>
                             <h6 class="fw-bolder pt-2">PEACE</h6>
                         </div>
@@ -198,7 +198,7 @@
                         <div class="d-flex justify-content-center flex-column text-center">
                             <div class="home-feature">
                                 <img class="img-fluid" width="35px"
-                                    src="{{ asset('frontend/images/icons/icons2/SupportClasses.png') }}"
+                                    src="{{ asset('frontend/images/icons/icons2/awarness.png') }}"
                                     alt="">
                             </div>
                             <h6 class="fw-bolder pt-2">AWARNESS</h6>
@@ -212,7 +212,7 @@
                         <div class="d-flex justify-content-center flex-column text-center">
                             <div class="home-feature">
                                 <img class="img-fluid" width="35px"
-                                    src="{{ asset('frontend/images/icons/icons2/certificate.png') }}" alt="">
+                                    src="{{ asset('frontend/images/icons/icons2/together.png') }}" alt="">
                             </div>
                             <h6 class="fw-bolder pt-2">TOGETHERNESS</h6>
                         </div>
@@ -225,7 +225,7 @@
                         <div class="d-flex justify-content-center flex-column text-center">
                             <div class="home-feature">
                                 <img class="img-fluid" width="35px"
-                                    src="{{ asset('frontend/images/icons/icons2/LifetimeVideoAccess.png') }}"
+                                    src="{{ asset('frontend/images/icons/icons2/humanity.png') }}"
                                     alt="">
                             </div>
                             <h6 class="fw-bolder pt-2">HUMANITY</h6>
