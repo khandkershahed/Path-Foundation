@@ -4,11 +4,11 @@
 <head>
     @include('frontend.partials.head')
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    
+
     <meta name="google-site-verification" content="rvHWL3HPw7hzVuxHE37nPByXS604wH6gpUPzjZiWNy8" />
-    <meta name="title" content="NGen IT Ltd.">
+    <meta name="title" content="Path Foundation">
     <meta name="description"
-        content="NGEN IT Ltd. is a System Integration, Software & Hardware based License Provider & Software development based company established at 2008. Our technical expertise, broad solutions portfolio and supply chain capabilities give us the right resources and scale to achieve more for you. Cloud Services.">
+        content="Path Foundation is a System Integration, Software & Hardware based License Provider & Software development based company established at 2008. Our technical expertise, broad solutions portfolio and supply chain capabilities give us the right resources and scale to achieve more for you. Cloud Services.">
     <meta name="keywords"
         content="software, hardware, training, books, license, Microsoft, Adobe, Software License, Acronis, Veeam, Industry, Solution, Health Industry, Financial Industry,">
     <meta name="robots" content="index, follow">
@@ -81,7 +81,7 @@
 
     {{-- {{ \TawkTo::widgetCode() }} --}}
 
-    
+
 
 
 </body>

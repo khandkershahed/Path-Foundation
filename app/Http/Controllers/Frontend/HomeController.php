@@ -143,7 +143,7 @@ class HomeController extends Controller
     public function courseDetails($id,$slug)
     {
         $coursedetail = Course::find($id);
-        
+
         $relatedcourses = Course::latest()->get();
 
         $courseCurriculams = CourseCurriculum::where('course_id', $coursedetail->id)->get();
@@ -189,7 +189,7 @@ class HomeController extends Controller
     //About
     public function about()
     {
-        // $data['about'] = AboutUs::latest('id', 'desc')->firstOrFail();
+        $data['about'] = AboutUs::latest('id', 'desc')->firstOrFail();
         // if ($data['about']) {
 
         //     $data['row1'] = Row::where('id', $data['about']->row_one_id)->first();
@@ -197,7 +197,7 @@ class HomeController extends Controller
         //     $data['row3'] = Row::where('id', $data['about']->row_three_id)->first();
         // }
         // $data['pdfs'] = DocumentPdf::where('category', 'company')->latest('id', 'desc')->limit(4)->get(['document', 'button_name', 'button_link']);
-        return view('frontend.pages.about.about');
+        return view('frontend.pages.about.about',$data);
     }
 
     //What We Do

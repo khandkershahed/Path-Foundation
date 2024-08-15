@@ -6,7 +6,7 @@
         <div class="card-header mt-6">
             <div class="card-title"></div>
             <div class="card-toolbar">
-                <a href="{{ route('admin.about.create') }}" class="btn btn-light-primary rounded-2">
+                {{-- <a href="{{ route('admin.about.create') }}" class="btn btn-light-primary rounded-2">
                     <span class="svg-icon svg-icon-3">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                             fill="none">
@@ -18,7 +18,7 @@
                                 fill="currentColor" />
                         </svg>
                     </span> Create
-                </a>
+                </a> --}}
             </div>
         </div>
         <div class="card-body pt-0">

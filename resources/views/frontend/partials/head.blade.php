@@ -3,7 +3,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <!--Title-->
-<title>{{ !empty($setting->site_name) ? $setting->site_name : 'NGen IT Ltd.' }}</title>
+<title>{{ !empty($setting->site_name) ? $setting->site_name : 'Path Foundation' }}</title>
 
 <!--Fav-Icon-->
 <link rel="icon" type="image/x-icon"

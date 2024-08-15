@@ -29,12 +29,19 @@
                 <!--end::Alerts-->
                 <!--begin::Input group-->
                 <div class="row">
-                    <div class="col-lg-2 mb-7">
+                    <div class="col-lg-4 mb-7">
                         <x-metronic.label for="site_name" class="col-form-label fw-bold fs-6 ">{{ __('Site Name') }}
                         </x-metronic.label>
 
                         <x-metronic.input id="site_name" type="text" name="site_name" :value="old('site_name', optional($setting->first())->site_name)"
                             placeholder="Enter the Site Name"></x-metronic.input>
+                    </div>
+                    <div class="col-lg-4 mb-7">
+                        <x-metronic.label for="site_slogan" class="col-form-label fw-bold fs-6 ">{{ __('Site Slogan') }}
+                        </x-metronic.label>
+
+                        <x-metronic.input id="site_slogan" type="text" name="site_slogan" :value="old('site_slogan', optional($setting->first())->site_slogan)"
+                            placeholder="Enter the site slogan"></x-metronic.input>
                     </div>
 
                     <div class="col-lg-4 mb-7">

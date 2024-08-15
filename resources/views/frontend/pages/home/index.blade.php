@@ -1,7 +1,7 @@
 @extends('frontend.master')
 @section('content')
 @section('styles')
-    <meta property="og:title" content="NGen IT Ltd.">
+    <meta property="og:title" content="Path Foundation">
     <!--<meta property="og:description" content="Description of your blog post">-->
     <meta property="og:image" content="{{ asset('storage/' . optional($home)->branner1) }}">
     <!--<meta property="og:url" content="URL to your blog post">-->
@@ -178,10 +178,7 @@
 <section class="d-sm-none d-lg-block">
     <div class="container">
         <div class="row py-5">
-            <div class="col-lg-1">
-
-            </div>
-            <div class="col-lg-2">
+            <div class="col-lg-3">
                 <div class="card training-featuer">
                     <div class="card-body py-3 ">
                         <div class="d-flex justify-content-center flex-column text-center">
@@ -189,12 +186,12 @@
                                 <img class="img-fluid" width="35px"
                                     src="{{ asset('frontend/images/icons/icons2/project.png') }}" alt="">
                             </div>
-                            <h6 class="fw-bolder pt-2">20+ Practice <br> Project</h6>
+                            <h6 class="fw-bolder pt-2">Peace</h6>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-2">
+            <div class="col-lg-3">
                 <div class="card training-featuer">
                     <div class="card-body py-3 ">
                         <div class="d-flex justify-content-center flex-column text-center">
@@ -203,12 +200,12 @@
                                     src="{{ asset('frontend/images/icons/icons2/SupportClasses.png') }}"
                                     alt="">
                             </div>
-                            <h6 class="fw-bolder pt-2">Support <br> Classes</h6>
+                            <h6 class="fw-bolder pt-2">Awarness</h6>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-2">
+            <div class="col-lg-3">
                 <div class="card training-featuer">
                     <div class="card-body py-3 ">
                         <div class="d-flex justify-content-center flex-column text-center">
@@ -216,12 +213,12 @@
                                 <img class="img-fluid" width="35px"
                                     src="{{ asset('frontend/images/icons/icons2/certificate.png') }}" alt="">
                             </div>
-                            <h6 class="fw-bolder pt-2">After Course <br> Certificate</h6>
+                            <h6 class="fw-bolder pt-2">Togetherness</h6>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-2">
+            <div class="col-lg-3">
                 <div class="card training-featuer">
                     <div class="card-body py-3 ">
                         <div class="d-flex justify-content-center flex-column text-center">
@@ -230,27 +227,10 @@
                                     src="{{ asset('frontend/images/icons/icons2/LifetimeVideoAccess.png') }}"
                                     alt="">
                             </div>
-                            <h6 class="fw-bolder pt-2">Lifetime Video <br> Access</h6>
+                            <h6 class="fw-bolder pt-2">Humanity</h6>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-2">
-                <div class="card training-featuer">
-                    <div class="card-body py-3 ">
-                        <div class="d-flex justify-content-center flex-column text-center">
-                            <div class="home-feature">
-                                <img class="img-fluid" width="35px"
-                                    src="{{ asset('frontend/images/icons/icons2/MarketplaceGuideLine.png') }}"
-                                    alt="">
-                            </div>
-                            <h6 class="fw-bolder pt-2">Marketplace <br> Guideline</h6>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-1">
-
             </div>
         </div>
         <div class="row">

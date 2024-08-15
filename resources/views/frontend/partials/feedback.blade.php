@@ -25,7 +25,7 @@
         <div class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-content">
                 <div class="modal-header py-2" style="background: #ae0a46;">
-                    <h5 class="modal-title text-white" id="staticBackdropLabel">Course Register
+                    <h5 class="modal-title text-white" id="staticBackdropLabel">Member Register
                     </h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
@@ -36,7 +36,6 @@
                             @csrf
 
                             <div class="row mb-4">
-
                                 @php
                                     $courses = App\Models\Course::latest()->get();
                                 @endphp
