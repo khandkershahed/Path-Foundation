@@ -177,6 +177,7 @@
 <!--======// Action section //======-->
 <section class="d-sm-none d-lg-block">
     <div class="container">
+        <h3 class="Head main_color">Our Core Values </h3>
         <div class="row py-5">
             <div class="col-lg-3">
                 <div class="card training-featuer">
@@ -343,6 +344,7 @@
             @if (!empty($features))
                 <div class="d-lg-block d-sm-none">
                     <div class="row d-flex justify-content-center">
+                        <h3 class="main_color">Our Foucsing Area</h3>
                         @foreach ($features as $feature)
                             @if (!empty($feature))
                                 <div class="custom_col-2 col-md-6 col-sm-12">
@@ -373,28 +375,16 @@
                 <div class="row d-lg-none d-sm-block">
                     <div class="d-flex justify-content-center align-items-center px-3 mb-3 border-bottom">
                         <div class="text-start w-75">
-                            <h3 class="main_color">Feature Contents</h3>
+                            <h3 class="main_color">Our Foucsing Area</h3>
                         </div>
                         <div class="text-end w-25 d-flex">
                             <a class="Arrows custom-responsive-slider-prev me-1">
                                 <i class="fa-solid fa-chevron-left fa-2x"
-                                    style="cursor: pointer;
-    font: 18px / 36px FontAwesome;
-    text-align: center;
-    transition: all 0.5s;
-    background: #000;
-    width: 38px;
-    color: white;"></i>
+                                    style="cursor: pointer;font: 18px / 36px FontAwesome;text-align: center;transition: all 0.5s;background: #000;width: 38px;color: white;"></i>
                             </a>
                             <a class="Arrows custom-responsive-slider-next">
                                 <i class="fa-solid fa-chevron-right fa-2x"
-                                    style="cursor: pointer;
-    font: 18px / 36px FontAwesome;
-    text-align: center;
-    transition: all 0.5s;
-    background: #000;
-    width: 38px;
-    color: white;"></i>
+                                    style="cursor: pointer;font: 18px / 36px FontAwesome;text-align: center;transition: all 0.5s;background: #000;width: 38px;color: white;"></i>
                             </a>
                         </div>
                     </div>
@@ -440,82 +430,7 @@
 
 <!---------End -------->
 <!--=======// Shop product //======-->
-{{-- <section class="spacer learn_more py-lg-3">
-    <div class="container py-lg-5 py-4">
-        <div class="row align-items-center">
-            <!-- content -->
-            <div class="col-lg-8 col-sm-12">
-                <div class="home_shop_product_wrapper home_shop_product">
-                    <h5> Shop Products and Hardware</h5>
-                    <p class="text-justify w-75 w-sm-100">
-                        Among More than
-                        <strong class="main_color number-font" style="font-size:20px;">
-                            {{ $productCount }}
-                            <small>products</small>
-                        </strong>
-                        and
-                        <strong class="main_color number-font" style="font-size:20px;">
-                            {{ $brandCount }}
-                            <small>brands</small>
-                        </strong>
-                        at your service, we can provide you with the tools
-                        you need to succeed. Additionally, you may easily ask your exact requirements or contact us at
-                        anytime.
-                    </p>
-                    <div class="mt-lg-5 mt-4 btn-area">
-                        <a href="{{ route('shop.html') }}" class="btn-color">Explore Shop</a>
-                    </div>
-                </div>
-            </div>
-            <!-- product brand -->
-            <div class="col-lg-4 col-sm-12 product_brand">
-                <div>
-                    <p class="fw-bold top-line-title"><span style="border-top: 4px solid #ae0a46;">Exp</span>lore
-                        Categories
-                    </p>
 
-                    <div class="">
-                        <a href="{{ route('all.brand') }}">
-                            <div id="fed-bg">
-                                <div class="p-2">
-                                    <h3 class="text-white brand_side_text">Brands ›</h3>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="pt-2">
-                        <a href="{{ route('all.category') }}">
-                            <div id="fed-bg">
-                                <div class="p-2">
-                                    <h3 class="text-white brand_side_text">Product Categories ›</h3>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class=" pt-2">
-                        <a href="{{ route('software.common') }}">
-                            <div id="fed-bg">
-                                <div class="p-2">
-                                    <h3 class="text-white brand_side_text">Software ›</h3>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class=" pt-2">
-                        <a href="{{ route('hardware.common') }}">
-                            <div id="fed-bg">
-                                <div class="p-2">
-                                    <h3 class="text-white brand_side_text">Hardware ›</h3>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-</section> --}}
 <!---------End -------->
 <!--=======// Client Story //======-->
 {{-- @if (!empty($story) | !empty($story2) | !empty($story3) | !empty($story4)) --}}
@@ -524,7 +439,7 @@
         <div class="container my-4 mb-5 d-lg-block d-sm-none">
             <h2 class="text-center">
                 <span style="color: #07163b;font-weight: 600;">
-                    Upcoming Courses
+                    Research & Reports
                 </span>
             </h2>
             <div class="row">
@@ -565,23 +480,11 @@
                 <div class="text-end w-25 d-flex">
                     <a class="Arrows custom-responsive-slider-prev me-1">
                         <i class="fa-solid fa-chevron-left fa-2x"
-                            style="cursor: pointer;
-    font: 18px / 36px FontAwesome;
-    text-align: center;
-    transition: all 0.5s;
-    background: #000;
-    width: 38px;
-    color: white;"></i>
+                            style="cursor: pointer;font: 18px / 36px FontAwesome;text-align: center;transition: all 0.5s;background: #000;width: 38px;color: white;"></i>
                     </a>
                     <a class="Arrows custom-responsive-slider-next me-1">
                         <i class="fa-solid fa-chevron-right fa-2x"
-                            style="cursor: pointer;
-    font: 18px / 36px FontAwesome;
-    text-align: center;
-    transition: all 0.5s;
-    background: #000;
-    width: 38px;
-    color: white;"></i>
+                            style="cursor: pointer;font: 18px / 36px FontAwesome;text-align: center;transition: all 0.5s;background: #000;width: 38px;color: white;"></i>
                     </a>
                 </div>
             </div>
@@ -665,7 +568,7 @@
 
 {{-- =========================== --}}
 <!---------End -------->
-<section>
+{{-- <section>
     <div class="container p-0 my-4">
         <div class="Container spacer">
             <h3 class="Head main_color">Recent Courses <span class="Arrows"></span></h3>
@@ -719,7 +622,7 @@
             <!-- Carousel Container -->
         </div>
     </div>
-</section>
+</section> --}}
 <!---------Our Success Section-------->
 
 @if (!empty($successItems) && array_filter($successItems))
