@@ -202,19 +202,20 @@
 
     <!-------------End--------->
     <!--======// Call to action //======-->
-    <div class="call_to_action my-5"
-        style="background-image: linear-gradient(to right top, #ae0a46, #bf0248, #9a083e, #ad0441, #b31a52, #870736, #b70647, #b30243, #db0050, #b91c56, #a40942, #ae0a46)">
-        <div class="container">
-            <div class="call_to_action_text mx-auto">
-                <h4 class="">{{ $feature->row_three_title }}</h4>
-                <p>{{ $feature->row_three_header }}</p>
-                <div class="d-flex justify-content-center">
-                    <a href="{{ route('contact') }}" class="btn-color text-center">Contact us to buy</a>
+    @if (!empty($feature->row_three_title ) || !empty($feature->row_three_header ) )
+        <div class="call_to_action my-5"
+            style="background-image: linear-gradient(to right top, #ae0a46, #bf0248, #9a083e, #ad0441, #b31a52, #870736, #b70647, #b30243, #db0050, #b91c56, #a40942, #ae0a46)">
+            <div class="container">
+                <div class="call_to_action_text mx-auto">
+                    <h4 class="">{{ $feature->row_three_title }}</h4>
+                    <p>{{ $feature->row_three_header }}</p>
+                    <div class="d-flex justify-content-center">
+                        <a href="{{ route('contact') }}" class="btn-color text-center">Contact Us</a>
+                    </div>
                 </div>
             </div>
-
         </div>
-    </div>
+    @endif
     <!-------------End--------->
 
     <!--======// Business section //======-->
@@ -257,8 +258,6 @@
                             </div>
                         @endforeach
                     @endif
-
-
                 </div>
             </div>
         </div>

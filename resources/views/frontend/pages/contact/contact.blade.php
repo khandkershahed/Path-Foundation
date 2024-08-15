@@ -18,18 +18,12 @@
                         <h4>
                             <span class="why_Choose_lineTop">F</span>eel Free To Contact Us.
                         </h4>
-                        <h5 class="text-black">NGen IT Training Institute</h5>
-                        <p>{{ $setting->address ?? '' }}</p>
-                        <p>
-                            Address: <span class="main_color">
-                                36-37, Probal Housing, Ring Road, Mohammadpur, Dhaka-1207, Bangladesh
-                            </span>
-                            <br>
-                            Phone Number: <span class="main_color">01958025050</span> <br>
-                            Email: <span class="main_color">
-                                <a href="mailto:info@ngenitltd.com">info@ngenitltd.com</a>
-                            </span>
-                        </p>
+                        <h5 class="text-black">{{ optional($setting)->site_name }}</h5>
+                    <p>{{ optional($setting)->site_slogan }}</p>
+                    <p>{{ optional($setting)->address_line_one }}</p>
+                    <p>{{ optional($setting)->address_line_two }}</p>
+                    <p><strong>Email: </strong>{{ optional($setting)->support_email }}</p>
+                    <p><strong>Phone: </strong>{{ optional($setting)->primary_phone }}</p>
                         <!-- <h5><i class="fa-solid fa-phone"></i>NgenIT</h5> -->
                         {{-- <a href="{{ route('location') }}" class="product_button">View all NGen IT office locations</a> --}}
                     </div>

@@ -8,21 +8,13 @@
                     <h4>
                         <span class="why_Choose_lineTop">L</span>et’s do big things together.
                     </h4>
-                    <p>Get assistance with tracking an order, requesting a quote, contacting your account representative
-                        and more by phone or over chat.</p>
-                    <h5>NGen IT Training</h5>
+                    <h5>{{ optional($setting)->site_name }}</h5>
+                    <p>{{ optional($setting)->site_slogan }}</p>
                     <p>{{ !empty($setting->address) ? $setting->address : '' }}</p>
-                    {{-- <p>Billing & invoice: <span
-                            class="font-number">{{ !empty($setting->support_email) ? $setting->support_email : '' }}</span>
-                        <br> Information and sales: <span
-                            class="">{{ !empty($setting->sales_email) ? $setting->sales_email : '' }}</span>
-                        <br> OneCall support: <span
-                            class="font-number">{{ !empty($setting->phone_one) ? $setting->phone_one : '' }}</span>
-                        <br> Returns: <span
-                            class="font-number">{{ !empty($setting->whatsapp_number) ? $setting->whatsapp_number : '' }}</span>
-                    </p> --}}
-                    <p><strong>Address: </strong>36-37, Probal Housing, Ring Road, Mohammadpur, Dhaka-1207, Bangladesh</p>
-                    <p><strong>Phone: </strong>01958025050</p>
+                    <p>{{ optional($setting)->address_line_one }}</p>
+                    <p>{{ optional($setting)->address_line_two }}</p>
+                    <p><strong>Email: </strong>{{ optional($setting)->support_email }}</p>
+                    <p><strong>Phone: </strong>{{ optional($setting)->primary_phone }}</p>
                     <!-- <h5><i class="fa-solid fa-phone"></i>NgenIT</h5> -->
                 </div>
             </div>
@@ -72,7 +64,6 @@
                                                 <textarea name="message" class="app-form-control" rows="3" placeholder="Your Message"></textarea>
 
                                             </div>
-                                            <div class="app-form-group message g-recaptcha" data-sitekey="{{ config('app.recaptcha_site_key') }}"></div>
                                             <div class="app-form-group buttons">
                                                 <button class="app-form-button"
                                                     type="submit"><strong>SEND</strong></button>
