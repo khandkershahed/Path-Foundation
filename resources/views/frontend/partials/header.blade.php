@@ -97,7 +97,7 @@
             <nav class="navbar navbar-expand-lg p-2 main-navbar bg-white menu-section">
                 <div class="container-fluid d-flex align-items-center" style="height: 3.5rem">
                     <div class="step-img d-lg-block d-sm-none">
-                        <img src="https://i.ibb.co/t3Zrbj2/Asset-1-8.png" alt="">
+                        {{-- <img src="https://i.ibb.co/t3Zrbj2/Asset-1-8.png" alt=""> --}}
                     </div>
                     <a class="navbar-brand fw-bold upper-content-menu main-logo" href="{{ route('homepage') }}">
                         <img class="img-fluid site-main-logo"
@@ -139,17 +139,6 @@
                                             Research & Reports
                                         </a>
                                     </li>
-                                    <li class="nav-item pe-3">
-                                        <a class="nav-link pe-0" href="{{ route('course.registration') }}">
-                                            Registration
-                                        </a>
-                                    </li>
-                                    <li class="nav-item pe-3">
-                                        <a class="nav-link pe-0" href="{{ route('contact') }}">
-                                            Contact Us
-                                        </a>
-                                    </li>
-
                                 </ul>
                             </li>
                     </div>
@@ -188,7 +177,7 @@
     </div>
     <div class="offcanvas-body pt-0 px-0">
         <div>
-           
+
             <hr>
             <ul class="navbar-nav justify-content-end flex-grow-1 mt-0 ps-4">
                 <li class="nav-item dropdown cool-link">

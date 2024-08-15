@@ -1,7 +1,7 @@
 @extends('frontend.master')
 @section('content')
     <!--======// Header Title //======-->
-    <section class="common_product_header" style="background:url('{{ asset('frontend/images/Contact.jpg') }}');">
+    <section class="common_product_header" style="background:url('{{ asset('frontend/images/Contact.png') }}');">
         <div class="container ">
             <h1>Contact Us</h1>
             <p class="text-center text-white">Call or contact us for any help!</p>
@@ -79,8 +79,8 @@
                                                     <textarea name="message" class="app-form-control contact-message" rows="3" placeholder="Your Message" required></textarea>
 
                                                 </div>
-                                                <div class="g-recaptcha"
-                                                    data-sitekey="{{ config('app.recaptcha_site_key') }}"></div>
+                                                {{-- <div class="g-recaptcha"
+                                                    data-sitekey="{{ config('app.recaptcha_site_key') }}"></div> --}}
 
                                                 {{-- <div class="g-recaptcha" id="feedback-recaptcha"
                                                     data-sitekey="{{config('services.recaptcha.site_key')}}">

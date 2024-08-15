@@ -132,11 +132,12 @@
         <img src="https://promisetrainingglobal.com/wp-content/uploads/2019/03/course-banner.jpg?id=8892" alt="Picture">
         <div class="overlay-courses">
             <h2>Member Registration</h2>
+            <p>"Volunteer with PATH for building better Bangladesh."</p>
         </div>
     </section>
     <section style="background-color: #051225;">
         <div class="container py-lg-5 py-3">
-            
+
             <form method="POST" action="{{ route('register') }}" enctype="multipart/form-data">
                 @csrf
 
@@ -191,15 +192,9 @@
                             </div>
                             <div class="col-lg-6 d-lg-block d-sm-none">
                                 <div class="sidebar-areas">
-                                    <img class="form-side-area" width="516px" height="580px"
+                                    <img class="form-side-area" width="516px" height="700px"
                                         src="{{ asset('frontend/images/registration.jpg') }}"
                                         alt="">
-                                    <div class="sidebar-content">
-                                        <p>"Skill development is not just about acquiring knowledge;
-                                            it's about cultivating the ability to adapt and thrive
-                                            in a rapidly changing world." <span class="fw-bold text-danger">- Tony
-                                                Wagner</span></p>
-                                    </div>
                                 </div>
                             </div>
                         </div>
