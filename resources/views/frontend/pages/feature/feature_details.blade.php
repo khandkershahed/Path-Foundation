@@ -266,6 +266,6 @@
 
 
     <!--=====// Pageform section //=====-->
-    @include('frontend.partials.footer_contact')
+    {{-- @include('frontend.partials.footer_contact') --}}
     <!---------End -------->
 @endsection
