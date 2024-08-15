@@ -19,7 +19,7 @@
                                     SUPPORT
                                     <a href="tel:+{{ optional($setting)->primary_phone }}">
                                         <span
-                                            class="number-font header_top_phone">|{{ optional($setting)->primary_phone }}</span>
+                                            class="number-font header_top_phone text-white"style="font-size: 13px !important;">|{{ optional($setting)->primary_phone }}</span>
                                     </a>
 
                                 </a>
