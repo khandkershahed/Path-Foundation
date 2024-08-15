@@ -87,6 +87,6 @@ class SettingController extends Controller
 
         $toastrMessage = $setting->wasRecentlyCreated ? 'Setting created successfully' : 'Setting updated successfully';
 
-        return redirect()->route('admin.settings.index')->with('toast_success', $toastrMessage);
+        return redirect()->route('admin.settings.index')->with('success', $toastrMessage);
     }
 }

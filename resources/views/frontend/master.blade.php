@@ -58,6 +58,7 @@
 
     <!--============///* USE LINK *///=============-->
     @include('frontend.partials.script')
+    {!! Toastr::message() !!}
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             const preloader = document.getElementById('loading');
