@@ -81,7 +81,7 @@
                             placeholder="Enter the sales_email address"></x-metronic.input>
                     </div>
                     <div class="col-lg-3 mb-7">
-                        <x-metronic.label for="primary_phone" class="col-form-label fw-bold fs-6 ">{{ __('Primary primary_phone') }}
+                        <x-metronic.label for="primary_phone" class="col-form-label fw-bold fs-6 ">{{ __('Primary Phone') }}
                         </x-metronic.label>
 
                         <x-metronic.input id="primary_phone" type="number" name="primary_phone" :value="old('primary_phone', optional($setting->first())->primary_phone)"
@@ -93,6 +93,13 @@
 
                         <x-metronic.input id="secondary_phone" type="number" name="secondary_phone" :value="old('secondary_phone', optional($setting->first())->secondary_phone)"
                             placeholder="Enter the secondary_phone"></x-metronic.input>
+                    </div>
+                    <div class="col-lg-3 mb-7">
+                        <x-metronic.label for="whatsapp" class="col-form-label fw-bold fs-6 ">{{ __('Whatsapp Number') }}
+                        </x-metronic.label>
+
+                        <x-metronic.input id="whatsapp" type="number" name="whatsapp" :value="old('whatsapp', optional($setting->first())->whatsapp)"
+                            placeholder="Enter the whatsapp number"></x-metronic.input>
                     </div>
 
                 </div>

@@ -131,33 +131,21 @@
     <section class="showcase-courses">
         <img src="https://promisetrainingglobal.com/wp-content/uploads/2019/03/course-banner.jpg?id=8892" alt="Picture">
         <div class="overlay-courses">
-            <h2>Course Registration</h2>
-            <p>One-Stop Learning &amp; Development Solutions</p>
+            <h2>Member Registration</h2>
         </div>
     </section>
     <section style="background-color: #051225;">
         <div class="container py-lg-5 py-3">
-            {{-- <div class="row">
-                <div class="col-lg-12">
-                    <div class=" pb-lg-5 pb-3">
-                        <h1 class="page_title">Get Scholarship</h1>
-                        <p class="text-center text-white">Strategies to Maximize Financial Aid Opportunities for Course
-                            Enrollment</p>
-                    </div>
-                </div>
-            </div> --}}
-
-            <form action="{{ route('course.registration.store') }}" method="post" enctype="multipart/form-data">
-
+            
+            <form method="POST" action="{{ route('register') }}" enctype="multipart/form-data">
                 @csrf
+
                 <div class="row">
                     <div class="col-lg-10 offset-lg-1">
                         <div class="row">
                             <div class="col-lg-6 form-area">
                                 <div class="input-field-gap">
-                                    <h2 class="text-white form-title">Let’s connect constellations</h2>
-                                    <p class="text-white form-desc">Let's align our constellations! Reach out and let the
-                                        magic of collaboration illuminate our skies.</p>
+                                    <h2 class="text-white form-title">Join Our Team</h2>
                                 </div>
 
                                 <div class="input-field-gap">
@@ -174,19 +162,21 @@
                                     <input type="tel" class="form-control form-color" id="exampleInputEmail1"
                                         aria-describedby="emailHelp" required name="phone" placeholder="Phone;Eg:017*******">
                                 </div>
-
                                 <div class="input-field-gap">
-                                    <select class="form-select form-color" required name="course_id" aria-label="Select Course" placeholder="Select Course">
-                                        <option value="" disabled selected>Select Course</option>
-                                        @foreach ($courses as $course)
-                                            <option value="{{$course->id}}">{{$course->name}}</option>
-                                        @endforeach
-                                    </select>
+                                    <input type="text" class="form-control form-color" id="district"
+                                        aria-describedby="district" required name="district" placeholder="District;Eg:Khulna, Dhaka, Faridpur">
                                 </div>
-
                                 <div class="input-field-gap">
-                                    <textarea class="form-control form-color" name="message" rows="1"
-                                        placeholder="Something Note Here"></textarea>
+                                    <input type="text" class="form-control form-color" id="institution"
+                                        aria-describedby="institution" name="institution" placeholder="Institution;Eg:School, College, Working Place">
+                                </div>
+                                <div class="input-field-gap">
+                                    <input type="text" class="form-control form-color" id="blood_group"
+                                        aria-describedby="blood_group" name="blood_group" placeholder="Blood Group;Eg:A+, B-, O+">
+                                </div>
+                                <div class="input-field-gap">
+                                    <input type="text" class="form-control form-color" id="nid_number"
+                                        aria-describedby="nid_number" name="nid_number" placeholder="NID Number">
                                 </div>
 
                                 <div class="input-field-gap">

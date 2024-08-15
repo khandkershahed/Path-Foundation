@@ -16,16 +16,17 @@
                                     id="dropdownMenuClickableInside" data-bs-toggle="dropdown"
                                     data-bs-auto-close="outside" aria-expanded="false">
                                     <i class="fa-solid fa-phone-volume me-1" style="transform: rotate(7deg);"></i>
-                                    SUPPORT <span class="number-font header_top_phone">|
-                                        {{ optional($setting)->primary_phone }}</span>
+                                    SUPPORT <span class="number-font header_top_phone">|<a
+                                            href="tel:+{{ optional($setting)->primary_phone }}">{{ optional($setting)->primary_phone }}</a>
+                                    </span>
                                 </a>
                                 <div class="dropdown-menu drop-down-menus2" aria-labelledby="dropdownMenuButton">
                                     <div class="popover__content text-start">
-                                        {{-- <div class="text-muted">
+                                        <div class="text-muted">
                                             Call Us-
                                             <a href="tel:{{ optional($setting)->phone_one }}"
                                                 class="main_color">{{ optional($setting)->phone_one }}</a>
-                                        </div> --}}
+                                        </div>
                                         <hr class="text-muted" />
                                         <div class="d-flex flex-column align-items-center">
                                             <a href="https://wa.me/{{ optional($setting)->secondary_phone }}"
@@ -33,11 +34,7 @@
                                                 style="font-size: 13px">
                                                 <i class="fa-brands fa-whatsapp"></i> <span>Whats App</span>
                                             </a>
-                                            {{-- <a href="skype:<ngenit>?chat"
-                                                class="mx-auto py-2 btn-color top-info-text w-100"
-                                                style="font-size: 13px">
-                                                <i class="fa-brands fa-skype"></i> <span>Skype</span>
-                                            </a> --}}
+
                                         </div>
                                         <hr class="text-muted" />
                                         <div class="text-center">
@@ -45,27 +42,13 @@
                                             <small><a href="">{{ optional($setting)->primary_phone }}</a></small>
                                             <small><a href="">{{ optional($setting)->primary_email }}</a></small>
                                         </div>
-                                        {{-- <ul class="account p-0 text-muted text-start">
-                                            <li>
-                                                Check Our
-                                                <a href="{{ route('shop') }}" target="_blank" class="main_color">Shop
-                                                    Products</a>
-                                            </li>
-                                            <li>
-                                                Check Our
-                                                <a href="{{ route('all.solution') }}" target="_blank"
-                                                    class="main_color">Solution</a>
-                                            </li>
-                                        </ul> --}}
+
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="d-flex align-items-center ">
-                            {{-- <div class="d-lg-block d-sm-none">
-                                <a href="" class="top-info-text text-white pe-3"><i
-                                        class="fa-regular fa-circle-question me-1"></i> RFQ</a>
-                            </div> --}}
+
                             <div>
                                 {{-- <span class="text-white">My</span><span class="text-white">Path Foundation</span> --}}
                                 <div class="dropdown drop-top">
@@ -85,18 +68,7 @@
                                                     <a href="{{ route('dashboard') }}" class="">My
                                                         Profile</a>
                                                 </li>
-                                                {{-- <li>
-                                                    <i class="fa fa-envelope m-2"></i>
-                                                    <a href="{{ route('orders') }}" class="">My Orders</a>
-                                                </li>
-                                                <li>
-                                                    <i class="fa fa-star m-2"></i>
-                                                    <a href="{{ route('rfq') }}" class="">My RFQs/Deals</a>
-                                                </li> --}}
-                                                <li>
-                                                    <i class="fa fa-list m-2"></i>
-                                                    <a href="javascript:void(0)" class="">My Requests</a>
-                                                </li>
+
                                                 <li>
                                                     <i class="fa-solid fa-right-from-bracket m-2"></i>
                                                     <a href="{{ route('logout') }}" class="">Log Out</a>
@@ -108,18 +80,9 @@
                                                     style="font-size: 13px">
                                                     Sign In
                                                 </a>
-
                                                 <hr class="text-muted" />
                                             @endif
-                                            <ul class="account p-0 text-muted text-start">
-                                                @unless (Auth::user())
-                                                    <li class="mb-2">
-                                                        Sign In To Your
-                                                        <a href="{{ route('login') }}" target="_blank"
-                                                            class="main_color">Client Account</a>
-                                                    </li>
-                                                @endunless
-                                            </ul>
+
                                         </div>
                                     </div>
                                 </div>
@@ -144,34 +107,14 @@
                     <!---Category--->
 
                     <!---Category--->
-                    <form method="post" action="{{ route('course.search') }}"
-                        class="d-flex upper-content-menu justify-content-center align-items-center d-lg-none"
-                        role="search">
-                        @csrf
-                        <div class="input-group flex-nowrap search-input-container">
-                            <span class="input-group-text search-box-areas" id="addon-wrapping"><i
-                                    class="fa-solid fa-magnifying-glass"></i></span>
-                            <input class="form-control search-input-field search" id="mobile_search_text" name="search"
-                                type="search" placeholder="Search From Here..." aria-describedby="addon-wrapping">
-                        </div>
-                    </form>
+
                     <a href="javascript:void(0)" class="nvabar-toggler tab_btn_icon upper-content-menu d-lg-none"
                         type="button" data-bs-toggle="offcanvas" data-bs-target="#rightOffcanvas"
                         aria-controls="rightOffcanvas">
                         <i class="fa-solid fa-bars main_color" style="font-size: 15px !important;"></i>
                     </a>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <form class="d-flex ms-auto upper-content-menu" method="post"
-                            action="{{ route('course.search') }}" role="search">
-                            @csrf
-                            <div class="input-group flex-nowrap search-input-container">
-                                <span class="input-group-text search-box-areas" id="addon-wrapping"><i
-                                        class="fa-solid fa-magnifying-glass"></i></span>
-                                <input class="form-control search-input-field search" id="search_text" name="search"
-                                    type="search" placeholder="Search for products, solutions & more..."
-                                    aria-describedby="addon-wrapping">
-                            </div>
-                        </form>
+
                         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                             <hr>
                             <li class="nav-item dropdown position-static main-menu-spacing">
@@ -184,6 +127,16 @@
                                     <li class="nav-item pe-3">
                                         <a class="nav-link pe-0" href="{{ route('about') }}">
                                             About Us
+                                        </a>
+                                    </li>
+                                    <li class="nav-item pe-3">
+                                        <a class="nav-link pe-0" href="{{ route('whatwedo') }}">
+                                            What We Do
+                                        </a>
+                                    </li>
+                                    <li class="nav-item pe-3">
+                                        <a class="nav-link pe-0" href="{{ route('researchReport') }}">
+                                            Research & Reports
                                         </a>
                                     </li>
                                     <li class="nav-item pe-3">
@@ -235,18 +188,7 @@
     </div>
     <div class="offcanvas-body pt-0 px-0">
         <div>
-            <form method="post" action="{{ route('course.search') }}"
-                class="d-flex ms-auto upper-content-menu justify-content-center align-items-center d-none"
-                role="search">
-                @csrf
-                <div class="input-group flex-nowrap search-input-container">
-                    <span class="input-group-text search-box-areas" id="addon-wrapping"><i
-                            class="fa-solid fa-magnifying-glass"></i></span>
-                    <input type="text" class="form-control search-input-field" id="search_text" name="search"
-                        type="search" placeholder="Search for products, solutions & more..."
-                        aria-describedby="addon-wrapping">
-                </div>
-            </form>
+           
             <hr>
             <ul class="navbar-nav justify-content-end flex-grow-1 mt-0 ps-4">
                 <li class="nav-item dropdown cool-link">
@@ -265,15 +207,11 @@
                     </a>
                 </li>
                 <li class="nav-item dropdown cool-link">
-                    <a class="nav-link" href="{{ route('register') }}" role="button">
-                        Registration
+                    <a class="nav-link" href="{{ route('researchReport') }}" role="button">
+                        Research & Reports
                     </a>
                 </li>
-                <li class="nav-item dropdown cool-link">
-                    <a class="nav-link" href="{{ route('contact') }}" role="button">
-                        Contact Us
-                    </a>
-                </li>
+
             </ul>
 
         </div>

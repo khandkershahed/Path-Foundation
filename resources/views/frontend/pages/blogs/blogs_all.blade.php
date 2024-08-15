@@ -117,19 +117,11 @@
     <!--======// Header Title //======-->
     <section class="common_product_header pb-5" style="background-image: url('{{ asset('frontend/images/blog.jpg') }}');">
         <div class="container mb-5">
-            <h1 class="text-white">Blogs</h1>
-            <p class="text-center text-white">Through our deep partnerships with trusted brands, <br> Insight offers a
-                comprehensive catalog of software for business. </p>
+            <h1 class="text-white">Research & Reports</h1>
+
             <div class="row mb-5">
                 <!--BUTTON START-->
-                <div class="d-flex justify-content-center align-items-center">
-                    <div class="m-4">
-                        <a href="{{ route('all.story') }}" class="btn-color">All Client Storys</a>
-                    </div>
-                    <div class="m-4">
-                        <a href="{{ route('all.techglossy') }}" class="btn-color">All Tech Glossys</a>
-                    </div>
-                </div>
+
             </div>
         </div>
     </section>

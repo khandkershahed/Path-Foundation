@@ -33,6 +33,9 @@
                                 <li>
                                     <a href="{{ route('contact') }}">Contact Us</a>
                                 </li>
+                                <li>
+                                    <a href="{{ route('course.registration') }}">Member Registration</a>
+                                </li>
                             </ul>
                         </div>
                     </div>

@@ -15,7 +15,9 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('email')->unique();
+            $table->string('member_id')->unique();
             $table->string('phone')->nullable();
+            $table->string('photo')->nullable();
             $table->string('institution')->nullable();
             $table->string('blood_group')->nullable();
             $table->string('nid_number')->nullable();
