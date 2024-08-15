@@ -49,11 +49,11 @@
     @endif
 
     <!--=======// Cookises Modals //=======-->
-    @include('frontend.partials.cookies')
+    {{-- @include('frontend.partials.cookies') --}}
     <!----------End--------->
 
     <!--=======// Feedback Modals //=======-->
-    @include('frontend.partials.feedback')
+    {{-- @include('frontend.partials.feedback') --}}
     <!----------End--------->
 
     <!--============///* USE LINK *///=============-->

@@ -178,7 +178,7 @@
 <section class="d-sm-none d-lg-block">
     <div class="container">
         <h3 class="main_color text-center mt-5">Our Core Values </h3>
-        <div class="row py-5">
+        <div class="row py-5 pt-4">
             <div class="col-lg-3">
                 <div class="card training-featuer">
                     <div class="card-body py-3 ">
@@ -346,7 +346,7 @@
             @if (!empty($features))
                 <div class="d-lg-block d-sm-none">
                     <div class="row d-flex justify-content-center">
-                        <h3 class="main_color text-center mb-4">Our Foucs Areas</h3>
+                        <h3 class="main_color text-center mb-5">Our Foucs Areas</h3>
                         @foreach ($features as $feature)
                             @if (!empty($feature))
                                 <div class="custom_col-2 col-md-6 col-sm-12">
