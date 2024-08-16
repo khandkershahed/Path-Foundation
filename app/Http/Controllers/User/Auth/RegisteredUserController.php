@@ -40,7 +40,6 @@ class RegisteredUserController extends Controller
 
         // Find the most recent code for the given type and year
         $lastCode = User::where('code', 'like', $typePrefix . '-' . $year . '%')
-            ->where('type', $request->type)
             ->orderBy('id', 'desc')
             ->first();
 
