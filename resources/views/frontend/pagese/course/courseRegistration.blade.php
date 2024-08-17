@@ -154,7 +154,7 @@
                                         aria-describedby="emailHelp" required name="name" value="{{ old('name') }}"
                                         placeholder="Your Name Here">
                                     @error('name')
-                                        <div class="text-danger">{{ $message }}</div>
+                                        <div class="text-danger">{{ $error }}</div>
                                     @enderror
                                 </div>
 
@@ -163,7 +163,7 @@
                                         aria-describedby="emailHelp" required name="email" value="{{ old('email') }}"
                                         placeholder="Email Id:example@example.com">
                                     @error('email')
-                                        <div class="text-danger">{{ $message }}</div>
+                                        <div class="text-danger">{{ $error }}</div>
                                     @enderror
                                 </div>
 
@@ -172,7 +172,7 @@
                                         aria-describedby="emailHelp" required name="phone" value="{{ old('phone') }}"
                                         placeholder="Phone;Eg:017*******">
                                     @error('phone')
-                                        <div class="text-danger">{{ $message }}</div>
+                                        <div class="text-danger">{{ $error }}</div>
                                     @enderror
                                 </div>
                                 <div class="input-field-gap">
@@ -180,7 +180,7 @@
                                         aria-describedby="district" required name="district" value="{{ old('district') }}"
                                         placeholder="District;Eg:Khulna, Dhaka, Faridpur">
                                     @error('district')
-                                        <div class="text-danger">{{ $message }}</div>
+                                        <div class="text-danger">{{ $error }}</div>
                                     @enderror
                                 </div>
                                 <div class="input-field-gap">
@@ -188,7 +188,7 @@
                                         aria-describedby="institution" name="institution" value="{{ old('institution') }}"
                                         placeholder="Institution;Eg:School, College, Working Place">
                                     @error('institution')
-                                        <div class="text-danger">{{ $message }}</div>
+                                        <div class="text-danger">{{ $error }}</div>
                                     @enderror
                                 </div>
                                 <div class="input-field-gap">
@@ -196,7 +196,7 @@
                                         aria-describedby="blood_group" name="blood_group" value="{{ old('blood_group') }}"
                                         placeholder="Blood Group;Eg:A+, B-, O+">
                                     @error('blood_group')
-                                        <div class="text-danger">{{ $message }}</div>
+                                        <div class="text-danger">{{ $error }}</div>
                                     @enderror
                                 </div>
                                 <div class="input-field-gap">
@@ -204,7 +204,7 @@
                                         aria-describedby="nid_number" name="nid_number" value="{{ old('nid_number') }}"
                                         placeholder="NID Number">
                                     @error('nid_number')
-                                        <div class="text-danger">{{ $message }}</div>
+                                        <div class="text-danger">{{ $error }}</div>
                                     @enderror
                                 </div>
                                 <div class="input-field-gap">
@@ -212,7 +212,7 @@
                                         aria-describedby="password" name="password" value="{{ old('password') }}"
                                         placeholder="Password">
                                     @error('password')
-                                        <div class="text-danger">{{ $message }}</div>
+                                        <div class="text-danger">{{ $error }}</div>
                                     @enderror
                                 </div>
                                 <div class="input-field-gap">
@@ -220,7 +220,7 @@
                                         aria-describedby="password_confirmation" name="password_confirmation"
                                         value="{{ old('password_confirmation') }}" placeholder="Confirm Your Password">
                                     @error('password_confirmation')
-                                        <div class="text-danger">{{ $message }}</div>
+                                        <div class="text-danger">{{ $error }}</div>
                                     @enderror
                                 </div>
 
