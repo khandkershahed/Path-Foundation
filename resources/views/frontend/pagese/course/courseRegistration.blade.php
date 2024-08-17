@@ -151,46 +151,81 @@
 
                                 <div class="input-field-gap">
                                     <input type="text" class="form-control form-color" id="exampleInputEmail1"
-                                        aria-describedby="emailHelp" required name="name" value="{{ old('name') }}" placeholder="Your Name Here">
+                                        aria-describedby="emailHelp" required name="name" value="{{ old('name') }}"
+                                        placeholder="Your Name Here">
+                                    @error('name')
+                                        <div class="text-danger">{{ $message }}</div>
+                                    @enderror
                                 </div>
 
                                 <div class="input-field-gap">
                                     <input type="text" class="form-control form-color" id="exampleInputEmail1"
-                                        aria-describedby="emailHelp" required name="email" value="{{ old('email') }}" placeholder="Email Id:example@example.com">
+                                        aria-describedby="emailHelp" required name="email" value="{{ old('email') }}"
+                                        placeholder="Email Id:example@example.com">
+                                    @error('email')
+                                        <div class="text-danger">{{ $message }}</div>
+                                    @enderror
                                 </div>
 
                                 <div class="input-field-gap">
                                     <input type="tel" class="form-control form-color" id="exampleInputEmail1"
-                                        aria-describedby="emailHelp" required name="phone" value="{{ old('phone') }}" placeholder="Phone;Eg:017*******">
+                                        aria-describedby="emailHelp" required name="phone" value="{{ old('phone') }}"
+                                        placeholder="Phone;Eg:017*******">
+                                    @error('phone')
+                                        <div class="text-danger">{{ $message }}</div>
+                                    @enderror
                                 </div>
                                 <div class="input-field-gap">
                                     <input type="text" class="form-control form-color" id="district"
-                                        aria-describedby="district" required name="district" value="{{ old('district') }}" placeholder="District;Eg:Khulna, Dhaka, Faridpur">
+                                        aria-describedby="district" required name="district" value="{{ old('district') }}"
+                                        placeholder="District;Eg:Khulna, Dhaka, Faridpur">
+                                    @error('district')
+                                        <div class="text-danger">{{ $message }}</div>
+                                    @enderror
                                 </div>
                                 <div class="input-field-gap">
                                     <input type="text" class="form-control form-color" id="institution"
-                                        aria-describedby="institution" name="institution" value="{{ old('institution') }}" placeholder="Institution;Eg:School, College, Working Place">
+                                        aria-describedby="institution" name="institution" value="{{ old('institution') }}"
+                                        placeholder="Institution;Eg:School, College, Working Place">
+                                    @error('institution')
+                                        <div class="text-danger">{{ $message }}</div>
+                                    @enderror
                                 </div>
                                 <div class="input-field-gap">
                                     <input type="text" class="form-control form-color" id="blood_group"
-                                        aria-describedby="blood_group" name="blood_group" value="{{ old('blood_group') }}" placeholder="Blood Group;Eg:A+, B-, O+">
+                                        aria-describedby="blood_group" name="blood_group" value="{{ old('blood_group') }}"
+                                        placeholder="Blood Group;Eg:A+, B-, O+">
+                                    @error('blood_group')
+                                        <div class="text-danger">{{ $message }}</div>
+                                    @enderror
                                 </div>
                                 <div class="input-field-gap">
                                     <input type="text" class="form-control form-color" id="nid_number"
-                                        aria-describedby="nid_number" name="nid_number" value="{{ old('nid_number') }}" placeholder="NID Number">
+                                        aria-describedby="nid_number" name="nid_number" value="{{ old('nid_number') }}"
+                                        placeholder="NID Number">
+                                    @error('nid_number')
+                                        <div class="text-danger">{{ $message }}</div>
+                                    @enderror
                                 </div>
                                 <div class="input-field-gap">
                                     <input type="password" class="form-control form-color" id="password"
-                                        aria-describedby="password" name="password" value="{{ old('password') }}" placeholder="Password">
+                                        aria-describedby="password" name="password" value="{{ old('password') }}"
+                                        placeholder="Password">
+                                    @error('password')
+                                        <div class="text-danger">{{ $message }}</div>
+                                    @enderror
                                 </div>
                                 <div class="input-field-gap">
                                     <input type="password" class="form-control form-color" id="password_confirmation"
-                                        aria-describedby="password_confirmation" name="password_confirmation" value="{{ old('password_confirmation') }}" placeholder="Confirm Your Password">
+                                        aria-describedby="password_confirmation" name="password_confirmation"
+                                        value="{{ old('password_confirmation') }}" placeholder="Confirm Your Password">
+                                    @error('password_confirmation')
+                                        <div class="text-danger">{{ $message }}</div>
+                                    @enderror
                                 </div>
 
                                 <div class="input-field-gap">
-                                    <textarea class="form-control form-color" name="address" rows="2"
-                                        placeholder="Your Address">{{ old('address') }}</textarea>
+                                    <textarea class="form-control form-color" name="address" rows="2" placeholder="Your Address">{{ old('address') }}</textarea>
                                 </div>
 
                                 <div>
@@ -201,8 +236,7 @@
                             <div class="col-lg-6 d-lg-block d-sm-none">
                                 <div class="sidebar-areas">
                                     <img class="form-side-area" width="516px" height="700px"
-                                        src="{{ asset('frontend/images/registration.jpg') }}"
-                                        alt="">
+                                        src="{{ asset('frontend/images/registration.jpg') }}" alt="">
                                 </div>
                             </div>
                         </div>
