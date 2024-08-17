@@ -78,9 +78,10 @@ class RegisteredUserController extends Controller
 
         } catch (\Exception $e) {
             // Log the exception
-            Log::error('User creation failed: ' . $e->getMessage());
+            // Log::error('User creation failed: ' . $e->getMessage());
 
             // Redirect back with an error message
-            return redirect()->back()->withErrors(['error' => 'An error occurred while creating the user. Please try again later.']);
+            return redirect()->back()->withErrors(['error' => $e->getMessage()]);
         }
+    }
 }
