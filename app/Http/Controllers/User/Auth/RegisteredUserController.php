@@ -14,6 +14,7 @@ use Illuminate\Auth\Events\Registered;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Validator;
+use Toastr;
 
 class RegisteredUserController extends Controller
 {
@@ -32,20 +33,43 @@ class RegisteredUserController extends Controller
      */
     public function store(Request $request): RedirectResponse
     {
-        try {
-            // Validate the request data
-            $validator = Validator::make($request->all(), [
-                'name' => ['required', 'string', 'max:255'],
-                'email' => ['required', 'string', 'email', 'max:255', 'unique:' . User::class],
-                'password' => ['required', 'confirmed', Rules\Password::defaults()],
-            ]);
-            if ($validator->fails()) {
-                foreach ($validator->messages()->all() as $message) {
-                    Session::flash('error', $message);
-                }
-                return redirect()->back()->withInput();
-            }
+        // Define validation rules
+        $validator = Validator::make($request->all(), [
+            'name' => ['required', 'string', 'max:255'],
+            'email' => ['required', 'string', 'email', 'max:255', 'unique:users,email'],
+            'password' => ['required', 'confirmed', Rules\Password::defaults()],
+            'phone' => ['nullable', 'string', 'regex:/^\+?[0-9]*$/'],
+            'photo' => ['nullable', 'file', 'image', 'mimes:jpeg,png,jpg,gif', 'max:2048'],
+            'institution' => ['nullable', 'string'],
+            'blood_group' => ['nullable', 'string'],
+            'nid_number' => ['nullable', 'string', 'unique:users,nid_number'],
+            'district' => ['nullable', 'string'],
+            'address' => ['nullable', 'string'],
+        ], [
+            'name.required' => 'The name field is required.',
+            'name.string' => 'The name must be a string.',
+            'name.max' => 'The name may not be greater than 255 characters.',
+            'email.required' => 'The email field is required.',
+            'email.email' => 'The email must be a valid email address.',
+            'email.unique' => 'The email has already been taken.',
+            'password.required' => 'The password field is required.',
+            'password.confirmed' => 'The password confirmation does not match.',
+            'phone.regex' => 'The phone number format is invalid.',
+            'photo.image' => 'The photo must be an image.',
+            'photo.mimes' => 'The photo must be a file of type: jpeg, png, jpg, gif.',
+            'photo.max' => 'The photo may not be greater than 2MB.',
+            'nid_number.unique' => 'The NID number has already been taken.',
+        ]);
 
+        if ($validator->fails()) {
+            $messages = $validator->messages();
+            foreach ($messages->all() as $message) {
+                Toastr::error($message, 'Failed', ['timeOut' => 30000]);
+            }
+            return redirect()->back()->withErrors($validator)->withInput();
+        }
+
+        try {
             $typePrefix = 'PF';
             $year = date('Y'); // Get the last two digits of the year (e.g., '24' for 2024)
 
@@ -57,7 +81,7 @@ class RegisteredUserController extends Controller
             $newNumber = $lastCode ? (int) substr($lastCode->member_id, strlen($typePrefix . '-' . $year)) + 1 : 1;
 
             // Construct the new code
-            $code = $typePrefix . '-' . $year . $newNumber;
+            $code = $typePrefix . '-' . $year . str_pad($newNumber, 4, '0', STR_PAD_LEFT);
 
             // Create the user
             $user = User::create([
@@ -82,10 +106,7 @@ class RegisteredUserController extends Controller
 
             // Redirect to the home page
             return redirect(RouteServiceProvider::HOME);
-
         } catch (\Exception $e) {
-            // Log the exception
-            // Log::error('User creation failed: ' . $e->getMessage());
 
             // Redirect back with an error message
             return redirect()->back()->withErrors(['error' => $e->getMessage()]);
