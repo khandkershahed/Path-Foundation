@@ -171,7 +171,7 @@ Route::middleware(['auth:admin'])->prefix('admin')->name('admin.')->group(functi
     Route::post('footers/toggle-status/{id}', [FooterController::class, 'toggleStatus'])->name('footers.toggle-status');
     Route::post('services/toggle-status/{id}', [ServiceController::class, 'toggleStatus'])->name('services.toggle-status');
     Route::post('blogs/toggle-status/{id}', [BlogController::class, 'toggleStatus'])->name('blogs.toggle-status');
-
+    Route::post('user/toggle-status/{id}', [UserManagementController::class, 'toggleStatus'])->name('user.toggle-status');
     Route::get('/backup', [Controller::class, 'downloadBackup']);
 
     Route::get('role/{roleId}/give-permission', [RoleController::class, 'givePermission'])->name('role.give-permission');

@@ -58,6 +58,7 @@ class RegisteredUserController extends Controller
             'nid_number'  => $request->nid_number,
             'district'    => $request->district,
             'address'     => $request->address,
+            'status'      => 'active',
             'password'    => Hash::make($request->password),
         ]);
 

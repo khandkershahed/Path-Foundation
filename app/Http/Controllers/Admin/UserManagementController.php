@@ -30,7 +30,7 @@ class UserManagementController extends Controller
      */
     public function create()
     {
-        return view('admin.pages.user-management.create', ['roles' => Role::get()]);
+        return view('admin.pages.user-management.create');
     }
 
 
@@ -78,9 +78,7 @@ class UserManagementController extends Controller
             'password' => $request->password ? Hash::make($request->password) : $user->password,
         ]);
 
-        if ($request->roles) {
-            $user->syncRoles($request->roles);
-        }
+        
 
         event(new ActivityLogged('User updated', $user));
 
@@ -98,5 +96,12 @@ class UserManagementController extends Controller
         event(new ActivityLogged('User deleted', $user));
 
         // return redirect()->back()->with('success', 'User deleted successfully');
+    }
+    public function toggleStatus(string $id)
+    {
+        $brand = User::findOrFail($id);
+        $brand->status = $brand->status == 'active' ? 'inactive' : 'active';
+        $brand->save();
+        return response()->json(['success' => true]);
     }
 }

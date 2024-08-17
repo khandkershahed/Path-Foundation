@@ -23,6 +23,7 @@ return new class extends Migration
             $table->string('nid_number')->nullable();
             $table->string('district')->nullable();
             $table->text('address')->nullable();
+            $table->string('status',150)->nullable();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();
