@@ -46,15 +46,11 @@
                                 <div class="symbol symbol-circle symbol-50px overflow-hidden me-3">
                                     <a href="javascript:void(0)">
                                         <div class="symbol-label"
-                                            style="background-color: {{ $user->profile_image ? 'transparent' : '#d3d3d3' }};">
-                                            @if ($user->profile_image)
-                                                <img src="{{ asset('storage/' . $user->profile_image) }}"
-                                                    alt="{{ $user->name }}" class="w-100" />
-                                            @else
-                                                <span class="text-gray-800 text-hover-primary mb-1">
-                                                    {{ $user->name }}
-                                                </span>
-                                            @endif
+                                            style="background-color: {{ $user->photo ? 'transparent' : '#d3d3d3' }};">
+                                            <img src="{{ file_exists(public_path('storage/' . ($user->photo ?? '')))
+                                                ? asset('storage/' . $user->photo)
+                                                : 'https://ui-avatars.com/api/?name=' . urlencode(Auth::guard('admin')->user()->name) }}"
+                                                alt="{{ $user->name ?? 'User' }}" class="w-100" />
                                         </div>
                                     </a>
                                 </div>

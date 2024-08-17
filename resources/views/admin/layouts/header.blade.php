@@ -464,59 +464,7 @@
                                             alt="" /></span></span>
                             </a>
                             <!--begin::Menu sub-->
-                            {{-- <div class="menu-sub menu-sub-dropdown w-175px py-4">
-                                <!--begin::Menu item-->
-                                <div class="menu-item px-3">
-                                    <a href="../../demo1/dist/account/settings.html"
-                                        class="menu-link d-flex px-5 active">
-                                        <span class="symbol symbol-20px me-4">
-                                            <img class="rounded-1"
-                                                src="{{ asset('admin/assets/media/flags/united-states.svg') }}"
-                                                alt="" />
-                                        </span>English</a>
-                                </div>
-                                <!--end::Menu item-->
-                                <!--begin::Menu item-->
-                                <div class="menu-item px-3">
-                                    <a href="../../demo1/dist/account/settings.html" class="menu-link d-flex px-5">
-                                        <span class="symbol symbol-20px me-4">
-                                            <img class="rounded-1"
-                                                src="{{ asset('admin/assets/media/flags/spain.svg') }}"
-                                                alt="" />
-                                        </span>Spanish</a>
-                                </div>
-                                <!--end::Menu item-->
-                                <!--begin::Menu item-->
-                                <div class="menu-item px-3">
-                                    <a href="../../demo1/dist/account/settings.html" class="menu-link d-flex px-5">
-                                        <span class="symbol symbol-20px me-4">
-                                            <img class="rounded-1"
-                                                src="{{ asset('admin/assets/media/flags/germany.svg') }}"
-                                                alt="" />
-                                        </span>German</a>
-                                </div>
-                                <!--end::Menu item-->
-                                <!--begin::Menu item-->
-                                <div class="menu-item px-3">
-                                    <a href="../../demo1/dist/account/settings.html" class="menu-link d-flex px-5">
-                                        <span class="symbol symbol-20px me-4">
-                                            <img class="rounded-1"
-                                                src="{{ asset('admin/assets/media/flags/japan.svg') }}"
-                                                alt="" />
-                                        </span>Japanese</a>
-                                </div>
-                                <!--end::Menu item-->
-                                <!--begin::Menu item-->
-                                <div class="menu-item px-3">
-                                    <a href="../../demo1/dist/account/settings.html" class="menu-link d-flex px-5">
-                                        <span class="symbol symbol-20px me-4">
-                                            <img class="rounded-1"
-                                                src="{{ asset('admin/assets/media/flags/france.svg') }}"
-                                                alt="" />
-                                        </span>French</a>
-                                </div>
-                                <!--end::Menu item-->
-                            </div> --}}
+                            
                             <div class="menu-sub menu-sub-dropdown w-175px py-4">
                                 <!--begin::Menu item-->
                                 @foreach (LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
@@ -538,10 +486,10 @@
                         </div>
                         <!--end::Menu item-->
                         <!--begin::Menu item-->
-                        <div class="menu-item px-5 my-1">
+                        {{-- <div class="menu-item px-5 my-1">
                             <a href="../../demo1/dist/account/settings.html" class="menu-link px-5">Account
                                 Settings</a>
-                        </div>
+                        </div> --}}
                         <!--end::Menu item-->
                         <!--begin::Menu item-->
                         <div class="menu-item px-5">

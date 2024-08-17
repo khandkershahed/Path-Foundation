@@ -6,7 +6,7 @@
       <div class="aside-logo flex-column-auto" id="kt_aside_logo">
           <a href="{{ route('dashboard') }}">
               <img alt="Logo"
-                  src="{{ !empty($site->site_logo) && file_exists(public_path('storage/settings/' . $site->site_logo)) ? asset('storage/settings/' . $site->site_logo) : asset('images/no-logo(217-55).jpg') }}"
+                  src="{{ !empty(optional($setting)->site_logo) && file_exists(public_path('storage/' . optional($setting)->site_logo)) ? asset('storage/' . optional($setting)->site_logo) : asset('frontend/images/brandPage-logo-no-img(217-55).jpg') }}"
                   class="h-60px logo w-200px">
           </a>
           <div id="kt_aside_toggle" class="btn btn-icon w-auto px-0 btn-active-color-primary aside-toggle active"
