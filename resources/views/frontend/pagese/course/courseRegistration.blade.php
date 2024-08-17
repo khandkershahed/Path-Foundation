@@ -179,6 +179,14 @@
                                     <input type="text" class="form-control form-color" id="nid_number"
                                         aria-describedby="nid_number" name="nid_number" placeholder="NID Number">
                                 </div>
+                                <div class="input-field-gap">
+                                    <input type="password" class="form-control form-color" id="password"
+                                        aria-describedby="password" name="password" placeholder="Password">
+                                </div>
+                                <div class="input-field-gap">
+                                    <input type="password" class="form-control form-color" id="password_confirmation"
+                                        aria-describedby="password_confirmation" name="password_confirmation" placeholder="Confirm Your Password">
+                                </div>
 
                                 <div class="input-field-gap">
                                     <textarea class="form-control form-color" name="address" rows="2"

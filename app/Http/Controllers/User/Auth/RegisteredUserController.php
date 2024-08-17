@@ -30,42 +30,57 @@ class RegisteredUserController extends Controller
      */
     public function store(Request $request): RedirectResponse
     {
-        $request->validate([
-            'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:' . User::class],
-            'password' => ['required', 'confirmed', Rules\Password::defaults()],
-        ]);
-        $typePrefix = 'PF';
-        $year = date('y'); // Get the last two digits of the year (e.g., '24' for 2024)
+        try {
+            // Validate the request data
+            $request->validate([
+                'name' => ['required', 'string', 'max:255'],
+                'email' => ['required', 'string', 'email', 'max:255', 'unique:' . User::class],
+                'password' => ['required', 'confirmed', Rules\Password::defaults()],
+            ]);
 
-        // Find the most recent code for the given type and year
-        $lastCode = User::where('member_id', 'like', $typePrefix . '-' . $year . '%')
-            ->orderBy('id', 'desc')
-            ->first();
+            $typePrefix = 'PF';
+            $year = date('y'); // Get the last two digits of the year (e.g., '24' for 2024)
 
-        // Extract and increment the last number or start at 1 if none exists
-        $newNumber = $lastCode ? (int) substr($lastCode->member_id, strlen($typePrefix . '-' . $year)) + 1 : 1;
+            // Find the most recent code for the given type and year
+            $lastCode = User::where('member_id', 'like', $typePrefix . '-' . $year . '%')
+                ->orderBy('id', 'desc')
+                ->first();
 
-        // Construct the new code
-        $code = $typePrefix . '-' . $year . $newNumber;
-        $user = User::create([
-            'name'        => $request->name,
-            'email'       => $request->email,
-            'member_id'   => $code,
-            'phone'       => $request->phone,
-            'institution' => $request->institution,
-            'blood_group' => $request->blood_group,
-            'nid_number'  => $request->nid_number,
-            'district'    => $request->district,
-            'address'     => $request->address,
-            'status'      => 'active',
-            'password'    => Hash::make($request->password),
-        ]);
+            // Extract and increment the last number or start at 1 if none exists
+            $newNumber = $lastCode ? (int) substr($lastCode->member_id, strlen($typePrefix . '-' . $year)) + 1 : 1;
 
-        event(new Registered($user));
+            // Construct the new code
+            $code = $typePrefix . '-' . $year . str_pad($newNumber, 4, '0', STR_PAD_LEFT);
 
-        Auth::login($user);
+            // Create the user
+            $user = User::create([
+                'name'        => $request->name,
+                'email'       => $request->email,
+                'member_id'   => $code,
+                'phone'       => $request->phone,
+                'institution' => $request->institution,
+                'blood_group' => $request->blood_group,
+                'nid_number'  => $request->nid_number,
+                'district'    => $request->district,
+                'address'     => $request->address,
+                'status'      => 'active',
+                'password'    => Hash::make($request->password),
+            ]);
 
-        return redirect(RouteServiceProvider::HOME);
-    }
+            // Trigger the Registered event
+            event(new Registered($user));
+
+            // Log the user in
+            Auth::login($user);
+
+            // Redirect to the home page
+            return redirect(RouteServiceProvider::HOME);
+
+        } catch (\Exception $e) {
+            // Log the exception
+            Log::error('User creation failed: ' . $e->getMessage());
+
+            // Redirect back with an error message
+            return redirect()->back()->withErrors(['error' => 'An error occurred while creating the user. Please try again later.']);
+        }
 }
