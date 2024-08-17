@@ -135,6 +135,15 @@
             <p>"Volunteer with PATH for building better Bangladesh."</p>
         </div>
     </section>
+    <div class="row bg-white">
+        @if ($errors->any())
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li class="text-danger">{{ $error }}</li>
+                @endforeach
+            </ul>
+        @endif
+    </div>
     <section style="background-color: #051225;">
         <div class="container py-lg-5 py-3">
 
