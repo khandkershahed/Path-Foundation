@@ -81,7 +81,7 @@ class RegisteredUserController extends Controller
             $newNumber = $lastCode ? (int) substr($lastCode->member_id, strlen($typePrefix . '-' . $year)) + 1 : 1;
 
             // Construct the new code
-            $code = $typePrefix . '-' . $year . str_pad($newNumber, 4, '0', STR_PAD_LEFT);
+            $code = $typePrefix . '-' . $year . $newNumber;
 
             // Create the user
             $user = User::create([
