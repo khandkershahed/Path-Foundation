@@ -39,18 +39,17 @@ class RegisteredUserController extends Controller
             ]);
 
             $typePrefix = 'PF';
-            $year = date('y'); // Get the last two digits of the year (e.g., '24' for 2024)
+            $year = date('Y'); // Get the last two digits of the year (e.g., '24' for 2024)
 
             // Find the most recent code for the given type and year
             $lastCode = User::where('member_id', 'like', $typePrefix . '-' . $year . '%')
                 ->orderBy('id', 'desc')
                 ->first();
 
-            // Extract and increment the last number or start at 1 if none exists
             $newNumber = $lastCode ? (int) substr($lastCode->member_id, strlen($typePrefix . '-' . $year)) + 1 : 1;
 
             // Construct the new code
-            $code = $typePrefix . '-' . $year . str_pad($newNumber, 4, '0', STR_PAD_LEFT);
+            $code = $typePrefix . '-' . $year . $newNumber;
 
             // Create the user
             $user = User::create([

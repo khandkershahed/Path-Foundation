@@ -66,6 +66,9 @@
                                 </div>
                             </td>
                             <td>
+                                <span>{{ $user->email }}</span>
+                            </td>
+                            <td>
                                 <span>{{ $user->member_id }}</span>
                             </td>
                             <td>
