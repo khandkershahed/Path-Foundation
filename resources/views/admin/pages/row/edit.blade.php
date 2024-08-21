@@ -112,7 +112,7 @@
                                         <div class="col-lg-12">
                                             <div class="d-flex justify-content-end">
                                                 <button type="submit" id="common_submit"
-                                                    class="btn btn-lg common-btn-3 fw-bolder me-4 w-175px mb-5">
+                                                    class="btn btn-lg btn-primary fw-bolder me-4 w-175px mb-5">
                                                     <span class="indicator-label">Submit</span>
                                                     <span class="indicator-progress">Please wait...
                                                         <span
@@ -252,7 +252,7 @@
                                         <div class="col-lg-12">
                                             <div class="d-flex justify-content-end">
                                                 <button type="submit" id="common_submit"
-                                                    class="btn btn-lg common-btn-3 fw-bolder me-4 w-175px mb-5">
+                                                    class="btn btn-lg btn-primary fw-bolder me-4 w-175px mb-5">
                                                     <span class="indicator-label">Submit</span>
                                                     <span class="indicator-progress">Please wait...
                                                         <span
