@@ -136,30 +136,29 @@
 
     @stack('scripts')
 
-    <script>
+    {{-- <script>
         tinymce.init({
             selector: 'textarea.kt_docs_tinymce_plugins',
             plugins: 'anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount',
             toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table | align lineheight | numlist bullist indent outdent | emoticons charmap | removeformat',
         });
-    </script>
+    </script> --}}
     <!--end::Page Custom Javascript-->
     <!--end::Javascript-->
 
-    <script src="https://cdn.ckeditor.com/ckeditor5/41.4.2/classic/ckeditor.js"></script>
+    <script src="https://cdn.ckeditor.com/ckeditor5/39.0.0/classic/ckeditor.js"></script>
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            // Initialize CKEditor for each textarea with the class 'editor'
-            document.querySelectorAll('.editor').forEach(function(textarea) {
+        document.querySelectorAll('.ckeditor').forEach(element => {
+            if (!element.classList.contains('ck-editor__editable_inline')) {
                 ClassicEditor
-                    .create(textarea)
+                    .create(element)
                     .then(editor => {
-                        console.log("CKEditor initialized successfully:", editor);
+                        console.log('CKEditor initialized:', editor);
                     })
                     .catch(error => {
-                        console.error("CKEditor initialization error:", error);
+                        console.error('CKEditor initialization error:', error);
                     });
-            });
+            }
         });
     </script>
 {!! Toastr::message() !!}

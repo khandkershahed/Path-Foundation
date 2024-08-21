@@ -106,7 +106,7 @@
                                                                 <label for="validationCustom01"
                                                                     class="form-label required ">Description
                                                                 </label>
-                                                                <textarea name="description" class="tox-target kt_docs_tinymce_plugins" rows="3">
+                                                                <textarea name="description" class="tox-target ckeditor" rows="3">
                                                                     {{ old('description') }}
                                                                 </textarea>
                                                             </div>
@@ -240,7 +240,7 @@
                                                                 <label for="validationCustom01"
                                                                     class="form-label required ">Description
                                                                 </label>
-                                                                <textarea name="description" class="tox-target kt_docs_tinymce_plugins">
+                                                                <textarea name="description" class="tox-target ckeditor">
                                                                     {{ old('description') }}
                                                                 </textarea>
                                                             </div>

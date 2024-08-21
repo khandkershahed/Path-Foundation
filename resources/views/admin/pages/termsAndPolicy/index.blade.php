@@ -232,7 +232,7 @@
                                         <div class="col-md-12 mb-2">
                                             <label for="validationCustom01"
                                                 class="form-label required mb-0">Content</label>
-                                            <textarea name="content" class="tox-target kt_docs_tinymce_plugins"></textarea>
+                                            <textarea name="content" class="tox-target ckeditor"></textarea>
                                             <div class="invalid-feedback"> Please Enter content </div>
                                         </div>
                                     </div>
@@ -353,7 +353,7 @@
                                             <div class="col-md-12 mb-2">
                                                 <label for="validationCustom01"
                                                     class="form-label required mb-0">Content</label>
-                                                <textarea name="content" class="tox-target kt_docs_tinymce_plugins">{{ $termsAndPolicy->content }}</textarea>
+                                                <textarea name="content" class="tox-target ckeditor">{{ $termsAndPolicy->content }}</textarea>
                                                 <div class="invalid-feedback">Please Enter content</div>
                                             </div>
                                         </div>
