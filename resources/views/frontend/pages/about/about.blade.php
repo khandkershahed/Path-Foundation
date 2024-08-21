@@ -128,7 +128,7 @@
                 <div class="col-lg-4 pb-5">
                     <div class="row">
                         <div class="col-12 text-center">
-                            <img src="{{ !empty($about->row_three_column_three_image) ? asset('upload/about/' . ($about->row_three_column_three_image) : asset('frontend/images/no_image.png')) }}"
+                            <img src="{{ !empty($about->row_three_column_three_image) ? asset('upload/about/' . $about->row_three_column_three_image) : asset('frontend/images/no_image.png')) }}"
                                 alt="Row Two Image" style="width: 175px; height:150px;border-radius: 9px;">
                         </div>
                         <div class="col-12 text-center">
