@@ -26,36 +26,36 @@ return new class extends Migration
 
             $table->string('row_two_badge')->nullable();
             $table->string('row_two_title')->nullable();
-            $table->string('row_two_description')->nullable();
+            $table->text('row_two_description')->nullable();
             $table->string('row_two_image')->nullable();
-            
+
             $table->string('row_three_section_title')->nullable();
             $table->string('row_three_column_one')->nullable();
             $table->string('row_three_column_one_image')->nullable();
             $table->string('row_three_column_one_title')->nullable();
-            $table->string('row_three_column_one_decription')->nullable();
+            $table->text('row_three_column_one_decription')->nullable();
             $table->string('row_three_column_one_url')->nullable();
 
             $table->string('row_three_column_two')->nullable();
             $table->string('row_three_column_two_image')->nullable();
             $table->string('row_three_column_two_title')->nullable();
-            $table->string('row_three_column_two_decription')->nullable();
+            $table->text('row_three_column_two_decription')->nullable();
             $table->string('row_three_column_two_url');
 
             $table->string('row_three_column_three')->nullable();
             $table->string('row_three_column_three_image')->nullable();
             $table->string('row_three_column_three_title')->nullable();
-            $table->string('row_three_column_three_decription')->nullable();
+            $table->text('row_three_column_three_decription')->nullable();
             $table->string('row_three_column_three_url')->nullable();
 
-            
+
             $table->string('row_four_column_one_title')->nullable();
             $table->string('row_four_column_one_header')->nullable();
-            $table->string('row_four_column_one_description')->nullable();
+            $table->text('row_four_column_one_description')->nullable();
 
             $table->string('row_four_column_two_title')->nullable();
             $table->string('row_four_column_two_header')->nullable();
-            $table->string('row_four_column_two_description')->nullable();
+            $table->text('row_four_column_two_description')->nullable();
 
             $table->timestamps();
         });
