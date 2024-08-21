@@ -14,10 +14,10 @@
                         <div class="card-toolbar">
                             <ul class="nav nav-tabs nav-line-tabs nav-stretch fs-8 border-0">
                                 <li class="nav-item">
-                                    <a class="nav-link active text-white" data-bs-toggle="tab" href="#row-with-image">Row With Image</a>
+                                    <a class="nav-link active btn btn-light-info text-primary" data-bs-toggle="tab" href="#row-with-image">Row With Image</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link text-white" data-bs-toggle="tab" href="#row-with-list">Row With List</a>
+                                    <a class="nav-link btn btn-light-info text-primary" data-bs-toggle="tab" href="#row-with-list">Row With List</a>
                                 </li>
                             </ul>
                         </div>
