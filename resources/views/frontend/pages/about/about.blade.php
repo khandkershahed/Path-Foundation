@@ -72,8 +72,8 @@
                     </div>
 
                     <div class="pt-4">
-                        <h6 class="main-color">{{ $about->ceo_name }}</h6>
-                        <strong class="main-color">{{ $about->ceo_designation }}</strong>
+                        <h4 class="main-color">{{ $about->ceo_name }}</h4>
+                        <span class="main-color" style="font-size: 14px;">{{ $about->ceo_designation }}</span>
                         <div>
                             <img class="img-fluid" src="{{ asset('upload/about/' . $about->ceo_section_signature) }}"
                                 alt="{{ $about->ceo_name }}" />
@@ -107,7 +107,7 @@
                     <div class="row">
                         <div class="col-12 text-center">
                             <img src="{{ asset('upload/about/' . ($about->row_three_column_one_image ? $about->row_three_column_one_image : '')) }}"
-                                alt="Row Two Image" style="width: 50px;">
+                                alt="Row Two Image" style="width: 200px;">
                         </div>
                         <div class="col-12 text-center">
                             <h4 class="main-color">{{ $about->row_three_column_one_title }}</h4>
@@ -122,7 +122,7 @@
                     <div class="row">
                         <div class="col-12 text-center">
                             <img src="{{ asset('upload/about/' . ($about->row_three_column_two_image ? $about->row_three_column_two_image : '')) }}"
-                                alt="Row Two Image" style="width: 50px;">
+                                alt="Row Two Image" style="width: 200px;">
                         </div>
                         <div class="col-12 text-center">
                             <h4 class="main-color">{{ $about->row_three_column_two_title }}</h4>
@@ -136,7 +136,7 @@
                     <div class="row">
                         <div class="col-12 text-center">
                             <img src="{{ asset('upload/about/' . ($about->row_three_column_three_image ? $about->row_three_column_three_image : '')) }}"
-                                alt="Row Two Image" style="width: 50px;">
+                                alt="Row Two Image" style="width: 200px;">
                         </div>
                         <div class="col-12 text-center">
                             <h4 class="main-color">{{ $about->row_three_column_three_title }}</h4>
