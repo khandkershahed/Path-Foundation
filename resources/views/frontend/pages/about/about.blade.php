@@ -105,11 +105,11 @@
                 <div class="col-lg-4 pb-5">
 
                     <div class="row">
-                        <div class="col-12">
+                        <div class="col-12 text-center">
                             <img src="{{ asset('upload/about/' . ($about->row_three_column_one_image ? $about->row_three_column_one_image : '')) }}"
                                 alt="Row Two Image" style="width: 50px;">
                         </div>
-                        <div class="col-12">
+                        <div class="col-12 text-center">
                             <h4 class="main-color">{{ $about->row_three_column_one_title }}</h4>
                             <p class="mb-0">
                                 {!! $about->row_three_column_one_decription !!}
@@ -120,11 +120,11 @@
                 </div>
                 <div class="col-lg-4 pb-5">
                     <div class="row">
-                        <div class="col-12">
+                        <div class="col-12 text-center">
                             <img src="{{ asset('upload/about/' . ($about->row_three_column_two_image ? $about->row_three_column_two_image : '')) }}"
                                 alt="Row Two Image" style="width: 50px;">
                         </div>
-                        <div class="col-12">
+                        <div class="col-12 text-center">
                             <h4 class="main-color">{{ $about->row_three_column_two_title }}</h4>
                             <p class="mb-0">
                                 {!! $about->row_three_column_two_decription !!}
@@ -134,11 +134,11 @@
                 </div>
                 <div class="col-lg-4 pb-5">
                     <div class="row">
-                        <div class="col-12">
+                        <div class="col-12 text-center">
                             <img src="{{ asset('upload/about/' . ($about->row_three_column_three_image ? $about->row_three_column_three_image : '')) }}"
                                 alt="Row Two Image" style="width: 50px;">
                         </div>
-                        <div class="col-12">
+                        <div class="col-12 text-center">
                             <h4 class="main-color">{{ $about->row_three_column_three_title }}</h4>
                             <p class="mb-0">
                                 {!! $about->row_three_column_three_decription !!}
