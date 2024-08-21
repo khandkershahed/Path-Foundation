@@ -107,7 +107,7 @@
                     <div class="row">
                         <div class="col-12 text-center">
                             <img src="{{ asset('upload/about/' . ($about->row_three_column_one_image ? $about->row_three_column_one_image : '')) }}"
-                                alt="Row Two Image" style="width: 200px;">
+                                alt="Row Two Image" style="width: 175px; height:150px;">
                         </div>
                         <div class="col-12 text-center">
                             <h4 class="main-color">{{ $about->row_three_column_one_title }}</h4>
@@ -122,7 +122,7 @@
                     <div class="row">
                         <div class="col-12 text-center">
                             <img src="{{ asset('upload/about/' . ($about->row_three_column_two_image ? $about->row_three_column_two_image : '')) }}"
-                                alt="Row Two Image" style="width: 200px;">
+                                alt="Row Two Image" style="width: 175px; height:150px;">
                         </div>
                         <div class="col-12 text-center">
                             <h4 class="main-color">{{ $about->row_three_column_two_title }}</h4>
@@ -136,7 +136,7 @@
                     <div class="row">
                         <div class="col-12 text-center">
                             <img src="{{ asset('upload/about/' . ($about->row_three_column_three_image ? $about->row_three_column_three_image : '')) }}"
-                                alt="Row Two Image" style="width: 200px;">
+                                alt="Row Two Image" style="width: 175px; height:150px;">
                         </div>
                         <div class="col-12 text-center">
                             <h4 class="main-color">{{ $about->row_three_column_three_title }}</h4>
