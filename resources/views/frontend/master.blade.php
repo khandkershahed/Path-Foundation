@@ -6,25 +6,30 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <!-- Primary Meta Tags -->
-<title>PATH Foundation</title>
-<meta name="title" content="PATH Foundation" />
-<meta name="description" content="Join PATH Foundation in its commitment to a harmonious Bangladesh, focusing on rule of law, environmental care, and equitable education for all communities." />
+    {{-- <title>PATH Foundation</title> --}}
+    <meta name="title" content="PATH Foundation" />
+    <meta name="description"
+        content="Join PATH Foundation in its commitment to a harmonious Bangladesh, focusing on rule of law, environmental care, and equitable education for all communities." />
 
-<!-- Open Graph / Facebook -->
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://metatags.io/" />
-<meta property="og:title" content="PATH Foundation" />
-<meta property="og:description" content="Join PATH Foundation in its commitment to a harmonious Bangladesh, focusing on rule of law, environmental care, and equitable education for all communities." />
-<meta property="og:image" content="https://metatags.io/images/meta-tags.png" />
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://pathbd.org/" />
+    <meta property="og:title" content="PATH Foundation" />
+    <meta property="og:description"
+        content="Join PATH Foundation in its commitment to a harmonious Bangladesh, focusing on rule of law, environmental care, and equitable education for all communities." />
+    <meta property="og:image"
+        content="{{ !empty(optional($setting)->site_logo) && file_exists(public_path('storage/' . optional($setting)->site_logo)) ? asset('storage/' . optional($setting)->site_logo) : asset('frontend/images/brandPage-logo-no-img(217-55).jpg') }}" />
 
-<!-- Twitter -->
-<meta property="twitter:card" content="summary_large_image" />
-<meta property="twitter:url" content="https://metatags.io/" />
-<meta property="twitter:title" content="PATH Foundation" />
-<meta property="twitter:description" content="Join PATH Foundation in its commitment to a harmonious Bangladesh, focusing on rule of law, environmental care, and equitable education for all communities." />
-<meta property="twitter:image" content="https://metatags.io/images/meta-tags.png" />
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://pathbd.org/" />
+    <meta property="twitter:title" content="PATH Foundation" />
+    <meta property="twitter:description"
+        content="Join PATH Foundation in its commitment to a harmonious Bangladesh, focusing on rule of law, environmental care, and equitable education for all communities." />
+    <meta property="twitter:image"
+        content="{{ !empty(optional($setting)->site_logo) && file_exists(public_path('storage/' . optional($setting)->site_logo)) ? asset('storage/' . optional($setting)->site_logo) : asset('frontend/images/brandPage-logo-no-img(217-55).jpg') }}" />
 
-<!-- Meta Tags Generated with https://metatags.io -->
+    <!-- Meta Tags Generated with https://metatags.io -->
     {{-- <script async data-id="9476858534" id="chatling-embed-script" type="text/javascript"
         src="https://chatling.ai/js/embed.js"></script> --}}
 
