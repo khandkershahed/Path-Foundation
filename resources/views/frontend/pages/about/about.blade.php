@@ -46,7 +46,6 @@
                     <div>
                         <img src="{{ asset('upload/about/' . ($about->row_two_image ? $about->row_two_image : '')) }}"
                             alt="Row Two Image">
-
                     </div>
                 </div>
             </div>
@@ -61,20 +60,16 @@
                         alt="" />
                 </div>
                 <div class="col-lg-6">
-
                     <div>
-
                         <p>{{ $about->ceo_section_badge }}</p>
                         <h2 class="main-color">{{ $about->ceo_section_title }}</h2>
-
                         <p>{!! $about->ceo_section_description !!}</p>
-
                     </div>
 
                     <div class="pt-4">
                         <h4 class="main-color">{{ $about->ceo_name }}</h4>
                         <span class="main-color" style="font-size: 14px;">{{ $about->ceo_designation }}</span>
-                        <div>
+                        <div class="mt-3">
                             <img class="img-fluid" src="{{ asset('upload/about/' . $about->ceo_section_signature) }}"
                                 alt="{{ $about->ceo_name }}" />
                         </div>
@@ -101,9 +96,7 @@
                 </div>
             </div>
             <div class="row pt-5">
-
                 <div class="col-lg-4 pb-5">
-
                     <div class="row">
                         <div class="col-12 text-center">
                             <img src="{{ asset('upload/about/' . ($about->row_three_column_one_image ? $about->row_three_column_one_image : '')) }}"
@@ -145,9 +138,7 @@
                             </p>
                         </div>
                     </div>
-
                 </div>
-
             </div>
         </div>
     </section>
