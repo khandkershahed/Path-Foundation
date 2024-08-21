@@ -280,9 +280,6 @@ class HomeController extends Controller
         //     ->where('brands.status', 'active')
         //     ->limit(10)
         //     ->get(['products.id', 'products.name', 'products.slug', 'products.thumbnail', 'products.price', 'products.discount', 'products.rfq', 'products.qty', 'products.stock']);
-
-        // $data['solutions'] = SolutionDetail::where('name', 'LIKE', '%' . $query . '%')->limit(5)->get(['id', 'name']);
-        // $data['industries'] = Industry::where('title', 'LIKE', '%' . $query . '%')->limit(5)->get(['id', 'title']);
         $data['blogs'] = NewsTrend::where('title', 'LIKE', '%' . $query . '%')->limit(5)->get(['id', 'title']);
         // $data['categorys'] = Category::where('title', 'LIKE', '%' . $query . '%')->limit(2)->get(['id', 'title', 'slug']);
         // $data['subcategorys'] = SubCategory::where('title', 'LIKE', '%' . $query . '%')->limit(2)->get(['id', 'title', 'slug']);
@@ -312,5 +309,17 @@ class HomeController extends Controller
     {
         $data['faq_categorys'] = Faq::select('category')->distinct()->get();
         return view('frontend.pages.policy.faq', $data);
+    }
+    public function privacyPolicy()
+    {
+        // $data['privacy'] = Priva::select('category')->distinct()->get();
+        // return view('frontend.pages.policy.faq', $data);
+        return view('frontend.pages.policy.privacy_policy');
+    }
+    public function termsCondition()
+    {
+        // $data['terms'] = Faq::select('category')->distinct()->get();
+        // return view('frontend.pages.policy.terms_policy', $data);
+        return view('frontend.pages.policy.terms_policy');
     }
 }

@@ -116,10 +116,10 @@ Route::get('/blog/{id}/details', [HomeController::class, 'BlogDetails'])->name('
 Route::get('/techglossy/all', [HomeController::class, 'AllTechGlossy'])->name('all.techglossy');
 Route::get('/techglossy/{id}/details', [HomeController::class, 'TechGlossyDetails'])->name('techglossy.details');
 
-Route::resource('client-feedback', FeedbackController::class)->except([
-    'index', 'edit', 'update', 'store',
-]);
-Route::post('/feedback/store', [FeedbackController::class, 'store'])->name('feedback.add');
+// Route::resource('client-feedback', FeedbackController::class)->except([
+//     'index', 'edit', 'update', 'store',
+// ]);
+// Route::post('/feedback/store', [FeedbackController::class, 'store'])->name('feedback.add');
 
 Route::get('/shop.html', [HomeController::class, 'shop_html'])->name('shop.html');
 
@@ -131,8 +131,8 @@ Route::get('/company/overview', [HomeController::class, 'about'])->name('about')
 
 //Terms & Policy
 Route::get('faq', [HomeController::class, 'faq'])->name('faq');
-Route::get('privacy_policy', [HomeController::class, 'PrivacyPolicy'])->name('privacy.policy');
-Route::get('terms_policy', [HomeController::class, 'TermsPolicy'])->name('terms.policy');
+Route::get('privacy-policy', [HomeController::class, 'privacyPolicy'])->name('privacy.policy');
+Route::get('terms-condition', [HomeController::class, 'termsCondition'])->name('terms.policy');
 // Route::get('terms_policy/{id}/details', [HomeController::class, 'TermsPolicyDetails'])->name('terms.details');
 
 //Portfolio
