@@ -70,7 +70,7 @@ class RegisteredUserController extends Controller
         }
 
         try {
-            $typePrefix = 'PF';
+            $typePrefix = 'PB';
             $year = date('Y'); // Get the last two digits of the year (e.g., '24' for 2024)
 
             // Find the most recent code for the given type and year
