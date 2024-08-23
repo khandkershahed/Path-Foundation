@@ -127,7 +127,7 @@ Route::get('/product/{id}/html', [HomeController::class, 'ProductCommon'])->name
 
 //Industry
 
-Route::get('/company/overview', [HomeController::class, 'about'])->name('about');
+Route::get('/about-us', [HomeController::class, 'about'])->name('about');
 
 //Terms & Policy
 Route::get('faq', [HomeController::class, 'faq'])->name('faq');
