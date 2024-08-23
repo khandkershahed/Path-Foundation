@@ -36,9 +36,9 @@ class ExecutivePanelController extends Controller
     {
         // Define validation rules
         $validator = Validator::make($request->all(), [
-            'name'         => ['required', 'string', 'max:255'],
-            'email'        => ['required', 'string', 'email', 'max:255', 'unique:executive_panels,email'],
-            'member_id'    => ['required', 'string', 'max:255', 'unique:executive_panels,member_id'],
+            'name'         => ['nullable', 'string', 'max:255'],
+            'email'        => ['nullable', 'string', 'email', 'max:255', 'unique:executive_panels,email'],
+            'member_id'    => ['nullable', 'string', 'max:255', 'unique:executive_panels,member_id'],
             'phone'        => ['nullable', 'string', 'regex:/^\+?[0-9]*$/'],
             'photo'        => ['nullable', 'file', 'image', 'mimes:jpeg,png,jpg,gif', 'max:2048'],
             'designation'  => ['nullable', 'string'],
@@ -47,7 +47,7 @@ class ExecutivePanelController extends Controller
             'nid_number'   => ['nullable', 'string', 'unique:executive_panels,nid_number'],
             'district'     => ['nullable', 'string'],
             'address'      => ['nullable', 'string'],
-            'status'       => ['required', 'string', 'in:active,inactive'], // Assuming status can only be 'active' or 'inactive'
+            'status'       => ['nullable', 'string', 'in:active,inactive'], // Assuming status can only be 'active' or 'inactive'
         ], [
             'name.required' => 'The name field is required.',
             'name.string' => 'The name must be a string.',
@@ -146,9 +146,9 @@ class ExecutivePanelController extends Controller
 
         // Define validation rules
         $validator = Validator::make($request->all(), [
-            'name'         => ['required', 'string', 'max:255'],
-            'email'        => ['required', 'string', 'email', 'max:255', 'unique:executive_panels,email,' . $id],
-            'member_id'    => ['required', 'string', 'max:255', 'unique:executive_panels,member_id,' . $id],
+            'name'         => ['nullable', 'string', 'max:255'],
+            'email'        => ['nullable', 'string', 'email', 'max:255', 'unique:executive_panels,email,' . $id],
+            'member_id'    => ['nullable', 'string', 'max:255', 'unique:executive_panels,member_id,' . $id],
             'phone'        => ['nullable', 'string', 'regex:/^\+?[0-9]*$/'],
             'photo'        => ['nullable', 'file', 'image', 'mimes:jpeg,png,jpg,gif', 'max:2048'],
             'designation'  => ['nullable', 'string'],
@@ -157,7 +157,7 @@ class ExecutivePanelController extends Controller
             'nid_number'   => ['nullable', 'string', 'unique:executive_panels,nid_number,' . $id],
             'district'     => ['nullable', 'string'],
             'address'      => ['nullable', 'string'],
-            'status'       => ['required', 'string', 'in:active,inactive'],
+            'status'       => ['nullable', 'string', 'in:active,inactive'],
         ], [
             'name.required' => 'The name field is required.',
             'name.string' => 'The name must be a string.',
