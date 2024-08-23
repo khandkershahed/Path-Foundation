@@ -111,6 +111,7 @@ class ExecutivePanelController extends Controller
 
             return redirect()->back()->with('success', 'Executive added successfully.');
         } catch (\Exception $e) {
+            Toastr::error($e->getMessage(), 'Failed', ['timeOut' => 30000]);
             return redirect()->back()->withErrors(['error' => $e->getMessage()]);
         }
     }

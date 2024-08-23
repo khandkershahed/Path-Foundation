@@ -97,7 +97,7 @@
             </div>
             <div class="row pt-5">
                 @foreach ($advisors as $advisor)
-                    <div class="col-lg-3 pb-5">
+                    <div class="col-lg-3 pb-7 mb-5">
                         <div class="card bg-transparent border-0">
                             <div class="card-body d-flex align-items-center justify-content-center">
                                 <img src="{{ !empty($advisor->photo) ? asset('storage/' . $advisor->photo) : asset('frontend/images/no_image.png') }}"
@@ -106,7 +106,7 @@
                             <div class="card-footer text-center main_bg rounded-3">
                                 <h5 class="text-white m-0 mb-1">{{ $advisor ->name}}</h5>
                                 {{-- <br> --}}
-                                <p class="m-0 text-white">{{ $advisor ->designation}}</p>
+                                <p class="m-0 text-white" style="font-size: 14px;">{{ $advisor ->designation}}</p>
                             </div>
                         </div>
                     </div>
@@ -128,7 +128,7 @@
             </div>
             <div class="row pt-5">
                 @foreach ($executives as $executive)
-                    <div class="col-lg-3 pb-5">
+                    <div class="col-lg-3 pb-7 mb-5">
                         <div class="card bg-transparent border-0">
                             <div class="card-body d-flex align-items-center justify-content-center">
                                 <img src="{{ !empty($executive->photo) ? asset('storage/' . $executive->photo) : asset('frontend/images/no_image.png') }}"
@@ -137,7 +137,7 @@
                             <div class="card-footer text-center main_bg rounded-3">
                                 <h5 class="text-white m-0 mb-1">{{ $executive ->name}}</h5>
                                 {{-- <br> --}}
-                                <p class="m-0 text-white">{{ $executive ->designation}}</p>
+                                <p class="m-0 text-white" style="font-size: 14px;">{{ $executive ->designation}}</p>
                             </div>
                         </div>
                     </div>
