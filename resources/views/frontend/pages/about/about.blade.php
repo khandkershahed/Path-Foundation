@@ -104,7 +104,7 @@
                                     alt="{{ $advisor ->name}}" style="width: 175px; height:150px;border-radius: 9px;">
                             </div>
                             <div class="card-footer text-center rounded-3 border-0" style="background-color: #d8d8d8;">
-                                <h5 class="main-color m-0 mb-1">{{ $advisor ->name}}</h5>
+                                <h5 class="main-color m-0 mb-1" style="font-size: 1.1rem;">{{ $advisor ->name}}</h5>
                                 <p class="m-0 main-color" style="font-size: 14px;">{{ $advisor ->designation}}</p>
                             </div>
                         </div>
@@ -134,7 +134,7 @@
                                     alt="{{ $executive ->name}}" style="width: 175px; height:150px;border-radius: 9px;">
                             </div>
                             <div class="card-footer text-center rounded-3 border-0" style="background-color: #d8d8d8;">
-                                <h5 class="main-color m-0 mb-1">{{ $executive ->name}}</h5>
+                                <h5 class="main-color m-0 mb-1" style="font-size: 1.1rem;">{{ $executive ->name}}</h5>
                                 <p class="m-0 main-color" style="font-size: 14px;">{{ $executive ->designation}}</p>
                             </div>
                         </div>
