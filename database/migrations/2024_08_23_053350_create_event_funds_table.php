@@ -23,7 +23,10 @@ return new class extends Migration
             $table->double('collected_amount')->nullable();
             $table->double('target_amount')->nullable();
             $table->double('total_donors')->nullable();
+            $table->double('total_expense')->nullable();
             $table->string('donation_type')->nullable();
+            $table->longText('expense_details')->nullable();
+            $table->longText('donor_details')->nullable();
             $table->integer('donors_count')->default(0);
             $table->string('currency', 10)->default('USD');
             $table->enum('funding_status', ['ongoing', 'completed'])->default('ongoing');
