@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Str;
 use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Facades\Storage;
 use Intervention\Image\Laravel\Facades\Image;
@@ -77,5 +78,44 @@ if (!function_exists('customUpload')) {
         ];
 
         return array_map('htmlspecialchars', $output);
+    }
+
+    if (!function_exists('newUpload')) {
+        function newUpload(UploadedFile $mainFile, string $uploadPath, ?int $reqWidth = null, ?int $reqHeight = null): array
+        {
+            try {
+                $originalName     = pathinfo($mainFile->getClientOriginalName(), PATHINFO_FILENAME);
+                $fileExtention    = $mainFile->getClientOriginalExtension();
+                $currentTime      = Str::random(10) . time();
+                $name = Str::limit($originalName, 100);
+                $fileName = $currentTime . '.' . $fileExtention ;
+
+                if (!is_dir($uploadPath)) {
+                    if (!mkdir($uploadPath, 0777, true)) {
+                        abort(404, "Failed to create the directory: $uploadPath");
+                    }
+                    chmod($uploadPath, 0777); // Reset umask to default (optional)
+                }
+
+                $mainFile->storeAs("public/$uploadPath", $fileName);
+                $filePath = "$uploadPath/$fileName";
+
+                $output = [
+                    'status'         => 1,
+                    'file_name'      => $fileName,
+                    'file_extension' => $mainFile->getClientOriginalExtension(),
+                    'file_size'      => $mainFile->getSize(),
+                    'file_type'      => $mainFile->getMimeType(),
+                    'file_path'      => $filePath,
+                ];
+
+                return array_map('htmlspecialchars', $output);
+            } catch (\Exception $e) {
+                return [
+                    'status' => 0,
+                    'error_message' => $e->getMessage(),
+                ];
+            }
+        }
     }
 }

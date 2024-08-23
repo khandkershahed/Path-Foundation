@@ -88,6 +88,68 @@
             <div class="row pb-5">
                 <div class="col-lg-12">
                     <div class="text-center section-title-about">
+                        <h1>Our Advisor Panel</h1>
+                        <div class="section-devider"
+                            style="background-color: #0a1d5b;height: 2px;width: 10%;margin: auto;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row pt-5">
+                @foreach ($advisors as $advisor)
+                    <div class="col-lg-3 pb-5">
+                        <div class="card bg-transparent border-0">
+                            <div class="card-body d-flex align-items-center justify-content-center">
+                                <img src="{{ !empty($advisor->photo) ? asset('storage/' . $advisor->photo) : asset('frontend/images/no_image.png') }}"
+                                    alt="{{ $advisor ->name}}" style="width: 175px; height:150px;border-radius: 9px;">
+                            </div>
+                            <div class="card-footer text-center main_bg rounded-3">
+                                <h5 class="text-white m-0 mb-1">{{ $advisor ->name}}</h5>
+                                {{-- <br> --}}
+                                <p class="m-0 text-white">{{ $advisor ->designation}}</p>
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
+            </div>
+        </div>
+    </section>
+    <section style="background-color: #eee">
+        <div class="container py-5">
+            <div class="row pb-5">
+                <div class="col-lg-12">
+                    <div class="text-center section-title-about">
+                        <h1>Our Executive Panel</h1>
+                        <div class="section-devider"
+                            style="background-color: #0a1d5b;height: 2px;width: 10%;margin: auto;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row pt-5">
+                @foreach ($executives as $executive)
+                    <div class="col-lg-3 pb-5">
+                        <div class="card bg-transparent border-0">
+                            <div class="card-body d-flex align-items-center justify-content-center">
+                                <img src="{{ !empty($executive->photo) ? asset('storage/' . $executive->photo) : asset('frontend/images/no_image.png') }}"
+                                    alt="{{ $executive ->name}}" style="width: 175px; height:150px;border-radius: 9px;">
+                            </div>
+                            <div class="card-footer text-center main_bg rounded-3">
+                                <h5 class="text-white m-0 mb-1">{{ $executive ->name}}</h5>
+                                {{-- <br> --}}
+                                <p class="m-0 text-white">{{ $executive ->designation}}</p>
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
+            </div>
+        </div>
+    </section>
+    <section style="background-color: #eee">
+        <div class="container py-5">
+            <div class="row pb-5">
+                <div class="col-lg-12">
+                    <div class="text-center section-title-about">
                         <h1>{{ $about->row_three_section_title }}</h1>
                         <div class="section-devider"
                             style="background-color: #0a1d5b;height: 2px;width: 10%;margin: auto;">
@@ -99,7 +161,7 @@
                 <div class="col-lg-4 pb-5">
                     <div class="row">
                         <div class="col-12 text-center">
-                            <img src="{{ asset('upload/about/' . ($about->row_three_column_one_image ? $about->row_three_column_one_image : '')) }}"
+                            <img src="{{ !empty($about->row_three_column_one_image) ? asset('upload/about/' . $about->row_three_column_one_image) : asset('frontend/images/no_image.png') }}"
                                 alt="Row Two Image" style="width: 175px; height:150px;border-radius: 9px;">
                         </div>
                         <div class="col-12 text-center">
@@ -114,7 +176,7 @@
                 <div class="col-lg-4 pb-5">
                     <div class="row">
                         <div class="col-12 text-center">
-                            <img src="{{ asset('upload/about/' . ($about->row_three_column_two_image ? $about->row_three_column_two_image : '')) }}"
+                            <img src="{{ !empty($about->row_three_column_two_image) ? asset('upload/about/' . $about->row_three_column_two_image) : asset('frontend/images/no_image.png') }}"
                                 alt="Row Two Image" style="width: 175px; height:150px;border-radius: 9px;">
                         </div>
                         <div class="col-12 text-center">

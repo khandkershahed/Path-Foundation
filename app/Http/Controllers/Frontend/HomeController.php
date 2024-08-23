@@ -35,6 +35,7 @@ use App\Models\MultiIndustry;
 use App\Models\PortfolioPage;
 use App\Models\PortfolioTeam;
 use App\Http\Controllers\Controller;
+use App\Models\AdviserPanel;
 use App\Models\Course;
 use App\Models\CourseCurriculum;
 use App\Models\OfficeLocation;
@@ -52,6 +53,7 @@ use App\Models\PortfolioChooseUs;
 use App\Models\SubSubSubCategory;
 use App\Models\PortfolioClientFeedback;
 use App\Models\CourseQuery;
+use App\Models\ExecutivePanel;
 
 class HomeController extends Controller
 {
@@ -189,14 +191,10 @@ class HomeController extends Controller
     //About
     public function about()
     {
-        $data['about'] = AboutUs::latest('id', 'desc')->firstOrFail();
-        // if ($data['about']) {
+        $data['about']        = AboutUs::latest('id', 'desc')->firstOrFail();
+        $data['advisors']     = AdviserPanel::get();
+        $data['executives']   = ExecutivePanel::get();
 
-        //     $data['row1'] = Row::where('id', $data['about']->row_one_id)->first();
-        //     $data['row2'] = Row::where('id', $data['about']->row_two_id)->first();
-        //     $data['row3'] = Row::where('id', $data['about']->row_three_id)->first();
-        // }
-        // $data['pdfs'] = DocumentPdf::where('category', 'company')->latest('id', 'desc')->limit(4)->get(['document', 'button_name', 'button_link']);
         return view('frontend.pages.about.about',$data);
     }
 
