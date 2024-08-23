@@ -103,10 +103,9 @@
                                 <img src="{{ !empty($advisor->photo) ? asset('storage/' . $advisor->photo) : asset('frontend/images/no_image.png') }}"
                                     alt="{{ $advisor ->name}}" style="width: 175px; height:150px;border-radius: 9px;">
                             </div>
-                            <div class="card-footer text-center main_bg rounded-3">
-                                <h5 class="text-white m-0 mb-1">{{ $advisor ->name}}</h5>
-                                {{-- <br> --}}
-                                <p class="m-0 text-white" style="font-size: 14px;">{{ $advisor ->designation}}</p>
+                            <div class="card-footer text-center rounded-3 border-0" style="background-color: #d8d8d8;">
+                                <h5 class="main-color m-0 mb-1">{{ $advisor ->name}}</h5>
+                                <p class="m-0 main-color" style="font-size: 14px;">{{ $advisor ->designation}}</p>
                             </div>
                         </div>
                     </div>
@@ -134,10 +133,9 @@
                                 <img src="{{ !empty($executive->photo) ? asset('storage/' . $executive->photo) : asset('frontend/images/no_image.png') }}"
                                     alt="{{ $executive ->name}}" style="width: 175px; height:150px;border-radius: 9px;">
                             </div>
-                            <div class="card-footer text-center main_bg rounded-3">
-                                <h5 class="text-white m-0 mb-1">{{ $executive ->name}}</h5>
-                                {{-- <br> --}}
-                                <p class="m-0 text-white" style="font-size: 14px;">{{ $executive ->designation}}</p>
+                            <div class="card-footer text-center rounded-3 border-0" style="background-color: #d8d8d8;">
+                                <h5 class="main-color m-0 mb-1">{{ $executive ->name}}</h5>
+                                <p class="m-0 main-color" style="font-size: 14px;">{{ $executive ->designation}}</p>
                             </div>
                         </div>
                     </div>
