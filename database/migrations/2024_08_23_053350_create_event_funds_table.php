@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('event_funds', function (Blueprint $table) {
             $table->id();
             $table->foreignId('event_id')->constrained('events')->onDelete('cascade');
+            $table->foreignId('content_id')->constrained('news_trends')->onDelete('cascade');
             $table->string('badge')->nullable();
             $table->string('title', 250)->nullable();
             $table->string('slug', 255)->nullable();
