@@ -17,7 +17,7 @@ class ExecutivePanelController extends Controller
     public function index()
     {
         return view('admin.pages.executivePanel.index', [
-            'teams' => ExecutivePanel::latest('id')->get(),
+            'teams' => ExecutivePanel::get(),
         ]);
     }
 
