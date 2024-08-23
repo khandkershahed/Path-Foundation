@@ -52,35 +52,6 @@
         </div>
     </section>
 
-    <section style="background-color: #eee">
-        <div class="container py-5">
-            <div class="row align-items-center">
-                <div class="col-lg-6">
-                    <img class="img-fluid rounded-4" src="{{ asset('upload/about/' . $about->ceo_section_image) }}"
-                        alt="" />
-                </div>
-                <div class="col-lg-6">
-                    <div>
-                        <p>{{ $about->ceo_section_badge }}</p>
-                        <h2 class="main-color">{{ $about->ceo_section_title }}</h2>
-                        <p>{!! $about->ceo_section_description !!}</p>
-                    </div>
-
-                    <div class="pt-4">
-                        <h4 class="main-color">{{ $about->ceo_name }}</h4>
-                        <span class="main-color" style="font-size: 14px;">{{ $about->ceo_designation }}</span>
-                        <div class="mt-3">
-                            <img class="img-fluid" src="{{ asset('upload/about/' . $about->ceo_section_signature) }}"
-                                alt="{{ $about->ceo_name }}" />
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    {{-- Row Two  --}}
-
 
     {{-- Row Three --}}
     <section style="background-color: #eee">
@@ -89,8 +60,7 @@
                 <div class="col-lg-12">
                     <div class="text-center section-title-about">
                         <h1>Our Advisor Panel</h1>
-                        <div class="section-devider"
-                            style="background-color: #0a1d5b;height: 2px;width: 10%;margin: auto;">
+                        <div class="section-devider" style="background-color: #0a1d5b;height: 2px;width: 10%;margin: auto;">
                         </div>
                     </div>
                 </div>
@@ -101,11 +71,11 @@
                         <div class="card bg-transparent border-0">
                             <div class="card-body d-flex align-items-center justify-content-center">
                                 <img src="{{ !empty($advisor->photo) ? asset('storage/' . $advisor->photo) : asset('frontend/images/no_image.png') }}"
-                                    alt="{{ $advisor ->name}}" style="width: 175px; height:150px;border-radius: 9px;">
+                                    alt="{{ $advisor->name }}" style="width: 175px; height:150px;border-radius: 9px;">
                             </div>
                             <div class="card-footer text-center rounded-3 border-0" style="background-color: #d8d8d8;">
-                                <h5 class="main-color m-0 mb-1" style="font-size: 1.1rem;">{{ $advisor ->name}}</h5>
-                                <p class="m-0 main-color" style="font-size: 14px;">{{ $advisor ->designation}}</p>
+                                <h5 class="main-color m-0 mb-1" style="font-size: 1.1rem;">{{ $advisor->name }}</h5>
+                                <p class="m-0 main-color" style="font-size: 14px;">{{ $advisor->designation }}</p>
                             </div>
                         </div>
                     </div>
@@ -113,14 +83,14 @@
             </div>
         </div>
     </section>
+
     <section style="background-color: #eee">
         <div class="container py-5">
             <div class="row pb-5">
                 <div class="col-lg-12">
                     <div class="text-center section-title-about">
                         <h1>Our Executive Panel</h1>
-                        <div class="section-devider"
-                            style="background-color: #0a1d5b;height: 2px;width: 10%;margin: auto;">
+                        <div class="section-devider" style="background-color: #0a1d5b;height: 2px;width: 10%;margin: auto;">
                         </div>
                     </div>
                 </div>
@@ -131,11 +101,11 @@
                         <div class="card bg-transparent border-0">
                             <div class="card-body d-flex align-items-center justify-content-center">
                                 <img src="{{ !empty($executive->photo) ? asset('storage/' . $executive->photo) : asset('frontend/images/no_image.png') }}"
-                                    alt="{{ $executive ->name}}" style="width: 175px; height:150px;border-radius: 9px;">
+                                    alt="{{ $executive->name }}" style="width: 175px; height:150px;border-radius: 9px;">
                             </div>
                             <div class="card-footer text-center rounded-3 border-0" style="background-color: #d8d8d8;">
-                                <h5 class="main-color m-0 mb-1" style="font-size: 1.1rem;">{{ $executive ->name}}</h5>
-                                <p class="m-0 main-color" style="font-size: 14px;">{{ $executive ->designation}}</p>
+                                <h5 class="main-color m-0 mb-1" style="font-size: 1.1rem;">{{ $executive->name }}</h5>
+                                <p class="m-0 main-color" style="font-size: 14px;">{{ $executive->designation }}</p>
                             </div>
                         </div>
                     </div>
@@ -143,14 +113,14 @@
             </div>
         </div>
     </section>
+
     <section style="background-color: #eee">
         <div class="container py-5">
             <div class="row pb-5">
                 <div class="col-lg-12">
                     <div class="text-center section-title-about">
                         <h1>{{ $about->row_three_section_title }}</h1>
-                        <div class="section-devider"
-                            style="background-color: #0a1d5b;height: 2px;width: 10%;margin: auto;">
+                        <div class="section-devider" style="background-color: #0a1d5b;height: 2px;width: 10%;margin: auto;">
                         </div>
                     </div>
                 </div>
@@ -203,6 +173,32 @@
         </div>
     </section>
 
+    <section style="background-color: #eee">
+        <div class="container py-5">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <img class="img-fluid rounded-4" src="{{ asset('upload/about/' . $about->ceo_section_image) }}"
+                        alt="" />
+                </div>
+                <div class="col-lg-6">
+                    <div>
+                        <p>{{ $about->ceo_section_badge }}</p>
+                        <h2 class="main-color">{{ $about->ceo_section_title }}</h2>
+                        <p>{!! $about->ceo_section_description !!}</p>
+                    </div>
+
+                    <div class="pt-4">
+                        <h4 class="main-color">{{ $about->ceo_name }}</h4>
+                        <span class="main-color" style="font-size: 14px;">{{ $about->ceo_designation }}</span>
+                        <div class="mt-3">
+                            <img class="img-fluid" src="{{ asset('upload/about/' . $about->ceo_section_signature) }}"
+                                alt="{{ $about->ceo_name }}" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     {{-- Row Four  --}}
     <section>
         <div class="container-fluid">
