@@ -305,7 +305,7 @@ class HomeController extends Controller
     }
     public function faq()
     {
-        $data['faq_categorys'] = Faq::select('category')->distinct()->get();
+        $data['faqs'] = Faq::orderBy('order','ASC')->where('status','active')->get();
         return view('frontend.pages.policy.faq', $data);
     }
     public function privacyPolicy()
