@@ -93,11 +93,11 @@
                                 <span class="special_character"><i class="fa-regular fa-bookmark"></i> {{ $last_word }} </span>
                             @endif
                         </p>
-                        <div class="bySocial col-3">
+                        {{-- <div class="bySocial col-3">
                             <ul class="social-icon-links pull-right" style="font-size: 1.5rem;">
                                 {!! Share::page(url('/blog/' . $blog->id . '/details'))->facebook()->twitter()->whatsapp() !!}
                             </ul>
-                        </div>
+                        </div> --}}
                     </div>
 
                 </div>
