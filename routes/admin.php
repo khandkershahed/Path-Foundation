@@ -3,6 +3,7 @@
 use App\Http\Controllers\Admin\AboutUsController;
 use App\Http\Controllers\Admin\ActivityLogController;
 use App\Http\Controllers\Admin\AdminController;
+use App\Http\Controllers\Admin\AdviserPanelController;
 use App\Http\Controllers\Admin\Auth\AuthenticatedSessionController;
 use App\Http\Controllers\Admin\Auth\ConfirmablePasswordController;
 use App\Http\Controllers\Admin\Auth\EmailVerificationNotificationController;
@@ -27,6 +28,7 @@ use App\Http\Controllers\Admin\CourseQueryController;
 use App\Http\Controllers\Admin\CourseScheduleController;
 use App\Http\Controllers\Admin\DynamicCssController;
 use App\Http\Controllers\Admin\EmailSettingController;
+use App\Http\Controllers\Admin\ExecutivePanelController;
 use App\Http\Controllers\Admin\FaqController;
 use App\Http\Controllers\Admin\FeatureController;
 use App\Http\Controllers\Admin\FooterController;
@@ -114,6 +116,13 @@ Route::middleware(['auth:admin'])->prefix('admin')->name('admin.')->group(functi
         ],
         ['except' => ['show']]
     );
+    Route::resources(
+        [
+            'adviser-panel'   => AdviserPanelController::class,
+            'executive-panel' => ExecutivePanelController::class,
+        ],
+        ['except' => ['show', 'create', 'edit']]
+    );
 
     //Registration
     Route::get('/registration', [RegistrationController::class, 'AllRegistration'])->name('all.registration');
@@ -121,40 +130,40 @@ Route::middleware(['auth:admin'])->prefix('admin')->name('admin.')->group(functi
 
     Route::resources(
         [
-            'user' => UserController::class, //done
-            'user-management' => UserManagementController::class,
-            'categories' => CategoryController::class, //done
-            'tags' => TagController::class, //done
-            'icons' => IconController::class, //done
-            'services' => ServiceController::class, //done
-            // 'experiences'     => ExperienceController::class, //done
-            'projects' => ProjectController::class,
-            'testimonials' => TestimonialController::class,
-            'specifications' => SpecificationController::class,
-            'blogs' => BlogController::class,
-            'newsletters' => NewsletterController::class,
-            'brands' => BrandController::class, //done
-            'contacts' => ContactController::class,
-            'feature' => FeatureController::class,
-            'row' => RowController::class,
-            'news-trend' => NewsTrendController::class,
-            'homepage' => HomepageController::class,
-            'whatwedo' => WhatWeDoPageController::class,
-            'learnmore' => LearnMoreController::class,
-            'success' => SuccessController::class,
+            'user'              => UserController::class, //done
+            'user-management'   => UserManagementController::class,
+            'categories'        => CategoryController::class, //done
+            'tags'              => TagController::class, //done
+            'icons'             => IconController::class, //done
+            'services'          => ServiceController::class, //done
+            // 'experiences'    => ExperienceController      ::class, //done
+            'projects'          => ProjectController::class,
+            'testimonials'      => TestimonialController::class,
+            'specifications'    => SpecificationController::class,
+            'blogs'             => BlogController::class,
+            'newsletters'       => NewsletterController::class,
+            'brands'            => BrandController::class, //done
+            'contacts'          => ContactController::class,
+            'feature'           => FeatureController::class,
+            'row'               => RowController::class,
+            'news-trend'        => NewsTrendController::class,
+            'homepage'          => HomepageController::class,
+            'whatwedo'          => WhatWeDoPageController::class,
+            'learnmore'         => LearnMoreController::class,
+            'success'           => SuccessController::class,
 
             //Created By Ashiquzzaman
-            'course' => CourseController::class,
+            'course'            => CourseController::class,
             'course_curriculam' => CourseCurriculamController::class,
-            'course_content' => CourseContentController::class,
-            'coupon' => CouponController::class,
-            'course_query' => CourseQueryController::class,
+            'course_content'    => CourseContentController::class,
+            'coupon'            => CouponController::class,
+            'course_query'      => CourseQueryController::class,
 
             'course_management' => CourseManagentController::class,
-            'course_project' => CourseProjectController::class,
-            'course_outline' => CourseOutlineController::class,
-            'course_schedule' => CourseScheduleController::class,
-            'about' => AboutUsController::class,
+            'course_project'    => CourseProjectController::class,
+            'course_outline'    => CourseOutlineController::class,
+            'course_schedule'   => CourseScheduleController::class,
+            'about'             => AboutUsController::class,
 
         ],
     );
@@ -199,5 +208,4 @@ Route::middleware(['auth:admin'])->prefix('admin')->name('admin.')->group(functi
         Route::get('/dynamic-css', 'index')->name('css.index');
         Route::put('/dynamic-css/{id}/update', 'update')->name('css.update');
     });
-
 });

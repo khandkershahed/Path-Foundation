@@ -154,11 +154,11 @@
                                         </div>
                                         {{-- Blog Button --}}
                                         <div class="d-flex justify-content-between align-items-center">
-                                            <div class="d-flex justify-content-center align-items-center">
+                                            {{-- <div class="d-flex justify-content-center align-items-center">
                                                 <p class="mb-0 pe-2 pt-2">{!! Share::page(url('/blog/' . $item->id . '/details'))->facebook() !!}</p>
                                                 <p class="mb-0 pe-2 pt-2">{!! Share::page(url('/blog/' . $item->id . '/details'))->twitter()  !!}</p>
                                                 <p class="mb-0 pe-2 pt-2">{!! Share::page(url('/blog/' . $item->id . '/details'))->whatsapp() !!}</p>
-                                            </div>
+                                            </div> --}}
                                             <div class="d-flex justify-content-center align-items-center">
                                                 <p class="ml-2"><strong>Created at :
                                                     </strong>{{ $item->created_at->format('Y-m-d') }}</p>

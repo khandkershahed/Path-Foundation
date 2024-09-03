@@ -155,14 +155,14 @@
                                 <div class="col-md-12 mb-1 pt-7">
                                     <label for="validationCustom01" class="form-label mb-0">Short
                                         Description</label>
-                                    <textarea name="short_des" class="tox-target kt_docs_tinymce_plugins">
+                                    <textarea name="short_des" class="tox-target ckeditor">
                                         {{$newsTrend->short_des}}</textarea>
                                     <div class="invalid-feedback"> Please Enter Title </div>
                                 </div>
                                 <div class="col-md-12 mb-1 pt-7">
                                     <label for="validationCustom01" class="form-label mb-0">Long
                                         Description</label>
-                                    <textarea name="long_des" class="tox-target kt_docs_tinymce_plugins"> {{$newsTrend->long_des}}</textarea>
+                                    <textarea name="long_des" class="tox-target ckeditor"> {{$newsTrend->long_des}}</textarea>
                                     <div class="invalid-feedback"> Please Enter Title </div>
                                 </div>
                             </div>

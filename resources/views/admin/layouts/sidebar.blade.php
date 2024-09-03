@@ -60,7 +60,7 @@
                   <div data-kt-menu-trigger="click" class="menu-item menu-accordion">
                       <span class="menu-link">
                           <span class="menu-icon">
-                              <!--begin::Svg Icon | path: icons/duotune/ecommerce/ecm002.svg-->
+
                               <span class="svg-icon svg-icon-2">
                                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                       viewBox="0 0 24 24" fill="none">
@@ -75,7 +75,7 @@
                                           fill="currentColor" />
                                   </svg>
                               </span>
-                              <!--end::Svg Icon-->
+
                           </span>
                           <span class="menu-title">Course Setting</span>
                           <span class="menu-arrow"></span>
@@ -172,7 +172,7 @@
                       class="menu-item menu-accordion  {{ Route::is('admin.contacts.index', 'admin.newsletters.index') ? 'here show' : '' }}">
                       <span class="menu-link">
                           <span class="menu-icon">
-                              <!--begin::Svg Icon | path: icons/duotune/ecommerce/ecm002.svg-->
+
                               <span class="svg-icon svg-icon-2">
                                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                       viewBox="0 0 24 24" fill="none">
@@ -187,7 +187,7 @@
                                           fill="currentColor" />
                                   </svg>
                               </span>
-                              <!--end::Svg Icon-->
+
                           </span>
                           <span class="menu-title">Site Contents</span>
                           <span class="menu-arrow"></span>
@@ -273,10 +273,10 @@
                   </div>
 
                   <div data-kt-menu-trigger="click"
-                      class="menu-item menu-accordion  {{ Route::is('admin.contacts.index', 'admin.newsletters.index') ? 'here show' : '' }}">
+                      class="menu-item menu-accordion {{ Route::is('admin.contacts.index', 'admin.newsletters.index') ? 'here show' : '' }}">
                       <span class="menu-link">
                           <span class="menu-icon">
-                              <!--begin::Svg Icon | path: icons/duotune/ecommerce/ecm002.svg-->
+
                               <span class="svg-icon svg-icon-2">
                                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                       viewBox="0 0 24 24" fill="none">
@@ -291,7 +291,7 @@
                                           fill="currentColor" />
                                   </svg>
                               </span>
-                              <!--end::Svg Icon-->
+
                           </span>
                           <span class="menu-title">Customer Support</span>
                           <span class="menu-arrow"></span>
@@ -331,7 +331,7 @@
                   <div data-kt-menu-trigger="click" class="menu-item menu-accordion mb-1">
                       <span class="menu-link">
                           <span class="menu-icon">
-                              <!--begin::Svg Icon | path: icons/duotune/general/gen051.svg-->
+
                               <span class="svg-icon svg-icon-2">
                                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                       viewBox="0 0 24 24" fill="none">
@@ -343,7 +343,7 @@
                                           fill="currentColor" />
                                   </svg>
                               </span>
-                              <!--end::Svg Icon-->
+
                           </span>
                           <span class="menu-title">User Management</span>
                           <span class="menu-arrow"></span>
@@ -408,10 +408,10 @@
                           </div>
                       </div>
                   </div>
-                  <div data-kt-menu-trigger="click" class="menu-item menu-accordion mb-1">
+                  <div data-kt-menu-trigger="click" class="menu-item menu-accordion mb-1 {{ Route::is('admin.adviser-panel.index', 'admin.executive-panel.index') ? 'here show' : '' }}">
                       <span class="menu-link">
                           <span class="menu-icon">
-                              <!--begin::Svg Icon | path: icons/duotune/general/gen051.svg-->
+
                               <span class="svg-icon svg-icon-2">
                                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                       viewBox="0 0 24 24" fill="none">
@@ -423,39 +423,28 @@
                                           fill="currentColor" />
                                   </svg>
                               </span>
-                              <!--end::Svg Icon-->
+
                           </span>
-                          <span class="menu-title">Seller Management</span>
+                          <span class="menu-title">Authority Management</span>
                           <span class="menu-arrow"></span>
                       </span>
                       <div class="menu-sub menu-sub-accordion">
-                          <div data-kt-menu-trigger="click" class="menu-item menu-accordion mb-1">
-                              <span class="menu-link">
-                                  <span class="menu-bullet">
-                                      <span class="bullet bullet-dot"></span>
-                                  </span>
-                                  <span class="menu-title">Seller</span>
-                                  <span class="menu-arrow"></span>
-                              </span>
-                              <div class="menu-sub menu-sub-accordion">
-                                  <div class="menu-item">
-                                      <a class="menu-link" href="{{ route('admin.user.index') }}">
-                                          <span class="menu-bullet">
-                                              <span class="bullet bullet-dot"></span>
-                                          </span>
-                                          <span class="menu-title">Seller List</span>
-                                      </a>
-                                  </div>
-                                  <div class="menu-item">
-                                      <a class="menu-link" href="{{ route('admin.user.index') }}">
-                                          <span class="menu-bullet">
-                                              <span class="bullet bullet-dot"></span>
-                                          </span>
-                                          <span class="menu-title">Seller Statistic</span>
-                                      </a>
-                                  </div>
-                              </div>
-                          </div>
+                        <div class="menu-item">
+                            <a class="menu-link" href="{{ route('admin.adviser-panel.index') }}">
+                                <span class="menu-bullet">
+                                    <span class="bullet bullet-dot"></span>
+                                </span>
+                                <span class="menu-title">Advisor Panel</span>
+                            </a>
+                        </div>
+                        <div class="menu-item">
+                            <a class="menu-link" href="{{ route('admin.executive-panel.index') }}">
+                                <span class="menu-bullet">
+                                    <span class="bullet bullet-dot"></span>
+                                </span>
+                                <span class="menu-title">Executive Panel</span>
+                            </a>
+                        </div>
                       </div>
                   </div>
 
@@ -463,7 +452,7 @@
                       class="menu-item menu-accordion  {{ Route::is('admin.settings.index', 'admin.css.index', 'admin.email-settings.index') ? 'here show' : '' }}">
                       <span class="menu-link">
                           <span class="menu-icon">
-                              <!--begin::Svg Icon | path: icons/duotune/ecommerce/ecm002.svg-->
+
                               <span class="svg-icon svg-icon-2">
                                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                       viewBox="0 0 24 24" fill="none">
@@ -478,7 +467,7 @@
                                           fill="currentColor" />
                                   </svg>
                               </span>
-                              <!--end::Svg Icon-->
+
                           </span>
                           <span class="menu-title">Settings</span>
                           <span class="menu-arrow"></span>

@@ -36,8 +36,7 @@
                                         Title</label>
                                     <div class="input-group col-lg-12">
                                         <input name="bannner_title" maxlength="255" type="text"
-                                            class="form-control form-control-sm" placeholder="Enter Banner Title"
-                                            required>
+                                            class="form-control form-control-sm" placeholder="Enter Banner Title">
                                     </div>
                                 </div>
 
@@ -49,8 +48,8 @@
                                         Description</label>
                                     <div class="input-group col-lg-12">
                                         <input name="bannner_description" type="text"
-                                            class="form-control form-control-sm" placeholder="Enter Bannner Description"
-                                            required>
+                                            class="form-control form-control-sm"
+                                            placeholder="Enter Bannner Description">
                                     </div>
                                 </div>
 
@@ -64,7 +63,7 @@
                                     <div class="input-group col-lg-12">
                                         <input name="bannner_btn_one_name" type="text" maxlength="255"
                                             class="form-control form-control-sm"
-                                            placeholder="Enter Bannner Button One Name" required>
+                                            placeholder="Enter Bannner Button One Name">
                                     </div>
                                 </div>
 
@@ -75,7 +74,7 @@
                                     <div class="input-group col-lg-12">
                                         <input name="bannner_btn_one_link" type="text" maxlength="255"
                                             class="form-control form-control-sm"
-                                            placeholder="Enter Bannner Button One Link" required>
+                                            placeholder="Enter Bannner Button One Link">
                                     </div>
                                 </div>
 
@@ -86,7 +85,7 @@
                                     <div class="input-group col-lg-12">
                                         <input name="bannner_btn_one_icon" type="text" maxlength="255"
                                             class="form-control form-control-sm"
-                                            placeholder="Enter Bannner Btn One Icon" required>
+                                            placeholder="Enter Bannner Btn One Icon">
                                     </div>
                                 </div>
 
@@ -100,7 +99,7 @@
                                     <div class="input-group col-lg-12">
                                         <input name="bannner_btn_two_name" type="text" maxlength="255"
                                             class="form-control form-control-sm"
-                                            placeholder="Enter Bannner Btn Two Name" required>
+                                            placeholder="Enter Bannner Btn Two Name">
                                     </div>
                                 </div>
 
@@ -111,7 +110,7 @@
                                     <div class="input-group col-lg-12">
                                         <input name="bannner_btn_two_link" type="url" maxlength="100"
                                             class="form-control form-control-sm"
-                                            placeholder="Enter Bannner Btn Two Link" required>
+                                            placeholder="Enter Bannner Btn Two Link">
                                     </div>
                                 </div>
 
@@ -122,7 +121,7 @@
                                     <div class="input-group col-lg-12">
                                         <input name="bannner_btn_two_icon" type="text" maxlength="100"
                                             class="form-control form-control-sm"
-                                            placeholder="Enter Bannner Btn Two Icon" required>
+                                            placeholder="Enter Bannner Btn Two Icon">
                                     </div>
                                 </div>
 
@@ -136,7 +135,7 @@
                                     <div class="input-group col-lg-12">
                                         <input name="bannner_btn_three_name" type="text" maxlength="100"
                                             class="form-control form-control-sm"
-                                            placeholder="Enter Bannner Btn Three Name" required>
+                                            placeholder="Enter Bannner Btn Three Name">
                                     </div>
                                 </div>
 
@@ -147,7 +146,7 @@
                                     <div class="input-group col-lg-12">
                                         <input name="bannner_btn_three_link" type="url" maxlength="100"
                                             class="form-control form-control-sm"
-                                            placeholder="Enter Bannner Btn Three Link" required>
+                                            placeholder="Enter Bannner Btn Three Link">
                                     </div>
                                 </div>
 
@@ -158,7 +157,7 @@
                                     <div class="input-group col-lg-12">
                                         <input name="bannner_btn_three_icon" type="text" maxlength="100"
                                             class="form-control form-control-sm"
-                                            placeholder="Enter Bannner Button Three Icon" required>
+                                            placeholder="Enter Bannner Button Three Icon">
                                     </div>
                                 </div>
 
@@ -172,7 +171,7 @@
                                     <div class="input-group col-lg-12">
                                         <input name="bannner_btn_four_name" type="text" maxlength="100"
                                             class="form-control form-control-sm"
-                                            placeholder="Enter Bannner Btn Four Name" required>
+                                            placeholder="Enter Bannner Btn Four Name">
                                     </div>
                                 </div>
 
@@ -183,7 +182,7 @@
                                     <div class="input-group col-lg-12">
                                         <input name="bannner_btn_four_link" type="text" maxlength="100"
                                             class="form-control form-control-sm"
-                                            placeholder="Enter Bannner Button Four Link" required>
+                                            placeholder="Enter Bannner Button Four Link">
                                     </div>
                                 </div>
 
@@ -194,7 +193,7 @@
                                     <div class="input-group col-lg-12">
                                         <input name="bannner_btn_four_icon" type="text" maxlength="100"
                                             class="form-control form-control-sm"
-                                            placeholder="Enter Bannner Button Four Icon" required>
+                                            placeholder="Enter Bannner Button Four Icon">
                                     </div>
                                 </div>
                             </div>
@@ -207,8 +206,7 @@
                                         One Header</label>
                                     <div class="input-group col-lg-12">
                                         <input name="row_one_header" type="text" maxlength="250"
-                                            class="form-control form-control-sm" placeholder="Enter Row One Header"
-                                            required>
+                                            class="form-control form-control-sm" placeholder="Enter Row One Header">
                                     </div>
                                 </div>
 
@@ -219,7 +217,7 @@
                                     <div class="input-group col-lg-12">
                                         <input name="row_one_short_description" type="text"
                                             class="form-control form-control-sm"
-                                            placeholder="Enter Row One Short Description" required>
+                                            placeholder="Enter Row One Short Description">
                                     </div>
                                 </div>
 

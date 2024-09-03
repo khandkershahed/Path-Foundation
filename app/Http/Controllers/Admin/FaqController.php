@@ -12,7 +12,7 @@ class FaqController extends Controller
     public function index()
     {
         return view('admin.pages.faq.index', [
-            'faqs'              => Faq::latest('id')->get(),
+            'faqs' => Faq::latest('id')->get(),
             // 'dynamicCategories' => $this->dynamicCategoryRepository->allDynamicCategory(),
         ]);
     }

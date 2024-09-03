@@ -99,9 +99,9 @@
                                                     <div class="row">
                                                         <div class="col-md-12 mb-1">
                                                             <label for="validationCustom01"
-                                                                class="form-label required ">Description
+                                                                class="form-label ">Description
                                                             </label>
-                                                            <textarea name="description" class="tox-target kt_docs_tinymce_plugins" rows="3">
+                                                            <textarea name="description" class="tox-target ckeditor" rows="3">
                                                                     {{ $row->description }}
                                                                 </textarea>
                                                         </div>
@@ -112,7 +112,7 @@
                                         <div class="col-lg-12">
                                             <div class="d-flex justify-content-end">
                                                 <button type="submit" id="common_submit"
-                                                    class="btn btn-lg common-btn-3 fw-bolder me-4 w-175px mb-5">
+                                                    class="btn btn-lg btn-primary fw-bolder me-4 w-175px mb-5">
                                                     <span class="indicator-label">Submit</span>
                                                     <span class="indicator-progress">Please wait...
                                                         <span
@@ -169,60 +169,60 @@
                                                     <div class="row">
                                                         <div class="col-md-4 mb-1">
                                                             <label for="validationCustom01"
-                                                                class="form-label required ">List Title
+                                                                class="form-label ">List Title
                                                             </label>
                                                             <input type="text"
                                                                 class="form-control form-control-solid form-control-sm"
                                                                 name="list_title" id="validationCustom01"
-                                                                placeholder="Enter Row Link" required
+                                                                placeholder="Enter Row Link"
                                                                 value="{{ $row->list_title }}">
                                                             <div class="invalid-feedback"> Please Enter Button Name
                                                             </div>
                                                         </div>
                                                         <div class="col-md-2 mb-1">
                                                             <label for="validationCustom01"
-                                                                class="form-label required ">List One
+                                                                class="form-label ">List One
                                                             </label>
                                                             <input type="text"
                                                                 class="form-control form-control-solid form-control-sm"
                                                                 name="list_one" id="validationCustom01"
-                                                                placeholder="Enter Row Link" required
+                                                                placeholder="Enter Row Link"
                                                                 value="{{ $row->list_one }}">
                                                             <div class="invalid-feedback"> Please Enter Button Name
                                                             </div>
                                                         </div>
                                                         <div class="col-md-2 mb-1">
                                                             <label for="validationCustom01"
-                                                                class="form-label required ">List Two
+                                                                class="form-label ">List Two
                                                             </label>
                                                             <input type="text"
                                                                 class="form-control form-control-solid form-control-sm"
                                                                 name="list_two" id="validationCustom01"
-                                                                placeholder="Enter Row Link" required
+                                                                placeholder="Enter Row Link"
                                                                 value="{{ $row->list_two }}">
                                                             <div class="invalid-feedback"> Please Enter Button Name
                                                             </div>
                                                         </div>
                                                         <div class="col-md-2 mb-1">
                                                             <label for="validationCustom01"
-                                                                class="form-label required ">List Three
+                                                                class="form-label ">List Three
                                                             </label>
                                                             <input type="text"
                                                                 class="form-control form-control-solid form-control-sm"
                                                                 name="list_three" id="validationCustom01"
-                                                                placeholder="Enter Row Link" required
+                                                                placeholder="Enter Row Link"
                                                                 value="{{ $row->list_three }}">
                                                             <div class="invalid-feedback"> Please Enter Button Name
                                                             </div>
                                                         </div>
                                                         <div class="col-md-2 mb-1">
                                                             <label for="validationCustom01"
-                                                                class="form-label required ">List Four
+                                                                class="form-label ">List Four
                                                             </label>
                                                             <input type="text"
                                                                 class="form-control form-control-solid form-control-sm"
                                                                 name="list_four" id="validationCustom01"
-                                                                placeholder="Enter Row Link" required
+                                                                placeholder="Enter Row Link"
                                                                 value="{{ $row->list_four }}">
                                                             <div class="invalid-feedback"> Please Enter Button Name
                                                             </div>
@@ -239,9 +239,9 @@
                                                     <div class="row">
                                                         <div class="col-md-12 mb-1">
                                                             <label for="validationCustom01"
-                                                                class="form-label required ">Description
+                                                                class="form-label ">Description
                                                             </label>
-                                                            <textarea name="description" class="tox-target kt_docs_tinymce_plugins">
+                                                            <textarea name="description" class="tox-target ckeditor">
                                                                     {{ $row->description }}
                                                                 </textarea>
                                                         </div>
@@ -252,7 +252,7 @@
                                         <div class="col-lg-12">
                                             <div class="d-flex justify-content-end">
                                                 <button type="submit" id="common_submit"
-                                                    class="btn btn-lg common-btn-3 fw-bolder me-4 w-175px mb-5">
+                                                    class="btn btn-lg btn-primary fw-bolder me-4 w-175px mb-5">
                                                     <span class="indicator-label">Submit</span>
                                                     <span class="indicator-progress">Please wait...
                                                         <span

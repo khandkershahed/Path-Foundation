@@ -14,23 +14,31 @@ return new class extends Migration
     public function up()
     {
         Schema::create('news_trends', function (Blueprint $table) {
-            $table->id();
-            $table->json('course_id')->nullable()->comment('multi_id');
-            $table->enum('featured', ['0', '1'])->default('0')->nullable();
-            $table->enum('type', ['news', 'trends'])->default('trends');
-            $table->string('badge', 50)->nullable();
+            // General Fields
+            $table->enum('type', ['event', 'news', 'trend'])->default('event'); // Differentiates between events, news, and trends
+            $table->string('badge')->nullable();
             $table->string('title', 255)->nullable();
+            $table->string('slug', 255)->nullable();
             $table->text('header')->nullable();
             $table->longText('short_des')->comment('summernote')->nullable();
             $table->longText('long_des')->comment('summernote')->nullable();
-            $table->string('author')->nullable();
-            $table->text('address')->nullable();
+            $table->longText('story')->comment('summernote')->nullable(); // Applicable to events and trends
+            $table->text('address')->nullable(); // Kept from news_trends, could be useful for events
+            $table->text('location')->nullable(); // Specific to events
+            $table->text('map_url')->nullable(); // Specific to events
+            $table->date('start_date')->nullable(); // Specific to events
+            $table->date('end_date')->nullable(); // Specific to events
+            $table->date('registration_deadline')->nullable(); // Specific to events
             $table->json('tags')->nullable();
+            $table->string('logo')->nullable();
+            $table->string('image')->nullable();
             $table->string('banner_image')->nullable();
-            $table->string('logo_image')->nullable();
-            $table->string('thumbnail_image')->nullable();
             $table->string('additional_url')->nullable();
             $table->text('footer')->nullable()->comment('summernote')->nullable();
+            $table->enum('status', ['active', 'inactive', 'completed'])->default('active'); // Specific to events
+            $table->string('organizer')->nullable(); // Specific to events
+            $table->integer('participants_count')->default(0); // Specific to events
+            $table->boolean('featured')->default(false); // Specific to both events and news/trends
             $table->timestamps();
         });
     }

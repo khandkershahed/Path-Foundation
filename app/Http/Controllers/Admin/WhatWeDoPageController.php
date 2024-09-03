@@ -47,7 +47,7 @@ class WhatWeDoPageController extends Controller
         $validator = Validator::make(
             $request->all(),
             [
-                'row_one_header' => 'required',
+                'row_one_header' => 'nullable',
                 'row_one_image'   => 'nullable|image|mimes:png,jpg,jpeg|max:10000',
             ],
             [
