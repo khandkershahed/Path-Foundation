@@ -154,7 +154,7 @@
                                             {{-- Blog Button --}}
                                             <div class="d-flex justify-content-between align-items-center">
                                                 <div class="d-flex justify-content-center align-items-center">
-                                                    <p class="ml-2"><strong>Created at :
+                                                    <p class="ml-2 mb-0"><strong>Created at :
                                                         </strong>{{ $blog->created_at->format('Y-m-d') }}</p>
                                                 </div>
                                                 <div class="d-flex justify-content-end align-items-center">
