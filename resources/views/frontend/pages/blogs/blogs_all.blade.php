@@ -135,7 +135,7 @@
                     <div class="row">
                         @if ($blogs)
                             @foreach ($blogs as $blog)
-                                <div class="col-lg-4 p-3 border shadow-lg mt-2"
+                                <div class="col-lg-4 p-3 border shadow-lg m-4"
                                     style="background-color: #fff;border-radius: 5px;">
                                     <a class="text-black" href="{{ route('story.details', $blog->slug) }}">
                                         <div class="p-3">
