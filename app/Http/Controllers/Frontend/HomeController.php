@@ -236,7 +236,7 @@ class HomeController extends Controller
         $data['row_two'] = $data['feature']->rowTwo;
 
         $data['features'] = Feature::with('rowOne', 'rowTwo')
-            ->where('slug', '!=', $id)->select('logo', 'id', 'badge', 'header')->get();
+            ->where('slug', '!=', $id)->select('logo', 'id', 'badge', 'header','slug')->get();
         return view('frontend.pages.feature.feature_details', $data);
     }
 
