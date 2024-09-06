@@ -129,55 +129,55 @@
     <div class="container-fluid blog_bg p-0 m-0">
         <div class="container px-4 py-5">
             <div class="row gx-3 ">
-                <div class="col-lg- col-12 blog_left mt-3">
 
-                </div>
-                <div class="col-lg-6 col-12 blog_left main_blogs mt-3">
-
+                <div class="col-lg-10 offset-lg-1 col-12 blog_left main_blogs mt-3">
                     {{-- First Blog --}}
-                    @if ($blogs)
-                        @foreach ($blogs as $blog)
-                            <div class="p-3 border shadow-lg mt-2" style="background-color: #fff;border-radius: 5px;">
-                                <a class="text-black" href="{{ route('story.details', $blog->slug) }}">
-                                    <div class="p-3">
-                                        {{-- Blog Image --}}
-                                        <img src="{{ !empty($blog->thumbnail_image) && file_exists(public_path('storage/' . $blog->thumbnail_image)) ? asset('storage/' . $blog->thumbnail_image) : asset('storage/' . $blog->banner_image) }}" class="img-fluid" alt="">
-                                        <div class="row d-flex justify-content-between">
-                                            <div class="col mt-3">
-                                                {{-- Blog Descrition --}}
-                                                <div>
-                                                    <h5 class="fw-semibold">{{ $blog->title }}</h5>
-                                                    <p>{{ $blog->header }}</p>
+                    <div class="row">
+                        @if ($blogs)
+                            @foreach ($blogs as $blog)
+                                <div class="col-lg-4 p-3 border shadow-lg mt-2"
+                                    style="background-color: #fff;border-radius: 5px;">
+                                    <a class="text-black" href="{{ route('story.details', $blog->slug) }}">
+                                        <div class="p-3">
+                                            {{-- Blog Image --}}
+                                            <img src="{{ !empty($blog->thumbnail_image) && file_exists(public_path('storage/' . $blog->thumbnail_image)) ? asset('storage/' . $blog->thumbnail_image) : asset('storage/' . $blog->banner_image) }}"
+                                                class="img-fluid" alt="">
+                                            <div class="row d-flex justify-content-between">
+                                                <div class="col mt-3">
+                                                    {{-- Blog Descrition --}}
+                                                    <div>
+                                                        <h5 class="fw-semibold">{{ $blog->title }}</h5>
+                                                        <p>{{ $blog->header }}</p>
+                                                    </div>
+                                                    {{-- Blog Descrition End --}}
                                                 </div>
-                                                {{-- Blog Descrition End --}}
                                             </div>
-                                        </div>
-                                        {{-- Blog Button --}}
-                                        <div class="d-flex justify-content-between align-items-center">
-                                            {{-- <div class="d-flex justify-content-center align-items-center">
+                                            {{-- Blog Button --}}
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                {{-- <div class="d-flex justify-content-center align-items-center">
                                                 <p class="mb-0 pe-2 pt-2">{!! Share::page(url('/blog/' . $blog->id . '/details'))->facebook() !!}</p>
                                                 <p class="mb-0 pe-2 pt-2">{!! Share::page(url('/blog/' . $blog->id . '/details'))->twitter()  !!}</p>
                                                 <p class="mb-0 pe-2 pt-2">{!! Share::page(url('/blog/' . $blog->id . '/details'))->whatsapp() !!}</p>
                                             </div> --}}
-                                            <div class="d-flex justify-content-center align-items-center">
-                                                <p class="ml-2"><strong>Created at :
-                                                    </strong>{{ $blog->created_at->format('Y-m-d') }}</p>
+                                                <div class="d-flex justify-content-center align-items-center">
+                                                    <p class="ml-2"><strong>Created at :
+                                                        </strong>{{ $blog->created_at->format('Y-m-d') }}</p>
+                                                </div>
                                             </div>
+                                            {{-- Blog Button End --}}
                                         </div>
-                                        {{-- Blog Button End --}}
-                                    </div>
-                                </a>
-                            </div>
-                        @endforeach
-                    @endif
+                                    </a>
+                                </div>
+                            @endforeach
+                        @endif
+                    </div>
                 </div>
-                @if ($featured_storys->count() > 0)
+                {{-- @if ($featured_storys->count() > 0)
                     <div class="col-lg-3 col-12 blog_left mt-3">
                         <div class="px-3 py-3 shadow-lg rounded-lg">
                             <img class="img-fluid" src="https://source.unsplash.com/random/580x320">
                             <div class="pt-3">
                                 <h6>POPULAR POSTS</h6>
-                                {{-- Popular Product 1 --}}
                                 @if ($featured_storys)
                                     @foreach ($featured_storys as $item)
                                         <div class="pt-3 pb-3 d-flex justify-content-between popular_post">
@@ -198,7 +198,7 @@
                             </div>
                         </div>
                     </div>
-                @endif
+                @endif --}}
                 <div class="row">
                     <div class="d-flex justify-content-center">
                         <nav aria-label="Page navigation example">
