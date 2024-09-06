@@ -147,9 +147,11 @@
                                                     <div>
                                                         <h5 class="fw-semibold">{{ $blog->title }}</h5>
                                                         <p>{{ $blog->header }}</p>
+                                                        <a class="mt-4" href="{{ route('story.details', $blog->slug) }}" style="color: #ae0a46;">See Details -></a>
                                                     </div>
                                                     {{-- Blog Descrition End --}}
                                                 </div>
+
                                             </div>
                                             {{-- Blog Button --}}
                                             <div class="d-flex justify-content-between align-items-center">
@@ -189,7 +191,7 @@
                                         </div>
                                     @endforeach
                                 @endif
-                                
+
                             </div>
                         </div>
                     </div>
