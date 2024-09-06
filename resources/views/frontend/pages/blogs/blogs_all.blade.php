@@ -136,18 +136,18 @@
 
                     {{-- First Blog --}}
                     @if ($blogs)
-                        @foreach ($blogs as $item)
+                        @foreach ($blogs as $blog)
                             <div class="p-3 border shadow-lg mt-2" style="background-color: #fff;border-radius: 5px;">
-                                <a class="text-black" href="{{ route('story.details', $item->id) }}">
+                                <a class="text-black" href="{{ route('story.details', $blog->slug) }}">
                                     <div class="p-3">
                                         {{-- Blog Image --}}
-                                        <img src="{{ asset('storage/' . $item->image) }}" class="img-fluid" alt="">
+                                        <img src="{{ !empty($blog->thumbnail_image) && file_exists(public_path('storage/' . $blog->thumbnail_image)) ? asset('storage/' . $blog->thumbnail_image) : asset('storage/' . $blog->banner_image) }}" class="img-fluid" alt="">
                                         <div class="row d-flex justify-content-between">
                                             <div class="col mt-3">
                                                 {{-- Blog Descrition --}}
                                                 <div>
-                                                    <h5 class="fw-semibold">{{ $item->title }}</h5>
-                                                    <p>{{ $item->header }}</p>
+                                                    <h5 class="fw-semibold">{{ $blog->title }}</h5>
+                                                    <p>{{ $blog->header }}</p>
                                                 </div>
                                                 {{-- Blog Descrition End --}}
                                             </div>
@@ -155,13 +155,13 @@
                                         {{-- Blog Button --}}
                                         <div class="d-flex justify-content-between align-items-center">
                                             {{-- <div class="d-flex justify-content-center align-items-center">
-                                                <p class="mb-0 pe-2 pt-2">{!! Share::page(url('/blog/' . $item->id . '/details'))->facebook() !!}</p>
-                                                <p class="mb-0 pe-2 pt-2">{!! Share::page(url('/blog/' . $item->id . '/details'))->twitter()  !!}</p>
-                                                <p class="mb-0 pe-2 pt-2">{!! Share::page(url('/blog/' . $item->id . '/details'))->whatsapp() !!}</p>
+                                                <p class="mb-0 pe-2 pt-2">{!! Share::page(url('/blog/' . $blog->id . '/details'))->facebook() !!}</p>
+                                                <p class="mb-0 pe-2 pt-2">{!! Share::page(url('/blog/' . $blog->id . '/details'))->twitter()  !!}</p>
+                                                <p class="mb-0 pe-2 pt-2">{!! Share::page(url('/blog/' . $blog->id . '/details'))->whatsapp() !!}</p>
                                             </div> --}}
                                             <div class="d-flex justify-content-center align-items-center">
                                                 <p class="ml-2"><strong>Created at :
-                                                    </strong>{{ $item->created_at->format('Y-m-d') }}</p>
+                                                    </strong>{{ $blog->created_at->format('Y-m-d') }}</p>
                                             </div>
                                         </div>
                                         {{-- Blog Button End --}}
@@ -171,32 +171,34 @@
                         @endforeach
                     @endif
                 </div>
-                <div class="col-lg-3 col-12 blog_left mt-3">
-                    <div class="px-3 py-3 shadow-lg rounded-lg">
-                        <img class="img-fluid" src="https://source.unsplash.com/random/580x320">
-                        <div class="pt-3">
-                            <h6>POPULAR POSTS</h6>
-                            {{-- Popular Product 1 --}}
-                            @if ($featured_storys)
-                                @foreach ($featured_storys as $item)
-                                    <div class="pt-3 pb-3 d-flex justify-content-between popular_post">
-                                        <a href="{{ route('story.details', $item->id) }}"
-                                            class="d-flex justify-content-between">
-                                            <img class="rounded-circle img-fluid"
-                                                src="{{ asset('storage/' . $item->image) }}" alt="" style="">
-                                            <p class="ms-2">{{ Str::limit($item->title, 30) }}</p>
-                                        </a>
-                                    </div>
-                                @endforeach
-                            @endif
-                            <div>
+                @if ($featured_storys->count() > 0)
+                    <div class="col-lg-3 col-12 blog_left mt-3">
+                        <div class="px-3 py-3 shadow-lg rounded-lg">
+                            <img class="img-fluid" src="https://source.unsplash.com/random/580x320">
+                            <div class="pt-3">
+                                <h6>POPULAR POSTS</h6>
+                                {{-- Popular Product 1 --}}
+                                @if ($featured_storys)
+                                    @foreach ($featured_storys as $item)
+                                        <div class="pt-3 pb-3 d-flex justify-content-between popular_post">
+                                            <a href="{{ route('story.details', $item->id) }}"
+                                                class="d-flex justify-content-between">
+                                                <img class="rounded-circle img-fluid"
+                                                    src="{{ asset('storage/' . $item->thumbnail_image) }}" alt="" style="">
+                                                <p class="ms-2">{{ Str::limit($item->title, 30) }}</p>
+                                            </a>
+                                        </div>
+                                    @endforeach
+                                @endif
                                 <div>
-                                    <img class="img-fluid" src="https://source.unsplash.com/random/580x420">
+                                    <div>
+                                        <img class="img-fluid" src="https://source.unsplash.com/random/580x420">
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                @endif
                 <div class="row">
                     <div class="d-flex justify-content-center">
                         <nav aria-label="Page navigation example">

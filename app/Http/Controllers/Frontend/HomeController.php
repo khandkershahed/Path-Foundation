@@ -207,6 +207,14 @@ class HomeController extends Controller
         return view('frontend.pages.blogs.blogs_all', $data);
     }
 
+    public function StoryDetails($id)
+    {
+        $data['blog'] = NewsTrend::where('slug', $id)->firstOrFail();
+        $data['storys'] = NewsTrend::inRandomOrder()->limit(4)->get();
+        return view('frontend.pages.story.story_details', $data);
+    }
+
+
     public function whatWeDo()
     {
         $data['whatwedo'] = WhatWeDoPage::latest('id', 'desc')->firstOrFail();
@@ -297,12 +305,7 @@ class HomeController extends Controller
         $data['storys'] = NewsTrend::inRandomOrder()->limit(7)->get();
         return view('frontend.pages.tech.techglossy_details', $data);
     }
-    public function StoryDetails($id)
-    {
-        $data['blog'] = NewsTrend::where('id', $id)->firstOrFail();
-        $data['storys'] = NewsTrend::inRandomOrder()->limit(4)->get();
-        return view('frontend.pages.story.story_details', $data);
-    }
+
     public function faq()
     {
         $data['faqs'] = Faq::orderBy('order','ASC')->where('status','active')->get();

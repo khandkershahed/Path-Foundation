@@ -30,9 +30,9 @@ return new class extends Migration
             $table->date('end_date')->nullable(); // Specific to events
             $table->date('registration_deadline')->nullable(); // Specific to events
             $table->json('tags')->nullable();
-            $table->string('logo')->nullable();
-            $table->string('image')->nullable();
             $table->string('banner_image')->nullable();
+            $table->string('thumbnail_image')->nullable();
+            $table->string('logo_image')->nullable();
             $table->string('additional_url')->nullable();
             $table->text('footer')->nullable()->comment('summernote')->nullable();
             $table->enum('status', ['active', 'inactive', 'completed'])->default('active'); // Specific to events
