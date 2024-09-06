@@ -161,7 +161,7 @@
                                                     {{-- <p class="mb-0 pe-2 pt-2">{!! Share::page(url('/blog/' . $blog->id . '/details'))->facebook() !!}</p>
                                                     <p class="mb-0 pe-2 pt-2">{!! Share::page(url('/blog/' . $blog->id . '/details'))->twitter() !!}</p>
                                                     <p class="mb-0 pe-2 pt-2">{!! Share::page(url('/blog/' . $blog->id . '/details'))->whatsapp() !!}</p> --}}
-                                                    <a class="mt-4" href="{{ route('story.details', $blog->slug) }}" style="color: #ae0a46;">See Details -></a>
+                                                    <a class="" href="{{ route('story.details', $blog->slug) }}" style="color: #ae0a46;">See Details -></a>
                                                 </div>
                                             </div>
                                             {{-- Blog Button End --}}
