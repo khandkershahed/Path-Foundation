@@ -134,8 +134,7 @@
                     <div class="row">
                         @if ($blogs)
                             @foreach ($blogs as $blog)
-                                <div class="p-3 border shadow-lg m-4"
-                                    style="background-color: #fff;border-radius: 5px;">
+                                <div class="p-3 border shadow-lg m-4" style="background-color: #fff;border-radius: 5px;">
                                     <a class="text-black" href="{{ route('story.details', $blog->slug) }}">
                                         <div class="p-3">
                                             {{-- Blog Image --}}
@@ -154,14 +153,14 @@
                                             </div>
                                             {{-- Blog Button --}}
                                             <div class="d-flex justify-content-between align-items-center">
-                                                {{-- <div class="d-flex justify-content-center align-items-center">
-                                                <p class="mb-0 pe-2 pt-2">{!! Share::page(url('/blog/' . $blog->id . '/details'))->facebook() !!}</p>
-                                                <p class="mb-0 pe-2 pt-2">{!! Share::page(url('/blog/' . $blog->id . '/details'))->twitter()  !!}</p>
-                                                <p class="mb-0 pe-2 pt-2">{!! Share::page(url('/blog/' . $blog->id . '/details'))->whatsapp() !!}</p>
-                                            </div> --}}
                                                 <div class="d-flex justify-content-center align-items-center">
                                                     <p class="ml-2"><strong>Created at :
                                                         </strong>{{ $blog->created_at->format('Y-m-d') }}</p>
+                                                </div>
+                                                <div class="d-flex justify-content-end align-items-center">
+                                                    {{-- <p class="mb-0 pe-2 pt-2">{!! Share::page(url('/blog/' . $blog->id . '/details'))->facebook() !!}</p>
+                                                    <p class="mb-0 pe-2 pt-2">{!! Share::page(url('/blog/' . $blog->id . '/details'))->twitter() !!}</p>
+                                                    <p class="mb-0 pe-2 pt-2">{!! Share::page(url('/blog/' . $blog->id . '/details'))->whatsapp() !!}</p> --}}
                                                     <a class="mt-4" href="{{ route('story.details', $blog->slug) }}" style="color: #ae0a46;">See Details -></a>
                                                 </div>
                                             </div>
@@ -185,7 +184,8 @@
                                             <a href="{{ route('story.details', $item->id) }}"
                                                 class="d-flex justify-content-between">
                                                 <img class="rounded-circle img-fluid"
-                                                    src="{{ asset('storage/' . $item->thumbnail_image) }}" alt="" style="">
+                                                    src="{{ asset('storage/' . $item->thumbnail_image) }}" alt=""
+                                                    style="">
                                                 <p class="ms-2">{{ Str::limit($item->title, 30) }}</p>
                                             </a>
                                         </div>
