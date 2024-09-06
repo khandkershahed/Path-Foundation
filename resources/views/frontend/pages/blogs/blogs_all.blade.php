@@ -129,13 +129,12 @@
     <div class="container-fluid blog_bg p-0 m-0">
         <div class="container px-4 py-5">
             <div class="row gx-3 ">
-
-                <div class="col-lg-10 offset-lg-1 col-12 blog_left main_blogs mt-3">
+                <div class="col-lg-8 offset-lg-1 col-12 blog_left main_blogs mt-3">
                     {{-- First Blog --}}
                     <div class="row">
                         @if ($blogs)
                             @foreach ($blogs as $blog)
-                                <div class="col-lg-4 p-3 border shadow-lg m-4"
+                                <div class="p-3 border shadow-lg m-4"
                                     style="background-color: #fff;border-radius: 5px;">
                                     <a class="text-black" href="{{ route('story.details', $blog->slug) }}">
                                         <div class="p-3">
@@ -172,12 +171,12 @@
                         @endif
                     </div>
                 </div>
-                {{-- @if ($featured_storys->count() > 0)
+                @if ($featured_storys->count() > 0)
                     <div class="col-lg-3 col-12 blog_left mt-3">
                         <div class="px-3 py-3 shadow-lg rounded-lg">
-                            <img class="img-fluid" src="https://source.unsplash.com/random/580x320">
+                            {{-- <img class="img-fluid" src="https://source.unsplash.com/random/580x320"> --}}
                             <div class="pt-3">
-                                <h6>POPULAR POSTS</h6>
+                                <h6>Popular Posts</h6>
                                 @if ($featured_storys)
                                     @foreach ($featured_storys as $item)
                                         <div class="pt-3 pb-3 d-flex justify-content-between popular_post">
@@ -190,15 +189,11 @@
                                         </div>
                                     @endforeach
                                 @endif
-                                <div>
-                                    <div>
-                                        <img class="img-fluid" src="https://source.unsplash.com/random/580x420">
-                                    </div>
-                                </div>
+                                
                             </div>
                         </div>
                     </div>
-                @endif --}}
+                @endif
                 <div class="row">
                     <div class="d-flex justify-content-center">
                         <nav aria-label="Page navigation example">

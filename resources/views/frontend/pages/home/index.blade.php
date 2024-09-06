@@ -346,7 +346,7 @@
             @if (!empty($features))
                 <div class="d-lg-block d-sm-none">
                     <div class="row d-flex justify-content-center">
-                        <h3 class="main_color text-center mb-5">Our Foucs Areas</h3>
+                        <h3 class="main_color text-center mb-5">Our Focus Areas</h3>
                         @foreach ($features as $feature)
                             @if (!empty($feature))
                                 <div class="custom_col-2 col-md-6 col-sm-12">
@@ -377,7 +377,7 @@
                 <div class="row d-lg-none d-sm-block">
                     <div class="d-flex justify-content-center align-items-center px-3 mb-3 border-bottom">
                         <div class="text-start w-75">
-                            <h3 class="main_color">Our Foucsing Area</h3>
+                            <h3 class="main_color">Our Focus Area</h3>
                         </div>
                         <div class="text-end w-25 d-flex">
                             <a class="Arrows custom-responsive-slider-prev me-1">
