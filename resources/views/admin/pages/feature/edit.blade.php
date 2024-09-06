@@ -98,7 +98,7 @@
                                     </div>
                                     <div class="col-lg-8 col-sm-12">
                                         <select name="row_one_id" data-placeholder="Select Row One.."
-                                            class="form-select" style="width: 100%;">
+                                            class="form-select" data-allow-clear="true" style="width: 100%;">
                                             @foreach ($rows as $row)
                                                 <option class="form-control" value="{{ $row->id }}"
                                                     {{ $row->id == $feature->row_one_id ? 'selected' : '' }}>
@@ -141,7 +141,7 @@
                                         <span>Row With Left Image</span>
                                     </div>
                                     <div class="col-lg-8 col-sm-12">
-                                        <select name="row_two_id" data-placeholder="Select Row Two.."
+                                        <select name="row_two_id" data-placeholder="Select Row Two.." data-allow-clear="true"
                                             class="form-select" style="width: 100%;">
                                             @foreach ($rows as $row)
                                                 <option class="form-control" value="{{ $row->id }}"
@@ -218,8 +218,6 @@
                                 class="ph-paper-plane-tilt ms-2"></i></button>
                     </div>
                 </div>
-
-
             </form>
         </div>
 

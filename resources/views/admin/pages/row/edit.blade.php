@@ -15,118 +15,9 @@
                         </div>
                     </div>
                     <div class="card-body">
-                        @if (!empty($row->image))
-                            <form action="{{ route('admin.row.update', $row->id) }}" class="needs-validation" method="POST"
-                                novalidate enctype="multipart/form-data">
-                                @csrf
-                                @method('PUT')
-                                <div class="container px-0">
-                                    <div class="row">
-                                        <div class="col-lg-6">
-                                            <div class="row border p-4">
-                                                <p class="badge badge-info custom-badge" style="margin-top: -15px">
-                                                    Row</span>
-                                                <div class="col-lg-12 col-sm-12">
-                                                    <div class="row">
-                                                        <div class="col-md-12 mb-2">
-                                                            <label for="validationCustom01" class="form-label mb-0">Badge
-                                                            </label>
-                                                            <input type="text"
-                                                                class="form-control form-control-solid form-control-sm"
-                                                                name="badge" value="{{ $row->badge }}"
-                                                                id="validationCustom01" placeholder="Enter Badge">
-                                                            <div class="invalid-feedback"> Please Enter Badge </div>
-                                                        </div>
-                                                        <div class="col-md-12 mb-2">
-                                                            <label for="validationCustom01"
-                                                                class="form-label required mb-0">Title
-                                                            </label>
-                                                            <input type="text"
-                                                                class="form-control form-control-solid form-control-sm"
-                                                                name="title" value="{{ $row->title }}"
-                                                                id="validationCustom01" placeholder="Enter Title" required>
-                                                            <div class="invalid-feedback"> Please Enter Title </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6">
-                                            <div class="row border p-4">
-                                                <p class="badge badge-info custom-badge w-125px" style="margin-top: -15px;">
-                                                    Row Image Area</span>
-                                                <div class="col-lg-12 col-sm-12">
-                                                    <div class="row">
-                                                        <div class="col-md-6 mb-2">
-                                                            <label for="validationCustom01"
-                                                                class="form-label mb-0">Row Image
-                                                            </label>
-                                                            <input type="file"
-                                                                class="form-control form-control-solid form-control-sm image"
-                                                                name="image" id="validationCustom01"
-                                                                placeholder="Enter Row Image">
-                                                            <div>
-                                                                <img class="showImage" src="{{ asset("storage/row/{$row->image}") }}" height="70px" width="100px" alt="">
-                                                            </div>
-                                                            <div class="invalid-feedback"> Please Enter Row Image </div>
-                                                        </div>
-                                                        <div class="col-md-6 mb-2">
-                                                            <label for="validationCustom01" class="form-label mb-0">Button
-                                                                Name
-                                                            </label>
-                                                            <input type="text"
-                                                                class="form-control form-control-solid form-control-sm"
-                                                                name="btn_name" value="{{ $row->btn_name }}"
-                                                                id="validationCustom01" placeholder="Enter Button Name">
-                                                        </div>
-                                                        <div class="col-md-12 mb-2">
-                                                            <label for="validationCustom01" class="form-label mb-0">Link
-                                                            </label>
-                                                            <input type="url"
-                                                                class="form-control form-control-solid form-control-sm"
-                                                                name="link" value="{{ $row->link }}"
-                                                                id="validationCustom01" placeholder="Enter Row Link">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-12">
-                                            <div class="row border p-4 mt-8">
-                                                <p class="badge badge-info custom-badge w-125px" style="margin-top: -15px;">
-                                                    Row Description</span>
-                                                <div class="col-lg-12 col-sm-12">
-                                                    <div class="row">
-                                                        <div class="col-md-12 mb-1">
-                                                            <label for="validationCustom01"
-                                                                class="form-label ">Description
-                                                            </label>
-                                                            <textarea name="description" class="tox-target ckeditor" rows="3">
-                                                                    {{ $row->description }}
-                                                                </textarea>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-12">
-                                            <div class="d-flex justify-content-end">
-                                                <button type="submit" id="common_submit"
-                                                    class="btn btn-lg btn-primary fw-bolder me-4 w-175px mb-5">
-                                                    <span class="indicator-label">Submit</span>
-                                                    <span class="indicator-progress">Please wait...
-                                                        <span
-                                                            class="spinner-border spinner-border-sm align-middle ms-2"></span>
-                                                    </span>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </form>
-                        @else
-                            <form action="{{ route('admin.row.update', $row->id) }}" class="needs-validation" method="POST"
-                                novalidate enctype="multipart/form-data">
+                        @if (!empty($row->list_title))
+                            <form action="{{ route('admin.row.update', $row->id) }}" class="needs-validation"
+                                method="POST" novalidate enctype="multipart/form-data">
                                 @csrf
                                 @method('PUT')
                                 <div class="container px-0">
@@ -168,8 +59,8 @@
                                                 <div class="col-lg-12 col-sm-12">
                                                     <div class="row">
                                                         <div class="col-md-4 mb-1">
-                                                            <label for="validationCustom01"
-                                                                class="form-label ">List Title
+                                                            <label for="validationCustom01" class="form-label ">List
+                                                                Title
                                                             </label>
                                                             <input type="text"
                                                                 class="form-control form-control-solid form-control-sm"
@@ -180,8 +71,7 @@
                                                             </div>
                                                         </div>
                                                         <div class="col-md-2 mb-1">
-                                                            <label for="validationCustom01"
-                                                                class="form-label ">List One
+                                                            <label for="validationCustom01" class="form-label ">List One
                                                             </label>
                                                             <input type="text"
                                                                 class="form-control form-control-solid form-control-sm"
@@ -192,8 +82,7 @@
                                                             </div>
                                                         </div>
                                                         <div class="col-md-2 mb-1">
-                                                            <label for="validationCustom01"
-                                                                class="form-label ">List Two
+                                                            <label for="validationCustom01" class="form-label ">List Two
                                                             </label>
                                                             <input type="text"
                                                                 class="form-control form-control-solid form-control-sm"
@@ -204,8 +93,8 @@
                                                             </div>
                                                         </div>
                                                         <div class="col-md-2 mb-1">
-                                                            <label for="validationCustom01"
-                                                                class="form-label ">List Three
+                                                            <label for="validationCustom01" class="form-label ">List
+                                                                Three
                                                             </label>
                                                             <input type="text"
                                                                 class="form-control form-control-solid form-control-sm"
@@ -216,8 +105,8 @@
                                                             </div>
                                                         </div>
                                                         <div class="col-md-2 mb-1">
-                                                            <label for="validationCustom01"
-                                                                class="form-label ">List Four
+                                                            <label for="validationCustom01" class="form-label ">List
+                                                                Four
                                                             </label>
                                                             <input type="text"
                                                                 class="form-control form-control-solid form-control-sm"
@@ -242,8 +131,127 @@
                                                                 class="form-label ">Description
                                                             </label>
                                                             <textarea name="description" class="tox-target ckeditor">
-                                                                    {{ $row->description }}
-                                                                </textarea>
+                                                                {{ $row->description }}
+                                                            </textarea>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12">
+                                            <div class="d-flex justify-content-end">
+                                                <button type="submit" id="common_submit"
+                                                    class="btn btn-lg btn-primary fw-bolder me-4 w-175px mb-5">
+                                                    <span class="indicator-label">Submit</span>
+                                                    <span class="indicator-progress">Please wait...
+                                                        <span
+                                                            class="spinner-border spinner-border-sm align-middle ms-2"></span>
+                                                    </span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        @else
+                            <form action="{{ route('admin.row.update', $row->id) }}" class="needs-validation"
+                                method="POST" novalidate enctype="multipart/form-data">
+                                @csrf
+                                @method('PUT')
+                                <div class="container px-0">
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <div class="row border p-4">
+                                                <p class="badge badge-info custom-badge" style="margin-top: -15px">
+                                                    Row</span>
+                                                <div class="col-lg-12 col-sm-12">
+                                                    <div class="row">
+                                                        <div class="col-md-12 mb-2">
+                                                            <label for="validationCustom01"
+                                                                class="form-label mb-0">Badge
+                                                            </label>
+                                                            <input type="text"
+                                                                class="form-control form-control-solid form-control-sm"
+                                                                name="badge" value="{{ $row->badge }}"
+                                                                id="validationCustom01" placeholder="Enter Badge">
+                                                            <div class="invalid-feedback"> Please Enter Badge </div>
+                                                        </div>
+                                                        <div class="col-md-12 mb-2">
+                                                            <label for="validationCustom01"
+                                                                class="form-label required mb-0">Title
+                                                            </label>
+                                                            <input type="text"
+                                                                class="form-control form-control-solid form-control-sm"
+                                                                name="title" value="{{ $row->title }}"
+                                                                id="validationCustom01" placeholder="Enter Title"
+                                                                required>
+                                                            <div class="invalid-feedback"> Please Enter Title </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="row border p-4">
+                                                <p class="badge badge-info custom-badge w-125px"
+                                                    style="margin-top: -15px;">
+                                                    Row Image Area</span>
+                                                <div class="col-lg-12 col-sm-12">
+                                                    <div class="row">
+                                                        <div class="col-md-6 mb-2">
+                                                            <label for="validationCustom01"
+                                                                class="form-label mb-0">Row Image
+                                                            </label>
+                                                            <input type="file"
+                                                                class="form-control form-control-solid form-control-sm image"
+                                                                name="image" id="validationCustom01"
+                                                                placeholder="Enter Row Image">
+                                                            <div>
+                                                                <img class="showImage"
+                                                                    src="{{ asset("storage/row/{$row->image}") }}"
+                                                                    height="70px" width="100px" alt="">
+                                                            </div>
+                                                            <div class="invalid-feedback"> Please Enter Row Image
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6 mb-2">
+                                                            <label for="validationCustom01"
+                                                                class="form-label mb-0">Button
+                                                                Name
+                                                            </label>
+                                                            <input type="text"
+                                                                class="form-control form-control-solid form-control-sm"
+                                                                name="btn_name" value="{{ $row->btn_name }}"
+                                                                id="validationCustom01"
+                                                                placeholder="Enter Button Name">
+                                                        </div>
+                                                        <div class="col-md-12 mb-2">
+                                                            <label for="validationCustom01"
+                                                                class="form-label mb-0">Link
+                                                            </label>
+                                                            <input type="url"
+                                                                class="form-control form-control-solid form-control-sm"
+                                                                name="link" value="{{ $row->link }}"
+                                                                id="validationCustom01" placeholder="Enter Row Link">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12">
+                                            <div class="row border p-4 mt-8">
+                                                <p class="badge badge-info custom-badge w-125px"
+                                                    style="margin-top: -15px;">
+                                                    Row Description</span>
+                                                <div class="col-lg-12 col-sm-12">
+                                                    <div class="row">
+                                                        <div class="col-md-12 mb-1">
+                                                            <label for="validationCustom01"
+                                                                class="form-label ">Description
+                                                            </label>
+                                                            <textarea name="description" class="tox-target ckeditor" rows="3">
+                                                                {{ $row->description }}
+                                                            </textarea>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -265,7 +273,6 @@
                                 </div>
                             </form>
                         @endif
-
                     </div>
                 </div>
             </div>
