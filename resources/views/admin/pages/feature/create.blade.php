@@ -130,6 +130,7 @@
                                         <select name="row_one_id" data-placeholder="Select Row One.."
                                             class="form-select" data-control="select2" data-allow-clear="true"
                                             data-placeholder="Select an option" style="width: 100%;">
+                                            <option value=""></option>
                                             @foreach ($rows as $row)
                                                 <option class="form-control" value="{{ $row->id }}">
                                                     {{ $row->title }}</option>

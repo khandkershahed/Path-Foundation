@@ -362,7 +362,7 @@
                                         <p class="feature_descrip">{{ Str::words($feature->header, 12, $end = '') }}
                                         </p>
                                     </div>
-                                    <a href="{{ route('feature.details', $feature->id) }}"
+                                    <a href="{{ route('feature.details', $feature->slug) }}"
                                         class="business_item_button pt-3">
                                         <span>Learn More</span>
                                         <span class="business_item_button_icon">
@@ -407,7 +407,7 @@
                                         <p class="feature_descrip">{{ Str::words($feature->header, 12, $end = '') }}
                                         </p>
                                     </div>
-                                    <a href="{{ route('feature.details', $feature->id) }}"
+                                    <a href="{{ route('feature.details', $feature->slug) }}"
                                         class="business_item_button pt-3">
                                         <span>Learn More</span>
                                         <span class="business_item_button_icon">

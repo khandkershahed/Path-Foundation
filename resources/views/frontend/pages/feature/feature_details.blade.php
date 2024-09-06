@@ -247,7 +247,7 @@
                                 <div class="business_item_content">
                                     <p class="business_item_title">{{ $item->badge }}</p>
                                     <p class="business_item_text text-center">{{ Str::limit($item->header, 55) }}</p>
-                                    <a href="{{ route('feature.details', $item->id) }}"
+                                    <a href="{{ route('feature.details', $item->slug) }}"
                                         class="d-flex main_color align-items-center text-center justify-content-center">
                                         <span>Learn More</span>
                                         <span class="business_item_button_icon">

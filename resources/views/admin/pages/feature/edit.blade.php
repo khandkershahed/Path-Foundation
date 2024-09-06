@@ -99,6 +99,7 @@
                                     <div class="col-lg-8 col-sm-12">
                                         <select name="row_one_id" data-placeholder="Select Row One.."
                                             class="form-select" data-allow-clear="true" style="width: 100%;">
+                                            <option value=""></option>
                                             @foreach ($rows as $row)
                                                 <option class="form-control" value="{{ $row->id }}"
                                                     {{ $row->id == $feature->row_one_id ? 'selected' : '' }}>
@@ -143,6 +144,7 @@
                                     <div class="col-lg-8 col-sm-12">
                                         <select name="row_two_id" data-placeholder="Select Row Two.." data-allow-clear="true"
                                             class="form-select" style="width: 100%;">
+                                            <option value=""></option>
                                             @foreach ($rows as $row)
                                                 <option class="form-control" value="{{ $row->id }}"
                                                     {{ $row->id == $feature->row_two_id ? 'selected' : '' }}>
