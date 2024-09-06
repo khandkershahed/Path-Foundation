@@ -147,7 +147,6 @@
                                                     <div>
                                                         <h5 class="fw-semibold">{{ $blog->title }}</h5>
                                                         <p>{{ $blog->header }}</p>
-                                                        <a class="mt-4" href="{{ route('story.details', $blog->slug) }}" style="color: #ae0a46;">See Details -></a>
                                                     </div>
                                                     {{-- Blog Descrition End --}}
                                                 </div>
@@ -163,6 +162,7 @@
                                                 <div class="d-flex justify-content-center align-items-center">
                                                     <p class="ml-2"><strong>Created at :
                                                         </strong>{{ $blog->created_at->format('Y-m-d') }}</p>
+                                                    <a class="mt-4" href="{{ route('story.details', $blog->slug) }}" style="color: #ae0a46;">See Details -></a>
                                                 </div>
                                             </div>
                                             {{-- Blog Button End --}}
