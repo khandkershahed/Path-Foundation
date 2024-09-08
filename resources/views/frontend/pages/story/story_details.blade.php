@@ -61,13 +61,9 @@
         </div>
     </section>
     <!----------End--------->
-    @php
-        $all_tags = json_decode($blog->tags);
-        $tags = explode(',', $all_tags);
-        $without_last_tags = array_slice($tags, 0, -1);
+    {{-- @php
         $last_word = end($tags);
-        // dd($without_last_tags);
-    @endphp
+    @endphp --}}
     <!--======// Home Cart Section //======-->
     <section class="">
         <div class="container">
@@ -85,12 +81,12 @@
                             </span>
                             @if (!empty($blog->tags))
                                 Topics :
-                                @foreach ($without_last_tags as $item)
+                                @foreach (json_decode($blog->tags) as $item)
                                     <span class="special_character"><i class="fa-regular fa-bookmark"></i>
                                         {{ $item }} , </span>
                                 @endforeach
-                                <span class="special_character"><i class="fa-regular fa-bookmark"></i> {{ $last_word }}
-                                </span>
+                                {{-- <span class="special_character"><i class="fa-regular fa-bookmark"></i> {{ $last_word }}
+                                </span> --}}
                             @endif
                         </p>
                         {{-- <div class="bySocial col-3">
