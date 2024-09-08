@@ -81,9 +81,19 @@
                             </span>
                             @if (!empty($blog->tags))
                                 Topics :
-                                @foreach (json_decode($blog->tags) as $item)
-                                    <span class="special_character"><i class="fa-regular fa-bookmark"></i>
-                                        {{ $item }} , </span>
+                                @php
+                                    $tags = json_decode($blog->tags);
+                                    $total = count($tags);
+                                @endphp
+
+                                @foreach ($tags as $index => $item)
+                                    <span class="special_character">
+                                        <i class="fa-regular fa-bookmark"></i>
+                                        {{ $item->value }}
+                                        @if ($index < $total - 1)
+                                            ,
+                                        @endif
+                                    </span>
                                 @endforeach
                                 {{-- <span class="special_character"><i class="fa-regular fa-bookmark"></i> {{ $last_word }}
                                 </span> --}}
