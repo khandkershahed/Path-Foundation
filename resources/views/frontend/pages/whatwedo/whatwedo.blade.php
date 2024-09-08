@@ -9,7 +9,7 @@
                         <h1 class="mb-4 what-we-do-title">{{ $whatwedo->bannner_title }}</h1>
                         <p class="text-white what-we-do-title" style="text-align: justify;letter-spacing: normal;">
                             {!! $whatwedo->bannner_description !!} </p>
-                        <a class="btn-white mt-5 py-3" href="{{ route('contact') }}">Talk with us</a>
+                        {{-- <a class="btn-white mt-5 py-3" href="{{ route('contact') }}">Talk with us</a> --}}
                     </div>
                     <div class="col-lg-5">
                         <div class="py-5 px-4 masthead-cards">
@@ -310,7 +310,6 @@
                                     </a>
                                 </div>
                             </div>
-                            <a class="btn-color what-link" href="{{ route('contact') }}">Talk to a specialist</a>
                         </div>
                     </div>
                 </div>
@@ -385,5 +384,5 @@
     <!---------End -------->
 
     <!--=====// Pageform section //=====-->
-    @include('frontend.partials.footer_contact')
+    {{-- @include('frontend.partials.footer_contact') --}}
 @endsection
