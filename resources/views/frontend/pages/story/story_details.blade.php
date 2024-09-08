@@ -62,7 +62,7 @@
     </section>
     <!----------End--------->
     @php
-        $all_tags = $blog->tags;
+        $all_tags = json_decode($blog->tags);
         $tags = explode(',', $all_tags);
         $without_last_tags = array_slice($tags, 0, -1);
         $last_word = end($tags);
