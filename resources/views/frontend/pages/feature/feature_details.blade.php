@@ -65,7 +65,6 @@
                     <span class="radius_text_button">{{ $feature->badge }}</span>
                     <h3>{{ $feature->title }}</h3>
                     <p>{!! $feature->header !!}</p>
-                    <a href="#Contact" class="btn-color mt-3">Hear from our team</a>
                 </div>
                 <div class="col-lg-6 col-sm-12 p-4">
                     <img class="img-fluid" style="border-radius: 8px;"
@@ -165,9 +164,9 @@
                         <p class="home_title_text text-white pt-2 text-lg-start text-center">
                             {{ Illuminate\Support\Str::limit($feature->row_four_header, 150, '...') }}
                         </p>
-                        <div class="business_seftion_button">
+                        {{-- <div class="business_seftion_button">
                             <a href="{{ asset('contact') }}" class="btn-color">Explore Our Business</a>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
             </div>
