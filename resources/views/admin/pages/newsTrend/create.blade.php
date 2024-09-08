@@ -116,6 +116,11 @@
                                     <div class="invalid-feedback"> Please Enter Header</div>
                                 </div>
                                 <div class="col-md-12 pb-7">
+                                    <x-metronic.label class="form-label">Tags</x-metronic.label>
+                                    <input class="form-control" name="tags" id="product_Tags"
+                                        :value="old('tags')" />
+                                </div>
+                                <div class="col-md-12 pb-7">
                                     <label for="validationCustom010" class="form-label mb-0">Address</label>
                                     <textarea rows="1" name="address" class="form-control form-control-sm form-control-solid"
                                         placeholder="Enter Address">{{old('address')}}</textarea>
@@ -151,6 +156,15 @@
     </div>
 
     @push('scripts')
-        <script></script>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                // The DOM elements you wish to replace with Tagify
+                var input1 = document.querySelector("#product_Tags");
+
+                // Initialize Tagify components on the above inputs
+                new Tagify(input1);
+            });
+        </script>
     @endpush
 </x-admin-app-layout>

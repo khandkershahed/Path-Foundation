@@ -154,8 +154,8 @@
                                             {{-- Blog Button --}}
                                             <div class="d-flex justify-content-between align-items-center">
                                                 <div class="d-flex justify-content-center align-items-center">
-                                                    <p class="ml-2 mb-0"><strong>Created at :
-                                                        </strong>{{ $blog->created_at->format('Y-m-d') }}</p>
+                                                    <p class="ml-2 mb-0"><strong>Author :
+                                                        </strong>{{ $blog->author }}</p>
                                                 </div>
                                                 <div class="d-flex justify-content-end align-items-center">
                                                     {{-- <p class="mb-0 pe-2 pt-2">{!! Share::page(url('/blog/' . $blog->id . '/details'))->facebook() !!}</p>

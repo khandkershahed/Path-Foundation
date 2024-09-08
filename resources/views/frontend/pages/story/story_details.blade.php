@@ -80,8 +80,8 @@
 
                         <p>By
                             <span
-                                class="special_character">{{ !empty($blog->created_by) ? $blog->created_by : 'PATH BANGLADESH' }}</span>
-                            <span class="date_blog">/ {{ $blog->created_at->format('Y-m-d') }} /
+                                class="special_character">{{ !empty($blog->author) ? $blog->author : 'PATH BANGLADESH' }}</span>
+                            <span class="date_blog">/ {{ $blog->created_at->format('D M, Y') }} /
                             </span>
                             @if (!empty($blog->tags))
                                 Topics :

@@ -53654,7 +53654,8 @@ body {
 }
 
 .aside.aside-dark {
-    background-color: #1e1e2d
+    /* background-color: #1e1e2d; */
+    background-color: #000000;
 }
 
 .aside.aside-dark .aside-logo {

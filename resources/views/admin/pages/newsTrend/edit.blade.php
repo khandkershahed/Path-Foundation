@@ -20,7 +20,7 @@
                 </a>
             </div>
         </div>
-        <form action="{{ route('admin.news-trend.update',$newsTrend->id) }}" class="needs-validation" method="POST"
+        <form action="{{ route('admin.news-trend.update', $newsTrend->id) }}" class="needs-validation" method="POST"
             enctype="multipart/form-data" novalidate>
             @csrf
             @method('PUT')
@@ -79,20 +79,23 @@
                                 <div class="col-md-4 pb-7">
                                     <label for="validationCustom01" class="form-label ">Badge
                                     </label>
-                                    <input type="text" class="form-control form-control-solid form-control-sm" value="{{$newsTrend->badge}}"
-                                        id="validationCustom01" placeholder="Enter Badge" name="badge">
+                                    <input type="text" class="form-control form-control-solid form-control-sm"
+                                        value="{{ $newsTrend->badge }}" id="validationCustom01"
+                                        placeholder="Enter Badge" name="badge">
                                     <div class="invalid-feedback"> Please Enter Badge </div>
                                 </div>
                                 <div class="col-md-4 pb-7">
                                     <label for="validationCustom01" class="form-label ">Title</label>
-                                    <input type="text" class="form-control form-control-solid form-control-sm" value="{{$newsTrend->title}}"
-                                        id="validationCustom01" placeholder="Enter Title" name="title">
+                                    <input type="text" class="form-control form-control-solid form-control-sm"
+                                        value="{{ $newsTrend->title }}" id="validationCustom01"
+                                        placeholder="Enter Title" name="title">
                                     <div class="invalid-feedback"> Please Enter Title </div>
                                 </div>
                                 <div class="col-md-4 pb-7">
                                     <label for="validationCustom01" class="form-label ">Author</label>
-                                    <input type="text" class="form-control form-control-solid form-control-sm" value="{{$newsTrend->author}}"
-                                        id="validationCustom01" placeholder="Enter Author" name="author">
+                                    <input type="text" class="form-control form-control-solid form-control-sm"
+                                        value="{{ $newsTrend->author }}" id="validationCustom01"
+                                        placeholder="Enter Author" name="author">
                                     <div class="invalid-feedback"> Please Enter Author </div>
                                 </div>
                                 <div class="col-md-4 pb-7">
@@ -100,13 +103,16 @@
                                         <div class="col-lg-10">
                                             <label for="validationCustom01" class="form-label ">Banner
                                                 Image</label>
-                                                <input type="file" class="form-control form-control-solid form-control-sm"
-                                                id="validationCustom01" placeholder="Enter Banner Image" name="banner_image">
+                                            <input type="file"
+                                                class="form-control form-control-solid form-control-sm"
+                                                id="validationCustom01" placeholder="Enter Banner Image"
+                                                name="banner_image">
                                             <div class="invalid-feedback"> Please Enter Banner Image </div>
                                         </div>
                                         <div class="col-lg-2">
                                             <label for="validationCustom01" class="form-label "></label>
-                                            <img src="{{ !empty($newsTrend->banner_image) && file_exists(public_path('storage/' . $newsTrend->banner_image)) ? asset('storage/' . $newsTrend->banner_image) : asset('frontend/images/banner-demo.png') }}" alt="" class="img-fluid" width="50px">
+                                            <img src="{{ !empty($newsTrend->banner_image) && file_exists(public_path('storage/' . $newsTrend->banner_image)) ? asset('storage/' . $newsTrend->banner_image) : asset('frontend/images/banner-demo.png') }}"
+                                                alt="" class="img-fluid" width="50px">
                                         </div>
                                     </div>
                                 </div>
@@ -115,14 +121,16 @@
                                         <div class="col-lg-10">
                                             <label for="validationCustom01" class="form-label ">Thumbnail
                                                 Image</label>
-                                            <input type="file" class="form-control form-control-solid form-control-sm"
+                                            <input type="file"
+                                                class="form-control form-control-solid form-control-sm"
                                                 id="validationCustom01" placeholder="Enter Thumbnail Image"
                                                 name="thumbnail_image">
                                             <div class="invalid-feedback"> Please Enter Thumbnail Image </div>
                                         </div>
                                         <div class="col-lg-2">
                                             <label for="validationCustom01" class="form-label "></label>
-                                            <img src="{{ !empty($newsTrend->thumbnail_image) && file_exists(public_path('storage/' . $newsTrend->thumbnail_image)) ? asset('storage/' . $newsTrend->thumbnail_image) : asset('frontend/images/banner-demo.png') }}" alt="" class="img-fluid" width="50px">
+                                            <img src="{{ !empty($newsTrend->thumbnail_image) && file_exists(public_path('storage/' . $newsTrend->thumbnail_image)) ? asset('storage/' . $newsTrend->thumbnail_image) : asset('frontend/images/banner-demo.png') }}"
+                                                alt="" class="img-fluid" width="50px">
                                         </div>
                                     </div>
                                 </div>
@@ -130,39 +138,44 @@
                                     <label for="validationCustom01" class="form-label ">Aditional
                                         URL</label>
                                     <input type="url" class="form-control form-control-solid form-control-sm"
-                                        id="validationCustom01" placeholder="Enter Additional URL" value="{{$newsTrend->additional_url}}"
-                                        name="additional_url">
+                                        id="validationCustom01" placeholder="Enter Additional URL"
+                                        value="{{ $newsTrend->additional_url }}" name="additional_url">
                                     <div class="invalid-feedback"> Please Enter Additional URL</div>
                                 </div>
                                 <div class="col-md-12 pb-7">
                                     <label for="validationCustom010" class="form-label mb-0">Header</label>
                                     <textarea rows="1" name="header" class="form-control form-control-sm form-control-solid"
-                                        placeholder="Enter Header">{{$newsTrend->header}}</textarea>
+                                        placeholder="Enter Header">{{ $newsTrend->header }}</textarea>
                                     <div class="invalid-feedback"> Please Enter Header</div>
+                                </div>
+                                <div class="col-md-12 pb-7">
+                                    <x-metronic.label class="form-label">Tags</x-metronic.label>
+                                    <input class="form-control" name="tags" id="product_Tags"
+                                        value="{{ old('tags', $newsTrend->tags) }}" />
                                 </div>
                                 <div class="col-md-12 pb-7">
                                     <label for="validationCustom010" class="form-label mb-0">Address</label>
                                     <textarea rows="1" name="address" class="form-control form-control-sm form-control-solid"
-                                        placeholder="Enter Address">{{$newsTrend->address}}</textarea>
+                                        placeholder="Enter Address">{{ $newsTrend->address }}</textarea>
                                     <div class="invalid-feedback"> Please Enter Address</div>
                                 </div>
                                 <div class="col-md-12 pb-7">
                                     <label for="validationCustom010" class="form-label mb-0">Footer</label>
                                     <textarea rows="1" name="footer" class="form-control form-control-sm form-control-solid"
-                                        placeholder="Enter Footer">{{$newsTrend->footer}}</textarea>
+                                        placeholder="Enter Footer">{{ $newsTrend->footer }}</textarea>
                                     <div class="invalid-feedback"> Please Enter Footer</div>
                                 </div>
                                 <div class="col-md-12 mb-1 pt-7">
                                     <label for="validationCustom01" class="form-label mb-0">Short
                                         Description</label>
                                     <textarea name="short_des" class="tox-target ckeditor">
-                                        {{$newsTrend->short_des}}</textarea>
+                                        {{ $newsTrend->short_des }}</textarea>
                                     <div class="invalid-feedback"> Please Enter Title </div>
                                 </div>
                                 <div class="col-md-12 mb-1 pt-7">
                                     <label for="validationCustom01" class="form-label mb-0">Long
                                         Description</label>
-                                    <textarea name="long_des" class="tox-target ckeditor"> {{$newsTrend->long_des}}</textarea>
+                                    <textarea name="long_des" class="tox-target ckeditor"> {{ $newsTrend->long_des }}</textarea>
                                     <div class="invalid-feedback"> Please Enter Title </div>
                                 </div>
                             </div>
@@ -177,8 +190,14 @@
     </div>
 
     @push('scripts')
-        <script></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                // The DOM elements you wish to replace with Tagify
+                var input1 = document.querySelector("#product_Tags");
+
+                // Initialize Tagify components on the above inputs
+                new Tagify(input1);
+            });
+        </script>
     @endpush
 </x-admin-app-layout>
-
-
