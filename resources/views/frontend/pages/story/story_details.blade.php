@@ -171,13 +171,7 @@
                             <div class="text-start p-2">
                                 
                                 @foreach ($tags as $index => $item)
-                                    <span class="special_character">
-                                        <i class="fa-regular fa-bookmark"></i>
-                                        {{ $item->value }}
-                                        @if ($index < $total - 1)
-                                            ,
-                                        @endif
-                                    </span>
+                                    <a href="" class=" text-black">#{{ $item->value }}</a>
                                 @endforeach
                             </div>
                         </div>
