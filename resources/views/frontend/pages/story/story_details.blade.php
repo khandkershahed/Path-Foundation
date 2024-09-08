@@ -169,8 +169,15 @@
                         <div class="border my-3 ">
                             <h4 class="text-center py-1 tag_title">TAGS</h4>
                             <div class="text-start p-2">
-                                @foreach ($tags as $item)
-                                    <a href="" class=" text-black">#{{ $item }}</a>
+                                
+                                @foreach ($tags as $index => $item)
+                                    <span class="special_character">
+                                        <i class="fa-regular fa-bookmark"></i>
+                                        {{ $item->value }}
+                                        @if ($index < $total - 1)
+                                            ,
+                                        @endif
+                                    </span>
                                 @endforeach
                             </div>
                         </div>
