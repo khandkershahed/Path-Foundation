@@ -83,6 +83,8 @@
                                 Topics :
                                 @php
                                     $tags = json_decode($blog->tags);
+                                    // Check if $tags is an array
+                                    $tags = is_array($tags) ? $tags : [];
                                     $total = count($tags);
                                 @endphp
 
@@ -95,8 +97,6 @@
                                         @endif
                                     </span>
                                 @endforeach
-                                {{-- <span class="special_character"><i class="fa-regular fa-bookmark"></i> {{ $last_word }}
-                                </span> --}}
                             @endif
                         </p>
                         {{-- <div class="bySocial col-3">
@@ -169,7 +169,7 @@
                         <div class="border my-3 ">
                             <h4 class="text-center py-1 tag_title">TAGS</h4>
                             <div class="text-start p-2">
-                                
+
                                 @foreach ($tags as $index => $item)
                                     <a href="" class=" text-black">#{{ $item->value }}</a>
                                 @endforeach
