@@ -22,7 +22,7 @@
                     <p><strong>Email: </strong><span>{{ optional($setting)->primary_email }}</span><br><span>{{ optional($setting)->support_email }}</span></p>
                     <p><strong>Phone: </strong>{{ optional($setting)->primary_phone }}</p>
                         <!-- <h5><i class="fa-solid fa-phone"></i>NgenIT</h5> -->
-                        {{-- <a href="{{ route('location') }}" class="product_button">View all NGen IT office locations</a> --}}
+                        {{-- <a href="{{ route('location') }}" class="product_button">View all PATH Bangladesh office locations</a> --}}
                     </div>
                 </div>
                 <!----------Sidebar Privacy Policy --------->

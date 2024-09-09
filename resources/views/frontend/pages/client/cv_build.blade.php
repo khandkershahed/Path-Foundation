@@ -273,7 +273,7 @@
                                                                 class="form-control form-control-sm border-0 bg-light"
                                                                 id="professional_company_name_one"
                                                                 name="professional_company_name_one"
-                                                                placeholder="E.g: Ngen It">
+                                                                placeholder="E.g: PATH Bangladesh">
                                                         </div>
                                                         <div class="mb-1 col-md-6">
                                                             <label for="professional_depertment_one" class="fw-light">
@@ -309,7 +309,7 @@
                                                                 class="form-control form-control-sm border-0 bg-light"
                                                                 id="professional_company_name_two"
                                                                 name="professional_company_name_two"
-                                                                placeholder="E.g: Ngen It">
+                                                                placeholder="E.g: PATH Bangladesh">
                                                         </div>
                                                         <div class="mb-1 col-md-6">
                                                             <label for="professional_depertment_two" class="fw-light">
@@ -620,7 +620,7 @@
                                                                 class="form-control form-control-sm border-0 bg-light"
                                                                 id="reference_organisation_one"
                                                                 name="reference_organisation_one"
-                                                                placeholder="E.g: Ngen It" required>
+                                                                placeholder="E.g: PATH Bangladesh" required>
                                                             <div class="valid-feedback">
                                                                 Looks good!
                                                             </div>
@@ -693,7 +693,7 @@
                                                                 class="form-control form-control-sm border-0 bg-light"
                                                                 id="reference_organisation_two"
                                                                 name="reference_organisation_two"
-                                                                placeholder="E.g: Ngen It">
+                                                                placeholder="E.g: PATH Bangladesh">
                                                         </div>
                                                         <div class="mb-1 col-md-6">
                                                             <label for="reference_email_two" class="fw-light">Reference

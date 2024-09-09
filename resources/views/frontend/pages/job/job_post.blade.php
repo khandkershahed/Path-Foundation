@@ -1,7 +1,7 @@
 @extends('frontend.master')
 @section('content')
 @section('styles')
-    <meta property="og:title" content="NGen IT Available Jobs">
+    <meta property="og:title" content="PATH Bangladesh Available Jobs">
     <!--<meta property="og:description" content="Description of your blog post">-->
     <meta property="og:image" content="http://ngenitltd.com/frontend/images/available_job.jpg">
     <!--<meta property="og:url" content="URL to your blog post">-->

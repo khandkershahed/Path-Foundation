@@ -28,7 +28,7 @@
                                                 alt=""> --}}
                                                 <img class="img-fluid site-main-logo-contents"
                                                 src="{{ !empty($techglossy->image) && file_exists(public_path('storage/' . $techglossy->image)) ? asset('storage/' . $techglossy->image) : asset('frontend/images/no-row-img(580-326).png') }}"
-                                                alt="NGEN IT">
+                                                alt="PATH Bangladesh">
                                         </div>
                                         <div>
                                             <p class="p-1" style="font-size: 16px;text-align:center;">
@@ -79,7 +79,7 @@
                                                 alt=""> --}}
                                                 <img class="img-fluid site-main-logo-contents"
                                                 src="{{ !empty($blog->image) && file_exists(public_path('storage/' . $blog->image)) ? asset('storage/' . $blog->image) : asset('frontend/images/no-row-img(580-326).png') }}"
-                                                alt="NGEN IT">
+                                                alt="PATH Bangladesh">
                                         </div>
                                         <div>
                                             <p class="p-1" style="font-size: 16px;text-align:center;">
@@ -111,7 +111,7 @@
                                         <div>
                                             <img class="img-fluid site-main-logo-contents"
                                                 src="{{ !empty($clientStory->image) && file_exists(public_path('storage/' . $clientStory->image)) ? asset('storage/' . $clientStory->image) : asset('frontend/images/no-row-img(580-326).png') }}"
-                                                alt="NGEN IT">
+                                                alt="PATH Bangladesh">
                                         </div>
                                         <div>
                                             <p class="p-1" style="font-size: 16px;text-align:center;">

@@ -5,7 +5,7 @@
     <section>
         <div>
             <img class="page_top_banner" src="http://127.0.0.1:8000/frontend/images/no-banner(1920-330).png"
-                alt="NGEN IT All Brands">
+                alt="PATH Bangladesh All Brands">
         </div>
     </section>
     <section>

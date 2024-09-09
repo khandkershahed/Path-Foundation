@@ -69,7 +69,7 @@
                 <div class="col-lg-6 col-sm-12 p-4">
                     <img class="img-fluid" style="border-radius: 8px;"
                         src="{{ !empty($feature->image) && file_exists(public_path('storage/' . $feature->image)) ? asset('storage/' . $feature->image) : asset('frontend/images/no-row-img(580-326).png') }}"
-                        alt="NGEN IT">
+                        alt="PATH Bangladesh">
                 </div>
             </div>
         </div>
@@ -182,7 +182,7 @@
                     <div class="col-lg-6 col-sm-12">
                         <img class="img-fluid" style="height:371px; width:100%; object-fit:cover; border-radius:15px;"
                             src="{{ !empty($row_two->image) && file_exists(public_path('storage/' . $row_two->image)) ? asset('storage/' . $row_two->image) : asset('frontend/images/no-row-img(580-326).png') }}"
-                            alt="NGEN IT">
+                            alt="PATH Bangladesh">
                     </div>
                     <div class="col-lg-6 col-sm-12 pr-4 service_common_content">
                         <h4>{{ $row_two->badge }}</h4>

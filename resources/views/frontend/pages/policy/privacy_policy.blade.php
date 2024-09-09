@@ -5,14 +5,14 @@
         <div>
             <img class="page_top_banner"
                 src="{{ asset('frontend/images/privacy.jpg') }}"
-                alt="NGEN IT Privacy Policy">
+                alt="PATH Bangladesh Privacy Policy">
         </div>
     </section>
     <!----------End--------->
     <section class="header">
         <div class="container">
             <div class="py-4">
-                <h4 class="text-center"><span class="faqs_title_border_top">NGe</span>n IT Company Privacy & Po<span
+                <h4 class="text-center"><span class="faqs_title_border_top">PATH</span>Bangladesh Privacy & Po<span
                         class="faqs_title_border_bottom">licy !</span></h4>
             </div>
             <div class="row">

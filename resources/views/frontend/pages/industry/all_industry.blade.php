@@ -1,7 +1,7 @@
 @extends('frontend.master')
 @section('content')
 @section('styles')
-    <meta property="og:title" content="Serving Industries of NGen IT">
+    <meta property="og:title" content="Serving Industries of PATH Bangladesh">
     <!--<meta property="og:description" content="Description of your blog post">-->
     <meta property="og:image" content="{{ asset('frontend/images/industry-banner.jpg') }}">
     <!--<meta property="og:url" content="URL to your blog post">-->
@@ -247,7 +247,7 @@
                 <div class="software_feature_title">
                     <h1 class="text-center my-3">Related Contents</h1>
                 </div>
-                <p class="home_title_text mb-lg-4 mb-3">See how NGen IT has helped organizations of all sizes across every
+                <p class="home_title_text mb-lg-4 mb-3">See how PATH Bangladesh has helped organizations of all sizes across every
                     industry maximize the value of their IT solutions, <br>  leverage emerging technologies and create fresh
                     experiences.
                 </p>

@@ -69,7 +69,7 @@
                                 @if ($sproduct->rfq == 1)
                                     <div class="d-lg-block d-sm-none p-0">
                                         <div class="row justify-content-between align-items-center p-0">
-                                            {{-- <a class="btn-color" href="{{route('contact')}}">Call Ngen It for price</a> --}}
+                                            {{-- <a class="btn-color" href="{{route('contact')}}">Call PATH Bangladesh for price</a> --}}
                                             <div class="need_help col-lg-6 col-sm-6">
                                                 <button class="btn-color" id="modal_view_left" data-toggle="modal"
                                                     data-target="#rfq{{ $sproduct->id }}" style="width: 100%;">Ask For
@@ -119,7 +119,7 @@
                                     <div class="d-lg-none d-sm-block p-0">
                                         <div>
                                             <div class="row justify-content-between align-items-center p-0">
-                                                {{-- <a class="btn-color" href="{{route('contact')}}">Call Ngen It for price</a> --}}
+                                                {{-- <a class="btn-color" href="{{route('contact')}}">Call PATH Bangladesh for price</a> --}}
                                                 <div class="need_help col-6">
                                                     <button class="btn-color brand-product-btn" id="modal_view_left"
                                                         data-toggle="modal" data-target="#rfq{{ $sproduct->id }}"
@@ -171,7 +171,7 @@
                                     </div>
                                 @elseif ($sproduct->price_status && $sproduct->price_status == 'rfq')
                                     <div class="row justify-content-between align-items-center">
-                                        {{-- <a class="btn-color" href="{{route('contact')}}">Call Ngen It for price</a> --}}
+                                        {{-- <a class="btn-color" href="{{route('contact')}}">Call PATH Bangladesh for price</a> --}}
                                         <div class="need_help col-lg-5 col-sm-12 p-0">
                                             <button class="btn-color" id="modal_view_left" data-toggle="modal"
                                                 data-target="#rfq{{ $sproduct->id }}" style="width: 100%;">Ask For

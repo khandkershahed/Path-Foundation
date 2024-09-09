@@ -11,7 +11,7 @@
             <div>
                 <img class="page_top_banner" width="1920px" height="330px"
                     src="{{ !empty($techglossy->banner_image) && file_exists(public_path('storage/' . $techglossy->banner_image)) ? asset('storage/' . $techglossy->banner_image) : asset('frontend/images/no-banner(1920-330).png') }}"
-                    alt="NGEN IT Software">
+                    alt="PATH Bangladesh Software">
             </div>
         </section>
     @endif
@@ -88,7 +88,7 @@
         <div class="container py-lg-5 py-2">
             <div class="">
                 <h2 class="text-center">
-                    <span class="main_color">Featured Techglossies By NGen IT</span>
+                    <span class="main_color">Featured Techglossies By PATH Bangladesh</span>
                 </h2>
             </div>
             <div class="row">

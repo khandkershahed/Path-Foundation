@@ -250,7 +250,7 @@
                         <div>
                             <img class="img-fluid"
                                 src="{{ !empty($whatwedo->row_one_image) && file_exists(public_path('storage/' . $whatwedo->row_one_image)) ? asset('storage/' . $whatwedo->row_one_image) : asset('frontend/images/no-row-img(580-326).png') }}"
-                                alt="NGEN IT">
+                                alt="PATH Bangladesh">
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-6">
@@ -325,7 +325,7 @@
                         <div>
                             <img class="img-fluid pt-3"
                                 src="{{ !empty($row_two->image) && file_exists(public_path('storage/' . $row_two->image)) ? asset('storage/' . $row_two->image) : asset('frontend/images/no-row-img(580-326).png') }}"
-                                alt="NGEN IT">
+                                alt="PATH Bangladesh">
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-6">
@@ -342,7 +342,7 @@
                         <div>
                             <img class="img-fluid"
                                 src="{{ !empty($row_two->image) && file_exists(public_path('storage/' . $row_two->image)) ? asset('storage/' . $row_two->image) : asset('frontend/images/no-row-img(580-326).png') }}"
-                                alt="NGEN IT">
+                                alt="PATH Bangladesh">
                         </div>
                     </div>
                 </div>
@@ -359,7 +359,7 @@
                         <div>
                             <img class="img-fluid"
                                 src="{{ !empty($row_three->image) && file_exists(public_path('storage/' . $row_three->image)) ? asset('storage/' . $row_three->image) : asset('frontend/images/no-row-img(580-326).png') }}"
-                                alt="NGEN IT">
+                                alt="PATH Bangladesh">
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-6">

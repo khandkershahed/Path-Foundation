@@ -67,9 +67,9 @@
                                 <li>
                                     <a href="{{ route('faq') }}">FAQs</a>
                                 </li>
-                                <li>
+                                {{-- <li>
                                     <a href="{{ route('privacy.policy') }}">Privacy Policy</a>
-                                </li>
+                                </li> --}}
                             </ul>
                         </div>
                     </div>
@@ -121,21 +121,17 @@
                 </div>
             </div>
             <div class="col-lg-6">
-                <div>
+                {{-- <div>
                     <ul class="footer_bottom_text">
                         <li>
                             <a class="text-white" href="{{ route('privacy.policy') }}">Privacy policy &nbsp;|&nbsp;
                             </a>
-                            {{-- <a class="text-white" href="{{ route('privacy.policy') }}">Privacy policy &nbsp;|&nbsp;
-                            </a> --}}
                         </li>
                         <li>
                             <a class="text-white" href="javascript:void(0)">Terms & Conditions &nbsp;|&nbsp;
                             </a>
-                            {{-- <a class="text-white" href="{{ route('terms.policy') }}">Terms & Conditions &nbsp;|&nbsp;
-                            </a> --}}
                         </li>
-                    </ul>
+                    </ul> --}}
                 </div>
             </div>
         </div>

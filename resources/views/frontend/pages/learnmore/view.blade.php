@@ -181,7 +181,7 @@
                                         <div class="col-lg-5">
                                             <img class="img-fluid story-tab"
                                                 src="{{ !empty($story1->image) && file_exists(public_path('storage/' . $story1->image)) ? asset('storage/' . $story1->image) : asset('frontend/images/no-row-img(580-326).png') }}"
-                                                alt="NGEN IT">
+                                                alt="PATH Bangladesh">
                                             {{-- <img class="img-fluid rounded-pill" src="{{ asset('storage/' . $story1->image) }}" alt=""> --}}
                                         </div>
                                         <div class="col-lg-7">
@@ -202,7 +202,7 @@
                                         <div class="col-lg-5">
                                             <img class="img-fluid story-tab"
                                                 src="{{ !empty($story2->image) && file_exists(public_path('storage/' . $story2->image)) ? asset('storage/' . $story2->image) : asset('frontend/images/no-row-img(580-326).png') }}"
-                                                alt="NGEN IT">
+                                                alt="PATH Bangladesh">
                                         </div>
                                         <div class="col-lg-7">
                                             <h2 class="story-title pb-3">{{ $story2->title }}</h2>
@@ -222,7 +222,7 @@
                                         <div class="col-lg-5">
                                             <img class="img-fluid story-tab"
                                                 src="{{ !empty($story3->image) && file_exists(public_path('storage/' . $story3->image)) ? asset('storage/' . $story3->image) : asset('frontend/images/no-row-img(580-326).png') }}"
-                                                alt="NGEN IT">
+                                                alt="PATH Bangladesh">
                                         </div>
                                         <div class="col-lg-7">
                                             <h2 class="story-title pb-3">{{ $story3->title }}</h2>
@@ -297,7 +297,7 @@
                                         <div class="we_serve_item_image">
                                             <img class="img-fluid"
                                             src="{{ !empty($item->logo) && file_exists(public_path('storage/' . $item->logo)) ? asset('storage/' . $item->logo) : asset('frontend/images/no-industy-img.png') }}"
-                                            alt="NGEN IT">
+                                            alt="PATH Bangladesh">
                                         </div>
                                         <div class="we_serve_item_text">{{ $item->title }}</div>
                                     </a>

@@ -353,7 +353,7 @@
                                     <div class="text-center">
                                         <img class="" width="70px"
                                             src="{{ !empty($feature->logo) && file_exists(public_path('storage/' . $feature->logo)) ? asset('storage/' . $feature->logo) : asset('frontend/images/service-no-img.png') }}"
-                                            alt="NGEN IT">
+                                            alt="PATH Bangladesh">
                                         <h5 class="business_services pt-2">
                                             {{ Str::words($feature->badge, 10, $end = '') }}
                                         </h5>
@@ -398,7 +398,7 @@
                                     <div class="text-center">
                                         <div class="d-flex justify-content-center align-items-center story-mb">
                                             <img src="{{ !empty($feature->logo) && file_exists(public_path('storage/' . $feature->logo)) ? asset('storage/' . $feature->logo) : asset('frontend/images/service-no-img.png') }}"
-                                                alt="NGEN IT" style="width: 80px;">
+                                                alt="PATH Bangladesh" style="width: 80px;">
                                         </div>
                                         <h5 class="business_services pt-2">
                                             {{ Str::words($feature->badge, 10, $end = '') }}</h5>

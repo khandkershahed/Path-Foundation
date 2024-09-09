@@ -18,7 +18,7 @@
         <div class="support_assistance_wrapper">
             <div class="row">
                 <div class="col-lg-7 col-sm-12 support_assistance_content">
-                    <p>Having trouble with {{ !empty($setting->site_name) ? $setting->site_name : 'NGen IT' }}? Reach out to
+                    <p>Having trouble with {{ !empty($setting->site_name) ? $setting->site_name : 'PATH Bangladesh' }}? Reach out to
                         our team of Web support specialists and get help over
                         the phone or through email.</p>
                     <div>
@@ -30,7 +30,7 @@
                                 x-cq-linkchecker="skip">Call us</a>
                         </div>
                         <div class="col-8">
-                            <span>Call {{ !empty($setting->site_name) ? $setting->site_name : 'NGen IT' }} to talk to a
+                            <span>Call {{ !empty($setting->site_name) ? $setting->site_name : 'PATH Bangladesh' }} to talk to a
                                 specialist directly.</span>
                         </div>
 

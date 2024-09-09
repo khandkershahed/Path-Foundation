@@ -8,7 +8,7 @@
             <div>
                 <img class="page_top_banner"
                     src="{{ !empty($bannerImage) && file_exists(public_path('storage/' . $bannerImage)) ? asset('storage/' . $bannerImage) : asset('frontend/images/no-banner(1920-330).png') }}"
-                    alt="NGEN IT Shop">
+                    alt="PATH Bangladesh Shop">
             </div>
         </section>
     @else
@@ -567,7 +567,7 @@
                             @endphp --}}
                             <div class="row">
                                 <div class="col-lg-12">
-                                    
+
                                 </div>
                             </div>
                             <div class="row">
@@ -772,7 +772,7 @@
                                                             {{-- <img class="pic-1" src="{{ asset($item->thumbnail) }}"> --}}
                                                             <img class="img-fluid"
                                                                 src="{{ !empty($item->thumbnail) && file_exists(public_path($item->thumbnail)) ? asset($item->thumbnail) : asset('frontend/images/random-no-img.png') }}"
-                                                                alt="NGEN IT">
+                                                                alt="PATH Bangladesh">
                                                         </a>
                                                         <ul class="custom-product-links">
                                                             <li><a href="#"><i

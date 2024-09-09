@@ -318,7 +318,7 @@
                             <a href="{{ route('contact') }}">
                                 <div class="our-team">
                                     <img class="page_top_banner"src="{{ !empty($team->image) && file_exists(public_path('storage/' . $team->image)) ? asset('storage/' . $team->image) : asset('frontend/images/service-no-img.png') }}"
-                                        alt="NGEN IT Software">
+                                        alt="PATH Bangladesh Software">
                                     <div class="team-content">
                                         <h3 class="title_name">{{ $team->title }}</h3>
                                         <span class="post">{{ $team->short_desc }}</span>
@@ -350,7 +350,7 @@
                                         <div class="card-body border-0 rounded-0">
                                             <div class="why_chose p-3 text-center">
                                                 <img class="img-fluid" src="{{ !empty($choose->image) && file_exists(public_path('storage/' . $choose->image)) ? asset('storage/' . $choose->image) : asset('frontend/images/service-no-img.png') }}"
-                                                    alt="NGEN IT Software">
+                                                    alt="PATH Bangladesh Software">
 
                                                 <div>
                                                     <h5 class="pt-3 main_color">{{ $choose->title }}</h5>

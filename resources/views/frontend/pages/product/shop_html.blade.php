@@ -43,7 +43,7 @@
                                                         {{-- <img class="pic-1" src="{{ asset($item->thumbnail) }}"> --}}
                                                         <img class="img-fluid"
                                                             src="{{ !empty($item->thumbnail) && file_exists(public_path($item->thumbnail)) ? asset($item->thumbnail) : asset('frontend/images/random-no-img.png') }}"
-                                                            alt="NGEN IT">
+                                                            alt="PATH Bangladesh">
                                                     </a>
                                                     <ul class="custom-product-links">
                                                         <li><a href="#"><i class="fa fa-random text-white"></i></a>
@@ -182,7 +182,7 @@
                                                             <img class="img-fluid"
                                                                 style="border-radius: 50%; height:70px !important; width:70px !important;"
                                                                 src="{{ !empty($item->image) && file_exists(public_path('storage/' . $item->image)) ? asset('storage/' . $item->image) : asset('frontend/images/no-shop-imge.png') }}"
-                                                                alt="NGEN IT">
+                                                                alt="PATH Bangladesh">
                                                         </div>
                                                         <p class="m-0 ps-2">{{ $item->title }}</p>
                                                     </div>
@@ -206,7 +206,7 @@
                                                             <img class="img-fluid"
                                                                 style="border-radius: 50%; height:70px !important; width:70px !important;"
                                                                 src="{{ !empty($item->image) && file_exists(public_path('storage/' . $item->image)) ? asset('storage/' . $item->image) : asset('frontend/images/no-shop-imge.png') }}"
-                                                                alt="NGEN IT">
+                                                                alt="PATH Bangladesh">
                                                         </div>
                                                         <p class="m-0 ps-2">{{ $item->title }}</p>
                                                     </div>
@@ -232,7 +232,7 @@
                                                                         <img class="img-fluid"
                                                                             style="border-radius: 50%; height:70px !important; width:70px !important;"
                                                                             src="{{ !empty($item->image) && file_exists(public_path('storage/' . $item->image)) ? asset('storage/' . $item->image) : asset('frontend/images/no-shop-imge.png') }}"
-                                                                            alt="NGEN IT">
+                                                                            alt="PATH Bangladesh">
                                                                     </div>
                                                                     <p class="m-0 ps-2">{{ $item->title }}</p>
                                                                 </div>
@@ -260,7 +260,7 @@
                                                                         <img class="img-fluid"
                                                                             style="border-radius: 50%; height:70px !important; width:70px !important;"
                                                                             src="{{ !empty($item->image) && file_exists(public_path('storage/' . $item->image)) ? asset('storage/' . $item->image) : asset('frontend/images/no-shop-imge.png') }}"
-                                                                            alt="NGEN IT">
+                                                                            alt="PATH Bangladesh">
                                                                     </div>
                                                                     <p class="m-0 ps-2">{{ $item->title }}</p>
                                                                 </div>

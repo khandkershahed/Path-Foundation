@@ -550,7 +550,7 @@
 <section class="tech_deals_header">
     <div class="container">
         <h1>Technology deals</h1>
-        <h3>Browse and Explore exclusive tech deals from Ngen It. We offer deep discounts on electronics, devices and softwares.</h3>
+        <h3>Browse and Explore exclusive tech deals from PATH Bangladesh. We offer deep discounts on electronics, devices and softwares.</h3>
 
         <div class="row d-flex justify-content-center">
             <div class="col-lg-2"></div>
@@ -725,7 +725,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-10 col-sm-10">
-                <h2>Ngen It offers exclusive deals and refurbished products.</h2>
+                <h2>PATH Bangladesh offers exclusive deals and refurbished products.</h2>
             </div>
             <div class="col-lg-2 col-sm-2">
                 <div class="d-flex justify-content-end">

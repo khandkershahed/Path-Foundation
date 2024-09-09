@@ -38,7 +38,7 @@
             <div>
                 <img class="page_top_banner"
                     src="{{ !empty($hardware_info->banner_image) && file_exists(public_path('storage/' . $hardware_info->banner_image)) ? asset('storage/' . $hardware_info->banner_image) : asset('frontend/images/no-banner(1920-330).png') }}"
-                    alt="NGEN IT Software">
+                    alt="PATH Bangladesh Software">
             </div>
         </section>
     @endif
@@ -194,7 +194,7 @@
                                                         {{-- <img class="pic-1" src="{{ asset($item->thumbnail) }}"> --}}
                                                         <img class="img-fluid"
                                                             src="{{ !empty($item->thumbnail) && file_exists(public_path($item->thumbnail)) ? asset($item->thumbnail) : asset('frontend/images/random-no-img.png') }}"
-                                                            alt="NGEN IT">
+                                                            alt="PATH Bangladesh">
                                                     </a>
                                                     <ul class="custom-product-links">
                                                         <li><a href="#"><i class="fa fa-random text-white"></i></a>
@@ -986,7 +986,7 @@
                                                         {{-- <img class="pic-1" src="{{ asset($item->thumbnail) }}"> --}}
                                                         <img class="img-fluid"
                                                             src="{{ !empty($item->thumbnail) && file_exists(public_path($item->thumbnail)) ? asset($item->thumbnail) : asset('frontend/images/random-no-img.png') }}"
-                                                            alt="NGEN IT">
+                                                            alt="PATH Bangladesh">
                                                     </a>
                                                     <ul class="custom-product-links">
                                                         <li><a href="#"><i class="fa fa-random text-white"></i></a>

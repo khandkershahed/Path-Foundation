@@ -3,7 +3,7 @@
     <!--======// Header Title //======-->
     <section>
         <div>
-            <img class="page_top_banner" src="{{ asset('frontend/images/faq.jpg') }}" alt="NGEN IT FAQ">
+            <img class="page_top_banner" src="{{ asset('frontend/images/faq.jpg') }}" alt="PATH Bangladesh FAQ">
         </div>
     </section>
     <!----------End--------->

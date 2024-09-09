@@ -6,7 +6,7 @@
             <div>
                 <img class="page_top_banner"
                     src="{{ !empty($industry->image) && file_exists(public_path('storage/' . $industry->image)) ? asset('storage/' . $industry->image) : asset('frontend/images/no-banner(1920-330).png') }}"
-                    alt="NGEN IT {{ $industry->title }} Industry">
+                    alt="PATH Bangladesh {{ $industry->title }} Industry">
             </div>
         </section>
     @endif
@@ -327,7 +327,7 @@
                                                     {{-- <img class="pic-1" src="{{ asset($product->thumbnail) }}"> --}}
                                                     <img class="img-fluid"
                                                         src="{{ !empty($product->thumbnail) && file_exists(public_path($product->thumbnail)) ? asset($product->thumbnail) : asset('frontend/images/random-no-img.png') }}"
-                                                        alt="NGEN IT">
+                                                        alt="PATH Bangladesh">
                                                 </a>
                                                 <ul class="custom-product-links">
                                                     <li><a href="#"><i class="fa fa-random text-white"></i></a>

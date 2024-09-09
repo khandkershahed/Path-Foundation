@@ -5,7 +5,7 @@
         <div>
             <img class="page_top_banner"
                 src="https://absolute.com.np/wp-content/uploads/2022/04/laptops-banner-english-text.jpg"
-                alt="NGEN IT Software">
+                alt="PATH Bangladesh Software">
         </div>
     </section>
     <!----------End--------->
@@ -89,7 +89,7 @@
                                                                     <img class=""
                                                                     style="object-fit: contain"
                                                                         src="https://computermania-bd.b-cdn.net/wp-content/uploads/microsoft.jpg"
-                                                                        alt="NGEN IT">
+                                                                        alt="PATH Bangladesh">
                                                                 </a>
                                                                 <ul class="custom-product-links">
                                                                     <li>
@@ -140,7 +140,7 @@
                                                                     <img class=""
                                                                     style="object-fit: contain"
                                                                         src="https://computermania-bd.b-cdn.net/wp-content/uploads/microsoft.jpg"
-                                                                        alt="NGEN IT">
+                                                                        alt="PATH Bangladesh">
                                                                 </a>
                                                                 <ul class="custom-product-links">
                                                                     <li>
@@ -191,7 +191,7 @@
                                                                     <img class=""
                                                                     style="object-fit: contain"
                                                                         src="https://computermania-bd.b-cdn.net/wp-content/uploads/microsoft.jpg"
-                                                                        alt="NGEN IT">
+                                                                        alt="PATH Bangladesh">
                                                                 </a>
                                                                 <ul class="custom-product-links">
                                                                     <li>
@@ -242,7 +242,7 @@
                                                                     <img class=""
                                                                     style="object-fit: contain"
                                                                         src="https://computermania-bd.b-cdn.net/wp-content/uploads/microsoft.jpg"
-                                                                        alt="NGEN IT">
+                                                                        alt="PATH Bangladesh">
                                                                 </a>
                                                                 <ul class="custom-product-links">
                                                                     <li>
@@ -336,7 +336,7 @@
                                 {{-- <img class="pic-1" src="{{ asset($item->thumbnail) }}"> --}}
                                 <img class="img-fluid"
                                     src="https://www.signalitsolutions.com/wp-content/uploads/2021/07/acronis-bw.png"
-                                    alt="NGEN IT">
+                                    alt="PATH Bangladesh">
                             </a>
                             <ul class="custom-product-links">
                                 <li><a href="#"><i class="fa fa-random text-white"></i></a>
@@ -372,7 +372,7 @@
                                 {{-- <img class="pic-1" src="{{ asset($item->thumbnail) }}"> --}}
                                 <img class="img-fluid"
                                     src="https://www.signalitsolutions.com/wp-content/uploads/2021/07/acronis-bw.png"
-                                    alt="NGEN IT">
+                                    alt="PATH Bangladesh">
                             </a>
                             <ul class="custom-product-links">
                                 <li><a href="#"><i class="fa fa-random text-white"></i></a>
@@ -408,7 +408,7 @@
                                 {{-- <img class="pic-1" src="{{ asset($item->thumbnail) }}"> --}}
                                 <img class="img-fluid"
                                     src="https://www.signalitsolutions.com/wp-content/uploads/2021/07/acronis-bw.png"
-                                    alt="NGEN IT">
+                                    alt="PATH Bangladesh">
                             </a>
                             <ul class="custom-product-links">
                                 <li><a href="#"><i class="fa fa-random text-white"></i></a>
@@ -444,7 +444,7 @@
                                 {{-- <img class="pic-1" src="{{ asset($item->thumbnail) }}"> --}}
                                 <img class="img-fluid"
                                     src="https://www.signalitsolutions.com/wp-content/uploads/2021/07/acronis-bw.png"
-                                    alt="NGEN IT">
+                                    alt="PATH Bangladesh">
                             </a>
                             <ul class="custom-product-links">
                                 <li><a href="#"><i class="fa fa-random text-white"></i></a>

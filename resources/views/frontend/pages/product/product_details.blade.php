@@ -120,7 +120,7 @@
                         <div class="bg-light d-flex justify-content-between align-items-center" style="width: 80%;">
                             <button class="btn-color" data-bs-toggle="modal" data-bs-target="#rfqModal"
                                 style="width: 35%;">Ask For Price</button>
-                            {{-- <a class="common_button" href="{{route('contact')}}">Call Ngen It for price</a> --}}
+                            {{-- <a class="common_button" href="{{route('contact')}}">Call PATH Bangladesh for price</a> --}}
                             <div class="need_help col-lg-4 col-sm-12">
                                 <h6 class="m-2">Need Help Ordering?</h6>
                                 <h6>Call <strong>{{ App\Models\Admin\Setting::first()->mobile }}</strong></h6>
@@ -153,7 +153,7 @@
                             <button class="common_button" id="modal_view_left" data-bs-toggle="modal"
                                 data-bs-target="#rfqModal" style="width: 35%;">Ask For Price</button>
 
-                            {{-- <a class="common_button" href="{{route('contact')}}">Call Ngen It for price</a> --}}
+                            {{-- <a class="common_button" href="{{route('contact')}}">Call PATH Bangladesh for price</a> --}}
                             <div class="need_help col-lg-4 col-sm-12">
                                 <h6 class="m-2">Need Help Ordering?</h6>
                                 <h6>Call <strong>{{ App\Models\Admin\Setting::first()->mobile }}</strong></h6>
@@ -401,7 +401,7 @@
                                                         {{-- <img class="pic-1" src="{{ asset($item->thumbnail) }}"> --}}
                                                         <img class="img-fluid"
                                                             src="{{ !empty($item->thumbnail) && file_exists(public_path($item->thumbnail)) ? asset($item->thumbnail) : asset('frontend/images/random-no-img.png') }}"
-                                                            alt="NGEN IT">
+                                                            alt="PATH Bangladesh">
                                                     </a>
                                                     <ul class="custom-product-links">
                                                         <li><a href="#"><i class="fa fa-random text-white"></i></a>

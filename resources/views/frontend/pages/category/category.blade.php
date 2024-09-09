@@ -265,7 +265,7 @@
                                                         {{-- <img class="pic-1" src="{{ asset($item->thumbnail) }}"> --}}
                                                         <img class="img-fluid"
                                                             src="{{ !empty($item->thumbnail) && file_exists(public_path($item->thumbnail)) ? asset($item->thumbnail) : asset('frontend/images/random-no-img.png') }}"
-                                                            alt="NGEN IT">
+                                                            alt="PATH Bangladesh">
                                                     </a>
                                                     <ul class="custom-product-links">
                                                         <li><a href="#"><i class="fa fa-random text-white"></i></a>

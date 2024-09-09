@@ -1,7 +1,7 @@
 @extends('frontend.master')
 @section('content')
 @section('styles')
-    <meta property="og:title" content="Solutions, NGen IT Offers">
+    <meta property="og:title" content="Solutions, PATH Bangladesh Offers">
     <meta property="og:image" content="{{ asset('frontend/images/solutions-banner.jpg') }}">
 @endsection
 @if (!empty($learnmore->background_image))
@@ -301,9 +301,9 @@
             <!-- home title -->
             <div class="home_title mt-3">
                 <div class="software_feature_title">
-                    <h1 class="text-center "> NGen IT Growing </h1>
+                    <h1 class="text-center "> PATH Bangladesh Growing </h1>
                 </div>
-                <p class="home_title_text solution_para py-3 pb-4 mb-1">See how NGen IT has helped organizations of all
+                <p class="home_title_text solution_para py-3 pb-4 mb-1">See how PATH Bangladesh has helped organizations of all
                     sizes across every industry maximize the value of their IT solutions, leverage emerging technologies
                     and create fresh
                     experiences.

@@ -1,7 +1,7 @@
 @extends('frontend.master')
 @section('content')
 @section('styles')
-    <meta property="og:title" content="NGen IT Job Registration">
+    <meta property="og:title" content="PATH Bangladesh Job Registration">
     <!--<meta property="og:description" content="Description of your blog post">-->
     <meta property="og:image" content="http://ngenitltd.com/frontend/images/job_registration.jpg">
     <!--<meta property="og:url" content="URL to your blog post">-->
@@ -282,7 +282,7 @@
                                             <input type="text"
                                                 class="form-control form-control-sm border-0 bg-light"
                                                 id="professional_company_name_one"
-                                                name="professional_company_name_one" placeholder="E.g: Ngen It">
+                                                name="professional_company_name_one" placeholder="E.g: PATH Bangladesh">
                                         </div>
                                         <div class="mb-1 col-md-6">
                                             <label for="professional_depertment_one" class="fw-light">
@@ -314,7 +314,7 @@
                                             <input type="text"
                                                 class="form-control form-control-sm border-0 bg-light"
                                                 id="professional_company_name_two"
-                                                name="professional_company_name_two" placeholder="E.g: Ngen It">
+                                                name="professional_company_name_two" placeholder="E.g: PATH Bangladesh">
                                         </div>
                                         <div class="mb-1 col-md-6">
                                             <label for="professional_depertment_two" class="fw-light">
@@ -592,7 +592,7 @@
                                             <input type="text"
                                                 class="form-control form-control-sm border-0 bg-light"
                                                 id="reference_organisation_one" name="reference_organisation_one"
-                                                placeholder="E.g: Ngen It" required>
+                                                placeholder="E.g: PATH Bangladesh" required>
                                             <div class="valid-feedback">
                                                 Looks good!
                                             </div>
@@ -658,7 +658,7 @@
                                             <input type="text"
                                                 class="form-control form-control-sm border-0 bg-light"
                                                 id="reference_organisation_two" name="reference_organisation_two"
-                                                placeholder="E.g: Ngen It">
+                                                placeholder="E.g: PATH Bangladesh">
                                         </div>
                                         <div class="mb-1 col-md-6">
                                             <label for="reference_email_two" class="fw-light">Reference Email

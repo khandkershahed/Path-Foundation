@@ -27,8 +27,8 @@
                                         style="background-color: #ae0a46;">
                                         <div>
                                             <a href="https://ngenitltd.com" target="_blank">
-                                                <img src="https://i.ibb.co/qMMpQMj/Logo-White.png" alt="Ngen IT"
-                                                    title="Ngen IT" style="text-decoration: none;" width="60" />
+                                                <img src="https://i.ibb.co/qMMpQMj/Logo-White.png" alt="PATH Bangladesh"
+                                                    title="PATH Bangladesh" style="text-decoration: none;" width="60" />
                                             </a>
                                         </div>
                                         <div>
@@ -157,7 +157,7 @@
                                                                                         </p>
                                                                                         <p
                                                                                             style="color: #ae0a46; margin: 0">
-                                                                                            NGEN IT SALES TEAM
+                                                                                            PATH Bangladesh SALES TEAM
                                                                                         </p>
                                                                                         <p
                                                                                             style="color: #ae0a46;font-size: 15px;margin: 0;">

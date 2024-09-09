@@ -5,7 +5,7 @@
         <div>
             <img class="page_top_banner"
                 src="{{ asset('frontend/images/terms.jpg') }}"
-                alt="NGEN IT Terms And Condition">
+                alt="PATH Bangladesh Terms And Condition">
         </div>
     </section>
     <!----------End--------->

@@ -6,7 +6,7 @@
             <div>
                 <img class="page_top_banner"
                     src="{{ !empty($hardware_info->banner_image) && file_exists(public_path('storage/' . $hardware_info->banner_image)) ? asset('storage/' . $hardware_info->banner_image) : asset('frontend/images/no-banner(1920-330).png') }}"
-                    alt="NGEN IT Software">
+                    alt="PATH Bangladesh Software">
             </div>
         </section>
     @endif
@@ -167,7 +167,7 @@
                                                         <div class="icons_area pe-2">
                                                             <img class="category_icon"
                                                                 src="{{ !empty($category->image) && file_exists(public_path('storage/' . $category->image)) ? asset('storage/' . $category->image) : asset('frontend/images/no-img-png.png') }}"
-                                                                alt="NGEN IT">
+                                                                alt="PATH Bangladesh">
                                                         </div>
                                                         <div class="text_area">
                                                             {{ $category->title }}

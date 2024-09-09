@@ -9,7 +9,7 @@
                         <div class="section_wrapper pt-4">
                             <div class="row mt-2">
                                 <div class="col-lg-12 col-md-12 col-sm-12 mb-4">
-                                    <h2>Welcome to NGen IT</h2>
+                                    <h2>Welcome to PATH Bangladesh</h2>
                                     <p style="text-align: justify;">My NGEN is a platform for optimizing your technology project, support and product
                                         supply chain. Here you can discover, purchase and manage your hardware, software,
                                         digital and cloud solutions. Moreover, you will be able to manage your project &

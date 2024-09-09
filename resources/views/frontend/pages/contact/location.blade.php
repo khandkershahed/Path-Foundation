@@ -84,7 +84,7 @@
         <div class="container  py-3">
             <div class="row d-flex justify-content-between align-items-center">
                 <div class="col-lg-6 col-7">
-                    <h2 class="text-lg-start text-sm-center d-lg-block d-sm-none">NGen IT Office Locations</h2> {{--for only large device--}}
+                    <h2 class="text-lg-start text-sm-center d-lg-block d-sm-none">PATH Bangladesh Office Locations</h2> {{--for only large device--}}
                     <h3 class="d-lg-none d-sm-block m-0 ps-2">Office Locations</h3>  {{--for only small device--}}
                 </div>
                 <div class="col-lg-6 col-5 text-lg-end text-sm-center">
@@ -129,7 +129,7 @@
             <div class="container pt-lg-5 pt-4 pb-lg-5 pb-3">
                 {{-- title  --}}
                 <div class="text-center mb-lg-5 mb-3">
-                    <h2 class="text-white location_footer_title">NGen IT By The Numbers</h2>
+                    <h2 class="text-white location_footer_title">PATH Bangladesh By The Numbers</h2>
                 </div>
                 <div class="row d-flex justify-content-center align-items-center">
                     @foreach ($tech_datas as $tech_data)

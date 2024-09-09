@@ -55,7 +55,7 @@
                                 <div class="ag-offer_img-box">
                                     <img class="ag-offer_img" width="70px" height="70px"
                                         src="{{ !empty($item->image) && file_exists(public_path('storage/' . $item->image)) ? asset('storage/' . $item->image) : asset('frontend/images/no-category-img.png') }}"
-                                        alt="NGEN IT">
+                                        alt="PATH Bangladesh">
                                 </div>
                                 <div class="ag-offer_title">
                                     <p>{{ Str::limit($item->title, 30) }}</p>
@@ -91,7 +91,7 @@
                                 <div class="ag-offer_img-box">
                                     <img class="ag-offer_img" width="70px" height="70px"
                                         src="{{ !empty($item->image) && file_exists(public_path('storage/' . $item->image)) ? asset('storage/' . $item->image) : asset('frontend/images/no-category-img.png') }}"
-                                        alt="NGEN IT">
+                                        alt="PATH Bangladesh">
                                 </div>
                                 <div class="ag-offer_title">
                                     <p>{{ Str::limit($item->title, 45) }}</p>
@@ -118,7 +118,7 @@
                                 <div class="ag-offer_img-box">
                                     <img class="ag-offer_img" width="70px" height="70px"
                                         src="{{ !empty($item->image) && file_exists(public_path('storage/' . $item->image)) ? asset('storage/' . $item->image) : asset('frontend/images/no-category-img.png') }}"
-                                        alt="NGEN IT">
+                                        alt="PATH Bangladesh">
                                 </div>
                                 <div class="ag-offer_title">
                                     <p>{{ Str::limit($item->title, 45) }}</p>
@@ -217,12 +217,12 @@
         </div>
     </section> --}}
     <!-------End-------->
-        <!--======// Explore all the brands Ngen It has to offer. //====-->
+        <!--======// Explore all the brands PATH Bangladesh has to offer. //====-->
         <section class="my-5">
             <div class="container">
                 <div class="row">
                     <div class="text-center py-3">
-                        <h2>Explore all the <strong class="main_color">Categorys</strong> Ngen It has to offer.</h2>
+                        <h2>Explore all the <strong class="main_color">Categorys</strong> PATH Bangladesh has to offer.</h2>
                     </div>
                     <div class="col-lg-12 ">
                         <div class="row mb-1">

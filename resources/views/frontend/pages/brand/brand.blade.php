@@ -4,7 +4,7 @@
     <section>
         <div>
             <img class="page_top_banner" src="{{ asset('frontend/images/Brands-All-Banner_NGenIT.jpg') }}"
-                alt="NGEN IT All Brands">
+                alt="PATH Bangladesh All Brands">
         </div>
     </section>
     <!----------End--------->
@@ -88,12 +88,12 @@
             </div>
         </div>
     </section>
-    <!--======// Explore all the brands Ngen It has to offer. //====-->
+    <!--======// Explore all the brands PATH Bangladesh has to offer. //====-->
     <section class="my-lg-5  my-0">
         <div class="container">
             <div class="row">
                 <div class="text-center py-3">
-                    <h2>Discover <span class="main_color fw-bold">NGen IT's</span> Brand Showcase.</h2>
+                    <h2>Discover <span class="main_color fw-bold">PATH Bangladesh's</span> Brand Showcase.</h2>
                 </div>
                 <div class="col-lg-12 ">
                     <div class="row mb-1">

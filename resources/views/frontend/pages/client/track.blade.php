@@ -192,7 +192,7 @@
                                                             <strong>Bank Name:</strong>
                                                             <p> Dutch Bangla Bank</p>
                                                             <strong>Account Title:</strong>
-                                                            <p> NGen IT</p>
+                                                            <p> PATH Bangladesh</p>
                                                             <strong>Account Number:</strong>
                                                             <p> 234***********</p>
                                                             <strong>Branch Title:</strong>

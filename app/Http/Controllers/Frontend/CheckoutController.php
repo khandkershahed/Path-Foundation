@@ -234,8 +234,8 @@ class CheckoutController extends Controller
         }
 
         $email = $data['billing_email'];
-        $subject = 'Proforma Invoice From Ngen It';
-        $message = 'Here is the Proforma Invoice From Ngen It which is generated against your Order.';
+        $subject = 'Proforma Invoice From PATH Bangladesh';
+        $message = 'Here is the Proforma Invoice From PATH Bangladesh which is generated against your Order.';
 
 
         //

@@ -421,7 +421,7 @@
                                                             for="basicpill-firstname-input">Company Name</label>
                                                         <input type="text" class="form-control form-control-sm"
                                                             name="company_name" id="basicpill-firstname-input"
-                                                            placeholder="Eg: NGen IT"
+                                                            placeholder="Eg: PATH Bangladesh"
                                                             value="{{ $data->company_name }}" />
                                                     </div>
                                                 </div>
