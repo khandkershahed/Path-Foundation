@@ -17380,10 +17380,7 @@ nav > div a.nav-item.nav-link.active {
     height:150px;
 }
 @media screen and (max-width: 767px) {
-    .team_image{
-        width: 100%;
-        height: 100%;
-    }
+
     .releted-course-home {
         width: 100%;
         height: 200px;
@@ -17456,5 +17453,9 @@ nav > div a.nav-item.nav-link.active {
     }
     .about_row_image{
         width: 100%;
+    }
+    .team_image{
+        width: 100%;
+        height: 100%;
     }
 }
