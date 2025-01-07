@@ -5824,12 +5824,12 @@ tr td:hover {
     position: fixed;
     width: 100%;
     height: 100vh;
-    background: #fff
-        url("https://i.ibb.co/120x92X/Spin-1x-1-0s-200px-200px.gif") no-repeat
-        center center;
+    background: #fff url('images/loader.gif') no-repeat center center;
+    background-size: contain; /* optional, adjust based on image size */
     z-index: 9999;
     margin-top: -1.5rem;
 }
+
 
 /* Header Start */
 #header {

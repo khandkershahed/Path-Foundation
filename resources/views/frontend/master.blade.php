@@ -53,14 +53,6 @@
         @include('frontend.partials.footer')
     @endif
 
-    <!--=======// Cookises Modals //=======-->
-    {{-- @include('frontend.partials.cookies') --}}
-    <!----------End--------->
-
-    <!--=======// Feedback Modals //=======-->
-    {{-- @include('frontend.partials.feedback') --}}
-    <!----------End--------->
-
     <!--============///* USE LINK *///=============-->
     @include('frontend.partials.script')
     {!! Toastr::message() !!}
