@@ -26,16 +26,16 @@
                         <!-- nav list -->
                         <div class="footer_nav_list pt-lg-4 pt-2">
                             <ul class="footer_link_text">
-                                <li style="font-size: 1.3rem; color: #fff;">
+                                <li style="font-size: 1.1rem; color: #fff;">
                                     Account Title : PATH Bangladesh
                                 </li>
-                                <li style="font-size: 1.3rem; color: #fff;">
+                                <li style="font-size: 1.1rem; color: #fff;">
                                     Account Number : 6031360000112
                                 </li>
-                                <li style="font-size: 1.3rem; color: #fff;">
+                                <li style="font-size: 1.1rem; color: #fff;">
                                     Bank : Social Islami Bank PLC
                                 </li>
-                                <li style="font-size: 1.3rem; color: #fff;">
+                                <li style="font-size: 1.1rem; color: #fff;">
                                     Branch : Khulna Branch
                                 </li>
                             </ul>
