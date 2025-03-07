@@ -63,12 +63,12 @@
     <!--======// Banner Section //======-->
     @if (!empty(optional($home)->branner1) || !empty(optional($home)->branner2) || !empty(optional($home)->branner3))
         <section>
-            <div class="row">
-                <div class="col-lg-4" style="background: #051225">
+            <div class="row g-0">
+                <div class="col-lg-4 d-flex justify-content-center align-items-center" style="background: #051225">
                     <div class="footer_item_wrapper p-lg-6 p-4">
                         <!-- title -->
-                        <h3 class="text-white" style="text-align: center;">Want To Make a <span
-                                style="border-bottom: 5px solid #2fdeaa;">Donation</span> ?</h3>
+                        <h2 class="text-white" style="text-align: center;">Want To Make a <span
+                                style="border-bottom: 5px solid #2fdeaa;">Donation</span> ?</h2>
                         <!-- nav list -->
                         <div class="footer_nav_list pt-lg-4 pt-2">
                             <ul class="footer_link_text text-center">
