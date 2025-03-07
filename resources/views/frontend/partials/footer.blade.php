@@ -10,7 +10,7 @@
             <div class="row">
                 <div class="row footer_middle_wrapper my-5">
                     <!-- item -->
-                    <div class="col-lg-6 col-md-6 col-sm-12 footer_item_wrapper">
+                    <div class="col-lg-4 col-md-4 col-sm-12 footer_item_wrapper">
                         <!-- title -->
                         <h2 class="text-white">{{ optional($setting)->site_name }}</h2>
                         <!-- text -->
@@ -22,7 +22,7 @@
                     <div class="col-lg-4 col-md-4 col-sm-12 footer_item_wrapper">
                         <!-- title -->
                         <h3 class="text-white" style="text-align: start;">Want To Make a <span
-                                style="border-bottom: 5px solid #f1f2f5;">Donation</span> ?</h3>
+                                style="border-bottom: 5px solid #2fdeaa;">Donation</span> ?</h3>
                         <!-- nav list -->
                         <div class="footer_nav_list pt-lg-4 pt-2">
                             <ul class="footer_link_text">
@@ -45,7 +45,7 @@
                     <div class="col-lg-2 col-md-2 col-sm-12 footer_item_wrapper">
                         <!-- title -->
                         <h6 class="home_title_text" style="text-align: start;"><span
-                                style="border-bottom: 5px solid #0a1d59;">Abo</span>ut & Contact</h6>
+                                style="border-bottom: 5px solid #2fdeaa;">Abo</span>ut & Contact</h6>
                         <!-- nav list -->
                         <div class="footer_nav_list pt-lg-4 pt-2">
                             <ul class="footer_link_text">
@@ -67,7 +67,7 @@
                     <div class="col-lg-2 col-md-2 col-sm-12 footer_item_wrapper">
                         <!-- title -->
                         <h6 class="home_title_text" style="text-align: start;"><span
-                                style="border-bottom: 5px solid #0a1d59;">FAQ</span> & Policies</h6>
+                                style="border-bottom: 5px solid #2fdeaa;">FAQ</span> & Policies</h6>
                         <!-- nav list -->
                         <div class="footer_nav_list pt-lg-4 pt-2">
                             <ul class="footer_link_text">
