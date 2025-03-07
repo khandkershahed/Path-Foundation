@@ -63,28 +63,32 @@
     <!--======// Banner Section //======-->
     @if (!empty(optional($home)->branner1) || !empty(optional($home)->branner2) || !empty(optional($home)->branner3))
         <section>
-            <div class="row g-0">
-                <div class="col-lg-4" style="background: #051225">
-                    <div class="footer_nav_list d-flex align-items-center justify-content-center pt-lg-4 pt-2">
-                        <h3 class="text-white">Want To Make a <span
+            <div class="row">
+                <div class="col-4" style="background: #051225">
+                    <div class="footer_item_wrapper p-lg-6 p-4">
+                        <!-- title -->
+                        <h3 class="text-white" style="text-align: center;">Want To Make a <span
                                 style="border-bottom: 5px solid #2fdeaa;">Donation</span> ?</h3>
-                        <ul class="footer_link_text">
-                            <li style="font-size: 1.1rem; color: #fff;">
-                                Account Title : PATH Bangladesh
-                            </li>
-                            <li style="font-size: 1.1rem; color: #fff;">
-                                Account Number : 6031360000112
-                            </li>
-                            <li style="font-size: 1.1rem; color: #fff;">
-                                Bank : Social Islami Bank PLC
-                            </li>
-                            <li style="font-size: 1.1rem; color: #fff;">
-                                Branch : Khulna Branch
-                            </li>
-                        </ul>
+                        <!-- nav list -->
+                        <div class="footer_nav_list pt-lg-4 pt-2">
+                            <ul class="footer_link_text text-center">
+                                <li style="font-size: 1.1rem; color: #fff;">
+                                    Account Title : PATH Bangladesh
+                                </li>
+                                <li style="font-size: 1.1rem; color: #fff;">
+                                    Account Number : 6031360000112
+                                </li>
+                                <li style="font-size: 1.1rem; color: #fff;">
+                                    Bank : Social Islami Bank PLC
+                                </li>
+                                <li style="font-size: 1.1rem; color: #fff;">
+                                    Branch : Khulna Branch
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-                <div class="col-lg-8">
+                <div class="col-8">
                     <div class="Advance-Slider">
                         <!-- Item -->
                         @if (!empty(optional($home)->branner1))
