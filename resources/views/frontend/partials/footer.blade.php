@@ -19,6 +19,28 @@
                         </p>
 
                     </div>
+                    <div class="col-lg-4 col-md-4 col-sm-12 footer_item_wrapper">
+                        <!-- title -->
+                        <h6 class="home_title_text" style="text-align: start;"><span
+                                style="border-bottom: 5px solid #0a1d59;">Want</span> To Make a Donation?</h6>
+                        <!-- nav list -->
+                        <div class="footer_nav_list pt-lg-4 pt-2">
+                            <ul class="footer_link_text">
+                                <li>
+                                    Account Title: PATH Bangladesh
+                                </li>
+                                <li>
+                                    Account Number: 6031360000112
+                                </li>
+                                <li>
+                                    Bank: Social Islami Bank PLC
+                                </li>
+                                <li>
+                                    Branch:  Khulna Branch
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                     <!-- item -->
                     <div class="col-lg-2 col-md-2 col-sm-12 footer_item_wrapper">
                         <!-- title -->
@@ -40,22 +62,7 @@
                         </div>
                     </div>
                     <!-- item -->
-                    {{-- <div class="col-lg-2 col-md-2 col-sm-12 footer_item_wrapper">
-                        <!-- title -->
-                        <h6 class="home_title_text" style="text-align: start;"><span
-                                style="border-bottom: 5px solid #0a1d59;">Tra</span>ining & Services</h6>
-                        <!-- nav list -->
-                        <div class="footer_nav_list pt-lg-4 pt-2">
-                            <ul class="footer_link_text">
-                                <li>
-                                    <a href="javascript:void(0)">Corporate Training</a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0)">Certification</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div> --}}
+
                     <!-- item -->
                     <div class="col-lg-2 col-md-2 col-sm-12 footer_item_wrapper">
                         <!-- title -->
