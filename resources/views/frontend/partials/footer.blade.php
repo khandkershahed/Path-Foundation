@@ -21,8 +21,8 @@
                     </div>
                     <div class="col-lg-4 col-md-4 col-sm-12 footer_item_wrapper">
                         <!-- title -->
-                        <h6 class="home_title_text" style="text-align: start;"><span
-                                style="border-bottom: 5px solid #0a1d59;">Want</span> To Make a Donation?</h6>
+                        <h3 class="text-white" style="text-align: start;">Want To Make a <span
+                                style="border-bottom: 5px solid #f1f2f5;">Donation</span> ?</h3>
                         <!-- nav list -->
                         <div class="footer_nav_list pt-lg-4 pt-2">
                             <ul class="footer_link_text">
