@@ -1,7 +1,6 @@
 @extends('frontend.master')
 @section('content')
 @section('styles')
-    <meta property="og:title" content="Path Foundation">
     <meta property="og:image" content="{{ asset('storage/' . optional($home)->branner1) }}">
     <style>
         .training-featuer {
