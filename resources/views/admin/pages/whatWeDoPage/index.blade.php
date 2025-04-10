@@ -43,11 +43,11 @@
                                 <td>
                                     <a href="{{ route('admin.whatwedo.edit', [$whatWeDoPage->id]) }}"
                                         class="text-primary">
-                                        <i class="fa-solid fa-pen-to-square me-2 p-1 rounded-circle text-primary"></i>
+                                        <i class="fas fa-pen me-2 p-1 rounded-circle text-primary"></i>
                                     </a>
                                     <a href="{{ route('admin.whatwedo.destroy', [$whatWeDoPage->id]) }}"
                                         class="text-danger delete">
-                                        <i class="fa-solid fa-trash p-1 rounded-circle text-danger"></i>
+                                        <i class="fas fa-trash p-1 rounded-circle text-danger"></i>
                                     </a>
                                 </td>
                             </tr>
