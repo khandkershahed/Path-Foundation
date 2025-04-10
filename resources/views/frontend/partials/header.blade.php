@@ -62,9 +62,6 @@
                 src="{{ !empty(optional($setting)->site_logo) && file_exists(public_path('storage/' . optional($setting)->site_logo)) ? asset('storage/' . optional($setting)->site_logo) : asset('frontend/images/brandPage-logo-no-img(217-55).jpg') }}"
                 alt="Path Foundation">
         </a>
-
-
-
         <button class="offcanvas-icons upper-content-menu text-reset" data-bs-dismiss="offcanvas" aria-label="Close"
             style="padding-left: none !important;">
             <i class="fa-solid fa-xmark" style="font-size: 18px !important;"></i>
@@ -72,31 +69,30 @@
     </div>
     <div class="offcanvas-body pt-0 px-0">
         <div>
-
             <hr>
             <ul class="navbar-nav justify-content-end flex-grow-1 mt-0 ps-4">
                 <li class="nav-item dropdown cool-link">
-                    <a class="nav-link" href="{{ route('homepage') }}" role="button">
+                    <a class="nav-link {{ Route::is('homepage') ? 'active' : '' }}" href="{{ route('homepage') }}" role="button">
                         Home
                     </a>
                 </li>
                 <li class="nav-item dropdown cool-link">
-                    <a class="nav-link" href="{{ route('about') }}" role="button">
+                    <a class="nav-link {{ Route::is('about') ? 'active' : '' }}" href="{{ route('about') }}" role="button">
                         About Us
                     </a>
                 </li>
                 <li class="nav-item dropdown cool-link">
-                    <a class="nav-link" href="{{ route('whatwedo') }}" role="button">
+                    <a class="nav-link {{ Route::is('whatwedo') ? 'active' : '' }}" href="{{ route('whatwedo') }}" role="button">
                         What We Do
                     </a>
                 </li>
                 <li class="nav-item dropdown cool-link">
-                    <a class="nav-link" href="{{ route('learn.more') }}" role="button">
+                    <a class="nav-link {{ Route::is('learn.more') ? 'active' : '' }}" href="{{ route('learn.more') }}" role="button">
                         Our Projects
                     </a>
                 </li>
                 <li class="nav-item dropdown cool-link">
-                    <a class="nav-link" href="{{ route('researchReport') }}" role="button">
+                    <a class="nav-link {{ Route::is('researchReport') ? 'active' : '' }}" href="{{ route('researchReport') }}" role="button">
                         Research & Reports
                     </a>
                 </li>
