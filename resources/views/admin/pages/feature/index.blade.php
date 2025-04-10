@@ -45,11 +45,11 @@
                                     <a href="{{ route('admin.feature.edit', $feature->id) }}"
                                         class="text-primary"> edit
                                         <i
-                                            class="fas fa-pen-to-square dash-icons"></i>
+                                            class="fas fa-pen text-primary dash-icons"></i>
                                     </a>
                                     <a href="{{ route('admin.feature.destroy', [$feature->id]) }}"
                                         class="text-danger delete"> Delete
-                                        <i class="fas fa-trash dash-icons"></i>
+                                        <i class="fas fa-trash text-danger dash-icons"></i>
                                     </a>
                                 </td>
                             </tr>

@@ -50,15 +50,15 @@
                                         alt="{{ $newsTrend->title }} Logo">
                                 </td>
                                 <td class="d-flex justify-content-between align-items-center">
-                                    
+
                                     <a href="{{ route('admin.news-trend.edit', $newsTrend->id) }}"
-                                        class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm me-1">
-                                        <i class="fa-solid fa-pen"></i>
+                                        class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm me-3">
+                                        <i class="fas fa-pen text-primary"></i>
                                     </a>
                                     <a href="{{ route('admin.news-trend.destroy', $newsTrend->id) }}"
                                         class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm me-1 delete"
                                         data-kt-docs-table-filter="delete_row">
-                                        <i class="fa-solid fa-trash-can-arrow-up"></i>
+                                        <i class="fas fa-trash text-danger"></i>
                                     </a>
                                 </td>
                             </tr>
