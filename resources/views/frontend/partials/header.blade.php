@@ -18,29 +18,29 @@
 
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <hr>
-                        <li class="nav-item dropdown position-static main-menu-spacing">
+                        <li class="nav-item  dropdown position-static main-menu-spacing">
                             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                                <li class="nav-item pe-3">
+                                <li class="nav-item {{ Route::is('homepage') ? 'active' : '' }} pe-3">
                                     <a class="nav-link pe-0" href="{{ route('homepage') }}">
                                         Home
                                     </a>
                                 </li>
-                                <li class="nav-item pe-3">
+                                <li class="nav-item {{ Route::is('about') ? 'active' : '' }} pe-3">
                                     <a class="nav-link pe-0" href="{{ route('about') }}">
                                         About Us
                                     </a>
                                 </li>
-                                <li class="nav-item pe-3">
+                                <li class="nav-item {{ Route::is('whatwedo') ? 'active' : '' }} pe-3">
                                     <a class="nav-link pe-0" href="{{ route('whatwedo') }}">
                                         What We Do
                                     </a>
                                 </li>
-                                <li class="nav-item pe-3">
+                                <li class="nav-item {{ Route::is('learn.more') ? 'active' : '' }} pe-3">
                                     <a class="nav-link pe-0" href="{{ route('learn.more') }}">
                                         Our Projects
                                     </a>
                                 </li>
-                                <li class="nav-item pe-3">
+                                <li class="nav-item {{ Route::is('researchReport') ? 'active' : '' }} pe-3">
                                     <a class="nav-link pe-0" href="{{ route('researchReport') }}">
                                         Research & Reports
                                     </a>
@@ -71,28 +71,28 @@
         <div>
             <hr>
             <ul class="navbar-nav justify-content-end flex-grow-1 mt-0 ps-4">
-                <li class="nav-item dropdown cool-link">
-                    <a class="nav-link {{ Route::is('homepage') ? 'active' : '' }}" href="{{ route('homepage') }}" role="button">
+                <li class="nav-item {{ Route::is('homepage') ? 'active' : '' }} dropdown cool-link">
+                    <a class="nav-link" href="{{ route('homepage') }}" role="button">
                         Home
                     </a>
                 </li>
-                <li class="nav-item dropdown cool-link">
-                    <a class="nav-link {{ Route::is('about') ? 'active' : '' }}" href="{{ route('about') }}" role="button">
+                <li class="nav-item {{ Route::is('about') ? 'active' : '' }} dropdown cool-link">
+                    <a class="nav-link" href="{{ route('about') }}" role="button">
                         About Us
                     </a>
                 </li>
-                <li class="nav-item dropdown cool-link">
-                    <a class="nav-link {{ Route::is('whatwedo') ? 'active' : '' }}" href="{{ route('whatwedo') }}" role="button">
+                <li class="nav-item {{ Route::is('whatwedo') ? 'active' : '' }} dropdown cool-link">
+                    <a class="nav-link" href="{{ route('whatwedo') }}" role="button">
                         What We Do
                     </a>
                 </li>
-                <li class="nav-item dropdown cool-link">
-                    <a class="nav-link {{ Route::is('learn.more') ? 'active' : '' }}" href="{{ route('learn.more') }}" role="button">
+                <li class="nav-item {{ Route::is('learn.more') ? 'active' : '' }} dropdown cool-link">
+                    <a class="nav-link" href="{{ route('learn.more') }}" role="button">
                         Our Projects
                     </a>
                 </li>
-                <li class="nav-item dropdown cool-link">
-                    <a class="nav-link {{ Route::is('researchReport') ? 'active' : '' }}" href="{{ route('researchReport') }}" role="button">
+                <li class="nav-item {{ Route::is('researchReport') ? 'active' : '' }} dropdown cool-link">
+                    <a class="nav-link" href="{{ route('researchReport') }}" role="button">
                         Research & Reports
                     </a>
                 </li>
