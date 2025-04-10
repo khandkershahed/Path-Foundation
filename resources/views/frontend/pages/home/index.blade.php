@@ -63,7 +63,7 @@
     @if (!empty(optional($home)->branner1) || !empty(optional($home)->branner2) || !empty(optional($home)->branner3))
         <section>
             <div class="row g-0">
-                <div class="col-lg-4 d-flex justify-content-center align-items-center" style="background: #051225">
+                {{-- <div class="col-lg-4 d-flex justify-content-center align-items-center" style="background: #051225">
                     <div class="footer_item_wrapper p-lg-6 p-4">
                         <!-- title -->
                         <h2 class="text-white" style="text-align: center;">Want To Make a <span
@@ -86,8 +86,8 @@
                             </ul>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-8">
+                </div> --}}
+                <div class="col-lg-12">
                     <div class="Advance-Slider">
                         <!-- Item -->
                         @if (!empty(optional($home)->branner1))

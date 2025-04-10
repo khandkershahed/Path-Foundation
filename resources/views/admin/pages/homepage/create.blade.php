@@ -443,7 +443,7 @@
                                             id="select">
                                             @foreach ($storys as $item)
                                                 <option class="col-8" value="{{ $item->id }}">
-                                                    {{ $item->badge }}
+                                                    {{ $item->title }}
                                                 </option>
                                             @endforeach
                                         </select>
@@ -459,7 +459,7 @@
                                             id="select7">
                                             @foreach ($storys as $item)
                                                 <option class="col-8" value="{{ $item->id }}">
-                                                    {{ $item->badge }}
+                                                    {{ $item->title }}
                                                 </option>
                                             @endforeach
                                         </select>
@@ -475,7 +475,7 @@
                                             id="select8">
                                             @foreach ($storys as $item)
                                                 <option class="col-8" value="{{ $item->id }}">
-                                                    {{ $item->badge }}
+                                                    {{ $item->title }}
                                                 </option>
                                             @endforeach
                                         </select>
@@ -491,7 +491,7 @@
                                             id="select9">
                                             @foreach ($storys as $item)
                                                 <option class="col-8" value="{{ $item->id }}">
-                                                    {{ $item->badge }}
+                                                    {{ $item->title }}
                                                 </option>
                                             @endforeach
                                         </select>
@@ -509,7 +509,7 @@
                                         <select name="techglossy_id" value="{{old('techglossy_id')}}" class="form-select" data-control="select2" data-placeholder="Select an option">
                                             @foreach ($techglossys as $item)
                                                 <option class="form-control" value="{{ $item->id }}">
-                                                    {{ $item->badge }}
+                                                    {{ $item->title }}
                                                 </option>
                                             @endforeach
                                         </select>

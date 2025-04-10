@@ -35,7 +35,7 @@
                 <tbody class="fw-bold text-gray-600">
                     @if (count($learnMores) > 0)
                         @foreach ($learnMores as $key => $learnMore)
-                            <tr>
+                            <tr> 
                                 <td class="text-center">{{ ++$key }}</td>
                                 <td>
                                     {{ isset($words[$key]) ? 'Tamplate' . ' ' . Str::ucfirst($words[$key]) : 'Number out of range' }}

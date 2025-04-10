@@ -137,7 +137,7 @@
                                         Short Description</label>
                                     <div class="input-group">
                                         <textarea name="consult_short_des" type="text" rows="1" class="form-control form-control-sm col-lg-12"
-                                            placeholder="Enter Consult Short Description"required>{{ $learnMore->consult_short_des }}</textarea>
+                                            placeholder="Enter Consult Short Description">{{ $learnMore->consult_short_des }}</textarea>
                                     </div>
                                 </div>
                                 {{--  --}}

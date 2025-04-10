@@ -30,33 +30,31 @@
                         <div class="px-2 py-2 rounded bg-light">
                             {{--  --}}
                             <div class="row align-items-center pb-7">
-                                <label
-                                    class="text-black label_style pe-3 col-lg-12">Badge</label>
+                                <label class="text-black label_style pe-3 col-lg-12">Badge</label>
                                 <div class="input-group">
                                     <input name="badge" maxlength="255" type="text"
-                                        class="form-control form-control-sm col-lg-12" placeholder="Enter Learn More Badge"
-                                        required>
+                                        class="form-control form-control-sm col-lg-12"
+                                        placeholder="Enter Learn More Badge">
                                 </div>
                             </div>
                             {{--  --}}
                             <div class="row align-items-center pb-7">
-                                <label
-                                    class="text-black label_style pe-3 col-lg-12">Title</label>
+                                <label class="text-black label_style pe-3 col-lg-12">Title</label>
                                 <div class="input-group">
                                     <input name="title" maxlength="255" type="text"
-                                        class="form-control form-control-sm col-lg-12" placeholder="Enter Learn More Title"
-                                        required>
+                                        class="form-control form-control-sm col-lg-12"
+                                        placeholder="Enter Learn More Title">
                                 </div>
                             </div>
                             {{--  --}}
                             <div class="row align-items-center pb-7">
-                                <label
-                                    class="text-black label_style pe-3 col-lg-12">Banner
+                                <label class="text-black label_style pe-3 col-lg-12">Banner
                                     Image</label>
                                 <div class="row">
                                     <div class="" style="width: 70%">
                                         <input name="image_banner" id="image" accept="image/*" type="file"
-                                            class="form-control form-control-sm col-lg-12" placeholder="Enter Banner Image">
+                                            class="form-control form-control-sm col-lg-12"
+                                            placeholder="Enter Banner Image">
                                     </div>
                                     <div class=" ms-2" style="width: 10%">
                                         <img class="img-fluid rounded-circle" id="showImage"
@@ -70,13 +68,12 @@
                             </div>
                             {{--  --}}
                             <div class="row align-items-center pb-7">
-                                <label
-                                    class="text-black label_style pe-3 col-lg-12">Background
+                                <label class="text-black label_style pe-3 col-lg-12">Background
                                     Image</label>
                                 <div class="row">
                                     <div class="" style="width: 70%">
-                                        <input name="background_image" id="image" accept="image/*"
-                                            type="file" class="form-control form-control-sm col-lg-12"
+                                        <input name="background_image" id="image" accept="image/*" type="file"
+                                            class="form-control form-control-sm col-lg-12"
                                             placeholder="Enter Background Image">
                                     </div>
                                     <div class=" ms-2" style="width: 10%">
@@ -93,24 +90,20 @@
                         <span class="mt-1 fw-bold text-info">Header</span>
                         <div class="px-2 py-2 rounded bg-light">
                             <div class="row align-items-center pb-7">
-                                <label
-                                    class="text-black label_style pe-3 col-lg-12">Header
+                                <label class="text-black label_style pe-3 col-lg-12">Header
                                     One</label>
                                 <div class="input-group">
                                     <input name="header_one" maxlength="255" type="text"
-                                        class="form-control form-control-sm col-lg-12" placeholder="Enter Header One"
-                                        required>
+                                        class="form-control form-control-sm col-lg-12" placeholder="Enter Header One">
                                 </div>
                             </div>
                             {{--  --}}
                             <div class="row align-items-center pb-7">
-                                <label
-                                    class="text-black label_style pe-3 col-lg-12">Header
+                                <label class="text-black label_style pe-3 col-lg-12">Header
                                     Two</label>
                                 <div class="input-group">
                                     <input name="header_two" maxlength="255" type="text"
-                                        class="form-control form-control-sm col-lg-12" placeholder="Enter Header Two"
-                                        required>
+                                        class="form-control form-control-sm col-lg-12" placeholder="Enter Header Two">
                                 </div>
                             </div>
                         </div>
@@ -118,42 +111,38 @@
                         <div class="px-2 py-2 rounded bg-light">
                             {{--  --}}
                             <div class="row align-items-center pb-7">
-                                <label
-                                    class="text-black label_style pe-3 col-lg-12">Footer</label>
+                                <label class="text-black label_style pe-3 col-lg-12">Footer</label>
                                 <div class="input-group">
-                                    <input name="footer" type="text" class="form-control form-control-sm col-lg-12"
-                                        placeholder="Enter Footer" required>
+                                    <input name="footer" type="text"
+                                        class="form-control form-control-sm col-lg-12" placeholder="Enter Footer">
                                 </div>
                             </div>
                             {{--  --}}
                             <div class="row align-items-center pb-7">
-                                <label
-                                    class="text-black label_style pe-3 col-lg-12">Consult
+                                <label class="text-black label_style pe-3 col-lg-12">Consult
                                     Title </label>
                                 <div class="input-group">
                                     <input name="consult_title" type="text"
-                                        class="form-control form-control-sm col-lg-12" placeholder="Enter Consult Title"
-                                        required>
+                                        class="form-control form-control-sm col-lg-12"
+                                        placeholder="Enter Consult Title">
                                 </div>
                             </div>
                             {{--  --}}
                             <div class="row align-items-center pb-7">
-                                <label
-                                    class="text-black label_style pe-3 col-lg-12">Consult
+                                <label class="text-black label_style pe-3 col-lg-12">Consult
                                     Short Description</label>
                                 <div class="input-group">
                                     <textarea name="consult_short_des" type="text" rows="1" class="form-control form-control-sm col-lg-12"
-                                        placeholder="Enter Consult Short Description"required></textarea>
+                                        placeholder="Enter Consult Short Description"></textarea>
                                 </div>
                             </div>
                             {{--  --}}
                             <div class="row align-items-center pb-7">
-                                <label
-                                    class="text-black label_style pe-3 col-lg-12">Industry
+                                <label class="text-black label_style pe-3 col-lg-12">Industry
                                     Header</label>
                                 <div class="input-group">
                                     <textarea name="industry_header" type="text" rows="2" class="form-control "
-                                        placeholder="Enter Industry Header"required></textarea>
+                                        placeholder="Enter Industry Header"></textarea>
                                 </div>
                             </div>
                         </div>
@@ -162,99 +151,90 @@
                         <span class="mt-1 fw-bold text-info">Box Area</span>
                         <div class="px-2 py-2 rounded bg-light mt-2">
                             <div class="row align-items-center pb-7">
-                                <label
-                                    class="text-black label_style pe-3 col-lg-12">Box
+                                <label class="text-black label_style pe-3 col-lg-12">Box
                                     One Title </label>
                                 <div class="input-group">
                                     <input name="box_one_title" maxlength="255" type="text"
-                                        class="form-control form-control-sm col-lg-12" placeholder="Enter Box One Title"
-                                        required>
+                                        class="form-control form-control-sm col-lg-12"
+                                        placeholder="Enter Box One Title">
                                 </div>
                             </div>
                             {{--  --}}
                             <div class="row align-items-center pb-7">
-                                <label
-                                    class="text-black label_style pe-3 col-lg-12">Box
+                                <label class="text-black label_style pe-3 col-lg-12">Box
                                     One Short Description</label>
                                 <div class="input-group">
                                     <input name="box_one_short_des" type="text"
                                         class="form-control form-control-sm col-lg-12"
-                                        placeholder="Enter Box One Short Description" required>
+                                        placeholder="Enter Box One Short Description">
                                 </div>
                             </div>
                             {{--  --}}
                             <div class="row align-items-center pb-7">
-                                <label
-                                    class="text-black label_style pe-3 col-lg-12">Box
+                                <label class="text-black label_style pe-3 col-lg-12">Box
                                     One link</label>
                                 <div class="input-group">
                                     <input name="box_one_link" type="url"
-                                        class="form-control form-control-sm col-lg-12" placeholder="Enter Box One link"
-                                        required>
+                                        class="form-control form-control-sm col-lg-12"
+                                        placeholder="Enter Box One link">
                                 </div>
                             </div>
                             {{--  --}}
                             <div class="row align-items-center pb-7">
-                                <label
-                                    class="text-black label_style pe-3 col-lg-12">Box
+                                <label class="text-black label_style pe-3 col-lg-12">Box
                                     Two Title</label>
                                 <div class="input-group">
                                     <input name="box_two_title" type="text"
-                                        class="form-control form-control-sm col-lg-12" placeholder="Enter Box Two Title"
-                                        required>
+                                        class="form-control form-control-sm col-lg-12"
+                                        placeholder="Enter Box Two Title">
                                 </div>
                             </div>
                             {{--  --}}
                             <div class="row align-items-center pb-7">
-                                <label
-                                    class="text-black label_style pe-3 col-lg-12">Box
+                                <label class="text-black label_style pe-3 col-lg-12">Box
                                     Two Short Description</label>
                                 <div class="input-group">
                                     <textarea name="box_two_short_des" type="text" rows="3" class="form-control form-control-sm col-lg-12"
-                                        placeholder="Enter Box Two Short Description" required></textarea>
+                                        placeholder="Enter Box Two Short Description"></textarea>
                                 </div>
                             </div>
                             {{--  --}}
                             <div class="row align-items-center pb-7">
-                                <label
-                                    class="text-black label_style pe-3 col-lg-12">Box
+                                <label class="text-black label_style pe-3 col-lg-12">Box
                                     Two link</label>
                                 <div class="input-group">
                                     <input name="box_two_link" type="url"
-                                        class="form-control form-control-sm col-lg-12" placeholder="Enter Box Two link"
-                                        required>
+                                        class="form-control form-control-sm col-lg-12"
+                                        placeholder="Enter Box Two link">
                                 </div>
                             </div>
                             {{--  --}}
 
                             <div class="row align-items-center pb-7">
-                                <label
-                                    class="text-black label_style pe-3 col-lg-12">Box
+                                <label class="text-black label_style pe-3 col-lg-12">Box
                                     Three Title</label>
                                 <div class="input-group">
                                     <input name="box_three_title" type="text"
-                                        class="form-control form-control-sm col-lg-12" placeholder="Enter Box Two link"
-                                        required>
+                                        class="form-control form-control-sm col-lg-12"
+                                        placeholder="Enter Box Two link">
                                 </div>
                             </div>
                             {{--  --}}
                             <div class="row align-items-center pb-7">
-                                <label
-                                    class="text-black label_style pe-3 col-lg-12">Box
+                                <label class="text-black label_style pe-3 col-lg-12">Box
                                     Three Short Description</label>
                                 <div class="input-group">
                                     <textarea name="box_three_short_des" type="text" rows="3" class="form-control form-control-sm col-lg-12"
-                                        placeholder="Enter Box Two link" required></textarea>
+                                        placeholder="Enter Box Two link"></textarea>
                                 </div>
                             </div>
                             {{--  --}}
                             <div class="row align-items-center pb-7">
-                                <label
-                                    class="text-black label_style pe-3 col-lg-12">Box
+                                <label class="text-black label_style pe-3 col-lg-12">Box
                                     Three link</label>
                                 <div class="input-group">
                                     <textarea name="box_three_link" type="text" rows="3" class="form-control form-control-sm col-lg-12"
-                                        placeholder="Enter Box Three link" required></textarea>
+                                        placeholder="Enter Box Three link"></textarea>
                                 </div>
                             </div>
                         </div>
@@ -264,22 +244,20 @@
                         <span class="mt-1 fw-bold text-info">Client Area</span>
                         <div class="px-2 py-2 rounded bg-light">
                             <div class="row align-items-center pb-7">
-                                <label
-                                    class="text-black label_style pe-3 col-lg-12">Success
+                                <label class="text-black label_style pe-3 col-lg-12">Success
                                     Story Title</label>
                                 <div class="input-group">
                                     <textarea name="success_story_title" type="text" rows="3" class="form-control form-control-sm col-lg-12"
-                                        placeholder="Enter Success Story Title" required></textarea>
+                                        placeholder="Enter Success Story Title"></textarea>
                                 </div>
                             </div>
                             {{--  --}}
                             <div class="row align-items-center pb-7">
-                                <label
-                                    class="text-black label_style pe-3 col-lg-12">Client
+                                <label class="text-black label_style pe-3 col-lg-12">Client
                                     Story One</label>
                                 <div class="input-group">
-                                    <select name="success_story_one_id" class="form-select" data-control="select2" data-placeholder="Select an option""
-                                        id="select6">
+                                    <select name="success_story_one_id" class="form-select" data-control="select2"
+                                        data-placeholder="Select an option"" id="select6">
                                         <option></option>
                                         @foreach ($storys as $item)
                                             <option value="{{ $item->id }}">{{ $item->badge }}
@@ -290,12 +268,11 @@
                             </div>
                             {{--  --}}
                             <div class="row align-items-center pb-7">
-                                <label
-                                    class="text-black label_style pe-3 col-lg-12">Client
+                                <label class="text-black label_style pe-3 col-lg-12">Client
                                     Story Two</label>
                                 <div class="input-group">
-                                    <select name="success_story_two_id"
-                                        class="form-select" data-control="select2" data-placeholder="Select an option" id="select7">
+                                    <select name="success_story_two_id" class="form-select" data-control="select2"
+                                        data-placeholder="Select an option" id="select7">
                                         <option></option>
                                         @foreach ($storys as $item)
                                             <option value="{{ $item->id }}">{{ $item->badge }}
@@ -306,12 +283,11 @@
                             </div>
                             {{--  --}}
                             <div class="row align-items-center pb-7">
-                                <label
-                                    class="text-black label_style pe-3 col-lg-12">Client
+                                <label class="text-black label_style pe-3 col-lg-12">Client
                                     Story Three</label>
                                 <div class="input-group">
-                                    <select name="success_story_three_id"
-                                        class="form-select" data-control="select2" data-placeholder="Select an option" id="select8">
+                                    <select name="success_story_three_id" class="form-select" data-control="select2"
+                                        data-placeholder="Select an option" id="select8">
                                         <option></option>
                                         @foreach ($storys as $item)
                                             <option value="{{ $item->id }}">{{ $item->badge }}
