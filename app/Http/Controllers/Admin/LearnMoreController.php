@@ -67,8 +67,8 @@ class LearnMoreController extends Controller
                 'consult_title'          => 'nullable',
                 'consult_short_des'      => 'nullable',
                 'industry_header'        => 'nullable',
-                'image_banner'       => 'nullable|image|mimes:png,jpg,jpeg|max:10000',
-                'background_image'      => 'nullable|image|mimes:png,jpg,jpeg|max:10000',
+                'image_banner'           => 'nullable|image|mimes:png,jpg,jpeg|max:10000',
+                'background_image'       => 'nullable|image|mimes:png,jpg,jpeg|max:10000',
             ],
             [
                 'mimes' => 'The :attribute must be a file of type: PNG - JPEG - JPG'
@@ -190,7 +190,7 @@ class LearnMoreController extends Controller
             }
 
             $learnMore->update([
-                'image_banner'       => $globalFunImgimage_banner['status'] == 1 ? $globalFunImgimage_banner['file_name'] : $learnMore->image_banner,
+                'image_banner'          => $globalFunImgimage_banner['status'] == 1 ? $globalFunImgimage_banner['file_name'] : $learnMore->image_banner,
                 'background_image'      => $globalFunbackground_image['status']   == 1 ? $globalFunbackground_image['file_name']  : $learnMore->background_image,
                 'badge'                  => $request->badge,
                 'title'                  => $request->title,
