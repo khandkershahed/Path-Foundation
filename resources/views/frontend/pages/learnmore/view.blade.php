@@ -64,14 +64,14 @@
                         <span class="word belize ml-2 normal_text fw-bold"> {{ $last_word }}</span>
                         <span class="word pomegranate ml-2 normal_text fw-bold"> {{ $last_word }}</span>
                     </h2>
-                    <div class="row ">
+                    {{-- <div class="row ">
                         <!--BUTTON START-->
                         <div class="d-flex justify-content-center align-items-center">
                             <div class="mt-5">
                                 <a class="btn-white" href="{{ route('contact') }}">Hear from our team</a>
                             </div>
                         </div>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
         </div>

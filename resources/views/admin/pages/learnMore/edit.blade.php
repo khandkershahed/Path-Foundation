@@ -60,7 +60,7 @@
                                         </div>
                                         <div class=" ms-2" style="width: 10%">
                                             <img class="img-fluid rounded-circle" id="showImage"
-                                                src="{{ asset('storage/thumb/' . $learnMore->image_banner) }}"
+                                                src="{{ asset('storage/' . $learnMore->image_banner) }}"
                                                 alt=""
                                                 style="width: 30px;
                                                     height: 30px;
