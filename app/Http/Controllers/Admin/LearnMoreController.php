@@ -3,12 +3,13 @@
 namespace App\Http\Controllers\Admin;
 
 use Helper;
-use Illuminate\Http\Request;
 use App\Models\LearnMore;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
 use Brian2694\Toastr\Facades\Toastr;
 use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Validator;
 
 class LearnMoreController extends Controller
@@ -77,23 +78,26 @@ class LearnMoreController extends Controller
         );
 
         if ($validator->passes()) {
-            $imageBanner = $request->image_banner;
-            $background_image = $request->background_image;
-            $uploadPath = storage_path('app/public/');
-            if (isset($imageBanner)) {
-                $globalFunImgBanner = customUpload($imageBanner, $uploadPath, 1800, 525);
-            } else {
-                $globalFunImgBanner = ['status' => 0];
-            }
+            $files = [
+                'image_banner'     => $request->file('image_banner'),
+                'background_image' => $request->file('background_image'),
+            ];
+            $uploadedFiles = [];
 
-            if (isset($background_image)) {
-                $globalFunBGImage = customUpload($background_image, $uploadPath, 1500, 1000);
-            } else {
-                $globalFunBGImage = ['status' => 0];
+            foreach ($files as $key => $file) {
+                if (!empty($file)) {
+                    $filePath = 'learnmore/' . $key;
+                    $uploadedFiles[$key] = imageUpload($file, $filePath);
+                    if ($uploadedFiles[$key]['status'] === 0) {
+                        return redirect()->back()->with('error', $uploadedFiles[$key]['error_message']);
+                    }
+                } else {
+                    $uploadedFiles[$key] = ['status' => 0];
+                }
             }
             LearnMore::create([
-                'image_banner'           => $globalFunImgBanner['status'] == 1 ? $globalFunImgBanner['file_name'] : '',
-                'background_image'       => $globalFunBGImage['status']   == 1 ? $globalFunBGImage['file_name']  : '',
+                'image_banner'           => $uploadedFiles['image_banner']['status'] == 1 ? $uploadedFiles['image_banner']['file_path'] : null,
+                'background_image'       => $uploadedFiles['background_image']['status'] == 1 ? $uploadedFiles['background_image']['file_path'] : null,
                 'badge'                  => $request->badge,
                 'title'                  => $request->title,
                 'header_one'             => $request->header_one,
@@ -163,35 +167,32 @@ class LearnMoreController extends Controller
         $learnMore = LearnMore::find($id);
         if (!empty($learnMore)) {
 
-            $image_bannerMainFile  = $request->image_banner;
-            $background_imageMainFile = $request->background_image;
-            $uploadPath    = storage_path('app/public/');
-            if (isset($image_bannerMainFile)) {
-                $globalFunImgimage_banner = customUpload($image_bannerMainFile, $uploadPath, 230, 227);
-            } else {
-                $globalFunImgimage_banner = ['status' => 0];
-            }
+            $files = [
+                'image_banner'     => $request->file('image_banner'),
+                'background_image' => $request->file('background_image'),
+            ];
+            $uploadedFiles = [];
 
-            if (isset($background_imageMainFile)) {
-                $globalFunbackground_image = customUpload($background_imageMainFile, $uploadPath, 230, 227);
-            } else {
-                $globalFunbackground_image = ['status' => 0];
-            }
+            foreach ($files as $key => $file) {
+                if (!empty($file)) {
+                    $filePath = 'learnmore/' . $key;
+                    $oldFile = $banner->$key ?? null;
 
-            if ($globalFunImgimage_banner['status'] == 1) {
-                File::delete(public_path('storage/') . $learnMore->image_banner);
-                File::delete(public_path('storage/requestImg/') . $learnMore->image_banner);
-                File::delete(public_path('storage/thumb/') . $learnMore->image_banner);
-            }
-            if ($globalFunbackground_image['status'] == 1) {
-                File::delete(public_path('storage/') . $learnMore->background_image);
-                File::delete(public_path('storage/requestImg/') . $learnMore->background_image);
-                File::delete(public_path('storage/thumb/') . $learnMore->background_image);
+                    if ($oldFile) {
+                        Storage::delete("public/" . $oldFile);
+                    }
+                    $uploadedFiles[$key] = imageUpload($file, $filePath);
+                    if ($uploadedFiles[$key]['status'] === 0) {
+                        return redirect()->back()->with('error', $uploadedFiles[$key]['error_message']);
+                    }
+                } else {
+                    $uploadedFiles[$key] = ['status' => 0];
+                }
             }
 
             $learnMore->update([
-                'image_banner'          => $globalFunImgimage_banner['status'] == 1 ? $globalFunImgimage_banner['file_name'] : $learnMore->image_banner,
-                'background_image'      => $globalFunbackground_image['status']   == 1 ? $globalFunbackground_image['file_name']  : $learnMore->background_image,
+                'image_banner'           => $uploadedFiles['image_banner']['status'] == 1 ? $uploadedFiles['image_banner']['file_path'] : $learnMore->image_banner,
+                'background_image'       => $uploadedFiles['background_image']['status'] == 1 ? $uploadedFiles['background_image']['file_path'] : $learnMore->background_image,
                 'badge'                  => $request->badge,
                 'title'                  => $request->title,
                 'header_one'             => $request->header_one,
