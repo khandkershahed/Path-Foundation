@@ -48,8 +48,8 @@
 <link rel="stylesheet" type="text/css" href="{{ asset('frontend/css/toastr/toastr.min.css') }}">
 
 <!-- Custom CSS links -->
-<link rel="stylesheet" type="text/css" href="{{ asset('frontend/css/custom_global.css') }}">
-<link rel="stylesheet" type="text/css" href="{{ asset('frontend/css/custom_responsive.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ asset('frontend/css/custom_global.css?v=' . time()) }}">
+<link rel="stylesheet" type="text/css" href="{{ asset('frontend/css/custom_responsive.css?v=' . time()) }}">
 
 {{-- Custom Style End --}}
 

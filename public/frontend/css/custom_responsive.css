@@ -1923,7 +1923,8 @@
     }
 
     .navbar-expand-lg .navbar-nav .nav-link {
-        font-size: 15px !important;
+        font-size: 18px !important;
+        /* font-size: 15px !important; */
     }
 
     .main-menu-specing {

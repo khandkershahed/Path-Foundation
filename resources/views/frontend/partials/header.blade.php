@@ -1,15 +1,15 @@
 <section class="main_header_area">
     <div class="fixed-section header">
         {{-- Top Bar Area --}}
-        <div class="container-fluid top-bar p-0">
+        {{-- <div class="container-fluid top-bar p-0">
             <div class="row gx-0 top-bar-bg">
                 <div class="col-lg-8 top-bar-curve-area d-lg-block d-sm-none">
-                    {{-- Empty Are --}}
+
                 </div>
                 <div class="col-lg-4 top-bar-right-side" style="z-index: 999;">
                     <div class="d-flex justify-content-between align-items-center top-menu-area">
                         <div class="">
-                            {{-- <span class="text-white">My</span><span class="text-white">Path Foundation</span> --}}
+                            <span class="text-white">My</span><span class="text-white">Path Foundation</span>
                             <div class="dropdown drop-top">
                                 <a href="javascript:void(0)"
                                     class="dropdown-toggle top-info-text top-info-text text-white" type="button"
@@ -53,7 +53,6 @@
                         <div class="d-flex align-items-center ">
 
                             <div>
-                                {{-- <span class="text-white">My</span><span class="text-white">Path Foundation</span> --}}
                                 <div class="dropdown drop-top">
                                     <a href="javascript:void(0)"
                                         class="dropdown-toggle top-info-text top-info-text text-white" type="button"
@@ -94,7 +93,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> --}}
         {{-- Menu And Logo Area --}}
         <div class="row px-2">
             <nav class="navbar navbar-expand-lg p-2 main-navbar bg-white menu-section">
@@ -107,9 +106,6 @@
                             src="{{ !empty(optional($setting)->site_logo) && file_exists(public_path('storage/' . optional($setting)->site_logo)) ? asset('storage/' . optional($setting)->site_logo) : asset('frontend/images/brandPage-logo-no-img(217-55).jpg') }}"
                             alt="Path Foundation">
                     </a>
-                    <!---Category--->
-
-                    <!---Category--->
 
                     <a href="javascript:void(0)" class="nvabar-toggler tab_btn_icon upper-content-menu d-lg-none"
                         type="button" data-bs-toggle="offcanvas" data-bs-target="#rightOffcanvas"

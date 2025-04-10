@@ -7051,7 +7051,7 @@ ul {
     padding: 5px;
 }
 
-/* What We Do Page Style Start */
+/* 8270 Page Style Start */
 .what-we-do-title {
     width: 80%;
 }
@@ -8270,7 +8270,9 @@ a:hover {
 .nav-link {
     font-family: var(--primary-font);
     font-size: 14px;
-    color: #5f5753;
+    color: #051225;
+    opacity: 1;
+    /* color: #5f5753; */
     font-weight: 900;
     display: block;
 }
