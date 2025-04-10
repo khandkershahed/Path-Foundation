@@ -43,12 +43,12 @@
                                     {{-- <a href="{{ route('homepage.show', $home->id) }}" class="text-info">
                                         <i class="icon-eye"></i>
                                     </a> --}}
-                                    <a href="{{ route('admin.homepage.edit', $home->id) }}" class="text-primary">
-                                        <i class="fas fa-pen text-primary">edit</i>
+                                    <a href="{{ route('admin.homepage.edit', $home->id) }}" class="text-primary me-2">
+                                        <i class="fas fa-pen text-primary"></i>
                                     </a>
                                     <a href="{{ route('admin.homepage.destroy', [$home->id]) }}"
                                         class="text-danger delete mx-2">
-                                        <i class="delete fas fa-trash-alt text-danger"></i>delete
+                                        <i class="delete fas fa-trash-alt text-danger"></i>
                                     </a>
                                 </td>
                             </tr>
