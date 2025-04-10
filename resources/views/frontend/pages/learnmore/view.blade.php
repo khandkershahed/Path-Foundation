@@ -22,7 +22,7 @@
 
     <!--======// Header Title //======-->
     <section class="common_product_header"
-        style="background-image:url({{ !empty($learnmore->image_banner) ? asset('storage/' . $learnmore->image_banner : asset('images/learn_more.png')) }});">
+        style="background-image:url({{ !empty($learnmore->image_banner) ? asset('storage/' . $learnmore->image_banner) : asset('images/learn_more.png') }});">
         {{-- style="background-image: url('{{ asset('storage/' . $learnmore->image_banner) }}');"> --}}
         <div>
             <div class="">
@@ -49,7 +49,8 @@
                         //$fourth_last_word = end(array_slice($words, -4, 1));
 
                         // Calculate the length of the last two words combined
-                        $last_three_words_length = strlen($third_last_word) + strlen($second_last_word) + strlen($last_word) + 3; // +2 to account for the spaces between words
+                        $last_three_words_length =
+                            strlen($third_last_word) + strlen($second_last_word) + strlen($last_word) + 3; // +2 to account for the spaces between words
 
                         // Use the substr() function to remove the last two words from the sentence
                         $manipulated_sentence = substr($sentence, 0, -$last_three_words_length);
@@ -145,8 +146,8 @@
                                     $tags_1 = explode(',', $story1->tags);
                                 @endphp
                                 <li class="nav-item" role="presentation">
-                                    <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home"
-                                        type="button" role="tab" aria-controls="home"
+                                    <button class="nav-link active" id="home-tab" data-bs-toggle="tab"
+                                        data-bs-target="#home" type="button" role="tab" aria-controls="home"
                                         aria-selected="true">{{ $story1->badge }}</button>
                                 </li>
                             @endif
@@ -155,8 +156,8 @@
                                     $tags_2 = explode(',', $story2->tags);
                                 @endphp
                                 <li class="nav-item ms-2" role="presentation">
-                                    <button class="nav-link " id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile"
-                                        type="button" role="tab" aria-controls="profile"
+                                    <button class="nav-link " id="profile-tab" data-bs-toggle="tab"
+                                        data-bs-target="#profile" type="button" role="tab" aria-controls="profile"
                                         aria-selected="false">{{ $story2->badge }}</button>
                                 </li>
                             @endif
@@ -165,8 +166,8 @@
                                     $tags_3 = explode(',', $story3->tags);
                                 @endphp
                                 <li class="nav-item ms-2" role="presentation">
-                                    <button class="nav-link " id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact"
-                                        type="button" role="tab" aria-controls="contact"
+                                    <button class="nav-link " id="contact-tab" data-bs-toggle="tab"
+                                        data-bs-target="#contact" type="button" role="tab" aria-controls="contact"
                                         aria-selected="false">{{ $story3->badge }}</button>
                                 </li>
                             @endif
