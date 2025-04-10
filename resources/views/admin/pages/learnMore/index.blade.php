@@ -35,18 +35,18 @@
                 <tbody class="fw-bold text-gray-600">
                     @if (count($learnMores) > 0)
                         @foreach ($learnMores as $key => $learnMore)
-                            <tr> 
+                            <tr>
                                 <td class="text-center">{{ ++$key }}</td>
                                 <td>
                                     {{ isset($words[$key]) ? 'Tamplate' . ' ' . Str::ucfirst($words[$key]) : 'Number out of range' }}
                                 </td>
                                 <td>
                                     <a href="{{ route('admin.learnmore.edit', [$learnMore->id]) }}" class="text-primary">
-                                        <i class="fa-solid fa-pen-to-square me-2 dash-icons text-primary"></i>
+                                        <i class="fas fa-pen-to-square me-3 dash-icons text-primary"></i>
                                     </a>
                                     <a href="{{ route('admin.learnmore.destroy', [$learnMore->id]) }}"
                                         class="text-danger delete">
-                                        <i class="fa-solid fa-trash dash-icons text-danger"></i>
+                                        <i class="fas fa-trash dash-icons text-danger"></i>
                                     </a>
                                 </td>
                             </tr>
