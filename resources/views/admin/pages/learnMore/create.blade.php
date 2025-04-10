@@ -67,7 +67,7 @@
                                 </div>
                             </div>
                             {{--  --}}
-                            <div class="row align-items-center pb-7">
+                            {{-- <div class="row align-items-center pb-7">
                                 <label class="text-black label_style pe-3 col-lg-12">Background
                                     Image</label>
                                 <div class="row">
@@ -85,7 +85,7 @@
                                                  margin-left: 2.5rem;">
                                     </div>
                                 </div>
-                            </div>
+                            </div> --}}
                         </div>
                         <span class="mt-1 fw-bold text-info">Header</span>
                         <div class="px-2 py-2 rounded bg-light">

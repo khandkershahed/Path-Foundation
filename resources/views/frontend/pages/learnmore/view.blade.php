@@ -22,7 +22,7 @@
 
     <!--======// Header Title //======-->
     <section class="common_product_header"
-        style="background-image:url(https://i.ibb.co/FWFKjVL/Learn-More-Banner-NGen-IT.jpg);">
+        style="background-image:url({{ !empty($learnmore->image_banner) ? asset('storage/' . $learnmore->image_banner : asset('images/learn_more.png')) }});">
         {{-- style="background-image: url('{{ asset('storage/' . $learnmore->image_banner) }}');"> --}}
         <div>
             <div class="">

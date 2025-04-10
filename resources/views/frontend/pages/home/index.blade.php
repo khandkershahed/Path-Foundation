@@ -449,7 +449,7 @@
             <!-- button -->
             @if (!empty($features))
                 <div class="d-flex justify-content-center my-5">
-                    <a class="btn-color" href="{{ route('learn.more') }}">Learn More</a>
+                    <a class="btn-color" href="{{ route('learn.more') }}">Creating Sustainable Future : Our Projects</a>
                 </div>
             @endif
         @endif
@@ -467,7 +467,7 @@
         <div class="container my-4 mb-5 d-lg-block d-sm-none">
             <h2 class="text-center">
                 <span style="color: #07163b;font-weight: 600;">
-                    Research & Reports
+                    Our Stories
                 </span>
             </h2>
             <div class="row">
@@ -481,13 +481,13 @@
                                 <div class="grid-river">
                                     <figure class="effect-oscar">
                                         <img src="{{ !empty($story->thumbnail_image) && file_exists(public_path('storage/' . $story->thumbnail_image)) ? asset('storage/' . $story->thumbnail_image) : asset('frontend/images/banner-demo.png') }}"
-                                            alt="">
+                                            alt="" width="306px" height="250px">
                                         <figcaption>
                                             {{-- <h6> {{ Str::words($story->title, 6) }}</h6> --}}
                                             {{-- <p>{{ Str::words($story->header, 10) }}</p> --}}
                                             <h5 class="download-hover-btn mt-5 pt-3">
                                                 <a class="text-white"
-                                                    href="{{ route('story.details', $story->id) }}">Read Story
+                                                    href="{{ route('story.details', $story->slug) }}">Read Story
                                                     <i class="fa-solid fa-chevron-right" style="font-size: 12px;"></i>
                                                 </a>
                                             </h5>
