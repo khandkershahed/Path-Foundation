@@ -42,11 +42,11 @@
                                 </td>
                                 <td>
                                     <a href="{{ route('admin.learnmore.edit', [$learnMore->id]) }}" class="text-primary">
-                                        <i class="fas fa-pen-to-square me-3 dash-icons text-primary"></i>
+                                        <i class="fas fa-pen me-3 dash-icons text-primary"></i>
                                     </a>
                                     <a href="{{ route('admin.learnmore.destroy', [$learnMore->id]) }}"
                                         class="text-danger delete">
-                                        <i class="fas fa-trash dash-icons text-danger"></i> 
+                                        <i class="fas fa-trash dash-icons text-danger"></i>
                                     </a>
                                 </td>
                             </tr>
