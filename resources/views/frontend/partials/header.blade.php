@@ -1,7 +1,6 @@
-<section class="main_header_area">
-
+<section class="">
     <div class="row px-2">
-        <nav class="navbar navbar-expand-lg p-2 main-navbar bg-white menu-section">
+        <nav class="navbar navbar-expand-lg p-2 main-navbar bg-white">
             <div class="container-fluid d-flex align-items-center">
 
                 <a class="navbar-brand fw-bold main-logo ms-4" href="{{ route('homepage') }}">
