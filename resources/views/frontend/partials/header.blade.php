@@ -138,6 +138,11 @@
                                         </a>
                                     </li>
                                     <li class="nav-item pe-3">
+                                        <a class="nav-link pe-0" href="{{ route('learn.more') }}">
+                                            Our Projects
+                                        </a>
+                                    </li>
+                                    <li class="nav-item pe-3">
                                         <a class="nav-link pe-0" href="{{ route('researchReport') }}">
                                             Research & Reports
                                         </a>
@@ -196,6 +201,11 @@
                 <li class="nav-item dropdown cool-link">
                     <a class="nav-link" href="{{ route('whatwedo') }}" role="button">
                         What We Do
+                    </a>
+                </li>
+                <li class="nav-item dropdown cool-link">
+                    <a class="nav-link" href="{{ route('learn.more') }}" role="button">
+                        Our Projects
                     </a>
                 </li>
                 <li class="nav-item dropdown cool-link">
