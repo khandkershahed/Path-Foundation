@@ -469,7 +469,7 @@
                                             <option value="" selected disabled>Select Client Story</option>
                                             @foreach ($storys as $item)
                                                 <option value="{{ $item->id }}" @selected($item->id == $homePage->solution1_id)>
-                                                    {{ $item->badge }}
+                                                    {{ $item->title }}
                                                 </option>
                                             @endforeach
                                         </select>
@@ -488,7 +488,7 @@
                                             @foreach ($storys as $item)
                                                 <option value="{{ $item->id }}"
                                                     {{ $item->id == $homePage->solution2_id ? 'selected' : '' }}>
-                                                    {{ $item->badge }}
+                                                    {{ $item->title }}
                                                 </option>
                                             @endforeach
                                         </select>
@@ -507,7 +507,7 @@
                                             @foreach ($storys as $item)
                                                 <option value="{{ $item->id }}"
                                                     {{ $item->id == $homePage->solution3_id ? 'selected' : '' }}>
-                                                    {{ $item->badge }}
+                                                    {{ $item->title }}
                                                 </option>
                                             @endforeach
                                         </select>
@@ -526,7 +526,7 @@
                                             @foreach ($storys as $item)
                                                 <option value="{{ $item->id }}"
                                                     {{ $item->id == $homePage->solution4_id ? 'selected' : '' }}>
-                                                    {{ $item->badge }}
+                                                    {{ $item->title }}
                                                 </option>
                                             @endforeach
                                         </select>
@@ -548,7 +548,7 @@
                                             @foreach ($techglossys as $item)
                                                 <option value="{{ $item->id }}"
                                                     {{ $item->id == $homePage->techglossy_id ? 'selected' : '' }}>
-                                                    {{ $item->badge }}
+                                                    {{ $item->title }}
                                                 </option>
                                             @endforeach
                                         </select>
