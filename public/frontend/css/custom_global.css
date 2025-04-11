@@ -119,13 +119,15 @@ body {
 }
 
 a {
-    color: #5e5e5e;
+    color: #171717;
+    /* color: #5e5e5e; */
     cursor: pointer;
     text-decoration: none;
 }
 
 a:hover {
-    color: var(--third-color);
+    color: #0d2e97;
+    /* color: var(--third-color); */
     text-decoration: none;
 }
 
