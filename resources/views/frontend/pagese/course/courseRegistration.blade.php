@@ -129,13 +129,13 @@
         }
     </style>
     <section class="showcase-courses">
-        <img src="https://promisetrainingglobal.com/wp-content/uploads/2019/03/course-banner.jpg?id=8892" alt="Picture">
+        <img src="{{ asset('images/member_registration.jpg') }}" alt="Picture">
         <div class="overlay-courses">
             <h2>Member Registration</h2>
             <p>"Volunteer with PATH for building better Bangladesh."</p>
         </div>
     </section>
-   
+
     <section style="background-color: #051225;">
         <div class="container py-lg-5 py-3">
 
