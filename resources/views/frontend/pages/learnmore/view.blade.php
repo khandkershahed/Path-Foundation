@@ -245,7 +245,7 @@
     </section>
     <!---------End -------->
     <!--=====// Global call section //=====-->
-    <section class="global_call_section section_padding">
+    {{-- <section class="global_call_section section_padding">
         <div class="container">
             <!-- content -->
             @php
@@ -264,7 +264,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
     <!---------End -------->
     <!--=====// We serve //=====-->
     {{-- <div class="container">
