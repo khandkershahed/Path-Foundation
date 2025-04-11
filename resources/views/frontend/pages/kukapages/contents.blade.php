@@ -21,7 +21,7 @@
                         <div class="col-lg-3 px-0 mx-3 mb-3">
                             <div class="container-area-brand">
                                 <div class="content-brand">
-                                    <a href="{{ route('techglossy.details', $techglossy->id) }}" target="_blank">
+                                    <a href="{{ route('story.details', $techglossy->slug) }}" target="_blank">
                                         <div class="content-overlay-brand"></div>
                                         <div>
                                             {{-- <img class="content-image" src="{{ asset('storage/' . $techglossy->image) }}"
@@ -41,7 +41,7 @@
                                             <p>{!! $techglossy->header !!}</p>
                                            </div>
                                             <div class="description-footer-brand inline-center text-white pt-2">
-                                                <a href="{{ route('techglossy.details', $techglossy->id) }}"
+                                                <a href="{{ route('story.details', $techglossy->slug) }}"
                                                     class="link text-white"><i class="fa fa-plus-circle me-2"></i>More
                                                     information</a>
                                             </div>

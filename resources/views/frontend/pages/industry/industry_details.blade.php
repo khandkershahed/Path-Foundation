@@ -299,7 +299,7 @@
                     <div class="col-lg-6 col-sm-12 account_benefits_section">
                         <h5>{{ $techglossy->badge }}</h5>
                         <p>{{ $techglossy->title }}</p>
-                        <a href="{{ route('techglossy.details', $techglossy->id) }}" class="common_button">Read More</a>
+                        <a href="{{ route('story.details', $techglossy->slug) }}" class="common_button">Read More</a>
                     </div>
                 </div>
             </div>

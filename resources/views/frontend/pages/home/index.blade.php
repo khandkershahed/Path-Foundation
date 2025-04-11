@@ -534,7 +534,7 @@
                                             <p>{{ Str::words($story->header, 10) }}</p>
                                             <h5 class="download-hover-btn">
                                                 <a class="text-white"
-                                                    href="{{ route('story.details', $story->id) }}">Read Story
+                                                    href="{{ route('story.details', $story->slug) }}">Read Story
                                                     <i class="fa-solid fa-chevron-right" style="font-size: 12px;"></i>
                                                 </a>
                                             </h5>
@@ -567,7 +567,7 @@
                                     {!! Str::words(strip_tags($techglossy->short_des), 50) !!}
                                     {{-- {{ $techglossy->header }} --}}
                                 </p>
-                                <a href="{{ route('techglossy.details', $techglossy->id) }}"
+                                <a href="{{ route('story.details', $techglossy->slug) }}"
                                     class="pt-3 business_item_button d-flex justify-content-start">
                                     <span>Read More</span>
                                     <span class="business_item_button_icon">
@@ -683,23 +683,11 @@
                 <div class="d-flex justify-content-between px-4">
                     <a class="Arrows custom-responsive-slider-prev">
                         <i class="fa-solid fa-chevron-left fa-2x"
-                            style="cursor: pointer;
-    font: 18px / 36px FontAwesome;
-    text-align: center;
-    transition: all 0.5s;
-    background: #000;
-    width: 38px;
-    color: white;"></i>
+                            style="cursor: pointer;font: 18px / 36px FontAwesome;text-align: center;transition: all 0.5s;background: #000;width: 38px;color: white;"></i>
                     </a>
                     <a class="Arrows custom-responsive-slider-next">
                         <i class="fa-solid fa-chevron-right fa-2x"
-                            style="cursor: pointer;
-    font: 18px / 36px FontAwesome;
-    text-align: center;
-    transition: all 0.5s;
-    background: #000;
-    width: 38px;
-    color: white;"></i>
+                            style="cursor: pointer;font: 18px / 36px FontAwesome;text-align: center;transition: all 0.5s;background: #000;width: 38px;color: white;"></i>
                     </a>
                 </div>
                 <div class="owl-carousel custom-responsive-slider" style="z-index: 0 !important;">
