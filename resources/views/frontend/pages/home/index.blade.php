@@ -380,9 +380,11 @@
                                         <img class="" width="70px"
                                             src="{{ !empty($feature->logo) && file_exists(public_path('storage/' . $feature->logo)) ? asset('storage/' . $feature->logo) : asset('frontend/images/service-no-img.png') }}"
                                             alt="PATH Bangladesh">
-                                        <h5 class="business_services pt-2">
-                                            {{ Str::words($feature->badge, 10, $end = '') }}
-                                        </h5>
+                                        <a href="{{ route('feature.details', $feature->slug) }}">
+                                            <h5 class="business_services pt-2">
+                                                {{ Str::words($feature->badge, 10, $end = '') }}
+                                            </h5>
+                                        </a>
                                     </div>
                                     <div class="feature_description">
                                         <p class="feature_descrip">{{ Str::words($feature->header, 12, $end = '') }}
@@ -426,8 +428,13 @@
                                             <img src="{{ !empty($feature->logo) && file_exists(public_path('storage/' . $feature->logo)) ? asset('storage/' . $feature->logo) : asset('frontend/images/service-no-img.png') }}"
                                                 alt="PATH Bangladesh" style="width: 80px;">
                                         </div>
-                                        <h5 class="business_services pt-2">
-                                            {{ Str::words($feature->badge, 10, $end = '') }}</h5>
+                                        <a href="{{ route('feature.details', $feature->slug) }}">
+                                            <h5 class="business_services pt-2">
+                                                {{ Str::words($feature->badge, 10, $end = '') }}
+                                            </h5>
+                                        </a>
+                                        {{-- <h5 class="business_services pt-2">
+                                            {{ Str::words($feature->badge, 10, $end = '') }}</h5> --}}
                                     </div>
                                     <div class="feature_description">
                                         <p class="feature_descrip">{{ Str::words($feature->header, 12, $end = '') }}
@@ -447,11 +454,11 @@
                 </div>
             @endif
             <!-- button -->
-            @if (!empty($features))
+            {{-- @if (!empty($features))
                 <div class="d-flex justify-content-center my-5">
                     <a class="btn-color" href="{{ route('learn.more') }}">Creating Sustainable Future : Our Projects</a>
                 </div>
-            @endif
+            @endif --}}
         @endif
     </div>
 </section>
@@ -503,7 +510,7 @@
         <div class="container my-4 mb-5 d-lg-none d-sm-block">
             <div class="d-flex justify-content-center align-items-center mx-3 border-bottom">
                 <div class="text-start w-75">
-                    <h3 style="color: #07163b;font-weight: 600;">Soon To Start Courses!</h3>
+                    <h3 style="color: #07163b;font-weight: 600;">Our Stories!</h3>
                 </div>
                 <div class="text-end w-25 d-flex">
                     <a class="Arrows custom-responsive-slider-prev me-1">
