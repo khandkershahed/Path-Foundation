@@ -593,6 +593,7 @@ ul {
 .navbar-nav .nav-item.show > .nav-link,
 .navbar-nav .nav-item.active > .nav-link {
     border-bottom: 3px solid var(--primary-color);
+    font-weight: 600;
 }
 
 .top-bar-bg {
@@ -1538,6 +1539,7 @@ figure.effect-oscar:hover p {
 
 .details-titles p {
     font-size: var(--header-font-size);
+    font-weight: 600;
 }
 
 .download-hover-btn:hover {
@@ -16852,6 +16854,7 @@ nav > div a.nav-item.nav-link.active:after {
 
 .nav-link {
     display: block;
+    font-weight: 600;
 }
 
 .nav-tabs .nav-item .material-icons {

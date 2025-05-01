@@ -215,7 +215,7 @@
                                 <img class="img-fluid" width="35px"
                                     src="{{ asset('frontend/images/icons/icons2/peace.png') }}" alt="">
                             </div>
-                            <h6 class="fw-bolder pt-2">PEACE</h6>
+                            <h6 class="fw-bold pt-2">PEACE</h6>
                         </div>
                     </div>
                 </div>
@@ -228,7 +228,7 @@
                                 <img class="img-fluid" width="35px"
                                     src="{{ asset('frontend/images/icons/icons2/awarness.png') }}" alt="">
                             </div>
-                            <h6 class="fw-bolder pt-2">AWARNESS</h6>
+                            <h6 class="fw-bold pt-2">AWARNESS</h6>
                         </div>
                     </div>
                 </div>
@@ -241,7 +241,7 @@
                                 <img class="img-fluid" width="35px"
                                     src="{{ asset('frontend/images/icons/icons2/together.png') }}" alt="">
                             </div>
-                            <h6 class="fw-bolder pt-2">TOGETHERNESS</h6>
+                            <h6 class="fw-bold pt-2">TOGETHERNESS</h6>
                         </div>
                     </div>
                 </div>
@@ -254,7 +254,7 @@
                                 <img class="img-fluid" width="35px"
                                     src="{{ asset('frontend/images/icons/icons2/humanity.png') }}" alt="">
                             </div>
-                            <h6 class="fw-bolder pt-2">HUMANITY</h6>
+                            <h6 class="fw-bold pt-2">HUMANITY</h6>
                         </div>
                     </div>
                 </div>
