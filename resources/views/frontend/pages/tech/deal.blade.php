@@ -12,7 +12,7 @@
     .common_button3 {
         padding: 5px 22px;
         cursor: pointer;
-        font-family: "Allumi Std Extended";
+        font-family: "Montserrat", sans-serif;
         font-size: 18px;
         font-weight: 500;
         text-align: center;

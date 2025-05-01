@@ -5,7 +5,7 @@
         .btn-white {
             padding: 15px 20px;
             cursor: pointer;
-            font-family: "Allumi Std Extended";
+            font-family: "Montserrat", sans-serif;
             font-size: 18px;
             font-weight: 500;
             text-align: center;
@@ -23,7 +23,7 @@
         }
 
         p {
-            font-family: "Allumi Std Extended" !important;
+            font-family: "Montserrat", sans-serif !important;
             font-size: 16px;
             line-height: 30px;
             color: var(--navColor);
@@ -59,7 +59,7 @@
 
         .section_title {
             /* font-family: cambian; */
-            font-family: "Allumi Std Extended";
+            font-family: "Montserrat", sans-serif;
             opacity: none;
             font-size: 29px;
             font-weight: 500;

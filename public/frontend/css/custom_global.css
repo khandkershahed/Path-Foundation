@@ -1,16 +1,16 @@
-@font-face {
+/* @font-face {
     font-family: "Allumi Std Extended";
     src: url("../css/font/AllumiStd-Regular.woff2") format("woff2"),
         url("../css/font/AllumiStd-Regular.woff") format("woff");
     font-weight: normal;
     font-style: normal;
     font-display: swap;
-}
+} */
 
 @import url("https://fonts.googleapis.com/css2?family=Libre+Franklin&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway&display=swap');
 :root {
     --primary-color: #051225;
     --secondary-color: #0a1d5b;
@@ -27,7 +27,8 @@
     --border-color: #eee;
     --secoandaryborder-color: #bbbbbb;
     --custom-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-    --primary-font: "Allumi Std Extended";
+    /* --primary-font: "Allumi Std Extended"; */
+    --primary-font: "Montserrat", sans-serif;
     --number-font: "Poppins", sans-serif;
     --section-title-font-size: 1.75rem;
     /*28px*/
@@ -54,7 +55,8 @@
         --border-color: #eee;
         --secoandaryborder-color: #bbbbbb;
         --custom-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-        --primary-font: "Allumi Std Extended";
+        --primary-font: "Montserrat", sans-serif;
+        /* --primary-font: "Allumi Std Extended"; */
         --number-font: "Poppins", sans-serif;
         --section-title-font-size: 1.5rem;
         /*28px*/
@@ -82,7 +84,8 @@
         --border-color: #eee;
         --secoandaryborder-color: #bbbbbb;
         --custom-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-        --primary-font: "Allumi Std Extended";
+        --primary-font: "Montserrat", sans-serif;
+        /* --primary-font: "Allumi Std Extended"; */
         --number-font: "Poppins", sans-serif;
         --section-title-font-size: 1.5rem;
         /*28px*/
@@ -16917,7 +16920,7 @@ nav > div a.nav-item.nav-link.active:after {
 .common_button3 {
     padding: 5px 22px;
     cursor: pointer;
-    font-family: "Allumi Std Extended";
+    font-family: var(--primary-font);
     font-size: 18px;
     font-weight: 500;
     text-align: center;
@@ -17161,7 +17164,7 @@ ul {
 .common_button2 {
     padding: 15px 20px;
     cursor: pointer;
-    font-family: "Allumi Std Extended";
+    font-family: var(--primary-font);
     font-size: 13px;
     font-weight: 500;
     text-align: center;
