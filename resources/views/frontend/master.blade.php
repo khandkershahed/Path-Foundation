@@ -4,9 +4,6 @@
 <head>
     @include('frontend.partials.head')
 
-    <!-- Meta Tags Generated with https://metatags.io -->
-    {{-- <script async data-id="9476858534" id="chatling-embed-script" type="text/javascript"
-        src="https://chatling.ai/js/embed.js"></script> --}}
 </head>
 {{-- <body onload="myFunction()"> --}}
 
