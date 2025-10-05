@@ -11,7 +11,7 @@
 {{-- <body onload="myFunction()"> --}}
 
 <body>
-    {{-- <div id="loading" style="margin-top: 0rem !important"></div> --}}
+    <div id="loading" style="margin-top: 0rem !important"></div>
 
     <!--======// Nav Menu //========-->
     @include('frontend.partials.header')
@@ -29,7 +29,7 @@
     <!--============///* USE LINK *///=============-->
     @include('frontend.partials.script')
     {!! Toastr::message() !!}
-    {{-- <script>
+    <script>
         document.addEventListener("DOMContentLoaded", function() {
             const preloader = document.getElementById('loading');
 
@@ -40,7 +40,7 @@
                 }, 100);
             }, 500);
         });
-    </script> --}}
+    </script>
 
 
     {{-- {{ \TawkTo::widgetCode() }} --}}
