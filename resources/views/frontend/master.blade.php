@@ -4,14 +4,11 @@
 <head>
     @include('frontend.partials.head')
 
-    <!-- Meta Tags Generated with https://metatags.io -->
-    {{-- <script async data-id="9476858534" id="chatling-embed-script" type="text/javascript"
-        src="https://chatling.ai/js/embed.js"></script> --}}
 </head>
 {{-- <body onload="myFunction()"> --}}
 
 <body>
-    {{-- <div id="loading" style="margin-top: 0rem !important"></div> --}}
+    <div id="loading" style="margin-top: 0rem !important"></div>
 
     <!--======// Nav Menu //========-->
     @include('frontend.partials.header')
@@ -29,7 +26,7 @@
     <!--============///* USE LINK *///=============-->
     @include('frontend.partials.script')
     {!! Toastr::message() !!}
-    {{-- <script>
+    <script>
         document.addEventListener("DOMContentLoaded", function() {
             const preloader = document.getElementById('loading');
 
@@ -40,7 +37,7 @@
                 }, 100);
             }, 500);
         });
-    </script> --}}
+    </script>
 
 
     {{-- {{ \TawkTo::widgetCode() }} --}}

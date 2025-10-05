@@ -4281,7 +4281,7 @@ select:focus-visible {
 
 /*------scroll bar---------------------*/
 body::-webkit-scrollbar {
-    width: 10px;
+    width: 5px;
     height: 5px;
 }
 
@@ -5821,8 +5821,8 @@ tr td:hover {
     position: fixed;
     width: 100%;
     height: 100%;
-    background: #000000 url('../../images/loader.gif') no-repeat center center;
-    background-size: contain; /* optional, adjust based on image size */
+    background: rgb(17, 17, 17) url('../../images/loading.gif') no-repeat center center;
+    /* background-size: contain; optional, adjust based on image size */
     z-index: 9999;
     margin-top: -1.5rem;
 }
