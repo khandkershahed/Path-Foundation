@@ -22,15 +22,17 @@
 
     <!--======// Header Title //======-->
     <section class="common_product_header"
-        style="background-image:url({{ !empty($learnmore->image_banner) ? asset('storage/' . $learnmore->image_banner) : asset('images/learn_more.png') }});">
+        style="height:25rem; background-image:url({{ !empty($learnmore->image_banner) ? asset('storage/' . $learnmore->image_banner) : asset('images/learn_more.png') }});">
         {{-- style="background-image: url('{{ asset('storage/' . $learnmore->image_banner) }}');"> --}}
         <div>
             <div class="">
                 <div class="container ">
                     {{-- <h1 class="text-capitalize w-50 mx-auto">{{ $learnmore->title }}.</h1> --}}
-                    <div class="outcome_assetType mb-4">
-                        <a href="#">{{ $learnmore->badge }}</a>
-                    </div>
+                    @if (!empty($learnmore->badge))
+                        <div class="outcome_assetType mb-4">
+                            <a href="#">{{ $learnmore->badge }}</a>
+                        </div>
+                    @endif
                     @php
                         $sentence = $learnmore->title;
 
@@ -56,14 +58,18 @@
                         $manipulated_sentence = substr($sentence, 0, -$last_three_words_length);
                         //dd($manipulated_sentence);
                     @endphp
-                    <h1 class="text-capitalize w-50 mx-auto">{{ $manipulated_sentence }}</h1>
-                    <h2 class="text-white text-center" style=" font-size: 30px; margin-left: -220px;">
-                        <span class="normal_text text-capitalize">{{ $third_last_word }} {{ $second_last_word }}</span>
-                        <span class="word wisteria ml-2 normal_text fw-bold"> {{ $last_word }}</span>
-                        <span class="word wisteria ml-2 normal_text fw-bold"> {{ $last_word }}</span>
-                        <span class="word belize ml-2 normal_text fw-bold"> {{ $last_word }}</span>
-                        <span class="word pomegranate ml-2 normal_text fw-bold"> {{ $last_word }}</span>
-                    </h2>
+                    @if (!empty($manipulated_sentence))
+                        <h1 class="text-capitalize w-50 mx-auto">{{ $manipulated_sentence }}</h1>
+                    @endif
+                    @if (!empty($third_last_word) || !empty($second_last_word) || !empty($last_word))
+                        <h2 class="text-white text-center" style=" font-size: 30px; margin-left: -220px;">
+                            <span class="normal_text text-capitalize">{{ $third_last_word }} {{ $second_last_word }}</span>
+                            <span class="word wisteria ml-2 normal_text fw-bold"> {{ $last_word }}</span>
+                            <span class="word wisteria ml-2 normal_text fw-bold"> {{ $last_word }}</span>
+                            <span class="word belize ml-2 normal_text fw-bold"> {{ $last_word }}</span>
+                            <span class="word pomegranate ml-2 normal_text fw-bold"> {{ $last_word }}</span>
+                        </h2>
+                    @endif
                     {{-- <div class="row ">
                         <!--BUTTON START-->
                         <div class="d-flex justify-content-center align-items-center">
