@@ -124,7 +124,7 @@
         <div class="row px-lg-4 px-sm-0 align-items-center">
             <div class="col-lg-6 text-lg-start text-sm-center">
                 <div>
-                    <p class="m-0 p-0 text-white">&copy {{ date('Y') }} Coder's Hat</p>
+                    <p class="m-0 p-0 text-white">&copy {{ date('Y') }} <a href="https://www.codershatbd.com/" class="text-white fw-bolder" target="_blank" rel="noopener noreferrer">Coder's Hat</a></p>
                 </div>
             </div>
             <div class="col-lg-6">
