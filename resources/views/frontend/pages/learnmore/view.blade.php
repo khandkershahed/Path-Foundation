@@ -22,7 +22,7 @@
 
     <!--======// Header Title //======-->
     <section class="common_product_header"
-        style="height:25rem; background-image:url({{ !empty($learnmore->image_banner) ? asset('storage/' . $learnmore->image_banner) : asset('images/learn_more.png') }});">
+        style="height:24rem; background-image:url({{ !empty($learnmore->image_banner) ? asset('storage/' . $learnmore->image_banner) : asset('images/learn_more.png') }});">
         {{-- style="background-image: url('{{ asset('storage/' . $learnmore->image_banner) }}');"> --}}
         <div>
             <div class="">
@@ -138,117 +138,126 @@
     </section>
     <!--=======// Techincal Expertise //========-->
     <!--======// our clint tab //======-->
-    <section>
-        <div class="container-fluid rounded-lg bg-light pb-5">
-            <div class="container">
-                <div class="row">
-                    <div class="text-center mt-4">
-                        <h3>{{ $learnmore->success_story_title }}</h3>
-                    </div>
-                    <div>
-                        <ul class="nav nav-tabs d-flex justify-content-center border-0 mt-3" id="myTab" role="tablist">
-                            @if (!empty($story1->badge))
-                                @php
-                                    $tags_1 = explode(',', $story1->tags);
-                                @endphp
-                                <li class="nav-item" role="presentation">
-                                    <button class="nav-link active" id="home-tab" data-bs-toggle="tab"
-                                        data-bs-target="#home" type="button" role="tab" aria-controls="home"
-                                        aria-selected="true">{{ $story1->badge }}</button>
-                                </li>
-                            @endif
-                            @if (!empty($story2->badge))
-                                @php
-                                    $tags_2 = explode(',', $story2->tags);
-                                @endphp
-                                <li class="nav-item ms-2" role="presentation">
-                                    <button class="nav-link " id="profile-tab" data-bs-toggle="tab"
-                                        data-bs-target="#profile" type="button" role="tab" aria-controls="profile"
-                                        aria-selected="false">{{ $story2->badge }}</button>
-                                </li>
-                            @endif
-                            @if (!empty($story3->badge))
-                                @php
-                                    $tags_3 = explode(',', $story3->tags);
-                                @endphp
-                                <li class="nav-item ms-2" role="presentation">
-                                    <button class="nav-link " id="contact-tab" data-bs-toggle="tab"
-                                        data-bs-target="#contact" type="button" role="tab" aria-controls="contact"
-                                        aria-selected="false">{{ $story3->badge }}</button>
-                                </li>
-                            @endif
-                        </ul>
+    @if (
+        !empty($learnmore->success_story_title) ||
+            !empty($story1->badge) ||
+            !empty($story2->badge) ||
+            !empty($story3->badge))
+        <section>
+            <div class="container-fluid rounded-lg bg-light pb-5">
+                <div class="container">
+                    <div class="row">
+                        <div class="text-center mt-4">
+                            <h3>{{ $learnmore->success_story_title }}</h3>
+                        </div>
+                        <div>
+                            <ul class="nav nav-tabs d-flex justify-content-center border-0 mt-3" id="myTab"
+                                role="tablist">
+                                @if (!empty($story1->badge))
+                                    @php
+                                        $tags_1 = explode(',', $story1->tags);
+                                    @endphp
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link active" id="home-tab" data-bs-toggle="tab"
+                                            data-bs-target="#home" type="button" role="tab" aria-controls="home"
+                                            aria-selected="true">{{ $story1->badge }}</button>
+                                    </li>
+                                @endif
+                                @if (!empty($story2->badge))
+                                    @php
+                                        $tags_2 = explode(',', $story2->tags);
+                                    @endphp
+                                    <li class="nav-item ms-2" role="presentation">
+                                        <button class="nav-link " id="profile-tab" data-bs-toggle="tab"
+                                            data-bs-target="#profile" type="button" role="tab" aria-controls="profile"
+                                            aria-selected="false">{{ $story2->badge }}</button>
+                                    </li>
+                                @endif
+                                @if (!empty($story3->badge))
+                                    @php
+                                        $tags_3 = explode(',', $story3->tags);
+                                    @endphp
+                                    <li class="nav-item ms-2" role="presentation">
+                                        <button class="nav-link " id="contact-tab" data-bs-toggle="tab"
+                                            data-bs-target="#contact" type="button" role="tab" aria-controls="contact"
+                                            aria-selected="false">{{ $story3->badge }}</button>
+                                    </li>
+                                @endif
+                            </ul>
 
 
-                        <div class="tab-content mt-5 mb-3" id="myTabContent">
-                            @if (!empty($story1->badge))
-                                <div class="tab-pane fade show active" id="home" role="tabpanel"
-                                    aria-labelledby="home-tab">
-                                    <div class="row d-flex align-items-center">
-                                        <div class="col-lg-5">
-                                            <img class="img-fluid story-tab"
-                                                src="{{ !empty($story1->image) && file_exists(public_path('storage/' . $story1->image)) ? asset('storage/' . $story1->image) : asset('frontend/images/no-row-img(580-326).png') }}"
-                                                alt="PATH Bangladesh">
-                                            {{-- <img class="img-fluid rounded-pill" src="{{ asset('storage/' . $story1->image) }}" alt=""> --}}
-                                        </div>
-                                        <div class="col-lg-7">
-                                            <h2 class="story-title pb-3">{{ $story1->title }}</h2>
-                                            <p class="text-justify">{{ $story1->header }}</p>
-                                            <div class="text-start p-2">
-                                                <a href="{{ route('all.story') }}" class="fw-bold"
-                                                    style="color: #ae0a46;">View all client
-                                                    stories →</a>
+                            <div class="tab-content mt-5 mb-3" id="myTabContent">
+                                @if (!empty($story1->badge))
+                                    <div class="tab-pane fade show active" id="home" role="tabpanel"
+                                        aria-labelledby="home-tab">
+                                        <div class="row d-flex align-items-center">
+                                            <div class="col-lg-5">
+                                                <img class="img-fluid story-tab"
+                                                    src="{{ !empty($story1->image) && file_exists(public_path('storage/' . $story1->image)) ? asset('storage/' . $story1->image) : asset('frontend/images/no-row-img(580-326).png') }}"
+                                                    alt="PATH Bangladesh">
+                                                {{-- <img class="img-fluid rounded-pill" src="{{ asset('storage/' . $story1->image) }}" alt=""> --}}
+                                            </div>
+                                            <div class="col-lg-7">
+                                                <h2 class="story-title pb-3">{{ $story1->title }}</h2>
+                                                <p class="text-justify">{{ $story1->header }}</p>
+                                                <div class="text-start p-2">
+                                                    <a href="{{ route('all.story') }}" class="fw-bold"
+                                                        style="color: #ae0a46;">View all client
+                                                        stories →</a>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                            @endif
-                            @if (!empty($story2->badge))
-                                <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                                    <div class="row d-flex align-items-center">
-                                        <div class="col-lg-5">
-                                            <img class="img-fluid story-tab"
-                                                src="{{ !empty($story2->image) && file_exists(public_path('storage/' . $story2->image)) ? asset('storage/' . $story2->image) : asset('frontend/images/no-row-img(580-326).png') }}"
-                                                alt="PATH Bangladesh">
-                                        </div>
-                                        <div class="col-lg-7">
-                                            <h2 class="story-title pb-3">{{ $story2->title }}</h2>
-                                            <p>{{ $story2->header }}</p>
-                                            <div class="text-start p-2">
-                                                <a href="{{ route('all.story') }}" class="fw-bold"
-                                                    style="color: #ae0a46;">View all client
-                                                    stories →</a>
+                                @endif
+                                @if (!empty($story2->badge))
+                                    <div class="tab-pane fade" id="profile" role="tabpanel"
+                                        aria-labelledby="profile-tab">
+                                        <div class="row d-flex align-items-center">
+                                            <div class="col-lg-5">
+                                                <img class="img-fluid story-tab"
+                                                    src="{{ !empty($story2->image) && file_exists(public_path('storage/' . $story2->image)) ? asset('storage/' . $story2->image) : asset('frontend/images/no-row-img(580-326).png') }}"
+                                                    alt="PATH Bangladesh">
+                                            </div>
+                                            <div class="col-lg-7">
+                                                <h2 class="story-title pb-3">{{ $story2->title }}</h2>
+                                                <p>{{ $story2->header }}</p>
+                                                <div class="text-start p-2">
+                                                    <a href="{{ route('all.story') }}" class="fw-bold"
+                                                        style="color: #ae0a46;">View all client
+                                                        stories →</a>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                            @endif
-                            @if (!empty($story3->badge))
-                                <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
-                                    <div class="row d-flex align-items-center">
-                                        <div class="col-lg-5">
-                                            <img class="img-fluid story-tab"
-                                                src="{{ !empty($story3->image) && file_exists(public_path('storage/' . $story3->image)) ? asset('storage/' . $story3->image) : asset('frontend/images/no-row-img(580-326).png') }}"
-                                                alt="PATH Bangladesh">
-                                        </div>
-                                        <div class="col-lg-7">
-                                            <h2 class="story-title pb-3">{{ $story3->title }}</h2>
-                                            <p>{{ $story3->header }}</p>
-                                            <div class="text-start p-2">
-                                                <a href="{{ route('all.story') }}" class="fw-bold"
-                                                    style="color: #ae0a46;">View all client
-                                                    stories →</a>
+                                @endif
+                                @if (!empty($story3->badge))
+                                    <div class="tab-pane fade" id="contact" role="tabpanel"
+                                        aria-labelledby="contact-tab">
+                                        <div class="row d-flex align-items-center">
+                                            <div class="col-lg-5">
+                                                <img class="img-fluid story-tab"
+                                                    src="{{ !empty($story3->image) && file_exists(public_path('storage/' . $story3->image)) ? asset('storage/' . $story3->image) : asset('frontend/images/no-row-img(580-326).png') }}"
+                                                    alt="PATH Bangladesh">
+                                            </div>
+                                            <div class="col-lg-7">
+                                                <h2 class="story-title pb-3">{{ $story3->title }}</h2>
+                                                <p>{{ $story3->header }}</p>
+                                                <div class="text-start p-2">
+                                                    <a href="{{ route('all.story') }}" class="fw-bold"
+                                                        style="color: #ae0a46;">View all client
+                                                        stories →</a>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                            @endif
+                                @endif
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    @endif
     <!---------End -------->
     <!--=====// Global call section //=====-->
     {{-- <section class="global_call_section section_padding">
@@ -341,13 +350,15 @@
     <!---------End -------->
 
 
-    <section class="container mt-3">
-        <div class="outcome_smail_bussiness_title">
-            <!-- <hr class="lineTop"> -->
-            <h2>{!! $learnmore->footer !!}</h2>
-            <hr class="lineBottom">
-        </div>
-    </section>
+    @if (!empty($learnmore->footer))
+        <section class="container mt-3">
+            <div class="outcome_smail_bussiness_title">
+                <!-- <hr class="lineTop"> -->
+                <h2>{!! $learnmore->footer !!}</h2>
+                <hr class="lineBottom">
+            </div>
+        </section>
+    @endif
 
 
     <!--=====// Pageform section //=====-->
