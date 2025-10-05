@@ -121,28 +121,11 @@
     </div>
     <!-- footer bottom -->
     <div class="container">
-        <div class="row px-lg-4 px-sm-0 align-items-center">
-            <div class="col-lg-6 text-lg-start text-sm-center">
-                <div>
-                    <p class="m-0 p-0 text-white">&copy {{ date('Y') }} <a href="https://www.codershatbd.com/" class="text-white fw-bolder" target="_blank" rel="noopener noreferrer">Coder's Hat</a></p>
-                </div>
-            </div>
-            <div class="col-lg-6">
-                {{-- <div>
-                    <ul class="footer_bottom_text">
-                        <li>
-                            <a class="text-white" href="{{ route('privacy.policy') }}">Privacy policy &nbsp;|&nbsp;
-                            </a>
-                        </li>
-                        <li>
-                            <a class="text-white" href="javascript:void(0)">Terms & Conditions &nbsp;|&nbsp;
-                            </a>
-                        </li>
-                    </ul> --}}
-                </div>
-            </div>
+        <div class="row px-lg-4 px-sm-0 align-items-center text-end">
+            <h6 class="m-0 p-0 my-1 text-white">&copy {{ date('Y') }} <a href="https://www.codershatbd.com/"
+                    class="text-danger fw-bolder" target="_blank" rel="noopener noreferrer">Coder's Hat</a></h6>
+
         </div>
     </div>
 </footer>
 <!----------End--------->
-
