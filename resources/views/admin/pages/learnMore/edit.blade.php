@@ -51,7 +51,12 @@
                                 </div>
                                 {{--  --}}
                                 <div class="row align-items-center pb-7">
-                                    <label class="form-label">Banner
+                                    <label for="validationCustom01" class="form-label ">Banner
+                                        Image <span class="text-danger">(Image size must be 1920 * 350 )</span></label>
+                                    <x-metronic.file-input id="image_banner" name="image_banner" :source="isset($learnMore->image_banner)
+                                        ? asset('storage/' . $learnMore->image_banner)
+                                        : null" />
+                                    {{-- <label class="form-label">Banner
                                         Image</label>
                                     <div class="row">
                                         <div class="" style="width: 70%">
@@ -66,11 +71,17 @@
                                                     height: 40px;
                                                      margin-left: 2.5rem;">
                                         </div>
-                                    </div>
+                                    </div> --}}
+
                                 </div>
                                 {{--  --}}
                                 <div class="row align-items-center pb-7">
-                                    <label class="form-label">Background
+                                    <label for="validationCustom01" class="form-label ">Feature Page
+                                        Image <span class="text-danger">(Image size must be 1920 * 0 )</span></label>
+                                    <x-metronic.file-input id="background_image" name="background_image" :source="isset($learnMore->background_image)
+                                        ? asset('storage/' . $learnMore->background_image)
+                                        : null" />
+                                    {{-- <label class="form-label">Background
                                         Image</label>
                                     <div class="row">
                                         <div class="" style="width: 70%">
@@ -86,7 +97,7 @@
                                                     height: 40px;
                                                      margin-left: 2.5rem;">
                                         </div>
-                                    </div>
+                                    </div> --}}
                                 </div>
                             </div>
                             <span class="mt-1 fw-bold text-info">Header</span>
