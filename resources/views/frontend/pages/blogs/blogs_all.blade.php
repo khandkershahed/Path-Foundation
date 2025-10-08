@@ -138,7 +138,7 @@
                                     <a class="text-black" href="{{ route('story.details', $blog->slug) }}">
                                         <div class="p-3">
                                             {{-- Blog Image --}}
-                                            <img src="{{ !empty($blog->thumbnail_image) && file_exists(public_path('storage/' . $blog->thumbnail_image)) ? asset('storage/' . $blog->thumbnail_image) : asset('storage/' . $blog->banner_image) }}"
+                                            <img src="{{ !empty($blog->banner_image) && file_exists(public_path('storage/' . $blog->banner_image)) ? asset('storage/' . $blog->banner_image) : asset('storage/' . $blog->thumbnail_image) }}"
                                                 class="img-fluid" alt="">
                                             <div class="row d-flex justify-content-between">
                                                 <div class="col mt-3">
