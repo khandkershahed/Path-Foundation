@@ -90,26 +90,27 @@
                                     <div class="invalid-feedback"> Please Enter Author </div>
                                 </div>
                                 <div class="col-md-4 pb-7">
-                                    <label for="validationCustom01" class="form-label ">Banner
-                                        Image</label>
-                                    <x-metronic.file-input id="banner_image" name="banner_image" />
-                                    {{-- <input type="file" class="form-control form-control-solid form-control-sm"
-                                        id="validationCustom01" placeholder="Enter Banner Image" name="banner_image"> --}}
-                                    {{-- <div class="invalid-feedback"> Please Enter Banner Image </div> --}}
-                                </div>
-                                <div class="col-md-4 pb-7">
                                     <label for="validationCustom01" class="form-label ">Thumbnail
-                                        Image</label>
-                                        <x-metronic.file-input id="thumbnail_image" name="thumbnail_image" />
+                                        Image <span class="text-danger">(Image size must be 306 * 250 )</span></label>
+                                    <x-metronic.file-input id="thumbnail_image" name="thumbnail_image" />
                                     {{-- <input type="file" class="form-control form-control-solid form-control-sm"
                                         id="validationCustom01" placeholder="Enter Thumbnail Image"
                                         name="thumbnail_image">
                                     <div class="invalid-feedback"> Please Enter Thumbnail Image </div> --}}
                                 </div>
                                 <div class="col-md-4 pb-7">
+                                    <label for="validationCustom01" class="form-label ">Banner
+                                        Image <span class="text-danger">(Image size must be 1920 * 400 )</span></label>
+                                    <x-metronic.file-input id="banner_image" name="banner_image" />
+                                    {{-- <input type="file" class="form-control form-control-solid form-control-sm"
+                                        id="validationCustom01" placeholder="Enter Banner Image" name="banner_image"> --}}
+                                    {{-- <div class="invalid-feedback"> Please Enter Banner Image </div> --}}
+                                </div>
+
+                                <div class="col-md-4 pb-7">
                                     <label for="validationCustom01" class="form-label ">Aditional
                                         URL</label>
-                                        
+
                                     <input type="url" class="form-control form-control-solid form-control-sm"
                                         id="validationCustom01" placeholder="Enter Additional  URL"
                                         name="additional_url" value="{{ old('additional_url') }}">
