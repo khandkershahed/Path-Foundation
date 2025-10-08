@@ -71,48 +71,54 @@
                                     <label for="validationCustom01" class="form-label ">Badge
                                     </label>
                                     <input type="text" class="form-control form-control-solid form-control-sm"
-                                        id="validationCustom01" placeholder="Enter Badge" name="badge" value="{{old('badge')}}">
+                                        id="validationCustom01" placeholder="Enter Badge" name="badge"
+                                        value="{{ old('badge') }}">
                                     <div class="invalid-feedback"> Please Enter Badge </div>
                                 </div>
                                 <div class="col-md-4 pb-7">
                                     <label for="validationCustom01" class="form-label ">Title</label>
                                     <input type="text" class="form-control form-control-solid form-control-sm"
-                                        id="validationCustom01" placeholder="Enter Title" name="title" value="{{old('title')}}">
+                                        id="validationCustom01" placeholder="Enter Title" name="title"
+                                        value="{{ old('title') }}">
                                     <div class="invalid-feedback"> Please Enter Title </div>
                                 </div>
                                 <div class="col-md-4 pb-7">
                                     <label for="validationCustom01" class="form-label ">Author</label>
                                     <input type="text" class="form-control form-control-solid form-control-sm"
-                                        id="validationCustom01" placeholder="Enter Author" name="author" value="{{old('author')}}">
+                                        id="validationCustom01" placeholder="Enter Author" name="author"
+                                        value="{{ old('author') }}">
                                     <div class="invalid-feedback"> Please Enter Author </div>
                                 </div>
                                 <div class="col-md-4 pb-7">
                                     <label for="validationCustom01" class="form-label ">Banner
                                         Image</label>
-                                    <input type="file" class="form-control form-control-solid form-control-sm"
-                                        id="validationCustom01" placeholder="Enter Banner Image" name="banner_image">
-                                    <div class="invalid-feedback"> Please Enter Banner Image </div>
+                                    <x-metronic.file-input id="banner_image" name="banner_image" />
+                                    {{-- <input type="file" class="form-control form-control-solid form-control-sm"
+                                        id="validationCustom01" placeholder="Enter Banner Image" name="banner_image"> --}}
+                                    {{-- <div class="invalid-feedback"> Please Enter Banner Image </div> --}}
                                 </div>
                                 <div class="col-md-4 pb-7">
                                     <label for="validationCustom01" class="form-label ">Thumbnail
                                         Image</label>
-                                    <input type="file" class="form-control form-control-solid form-control-sm"
+                                        <x-metronic.file-input id="thumbnail_image" name="thumbnail_image" />
+                                    {{-- <input type="file" class="form-control form-control-solid form-control-sm"
                                         id="validationCustom01" placeholder="Enter Thumbnail Image"
                                         name="thumbnail_image">
-                                    <div class="invalid-feedback"> Please Enter Thumbnail Image </div>
+                                    <div class="invalid-feedback"> Please Enter Thumbnail Image </div> --}}
                                 </div>
                                 <div class="col-md-4 pb-7">
                                     <label for="validationCustom01" class="form-label ">Aditional
                                         URL</label>
+                                        
                                     <input type="url" class="form-control form-control-solid form-control-sm"
                                         id="validationCustom01" placeholder="Enter Additional  URL"
-                                        name="additional_url" value="{{old('additional_url')}}">
+                                        name="additional_url" value="{{ old('additional_url') }}">
                                     <div class="invalid-feedback"> Please Enter Additional URL</div>
                                 </div>
                                 <div class="col-md-12 pb-7">
                                     <label for="validationCustom010" class="form-label mb-0">Header</label>
                                     <textarea rows="1" name="header" class="form-control form-control-sm form-control-solid"
-                                        placeholder="Enter Header">{{old('header')}}</textarea>
+                                        placeholder="Enter Header">{{ old('header') }}</textarea>
                                     <div class="invalid-feedback"> Please Enter Header</div>
                                 </div>
                                 <div class="col-md-12 pb-7">
@@ -123,25 +129,25 @@
                                 <div class="col-md-12 pb-7">
                                     <label for="validationCustom010" class="form-label mb-0">Address</label>
                                     <textarea rows="1" name="address" class="form-control form-control-sm form-control-solid"
-                                        placeholder="Enter Address">{{old('address')}}</textarea>
+                                        placeholder="Enter Address">{{ old('address') }}</textarea>
                                     <div class="invalid-feedback"> Please Enter Address</div>
                                 </div>
                                 <div class="col-md-12 pb-7">
                                     <label for="validationCustom010" class="form-label mb-0">Footer</label>
                                     <textarea rows="1" name="footer" class="form-control form-control-sm form-control-solid"
-                                        placeholder="Enter Footer">{{old('footer')}}</textarea>
+                                        placeholder="Enter Footer">{{ old('footer') }}</textarea>
                                     <div class="invalid-feedback"> Please Enter Footer</div>
                                 </div>
                                 <div class="col-md-12 mb-1 pt-7">
                                     <label for="validationCustom01" class="form-label mb-0">Short
                                         Description</label>
-                                    <textarea name="short_des" class="tox-target ckeditor">{{old('short_des')}}</textarea>
+                                    <textarea name="short_des" class="tox-target ckeditor">{{ old('short_des') }}</textarea>
                                     <div class="invalid-feedback"> Please Enter Title </div>
                                 </div>
                                 <div class="col-md-12 mb-1 pt-7">
                                     <label for="validationCustom01" class="form-label mb-0">Long
                                         Description</label>
-                                    <textarea name="long_des" class="tox-target ckeditor">{{old('long_des')}}</textarea>
+                                    <textarea name="long_des" class="tox-target ckeditor">{{ old('long_des') }}</textarea>
                                     <div class="invalid-feedback"> Please Enter Title </div>
                                 </div>
                             </div>
@@ -156,7 +162,6 @@
     </div>
 
     @push('scripts')
-
         <script>
             document.addEventListener('DOMContentLoaded', function() {
                 // The DOM elements you wish to replace with Tagify

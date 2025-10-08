@@ -99,10 +99,17 @@
                                     <div class="invalid-feedback"> Please Enter Author </div>
                                 </div>
                                 <div class="col-md-4 pb-7">
-                                    <div class="row">
+                                    <label for="validationCustom01" class="form-label ">Thumbnail
+                                        Image <span class="text-danger">(Image size must be 306 * 250 )</span></label>
+                                    <x-metronic.file-input id="thumbnail_image" name="thumbnail_image"
+                                        :source="isset($newsTrend->thumbnail_image)
+                                            ? asset('storage/' . $newsTrend->thumbnail_image)
+                                            : null" />
+                                    {{-- <div class="row">
                                         <div class="col-lg-10">
                                             <label for="validationCustom01" class="form-label ">Banner
                                                 Image</label>
+
                                             <input type="file"
                                                 class="form-control form-control-solid form-control-sm"
                                                 id="validationCustom01" placeholder="Enter Banner Image"
@@ -111,13 +118,19 @@
                                         </div>
                                         <div class="col-lg-2">
                                             <label for="validationCustom01" class="form-label "></label>
+
                                             <img src="{{ !empty($newsTrend->banner_image) && file_exists(public_path('storage/' . $newsTrend->banner_image)) ? asset('storage/' . $newsTrend->banner_image) : asset('frontend/images/banner-demo.png') }}"
                                                 alt="" class="img-fluid" width="50px">
                                         </div>
-                                    </div>
+                                    </div> --}}
                                 </div>
                                 <div class="col-md-4 pb-7">
-                                    <div class="row">
+                                    <label for="validationCustom01" class="form-label ">Banner
+                                        Image <span class="text-danger">(Image size must be 1920 * 400 )</span></label>
+                                    <x-metronic.file-input id="banner_image" name="banner_image" :source="isset($newsTrend->banner_image)
+                                        ? asset('storage/' . $newsTrend->banner_image)
+                                        : null" />
+                                    {{-- <div class="row">
                                         <div class="col-lg-10">
                                             <label for="validationCustom01" class="form-label ">Thumbnail
                                                 Image</label>
@@ -132,7 +145,7 @@
                                             <img src="{{ !empty($newsTrend->thumbnail_image) && file_exists(public_path('storage/' . $newsTrend->thumbnail_image)) ? asset('storage/' . $newsTrend->thumbnail_image) : asset('frontend/images/banner-demo.png') }}"
                                                 alt="" class="img-fluid" width="50px">
                                         </div>
-                                    </div>
+                                    </div> --}}
                                 </div>
                                 <div class="col-md-4 pb-7">
                                     <label for="validationCustom01" class="form-label ">Aditional

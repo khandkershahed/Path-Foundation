@@ -18,7 +18,7 @@
     </div>
 </div>
 
-<script>
+<script> 
 
     function previewFile(input) {
         var file = input.files[0];

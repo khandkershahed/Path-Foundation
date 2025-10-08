@@ -75,7 +75,7 @@ class HomeController extends Controller
     //Homepage
 
     public function index()
-    {
+    { 
 
         $data['home'] = Homepage::latest('id')->with([
             'feature1', 'feature2', 'feature3', 'feature4', 'feature5',

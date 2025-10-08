@@ -106,7 +106,7 @@
                         <div class="separator my-2"></div>
 
 
-                        <div class="menu-item px-5" data-kt-menu-trigger="hover" data-kt-menu-placement="left-start">
+                        {{-- <div class="menu-item px-5" data-kt-menu-trigger="hover" data-kt-menu-placement="left-start">
                             <a href="#" class="menu-link px-5">
                                 <span class="menu-title position-relative">Language
                                     <span
@@ -135,7 +135,7 @@
 
                             </div>
 
-                        </div>
+                        </div> --}}
 
 
                         {{-- <div class="menu-item px-5 my-1">

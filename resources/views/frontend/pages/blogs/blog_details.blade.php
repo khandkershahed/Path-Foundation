@@ -4,12 +4,12 @@
     {{-- Blog Updated  --}}
     <style>
         .blog_header {
-            background-image: url(../images/buy-category-hero.jpg);
+            /* background-image: url(../images/buy-category-hero.jpg); */
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
             /* padding: 180px 0px; */
-            height: 360px;
+            height: 400px;
         }
 
         .special_character {
@@ -52,7 +52,7 @@
     </style>
 
     <!--======// Header Title //======-->
-    <section class="blog_header" style="background-image: url('{{ asset('storage/' . $blog->image) }}');">
+    <section class="blog_header" style="background-image: url('{{ !empty($blog->image) && file_exists(public_path('storage/' . $blog->image)) ? asset('storage/' . $blog->image) : asset('frontend/images/buy-category-hero.jpg') }}');">
         <h1 class="text-center text-white pt-5">{{ $blog->badge }}</h1>
         <div class="container ">
             <div class="row ">
