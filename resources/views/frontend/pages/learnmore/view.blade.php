@@ -94,7 +94,7 @@
                 <div class="col-lg-4">
                     <div class="wedo-cards__container">
                         <div class="wedo-cards__item"
-                            style="background-image: url('{{ asset('frontend/images/Frame 4 (4).jpg') }}');">
+                            style="background-image: url('{{ asset('frontend/images/frame_1.jpg') }}');">
                             <div class="wedo-cards__content">
                                 <h3 class="wedo-cards__heading">{{ Str::limit($learnmore->box_one_title, 18) }}</h3>
                                 <p class="wedo-cards__sub-heading">{!! $learnmore->box_one_short_des !!}. <br>
@@ -108,7 +108,7 @@
                 <div class="col-lg-4">
                     <div class="wedo-cards__container">
                         <div class="wedo-cards__item"
-                            style="background-image: url('{{ asset('frontend/images/Frame 4 (5).jpg') }}');">
+                            style="background-image: url('{{ asset('frontend/images/frame_2.jpg') }}');">
                             <div class="wedo-cards__content">
                                 <h3 class="wedo-cards__heading">{{ Str::limit($learnmore->box_two_title, 18) }}</h3>
                                 <p class="wedo-cards__sub-heading">{!! $learnmore->box_two_short_des !!}
@@ -122,13 +122,14 @@
                 </div>
                 <div class="col-lg-4">
                     <div class="wedo-cards__item mt-5"
-                        style="background-image: url('{{ asset('frontend/images/Frame 4 (6).jpg') }}');">
+                        style="background-image: url('{{ asset('frontend/images/frame_3.jpg') }}');">
                         <div class="wedo-cards__content">
                             <h3 class="wedo-cards__heading">{{ Str::limit($learnmore->box_three_title, 18) }}</h3>
                             <p class="wedo-cards__sub-heading">{!! $learnmore->box_three_short_des !!}
                                 <a class="wedo-cards__cta" href="{{ $learnmore->box_three_link }}">Explore
                                     {{ $learnmore->box_three_title }}
                                 </a>
+                                
                             </p>
                         </div>
                     </div>
