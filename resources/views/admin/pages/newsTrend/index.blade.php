@@ -41,7 +41,7 @@
                                 <td>{{ $newsTrend->author }}
                                 </td>
                                 <td>
-                                    <img class="" width="60px"
+                                    <img class="" width="150px" height="50px"
                                         src="{{ !empty($newsTrend->banner_image) ? asset('storage/' . $newsTrend->banner_image) : asset('storage/main/no-image-available.png') }}"
                                         alt="{{ $newsTrend->title }} Logo">
                                 </td>
