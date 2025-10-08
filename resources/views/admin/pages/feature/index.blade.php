@@ -37,13 +37,13 @@
                             <tr>
                                 <td>{{ ++$key }}</td>
                                 <td class="text-center"><img class="rounded-circle"
-                                        src="{{ asset('storage/thumb/' . $feature->logo) }}"
+                                        src="{{ asset('storage/' . $feature->logo) }}"
                                         height="25" width="25" alt=""></td>
                                 <td class="text-start">{{ $feature->title }}</td>
                                 <td class="text-start"><span title="{!! $feature->header !!}">{!! implode(' ', array_slice(str_word_count($feature->header, 1), 0, 10)) !!}</span></td>
                                 <td>
                                     <a href="{{ route('admin.feature.edit', $feature->id) }}"
-                                        class="text-primary">
+                                        class="text-primary me-5">
                                         <i
                                             class="fas fa-pen text-primary dash-icons"></i>
                                     </a>

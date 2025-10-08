@@ -64,7 +64,7 @@
                                     </div>
                                     <div class="col-lg-2 col-sm-12 text-end">
                                         <img class="rounded-circle" id="showImage" height="25px" width="25px"
-                                            src="{{ asset('storage/thumb/' . $feature->logo) }}" alt="">
+                                            src="{{ asset('storage/' . $feature->logo) }}" alt="">
                                     </div>
                                 </div>
                                 {{--  --}}
@@ -78,7 +78,7 @@
                                     </div>
                                     <div class="col-lg-2 col-sm-12 text-end">
                                         <img class="rounded-circle" id="showImage1" height="25px" width="25px"
-                                            src="{{ asset('storage/thumb/' . $feature->image) }}" alt="">
+                                            src="{{ asset('storage/' . $feature->image) }}" alt="">
                                     </div>
                                 </div>
                                 {{--  --}}

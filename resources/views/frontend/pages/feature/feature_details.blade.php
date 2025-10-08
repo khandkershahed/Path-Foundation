@@ -164,9 +164,6 @@
                         <p class="home_title_text text-white pt-2 text-lg-start text-center">
                             {{ Illuminate\Support\Str::limit($feature->row_four_header, 150, '...') }}
                         </p>
-                        {{-- <div class="business_seftion_button">
-                            <a href="{{ asset('contact') }}" class="btn-color">Explore Our Business</a>
-                        </div> --}}
                     </div>
                 </div>
             </div>

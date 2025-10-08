@@ -17011,6 +17011,7 @@ nav > div a.nav-item.nav-link.active:after {
     padding: 75px;
     margin-left: -15px;
     margin-top: 1.3rem;
+    height: 350px;
 }
 
 .app-contact {
