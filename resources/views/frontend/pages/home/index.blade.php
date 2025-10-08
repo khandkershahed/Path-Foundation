@@ -589,7 +589,7 @@
                                 <div class="gradient-overlay"></div>
                                 <img class="img-fluid overlays-img"
                                     src="{{ isset($techglossy->thumbnail_image) && file_exists(public_path('storage/' . $techglossy->thumbnail_image)) ? asset('storage/' . $techglossy->thumbnail_image) : asset('frontend/images/banner-demo.png') }}"
-                                    alt="Picture" style="border-top-right-radius: 60px;">
+                                    alt="Picture">
                                     {{-- alt="Picture" style="border-top-right-radius: 60px;"> --}}
                             </div>
                         </div>
