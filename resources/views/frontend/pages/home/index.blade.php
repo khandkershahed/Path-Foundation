@@ -471,8 +471,8 @@
 {{-- @if (!empty($story) | !empty($story2) | !empty($story3) | !empty($story4)) --}}
 @if (!empty($storys) && array_filter($storys))
     <section>
-        <div class="container my-4 mb-5 d-lg-block d-sm-none">
-            <h2 class="text-center">
+        <div class="container my-5 d-lg-block d-sm-none">
+            <h2 class="text-center mb-5">
                 <span style="color: #07163b;font-weight: 600;">
                     Our Stories
                 </span>
