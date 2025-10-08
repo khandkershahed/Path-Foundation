@@ -560,7 +560,7 @@
 @if (!empty($techglossy))
     <section>
         <div class="container spacer">
-            <div class="row bg-white magazine_content">
+            <div class="row bg-white magazine_content" style="border-radius:15px;">
                 <div class="col-lg-12">
                     <div class="row align-items-center">
                         <div class="col-lg-6">
@@ -584,10 +584,10 @@
                             </div>
                         </div>
                         <div class="col-lg-6 p-0 d-lg-block d-sm-none">
-                            <div class="showcase-industry-bottom" style="position: relative; overflow: hidden;">
+                            <div class="showcase-industry-bottom" style="position: relative; overflow: hidden; border-radius:15px;">
                                 <!-- Add a pseudo-element for the overlay -->
                                 <div class="gradient-overlay"></div>
-                                <img class="img-fluid overlays-img"
+                                <img class="img-fluid"
                                     src="{{ isset($techglossy->thumbnail_image) && file_exists(public_path('storage/' . $techglossy->thumbnail_image)) ? asset('storage/' . $techglossy->thumbnail_image) : asset('frontend/images/banner-demo.png') }}"
                                     alt="Picture">
                                     {{-- alt="Picture" style="border-top-right-radius: 60px;"> --}}
