@@ -1273,8 +1273,8 @@ ul {
 }
 
 .magazine_content {
-    border-top-right-radius: 60px;
-    border-bottom-left-radius: 60px;
+    /* border-top-right-radius: 60px; */
+    /* border-bottom-left-radius: 60px; */
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 
@@ -1363,8 +1363,8 @@ ul {
     background: #3085a3;
     text-align: start;
     cursor: pointer;
-    border-bottom-left-radius: 40px;
-    border-top-right-radius: 40px;
+    /* border-bottom-left-radius: 40px;
+    border-top-right-radius: 40px; */
 }
 
 .grid-river figure img {
@@ -1519,7 +1519,7 @@ figure.effect-oscar:hover p {
 .details-titles {
     position: relative;
     bottom: -4rem;
-    border-top-right-radius: 40px;
+    /* border-top-right-radius: 40px; */
     color: var(--secondary-color);
     font-size: 20px;
     font-weight: 700;
