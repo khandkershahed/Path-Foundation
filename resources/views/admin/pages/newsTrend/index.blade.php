@@ -25,10 +25,9 @@
                 <thead class="table_header_bg">
                     <tr class="text-center text-gray-900 fw-bolder fs-7 text-uppercase">
                         <th width="5%">Sl</th>
-                        <th width="20%">Title</th>
-                        <th width="35%">Header</th>
+                        <th width="45%">Title</th>
                         <th width="20%">Author</th>
-                        <th width="10%">Banner Image</th>
+                        <th width="20%">Banner Image</th>
                         <th class="text-center" width="10%">Action</th>
                 </thead>
                 <tbody class="fw-bold text-gray-600 text-center">
@@ -39,13 +38,10 @@
                                     {{ $loop->iteration }}
                                 </td>
                                 <td>{{ $newsTrend->title }}</td>
-                                <td>
-                                    {{ $newsTrend->header }}
-                                </td>
                                 <td>{{ $newsTrend->author }}
                                 </td>
                                 <td>
-                                    <img class="img-fluid rounded-circle" width="35px"
+                                    <img class="" width="60px"
                                         src="{{ !empty($newsTrend->banner_image) ? asset('storage/' . $newsTrend->banner_image) : asset('storage/main/no-image-available.png') }}"
                                         alt="{{ $newsTrend->title }} Logo">
                                 </td>
