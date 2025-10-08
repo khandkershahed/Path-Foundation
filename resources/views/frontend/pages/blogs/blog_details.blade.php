@@ -53,7 +53,7 @@
 
     <!--======// Header Title //======-->
     <section class="blog_header" style="background-image: url('{{ !empty($blog->image) && file_exists(public_path('storage/' . $blog->image)) ? asset('storage/' . $blog->image) : asset('frontend/images/buy-category-hero.jpg') }}');">
-        <h1 class="text-center text-white pt-5">{{ $blog->badge }}</h1>
+        {{-- <h1 class="text-center text-white pt-5">{{ $blog->badge }}</h1> --}}
         <div class="container ">
             <div class="row ">
             </div>
