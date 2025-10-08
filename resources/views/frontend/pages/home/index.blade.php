@@ -483,7 +483,7 @@
                         <div class="col-lg-3">
                             <div class="client_story_box">
                                 <div class="details-titles p-4">
-                                    <p>{{ $story->badge }}</p>
+                                    <p class="mb-0">{{ $story->badge }}</p>
                                 </div>
                                 <div class="grid-river">
                                     <figure class="effect-oscar">
