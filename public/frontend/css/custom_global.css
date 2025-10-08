@@ -1268,9 +1268,9 @@ ul {
     font-size: 50px;
 }
 
-.client_story_box {
+/* .client_story_box {
     margin-top: -2rem;
-}
+} */
 
 .magazine_content {
     /* border-top-right-radius: 60px; */
@@ -1517,8 +1517,8 @@ figure.effect-oscar:hover p {
 } */
 
 .details-titles {
-    position: relative;
-    bottom: -4rem;
+    /* position: relative; */
+    /* bottom: -4rem; */
     /* border-top-right-radius: 40px; */
     color: var(--secondary-color);
     font-size: 20px;
@@ -1526,6 +1526,7 @@ figure.effect-oscar:hover p {
     background-color: #ffffff;
     box-shadow: var(--custom-shadow);
     border: 1px solid var(--border-color);
+    height: 5.5rem;
 }
 
 .details-titles p {

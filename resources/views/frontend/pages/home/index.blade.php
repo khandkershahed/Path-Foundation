@@ -482,8 +482,8 @@
                     @if (!empty($story))
                         <div class="col-lg-3">
                             <div class="client_story_box">
-                                <div class="details-titles pt-4 ps-4 pb-3">
-                                    <p class="pb-5">{{ $story->badge }}</p>
+                                <div class="details-titles p-4">
+                                    <p>{{ $story->badge }}</p>
                                 </div>
                                 <div class="grid-river">
                                     <figure class="effect-oscar">
