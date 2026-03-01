@@ -7,7 +7,7 @@
                 <!-- CONTENT -->
                 <div class="col-lg-6">
                     <div class="donate-content">
-                        <h2 class="display-5 fw-bold mb-3" style="color: #051225;">Support Our Mission</h2>
+                        <h2 class="display-5 fw-bold mb-3" style="color: #03265a;">Support Our Mission</h2>
                         <p class="lead">
                             Your generous donation helps us continue empowering communities, providing education,
                             and promoting justice for all. Every contribution — big or small — brings hope and change.
