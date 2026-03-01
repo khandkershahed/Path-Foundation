@@ -405,16 +405,16 @@
                 <div class="row d-lg-none d-sm-block">
                     <div class="d-flex justify-content-center align-items-center px-3 mb-3 border-bottom">
                         <div class="text-start w-75">
-                            <h3 class="main_color">Our Focus Area</h3>
+                            <h3 class="main_color text-center">Our Focus Area</h3>
                         </div>
                         <div class="text-end w-25 d-flex">
                             <a class="Arrows custom-responsive-slider-prev me-1">
                                 <i class="fa-solid fa-chevron-left fa-2x"
-                                    style="cursor: pointer;font: 18px / 36px FontAwesome;text-align: center;transition: all 0.5s;background: #000;width: 38px;color: white;"></i>
+                                    style="cursor: pointer;font: 18px / 36px FontAwesome;text-align: center;transition: all 0.5s;background: #a9a8a8;width: 38px;color: rgb(1, 5, 23);border: 1px solid #eee;"></i>
                             </a>
                             <a class="Arrows custom-responsive-slider-next">
                                 <i class="fa-solid fa-chevron-right fa-2x"
-                                    style="cursor: pointer;font: 18px / 36px FontAwesome;text-align: center;transition: all 0.5s;background: #000;width: 38px;color: white;"></i>
+                                    style="cursor: pointer;font: 18px / 36px FontAwesome;text-align: center;transition: all 0.5s;background: #a9a8a8;width: 38px;color: rgb(1, 5, 23);border: 1px solid #eee;"></i>
                             </a>
                         </div>
                     </div>
@@ -510,16 +510,16 @@
         <div class="container my-4 mb-5 d-lg-none d-sm-block">
             <div class="d-flex justify-content-center align-items-center mx-3 border-bottom">
                 <div class="text-start w-75">
-                    <h3 style="color: #07163b;font-weight: 600;">Our Stories!</h3>
+                    <h3 class="text-center" style="color: #07163b;font-weight: 600;">Our Stories!</h3>
                 </div>
                 <div class="text-end w-25 d-flex">
                     <a class="Arrows custom-responsive-slider-prev me-1">
                         <i class="fa-solid fa-chevron-left fa-2x"
-                            style="cursor: pointer;font: 18px / 36px FontAwesome;text-align: center;transition: all 0.5s;background: #000;width: 38px;color: white;"></i>
+                            style="cursor: pointer;font: 18px / 36px FontAwesome;text-align: center;transition: all 0.5s;background: #fff;width: 38px;color: rgb(1, 5, 23); border: 1px solid #eee;"></i>
                     </a>
                     <a class="Arrows custom-responsive-slider-next me-1">
                         <i class="fa-solid fa-chevron-right fa-2x"
-                            style="cursor: pointer;font: 18px / 36px FontAwesome;text-align: center;transition: all 0.5s;background: #000;width: 38px;color: white;"></i>
+                            style="cursor: pointer;font: 18px / 36px FontAwesome;text-align: center;transition: all 0.5s;background: #fff;width: 38px;color: rgb(1, 5, 23); border: 1px solid #eee;"></i>
                     </a>
                 </div>
             </div>
@@ -691,11 +691,11 @@
                 <div class="d-flex justify-content-between px-4">
                     <a class="Arrows custom-responsive-slider-prev">
                         <i class="fa-solid fa-chevron-left fa-2x"
-                            style="cursor: pointer;font: 18px / 36px FontAwesome;text-align: center;transition: all 0.5s;background: #000;width: 38px;color: white;"></i>
+                            style="cursor: pointer;font: 18px / 36px FontAwesome;text-align: center;transition: all 0.5s;background: #fff;width: 38px;color: rgb(1, 5, 23); border: 1px solid #eee;"></i>
                     </a>
                     <a class="Arrows custom-responsive-slider-next">
                         <i class="fa-solid fa-chevron-right fa-2x"
-                            style="cursor: pointer;font: 18px / 36px FontAwesome;text-align: center;transition: all 0.5s;background: #000;width: 38px;color: white;"></i>
+                            style="cursor: pointer;font: 18px / 36px FontAwesome;text-align: center;transition: all 0.5s;background: #fff;width: 38px;color: rgb(1, 5, 23); border: 1px solid #eee;"></i>
                     </a>
                 </div>
                 <div class="owl-carousel custom-responsive-slider" style="z-index: 0 !important;">
