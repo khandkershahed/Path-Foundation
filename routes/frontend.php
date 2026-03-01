@@ -21,6 +21,7 @@ Route::get('/learn/more', [HomeController::class, 'LearnMore'])->name('learn.mor
 
 //What We Do
 Route::get('/Whatwe/do', [HomeController::class, 'whatWeDo'])->name('whatwedo');
+Route::get('/donate', [HomeController::class, 'donate'])->name('donate');
 
 Route::get('/research/reports', [HomeController::class, 'researchReport'])->name('researchReport');
 
@@ -49,14 +50,6 @@ Route::get('/books', [HomeController::class, 'books'])->name('books');
 Route::get('/books', [HomeController::class, 'books'])->name('books');
 
 //Industry
-Route::get('/industry/all', [HomeController::class, 'AllIndustry'])->name('all.industry');
-//Industry details
-Route::get('/industry/{id}/details', [HomeController::class, 'IndustryDetails'])->name('industry.details');
-
-//Solution
-Route::get('/solution/all', [HomeController::class, 'allSolution'])->name('all.solution');
-//Solution details
-Route::get('/solution/{id}/details/', [HomeController::class, 'SolutionDetails'])->name('solution.details');
 
 //Contact & Support
 Route::post('/contact_us', [ContactController::class, 'store'])->name('contactus.store');
@@ -75,35 +68,6 @@ Route::get('/feature/{id}/details/', [HomeController::class, 'FeatureDetails'])-
 
 // Shop // Filter
 
-//Shop
-Route::get('/shop', [ShopController::class, 'mainShop'])->name('shop');
-Route::get('/custom/shop', [ShopController::class, 'CustomProduct'])->name('custom.shop');
-
-//Tech Deals and Refurbished Products
-Route::get('/techdeal.html', [HomeController::class, 'TechDeal'])->name('tech.deals');
-Route::get('/refurbished.html', [HomeController::class, 'Refurbished'])->name('refurbished');
-
-//Brand wise Shop
-Route::get('/brands/all', [HomeController::class, 'AllBrand'])->name('all.brand');
-Route::get('/brandpage/{id}/html', [HomeController::class, 'BrandPage'])->name('brandpage.html');
-
-//Category wise Shop
-Route::get('/category/all', [HomeController::class, 'AllCategory'])->name('all.category');
-Route::get('/category/{id}/html', [HomeController::class, 'CategoryCommon'])->name('category.html');
-
-//filter routes
-Route::match(['get', 'post'], '/custom/product/{slug}', [ShopController::class, 'CustomProductFilter'])->name('custom.product');
-Route::match(['get', 'post'], '/ngenit/shop/filter', [ShopController::class, 'ShopFilter'])->name('shop.filter');
-// Route::post('getshopProducts', [ShopController::class, 'getShopProducts'])->name('shop.filter');
-
-//Shop
-Route::get('/shop', [ShopController::class, 'mainShop'])->name('shop');
-Route::get('/custom/shop', [ShopController::class, 'customProduct'])->name('custom.shop');
-// Route::match(['get','post'],'/ngenit/shop/filter_page', [ShopController::class, 'Shop'])->name('shop.filter_partial');
-
-Route::match(['get', 'post'], '/ngenit/shop/filter_page', [ShopController::class, 'getShopProducts'])->name('shop.filter_partial');
-Route::post('brand-search', [ShopController::class, 'brandSearch'])->name('brand.search');
-
 //storys
 Route::get('/storys/all', [HomeController::class, 'AllStory'])->name('all.story');
 Route::get('/story/{id}/details', [HomeController::class, 'StoryDetails'])->name('story.details');
@@ -116,16 +80,7 @@ Route::get('/blog/{id}/details', [HomeController::class, 'BlogDetails'])->name('
 Route::get('/techglossy/all', [HomeController::class, 'AllTechGlossy'])->name('all.techglossy');
 Route::get('/techglossy/{id}/details', [HomeController::class, 'TechGlossyDetails'])->name('techglossy.details');
 
-// Route::resource('client-feedback', FeedbackController::class)->except([
-//     'index', 'edit', 'update', 'store',
-// ]);
-// Route::post('/feedback/store', [FeedbackController::class, 'store'])->name('feedback.add');
 
-Route::get('/shop.html', [HomeController::class, 'shop_html'])->name('shop.html');
-
-Route::get('/product/{id}/html', [HomeController::class, 'ProductCommon'])->name('product.common');
-
-//Industry
 
 Route::get('/about-us', [HomeController::class, 'about'])->name('about');
 
@@ -140,35 +95,7 @@ Route::get('portfolio', [HomeController::class, 'Portfolio'])->name('portfolio')
 // Route::get('portfolio/{id}/details', [HomeController::class, 'portfolioDetails'])->name('portfolio.details');
 Route::get('portfolio/{id}/details/', [HomeController::class, 'portfolioDetails'])->name('portfolio.details');
 
-// //Work Order Upload
-// Route::put('upload/work-order/{id}', [RFQController::class,'workOrderUpload'])->name('work-order.upload');
 
-// //Proof of Payment Upload
-// Route::put('upload/payment-proof/{id}', [RFQController::class,'proofPaymentUpload'])->name('payment-proof.upload');
-
-// Add to cart store data
-Route::post('cart_store', [App\Http\Controllers\Frontend\CartController::class, 'AddToCart'])->name('add.cart');
-
-// Cart All Route
-Route::controller(CartController::class)->group(function () {
-    Route::get('/mycart', 'MyCart')->name('mycart');
-    Route::get('/get-cart-product', 'GetCartProduct');
-    Route::get('/cart-destroy', 'CartDestroy')->name('cart.destroy');
-
-    Route::get('/cart-remove/{rowId}', 'CartRemove')->name('cart.remove');
-    Route::get('/cart-decrement/{rowId}', 'CartDecrement')->name('cart.decrement');
-    Route::get('/cart-increment/{rowId}', 'CartIncrement')->name('cart.increment');
-    Route::get('/add/cart', 'CartAdd')->name('cart.add');
-
-});
-
-// Checkout Routes
-
-Route::get('/checkout', [CheckoutController::class, 'CheckoutCreate'])->name('checkout');
-Route::post('/checkout/store', [CheckoutController::class, 'CheckoutStore'])->name('checkout.store');
-Route::get('/payment/page/{id}', [CheckoutController::class, 'PaymentPage'])->name('payment.page');
-
-Route::get('/checkout/ajax/{region_id}', [CheckoutController::class, 'getGST']);
 
 // Stripe Payment
 Route::controller(StripeController::class)->group(function () {
@@ -185,31 +112,5 @@ Route::controller(JobController::class)->group(function () {
     // Route::get('/job-register-user', 'jobRegisterUser')->name('job.regiserUser');
 });
 
-//RFQ
-// Route::get('rfq', [HomeController::class, 'rfqCreate'])->name('rfq');
-// Route::post('rfq/store', [RFQController::class, 'store'])->name('rfq.add');
-// Route::post('rfq/add', [RFQController::class, 'rfqCreate'])->name('rfqCreate');
-// Route::get('rfq/{id}/success', [HomeController::class, 'rfqSuccess'])->name('rfq.success');
 
-// Route::get('/single/product/{id}', [PageController::class, 'productDetails'])->name('product.details');
 
-//Kuka Pages
-Route::controller(PageController::class)->group(function () {
-    Route::get('/single/product/{id}', 'productDetails')->name('product.details');
-    Route::get('/{id}/overview', 'overview')->name('brand.overview');
-    Route::get('/{id}/products', 'brandProducts')->name('brand.products');
-    Route::get('/{id}/pdfs', 'brandPdf')->name('brand.pdf');
-    Route::get('/{id}/contents', 'content')->name('brand.content');
-    // Route::get('/{id}/contents/{id}/details', 'blogDetails')->name('brand.content.details.blog');
-    // Route::get('/{id}/contents/{id}/details', 'storyDetails')->name('brand.content.details.story');
-    Route::get('/{slug}/products', 'ajaxBrandProductsPagination')->name('brand.products.pagination');
-});
-
-//Course Enroll
-Route::controller(CourseEnrollController::class)->group(function () {
-    Route::post('/course/enroll/{course_id}', 'CourseEnroll')->name('course.enroll');
-
-    //Add To Enroll
-    Route::post('/add-to-enroll/{course_id}', 'AddToEnroll');
-    Route::post('/add-to-enroll-online', 'AddToEnrollOnline');
-});

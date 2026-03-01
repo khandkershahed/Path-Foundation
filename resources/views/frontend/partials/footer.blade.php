@@ -30,10 +30,10 @@
                                     Account Title : PATH Bangladesh
                                 </li>
                                 <li style="font-size: 1.1rem; line-height: 1.3; color: #fff;">
-                                    Account Number : 6031360000112
+                                    Account Number : 20507790200076813
                                 </li>
                                 <li style="font-size: 1.1rem; line-height: 1.3; color: #fff;">
-                                    Bank : Social Islami Bank PLC
+                                    Bank : Islami Bank Bangladesh PLC
                                 </li>
                                 <li style="font-size: 1.1rem; line-height: 1.3; color: #fff;">
                                     Branch : Khulna Branch
