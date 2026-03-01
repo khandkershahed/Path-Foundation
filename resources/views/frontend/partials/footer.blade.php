@@ -14,7 +14,7 @@
                         <!-- title -->
                         <h2 class="text-white">{{ optional($setting)->site_name }}</h2>
                         <!-- text -->
-                        <p class="footer_text pt-4">
+                        <p class="footer_text">
                             {{ optional($setting)->site_slogan }}
                         </p>
 
