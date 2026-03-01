@@ -3,7 +3,7 @@
         <nav class="navbar navbar-expand-lg p-2 main-navbar bg-white">
             <div class="container-fluid d-flex align-items-center">
 
-                <a class="navbar-brand fw-bold main-logo ms-4" href="{{ route('homepage') }}">
+                <a class="navbar-brand fw-bold main-logo ms-4 py-3 py-lg-0" href="{{ route('homepage') }}">
                     <img class="img-fluid site-main-logo"
                         src="{{ !empty(optional($setting)->site_logo) && file_exists(public_path('storage/' . optional($setting)->site_logo)) ? asset('storage/' . optional($setting)->site_logo) : asset('frontend/images/brandPage-logo-no-img(217-55).jpg') }}"
                         alt="Path Foundation">
