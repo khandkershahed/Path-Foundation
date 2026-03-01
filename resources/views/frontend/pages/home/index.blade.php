@@ -205,7 +205,7 @@
 <!--======// Action section //======-->
 <section class="d-sm-none d-lg-block">
     <div class="container">
-        <h3 class="main_color text-center mt-5">Our Core Values </h3>
+        <h3 class="main_color text-center mt-5" style="color: #07163b;font-weight: 600;">Our Core Values </h3>
         <div class="row py-5 pt-4">
             <div class="col-lg-3">
                 <div class="card training-featuer">
@@ -372,7 +372,7 @@
             @if (!empty($features))
                 <div class="d-lg-block d-sm-none">
                     <div class="row d-flex justify-content-center">
-                        <h3 class="main_color text-center mb-5">Our Focus Areas</h3>
+                        <h3 class="main_color text-center mb-5" style="color: #07163b;font-weight: 600;">Our Focus Areas</h3>
                         @foreach ($features as $feature)
                             @if (!empty($feature))
                                 <div class="custom_col-2 col-md-6 col-sm-12">
@@ -405,7 +405,7 @@
                 <div class="row d-lg-none d-sm-block">
                     <div class="d-flex justify-content-center align-items-center px-3 mb-3 border-bottom">
                         <div class="text-start w-75">
-                            <h3 class="main_color text-center">Our Focus Area</h3>
+                            <h3 class="main_color text-center" style="color: #07163b;font-weight: 600;">Our Focus Area</h3>
                         </div>
                         <div class="text-end w-25 d-flex">
                             <a class="Arrows custom-responsive-slider-prev me-1">
@@ -664,7 +664,7 @@
 @if (!empty($successItems) && array_filter($successItems))
     <section class="success_section">
         <div class="container my-4 pb-4 d-lg-block d-sm-none">
-            <h2 class="text-center pb-5">Our Success <span class="main_color">Starts With</span> Our Culture.</h2>
+            <h2 class="text-center pb-5" style="color: #07163b;font-weight: 600;">Our Success <span class="main_color">Starts With</span> Our Culture.</h2>
             <div class="row success-area">
                 @foreach ($successItems as $key => $successItem)
                     @if (!empty($successItem->title))
@@ -686,7 +686,7 @@
             </div>
         </div>
         <div class="container d-lg-none d-sm-block">
-            <h3 class="text-center">Our Success <span class="main_color">Starts With</span> Our Culture.</h3>
+            <h3 class="text-center" style="color: #07163b;font-weight: 600;">Our Success <span class="main_color">Starts With</span> Our Culture.</h3>
             <div class="row">
                 <div class="d-flex justify-content-between px-4">
                     <a class="Arrows custom-responsive-slider-prev">
