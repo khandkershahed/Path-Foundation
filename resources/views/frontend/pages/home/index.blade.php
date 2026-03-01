@@ -410,11 +410,11 @@
                         <div class="text-end w-25 d-flex">
                             <a class="Arrows custom-responsive-slider-prev me-1">
                                 <i class="fa-solid fa-chevron-left fa-2x"
-                                    style="cursor: pointer;font: 18px / 36px FontAwesome;text-align: center;transition: all 0.5s;background: #a9a8a8;width: 38px;color: rgb(1, 5, 23);border: 1px solid #eee;"></i>
+                                    style="cursor: pointer;font: 18px / 36px FontAwesome;text-align: center;transition: all 0.5s;background: #fff;width: 38px;color: rgb(1, 5, 23);border: 1px solid #eee;"></i>
                             </a>
                             <a class="Arrows custom-responsive-slider-next">
                                 <i class="fa-solid fa-chevron-right fa-2x"
-                                    style="cursor: pointer;font: 18px / 36px FontAwesome;text-align: center;transition: all 0.5s;background: #a9a8a8;width: 38px;color: rgb(1, 5, 23);border: 1px solid #eee;"></i>
+                                    style="cursor: pointer;font: 18px / 36px FontAwesome;text-align: center;transition: all 0.5s;background: #fff;width: 38px;color: rgb(1, 5, 23);border: 1px solid #eee;"></i>
                             </a>
                         </div>
                     </div>
