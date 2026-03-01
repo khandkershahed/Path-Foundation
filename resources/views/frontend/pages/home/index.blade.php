@@ -577,7 +577,7 @@
                                 <a href="{{ route('story.details', $techglossy->slug) }}"
                                     class="pt-3 business_item_button d-flex justify-content-start">
                                     <span>Read More</span>
-                                    <span class="business_item_button_icon">
+                                    <span class="business_item_button_icon ms-2">
                                         <i class="fa-solid fa-arrow-right-long" aria-hidden="true"></i>
                                     </span>
                                 </a>

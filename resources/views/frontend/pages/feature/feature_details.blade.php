@@ -219,7 +219,7 @@
         <div class="container">
             <!-- home title -->
             <div class="home_title">
-                <h5 class="home_title_heading mb-4 pb-4 callout" style="font-size: 27px;"> {!! $feature->footer !!}</h5>
+                <h5 class="home_title_heading mb-4 pb-4 callout ms-0" style="font-size: 27px;"> {!! $feature->footer !!}</h5>
                 <h4 class="section_title py-3 mt-4"><span
                         class="topLine">{{ \Illuminate\Support\Str::substr($feature->row_five_title, 0, 1) }}</span>{{ \Illuminate\Support\Str::substr($feature->row_five_title, 1) }}
                 </h4>
@@ -246,7 +246,7 @@
                                     <a href="{{ route('feature.details', $item->slug) }}"
                                         class="d-flex main_color align-items-center text-center justify-content-center">
                                         <span>Learn More</span>
-                                        <span class="business_item_button_icon">
+                                        <span class="business_item_button_icon ms-2">
                                             <i class="fa-solid fa-arrow-right-long"></i>
                                         </span>
                                     </a>
