@@ -211,71 +211,7 @@
         });
 
 
-        $('.add_to_cart_quantity').click(function() {
-            var id = $(this).data('id');
-            var name = $(this).data('name');
-            var quantity = $('.input-qty').val();
-            // alert(quantity);
-            var button = $('.cart_quantity_button' + id);
-            var cart_header = $('#cartQty');
-
-            var formData = {
-                product_id: id,
-                name: name,
-                qty: quantity
-            };
-
-            $.ajax({
-                url: "{{ route('add.cart') }}",
-                type: 'POST',
-                data: formData,
-                dataType: 'json',
-                success: function(response) {
-                    toastr.success('Successfully Added to Your Cart');
-                    cart_header.empty();
-                    cart_header.append('<span class="add_cart_count">' + response
-                        .cartHeader + '</span>');
-                    button.empty();
-                    button.append();
-                },
-                error: function(xhr, status, error) {
-                    console.error(xhr.responseText);
-                }
-            });
-        });
-
-        $('.add_to_cart').click(function() {
-            var id = $(this).data('id');
-            var name = $(this).data('name');
-            var quantity = $(this).data('quantity');
-            var button = $('.cart_button' + id);
-            var cart_header = $('#cartQty');
-
-            var formData = {
-                product_id: id,
-                name: name,
-                qty: quantity
-            };
-
-            $.ajax({
-                url: "{{ route('add.cart') }}",
-                type: 'POST',
-                data: formData,
-                dataType: 'json',
-                success: function(response) {
-                    toastr.success('Successfully Added to Your Cart');
-                    cart_header.empty();
-                    cart_header.append('<span class="add_cart_count">' + response
-                        .cartHeader + '</span>');
-                    button.empty();
-                    button.append();
-
-                },
-                error: function(xhr, status, error) {
-                    console.error(xhr.responseText);
-                }
-            });
-        });
+        
     });
 </script>
 
@@ -809,7 +745,7 @@
             },
 
             success: function(data) {
-                // Start Message 
+                // Start Message
 
                 const Toast = Swal.mixin({
                     toast: true,
@@ -848,7 +784,7 @@
 
         var amount = element.getAttribute('data-amount');
         var course_id = element.getAttribute('data-id');
-        
+
 
         $.ajax({
             type: 'POST',
@@ -861,7 +797,7 @@
             },
 
             success: function(data) {
-                // Start Message 
+                // Start Message
 
                 const Toast = Swal.mixin({
                     toast: true,
