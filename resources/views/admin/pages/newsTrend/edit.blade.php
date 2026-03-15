@@ -84,7 +84,7 @@
                                         placeholder="Enter Badge" name="badge">
                                     <div class="invalid-feedback"> Please Enter Badge </div>
                                 </div>
-                                <div class="col-md-4 pb-7">
+                                <div class="col-md-8 pb-7">
                                     <label for="validationCustom01" class="form-label required">Title</label>
                                     <input type="text" class="form-control form-control-solid form-control-sm" required
                                         value="{{ $newsTrend->title }}" id="validationCustom01"

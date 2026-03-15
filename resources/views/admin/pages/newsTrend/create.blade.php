@@ -75,11 +75,11 @@
                                         value="{{ old('badge') }}">
                                     <div class="invalid-feedback"> Please Enter Badge </div>
                                 </div>
-                                <div class="col-md-4 pb-7">
+                                <div class="col-md-8 pb-7">
                                     <label for="validationCustom01" class="form-label required">Title</label>
                                     <input type="text" class="form-control form-control-solid form-control-sm" required
                                         id="validationCustom01" placeholder="Enter Title" name="title"
-                                        value="{{ old('title') }}"> 
+                                        value="{{ old('title') }}">
                                     <div class="invalid-feedback"> Please Enter Title </div>
                                 </div>
                                 <div class="col-md-4 pb-7">
