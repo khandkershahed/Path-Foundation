@@ -381,7 +381,7 @@
                                             src="{{ !empty($feature->logo) && file_exists(public_path('storage/' . $feature->logo)) ? asset('storage/' . $feature->logo) : asset('frontend/images/service-no-img.png') }}"
                                             alt="PATH Bangladesh">
                                         <a href="{{ route('feature.details', $feature->slug) }}">
-                                            <h5 class="business_services pt-2 fw-boldest">
+                                            <h5 class="business_services pt-2 fw-bolder mt-3">
                                                 {{ Str::words($feature->badge, 10, $end = '') }}
                                             </h5>
                                         </a>
@@ -429,7 +429,7 @@
                                                 alt="PATH Bangladesh" style="width: 80px;">
                                         </div>
                                         <a href="{{ route('feature.details', $feature->slug) }}">
-                                            <h5 class="business_services pt-2 fw-boldest">
+                                            <h5 class="business_services pt-2 fw-bolder mt-3">
                                                 {{ Str::words($feature->badge, 10, $end = '') }}
                                             </h5>
                                         </a>
@@ -566,7 +566,9 @@
                         <div class="col-lg-6">
                             <div class="holder-main-text ps-5">
                                 {{-- <h6>{{ $techglossy->badge }}</h6> --}}
-                                <h6 class="title-tag text-capitalize">{{ $techglossy->badge }}</h6>
+                                @if (!empty($techglossy->badge))
+                                    <h6 class="title-tag text-capitalize">{{ $techglossy->badge }}</h6>
+                                @endif
                                 <h2 class="container-title">
                                     {{ $techglossy->title }}
                                 </h2>
