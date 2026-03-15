@@ -4730,7 +4730,8 @@ tr td:hover {
 .title-tag {
     font-size: var(--badge-font-size);
     font-weight: bold;
-    background-image: -webkit-gradient(
+    color: #053d8f;
+    /* background-image: -webkit-gradient(
         linear,
         left top,
         right top,
@@ -4751,14 +4752,13 @@ tr td:hover {
         to right,
         var(--third-color) 4%,
         var(--third-color) bb 100%
-    );
+    ); */
     position: relative;
     text-transform: uppercase;
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
     display: inline-block;
     margin-bottom: 30px;
-    padding-bottom: 5px;
+    padding-bottom: 10px;
 }
 
 .title-tag:after {

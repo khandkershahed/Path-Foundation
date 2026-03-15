@@ -567,7 +567,7 @@
                             <div class="holder-main-text ps-5">
                                 {{-- <h6>{{ $techglossy->badge }}</h6> --}}
                                 @if (!empty($techglossy->badge))
-                                    <h5 class="title-tag text-capitalize main-color">{{ $techglossy->badge }}</h5>
+                                    <h5 class="title-tag text-capitalize">{{ $techglossy->badge }}</h5>
                                 @endif
                                 <h2 class="container-title">
                                     {{ $techglossy->title }}
