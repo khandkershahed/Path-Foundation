@@ -34,7 +34,7 @@
         }
 
         .action-btnss {
-            padding: 5px 65px;
+            padding: 5px 20px;
             background-color: transparent;
             width: 12.5%;
         }
@@ -381,15 +381,15 @@
                                             src="{{ !empty($feature->logo) && file_exists(public_path('storage/' . $feature->logo)) ? asset('storage/' . $feature->logo) : asset('frontend/images/service-no-img.png') }}"
                                             alt="PATH Bangladesh">
                                         <a href="{{ route('feature.details', $feature->slug) }}">
-                                            <h5 class="business_services pt-2">
+                                            <h5 class="business_services pt-2 fw-boldest">
                                                 {{ Str::words($feature->badge, 10, $end = '') }}
                                             </h5>
                                         </a>
                                     </div>
-                                    <div class="feature_description">
+                                    {{-- <div class="feature_description">
                                         <p class="feature_descrip">{{ Str::words($feature->header, 12, $end = '') }}
                                         </p>
-                                    </div>
+                                    </div> --}}
                                     {{-- <a href="{{ route('feature.details', $feature->slug) }}"
                                         class="business_item_button pt-3">
                                         <span>Learn More</span>
@@ -429,17 +429,17 @@
                                                 alt="PATH Bangladesh" style="width: 80px;">
                                         </div>
                                         <a href="{{ route('feature.details', $feature->slug) }}">
-                                            <h5 class="business_services pt-2">
+                                            <h5 class="business_services pt-2 fw-boldest">
                                                 {{ Str::words($feature->badge, 10, $end = '') }}
                                             </h5>
                                         </a>
                                         {{-- <h5 class="business_services pt-2">
                                             {{ Str::words($feature->badge, 10, $end = '') }}</h5> --}}
                                     </div>
-                                    <div class="feature_description">
+                                    {{-- <div class="feature_description">
                                         <p class="feature_descrip">{{ Str::words($feature->header, 12, $end = '') }}
                                         </p>
-                                    </div>
+                                    </div> --}}
                                     {{-- <a href="{{ route('feature.details', $feature->slug) }}"
                                         class="business_item_button pt-3">
                                         <span>Learn More</span>

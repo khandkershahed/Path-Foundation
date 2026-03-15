@@ -7,7 +7,7 @@
                     <div class="d-flex flex-row-fluid flex-column text-center p-10 pt-lg-20">
                         <a href="{{ route('homepage') }}" class="py-9 mb-5">
                             <img alt="Logo"
-                                src="{{ !empty($setting->site_logo) && file_exists(public_path('storage/settings/' . $setting->site_logo)) ? asset('storage/settings/' . $setting->site_logo) : asset('images/no-logo(217-55).jpg') }}"
+                                src="{{ !empty(optional($setting)->site_logo) && file_exists(public_path('storage/' . optional($setting)->site_logo)) ? asset('storage/' . optional($setting)->site_logo) : asset('frontend/images/brandPage-logo-no-img(217-55).jpg') }}"
                                 class="h-60px" />
                         </a>
                         <h1 class="fw-bolder fs-2qx pb-5 pb-md-10" style="color: #179ef7">Welcome to

@@ -29,7 +29,7 @@
                     <div class="row">
                         <div class="col-lg-12 col-sm-12">
                             <div class="row">
-                                <div class="col-md-4 pb-7">
+                                {{-- <div class="col-md-4 pb-7">
                                     <label for="validationCustom010" class="form-label mb-0">Course
                                         Name</label>
                                     <select class="form-select form-select-solid multiselect" data-control="select2"
@@ -50,7 +50,7 @@
                                         @endforeach
                                     </select>
                                     <div class="invalid-feedback"> Please Select Course Name. </div>
-                                </div>
+                                </div> --}}
 
 
                                 <div class="col-md-4 pb-7">
@@ -85,8 +85,8 @@
                                     <div class="invalid-feedback"> Please Enter Badge </div>
                                 </div>
                                 <div class="col-md-4 pb-7">
-                                    <label for="validationCustom01" class="form-label ">Title</label>
-                                    <input type="text" class="form-control form-control-solid form-control-sm"
+                                    <label for="validationCustom01" class="form-label required">Title</label>
+                                    <input type="text" class="form-control form-control-solid form-control-sm" required
                                         value="{{ $newsTrend->title }}" id="validationCustom01"
                                         placeholder="Enter Title" name="title">
                                     <div class="invalid-feedback"> Please Enter Title </div>

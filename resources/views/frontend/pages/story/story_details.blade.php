@@ -54,7 +54,7 @@
     <!--======// Header Title //======-->
     <section class="blog_header"
         style="background-image: url('{{ !empty($blog->banner_image) && file_exists(public_path('storage/' . $blog->banner_image)) ? asset('storage/' . $blog->banner_image) : asset('frontend/images/no-banner(1920-330).png') }}');">
-        <h1 class="text-center text-white pt-5">{{ $blog->badge }}</h1>
+        {{-- <h1 class="text-center text-white pt-5">{{ $blog->badge }}</h1> --}}
         <div class="container ">
             <div class="row ">
             </div>
@@ -71,6 +71,7 @@
             <div class="row m-0">
                 <!-- home card item -->
                 <div class="col-lg-12 col-sm-12 shadow-lg px-5 py-3 text-center  bg-white" style="margin-top: -4.5rem; ">
+                    <h2 class="text-center pt-2">{{ $blog->badge }}</h2>
                     <h1> {{ $blog->title }}</h1>
                     <div class="d-flex justify-content-between">
 
