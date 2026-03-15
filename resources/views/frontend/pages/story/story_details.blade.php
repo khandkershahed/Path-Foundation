@@ -71,7 +71,7 @@
             <div class="row m-0">
                 <!-- home card item -->
                 <div class="col-lg-12 col-sm-12 shadow-lg px-5 py-3 text-center  bg-white" style="margin-top: -4.5rem; ">
-                    <h4 class="text-center pt-2 fw-bolder">{{ $blog->badge }}</h4>
+                    <h4 class="text-center pt-2 fw-bolder main-color">{{ $blog->badge }}</h4>
                     <h1> {{ $blog->title }}</h1>
                     <div class="d-flex justify-content-between">
 
